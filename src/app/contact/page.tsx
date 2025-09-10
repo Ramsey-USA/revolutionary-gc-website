@@ -5,6 +5,9 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import WhyChooseSection from '../../components/WhyChooseSection'
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
+import { db, functions } from '../../lib/firebase'
+import { collection, addDoc, Timestamp } from 'firebase/firestore'
+import { httpsCallable } from 'firebase/functions'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -33,9 +36,15 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Save to Firestore
+      await addDoc(collection(db, 'contacts'), {
+        ...formData,
+        createdAt: Timestamp.now()
+      })
+      // Call Cloud Function to send email
+      const sendContactEmail = httpsCallable(functions, 'sendContactEmail')
+      await sendContactEmail({ ...formData })
       alert('Thank you for your message! We will get back to you within 24 hours.')
       setFormData({
         name: '',
@@ -50,8 +59,10 @@ export default function ContactPage() {
         budgetRange: '',
         howHeard: ''
       })
-      setIsSubmitting(false)
-    }, 2000)
+    } catch (error) {
+      alert('There was an error submitting your message. Please try again later.')
+    }
+    setIsSubmitting(false)
   }
 
   const contactInfo = [

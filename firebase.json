@@ -1,15 +1,23 @@
 {
   "hosting": {
-    "public": "out",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
+  "public": "public",
+  "rewrites": [
+      {
+        "source": "/_next/static/*",
+        "destination": "/_next/static/$1"
+      },
+      {
+        "source": "/api/:path*",
+        "function": "nextjs-api"
+      },
       {
         "source": "**",
-        "destination": "/index.html"
+        "function": "nextjs-renderer"
       }
     ],
     "headers": [
