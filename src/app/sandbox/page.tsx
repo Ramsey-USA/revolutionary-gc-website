@@ -1,5 +1,6 @@
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import WhyChooseSection from '../../components/WhyChooseSection'
 import { Wrench, Play, Settings, Save, Download } from 'lucide-react'
 
 export default function SandboxPage() {
@@ -168,7 +169,8 @@ export default function SandboxPage() {
         </div>
       </section>
 
-      <Footer />
+  <WhyChooseSection />
+  <Footer />
     </main>
   )
 }

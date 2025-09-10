@@ -1,5 +1,6 @@
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import WhyChooseSection from '../../components/WhyChooseSection'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react'
@@ -259,7 +260,8 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <Footer />
+  <WhyChooseSection />
+  <Footer />
     </main>
   )
 }

@@ -1,5 +1,6 @@
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import WhyChooseSection from '../../components/WhyChooseSection'
 import { Mail, Linkedin } from 'lucide-react'
 
 export default function TeamPage() {
@@ -217,7 +218,8 @@ export default function TeamPage() {
         </div>
       </section>
 
-      <Footer />
+  <WhyChooseSection />
+  <Footer />
     </main>
   )
 }

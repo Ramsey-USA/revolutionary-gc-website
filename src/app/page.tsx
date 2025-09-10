@@ -5,6 +5,7 @@ import CoreValuesSection from '../components/CoreValuesSection'
 import FeaturedProjectsSection from '../components/FeaturedProjectsSection'
 import BlogNewsSection from '../components/BlogNewsSection'
 import Footer from '../components/Footer'
+import WhyChooseSection from '../components/WhyChooseSection'
 
 export default function Home() {
   return (
@@ -14,8 +15,9 @@ export default function Home() {
       <AIToolsSection />
       <CoreValuesSection />
       <FeaturedProjectsSection />
-      <BlogNewsSection />
-      <Footer />
+  <BlogNewsSection />
+  <WhyChooseSection />
+  <Footer />
     </main>
   )
 }

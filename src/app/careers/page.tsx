@@ -1,5 +1,6 @@
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import WhyChooseSection from '../../components/WhyChooseSection'
 
 export default function CareersPage() {
   return (
@@ -26,12 +27,53 @@ export default function CareersPage() {
               <input type="email" id="email" name="email" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green" placeholder="your.email@example.com" />
             </div>
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-army-black mb-2">Phone Number</label>
-              <input type="tel" id="phone" name="phone" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green" placeholder="(509) 555-0123" />
+              <label htmlFor="phone" className="block text-sm font-medium text-army-black mb-2">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green" placeholder="(509) 555-0123" />
             </div>
             <div>
               <label htmlFor="position" className="block text-sm font-medium text-army-black mb-2">Position Interested In *</label>
               <input type="text" id="position" name="position" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green" placeholder="e.g. Project Manager, Estimator, Superintendent" />
+            </div>
+            <div>
+              <label htmlFor="experienceLevel" className="block text-sm font-medium text-army-black mb-2">Experience Level *</label>
+              <select id="experienceLevel" name="experienceLevel" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green">
+                <option value="">Select experience level</option>
+                <option value="entry">Entry Level</option>
+                <option value="mid">Mid Level</option>
+                <option value="senior">Senior Level</option>
+                <option value="executive">Executive/Director</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="workPreference" className="block text-sm font-medium text-army-black mb-2">Work Preference *</label>
+              <select id="workPreference" name="workPreference" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green">
+                <option value="">Select preference</option>
+                <option value="onsite">On-site</option>
+                <option value="remote">Remote</option>
+                <option value="hybrid">Hybrid</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="desiredDepartment" className="block text-sm font-medium text-army-black mb-2">Desired Department *</label>
+              <select id="desiredDepartment" name="desiredDepartment" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green">
+                <option value="">Select department</option>
+                <option value="field">Field Operations</option>
+                <option value="project">Project Management</option>
+                <option value="estimating">Estimating</option>
+                <option value="admin">Administration</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="howHeard" className="block text-sm font-medium text-army-black mb-2">How Did You Hear About Us? *</label>
+              <select id="howHeard" name="howHeard" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green">
+                <option value="">Select option</option>
+                <option value="referral">Referral/Word of Mouth</option>
+                <option value="search">Search Engine</option>
+                <option value="social">Social Media</option>
+                <option value="event">Event/Trade Show</option>
+                <option value="other">Other</option>
+              </select>
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-army-black mb-2">Tell Us About Yourself *</label>
@@ -41,7 +83,8 @@ export default function CareersPage() {
           </form>
         </div>
       </section>
-      <Footer />
+  <WhyChooseSection />
+  <Footer />
     </main>
   )
 }

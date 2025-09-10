@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import WhyChooseSection from '../../components/WhyChooseSection'
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
 
 export default function ContactPage() {
@@ -12,7 +13,12 @@ export default function ContactPage() {
     phone: '',
     company: '',
     projectType: '',
-    message: ''
+    message: '',
+    jobRole: '',
+    projectStage: '',
+    projectTypeDetail: '',
+    budgetRange: '',
+    howHeard: ''
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -37,7 +43,12 @@ export default function ContactPage() {
         phone: '',
         company: '',
         projectType: '',
-        message: ''
+        message: '',
+        jobRole: '',
+        projectStage: '',
+        projectTypeDetail: '',
+        budgetRange: '',
+        howHeard: ''
       })
       setIsSubmitting(false)
     }, 2000)
@@ -134,19 +145,19 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-army-black mb-2">
-                      Phone Number
+                      Phone Number *
                     </label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
+                      required
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green"
                       placeholder="(509) 555-0123"
                     />
                   </div>
-                  
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-army-black mb-2">
                       Company/Organization
@@ -163,13 +174,120 @@ export default function ContactPage() {
                   </div>
                 </div>
 
+                {/* Additional Dropdowns for Job Clarity */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="jobRole" className="block text-sm font-medium text-army-black mb-2">
+                      Your Role *
+                    </label>
+                    <select
+                      id="jobRole"
+                      name="jobRole"
+                      required
+                      value={formData.jobRole || ''}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green"
+                    >
+                      <option value="">Select your role</option>
+                      <option value="owner">Owner/Decision Maker</option>
+                      <option value="architect">Architect/Designer</option>
+                      <option value="engineer">Engineer</option>
+                      <option value="contractor">Contractor/Subcontractor</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="projectStage" className="block text-sm font-medium text-army-black mb-2">
+                      Project Stage *
+                    </label>
+                    <select
+                      id="projectStage"
+                      name="projectStage"
+                      required
+                      value={formData.projectStage || ''}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green"
+                    >
+                      <option value="">Select stage</option>
+                      <option value="planning">Planning/Concept</option>
+                      <option value="design">Design/Engineering</option>
+                      <option value="bidding">Bidding/Estimating</option>
+                      <option value="construction">Under Construction</option>
+                      <option value="completed">Completed</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="projectTypeDetail" className="block text-sm font-medium text-army-black mb-2">
+                      Project Type Detail *
+                    </label>
+                    <select
+                      id="projectTypeDetail"
+                      name="projectTypeDetail"
+                      required
+                      value={formData.projectTypeDetail || ''}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green"
+                    >
+                      <option value="">Select detail</option>
+                      <option value="new-construction">New Construction</option>
+                      <option value="remodel">Remodel/Renovation</option>
+                      <option value="addition">Addition/Expansion</option>
+                      <option value="tenant-improvement">Tenant Improvement</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="budgetRange" className="block text-sm font-medium text-army-black mb-2">
+                      Estimated Budget Range *
+                    </label>
+                    <select
+                      id="budgetRange"
+                      name="budgetRange"
+                      required
+                      value={formData.budgetRange || ''}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green"
+                    >
+                      <option value="">Select range</option>
+                      <option value="under-250k">Under $250,000</option>
+                      <option value="250k-1m">$250,000 - $1M</option>
+                      <option value="1m-5m">$1M - $5M</option>
+                      <option value="5m-10m">$5M - $10M</option>
+                      <option value="10m-plus">$10M+</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="howHeard" className="block text-sm font-medium text-army-black mb-2">
+                    How Did You Hear About Us? *
+                  </label>
+                  <select
+                    id="howHeard"
+                    name="howHeard"
+                    required
+                    value={formData.howHeard || ''}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green"
+                  >
+                    <option value="">Select option</option>
+                    <option value="referral">Referral/Word of Mouth</option>
+                    <option value="search">Search Engine</option>
+                    <option value="social">Social Media</option>
+                    <option value="event">Event/Trade Show</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
                 <div>
                   <label htmlFor="projectType" className="block text-sm font-medium text-army-black mb-2">
-                    Project Type
+                    Project Type *
                   </label>
                   <select
                     id="projectType"
                     name="projectType"
+                    required
                     value={formData.projectType}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green"
@@ -187,12 +305,11 @@ export default function ContactPage() {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-army-black mb-2">
-                    Project Details *
+                    Project Details
                   </label>
                   <textarea
                     id="message"
                     name="message"
-                    required
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
@@ -251,43 +368,43 @@ export default function ContactPage() {
                 })}
               </div>
 
-              {/* Emergency Contact */}
-              <div className="mt-12 p-6 bg-red-50 border border-red-200 rounded-lg">
-                <h3 className="text-xl font-bold text-red-800 mb-3">
-                  Emergency Contact
-                </h3>
-                <p className="text-red-700">
-                  For construction emergencies or urgent project issues, call our 24/7 emergency line:
-                </p>
-                <p className="text-2xl font-bold text-red-800 mt-2">
-                  (509) 555-HELP (4357)
-                </p>
-              </div>
-
-              {/* Quick Links */}
-              <div className="mt-8">
-                <h3 className="text-xl font-bold text-army-black mb-4">
-                  Quick Actions
-                </h3>
-                <div className="space-y-3">
-                  <a
-                    href="/estimate"
-                    className="block bg-mh-forest-green text-white px-6 py-3 rounded-lg font-semibold hover:bg-army-green transition-colors text-center"
-                  >
-                    Get AI Estimate
-                  </a>
-                  <a
-                    href="/services"
-                    className="block border border-mh-forest-green text-mh-forest-green px-6 py-3 rounded-lg font-semibold hover:bg-mh-forest-green hover:text-white transition-colors text-center"
-                  >
-                    View Our Services
-                  </a>
-                  <a
-                    href="/projects"
-                    className="block border border-mh-forest-green text-mh-forest-green px-6 py-3 rounded-lg font-semibold hover:bg-mh-forest-green hover:text-white transition-colors text-center"
-                  >
-                    See Our Work
-                  </a>
+              {/* Emergency Contact & Quick Links - Improved Spacing */}
+              <div className="flex flex-col gap-6 mt-8">
+                <div className="p-6 bg-red-50 border border-red-200 rounded-lg">
+                  <h3 className="text-xl font-bold text-red-800 mb-2">
+                    Emergency Contact
+                  </h3>
+                  <p className="text-red-700 mb-2">
+                    For construction emergencies or urgent project issues, call our 24/7 emergency line:
+                  </p>
+                  <p className="text-2xl font-bold text-red-800">
+                    (509) 555-HELP (4357)
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-army-black mb-3">
+                    Quick Actions
+                  </h3>
+                  <div className="flex flex-col gap-3">
+                    <a
+                      href="/estimate"
+                      className="block bg-mh-forest-green text-white px-6 py-3 rounded-lg font-semibold hover:bg-army-green transition-colors text-center"
+                    >
+                      Get AI Estimate
+                    </a>
+                    <a
+                      href="/services"
+                      className="block border border-mh-forest-green text-mh-forest-green px-6 py-3 rounded-lg font-semibold hover:bg-mh-forest-green hover:text-white transition-colors text-center"
+                    >
+                      View Our Services
+                    </a>
+                    <a
+                      href="/projects"
+                      className="block border border-mh-forest-green text-mh-forest-green px-6 py-3 rounded-lg font-semibold hover:bg-mh-forest-green hover:text-white transition-colors text-center"
+                    >
+                      See Our Work
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -322,7 +439,8 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <Footer />
+  <WhyChooseSection />
+  <Footer />
     </main>
   )
 }

@@ -1,5 +1,6 @@
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import WhyChooseSection from '../../components/WhyChooseSection'
 import { Eye, MousePointer, Camera, Info } from 'lucide-react'
 
 export default function ThreeDExplorerPage() {
@@ -265,7 +266,8 @@ export default function ThreeDExplorerPage() {
         </div>
       </section>
 
-      <Footer />
+  <WhyChooseSection />
+  <Footer />
     </main>
   )
 }

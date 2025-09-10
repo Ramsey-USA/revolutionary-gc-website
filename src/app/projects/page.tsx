@@ -1,5 +1,6 @@
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import WhyChooseSection from '../../components/WhyChooseSection'
 
 export default function ProjectsPage() {
   return (
@@ -23,7 +24,8 @@ export default function ProjectsPage() {
           </div>
         </div>
       </div>
-      <Footer />
+  <WhyChooseSection />
+  <Footer />
     </main>
   )
 }
