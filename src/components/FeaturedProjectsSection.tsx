@@ -84,10 +84,6 @@ const FeaturedProjectsSection = () => {
                       alt={project.title}
                       fill
                       className="object-cover"
-                      onError={(e) => {
-                        // Fallback to placeholder if image fails to load
-                        e.currentTarget.src = `https://via.placeholder.com/600x400/396851/FFFFFF?text=${encodeURIComponent(project.title)}`
-                      }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6">

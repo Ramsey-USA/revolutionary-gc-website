@@ -99,9 +99,6 @@ const BlogNewsSection = () => {
                   alt={currentItem.title}
                   fill
                   className="object-cover"
-                  onError={(e) => {
-                    e.currentTarget.src = `https://via.placeholder.com/600x400/396851/FFFFFF?text=${encodeURIComponent(currentItem.title)}`
-                  }}
                 />
                 <div className="absolute top-4 left-4">
                   <span className="bg-army-gold text-army-black px-3 py-1 rounded-full text-sm font-semibold">
