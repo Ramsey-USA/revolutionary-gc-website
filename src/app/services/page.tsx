@@ -1,7 +1,7 @@
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import CoreValuesSection from '../../components/CoreValuesSection'
-import { Building, Hammer, HeartPulse, Shield, Factory, Grape } from 'lucide-react'
+import { Building, Hammer, HeartPulse, Shield, Factory, Grape, Trophy, Star, Bot, Headphones } from 'lucide-react'
 
 export default function ServicesPage() {
   const services = [
@@ -152,37 +152,37 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-army-gold text-army-black w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                20+
+              <div className="text-center">
+                <div className="bg-army-gold text-army-black w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 transition-transform duration-300 hover:scale-110 hover:-translate-y-1">
+                  <Trophy size={48} />
+                </div>
+                <h3 className="text-xl font-bold text-army-black mb-2">Years Experience</h3>
+                <p className="text-field-gray">Decades of combined construction expertise</p>
               </div>
-              <h3 className="text-xl font-bold text-army-black mb-2">Years Experience</h3>
-              <p className="text-field-gray">Decades of combined construction expertise</p>
-            </div>
 
-            <div className="text-center">
-              <div className="bg-mh-forest-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                100%
+              <div className="text-center">
+                <div className="bg-mh-forest-green text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 transition-transform duration-300 hover:scale-110 hover:-translate-y-1">
+                  <Star size={48} />
+                </div>
+                <h3 className="text-xl font-bold text-army-black mb-2">Veteran Owned</h3>
+                <p className="text-field-gray">Military precision and integrity in every project</p>
               </div>
-              <h3 className="text-xl font-bold text-army-black mb-2">Veteran Owned</h3>
-              <p className="text-field-gray">Military precision and integrity in every project</p>
-            </div>
 
-            <div className="text-center">
-              <div className="bg-army-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                AI
+              <div className="text-center">
+                <div className="bg-army-green text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 transition-transform duration-300 hover:scale-110 hover:-translate-y-1">
+                  <Bot size={48} />
+                </div>
+                <h3 className="text-xl font-bold text-army-black mb-2">Technology Leader</h3>
+                <p className="text-field-gray">First in the Pacific Northwest with AI estimating</p>
               </div>
-              <h3 className="text-xl font-bold text-army-black mb-2">Technology Leader</h3>
-              <p className="text-field-gray">First in the Pacific Northwest with AI estimating</p>
-            </div>
 
-            <div className="text-center">
-              <div className="bg-mh-warm-tan text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                24/7
+              <div className="text-center">
+                <div className="bg-mh-warm-tan text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 transition-transform duration-300 hover:scale-110 hover:-translate-y-1">
+                  <Headphones size={48} />
+                </div>
+                <h3 className="text-xl font-bold text-army-black mb-2">Project Support</h3>
+                <p className="text-field-gray">Real-time updates and transparent communication</p>
               </div>
-              <h3 className="text-xl font-bold text-army-black mb-2">Project Support</h3>
-              <p className="text-field-gray">Real-time updates and transparent communication</p>
-            </div>
           </div>
         </div>
       </section>

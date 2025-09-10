@@ -161,7 +161,7 @@ const Footer = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gray-800 p-2 rounded-lg hover:bg-mh-forest-green transition-colors"
+                    className="bg-gray-800 p-2 rounded-lg hover:bg-mh-forest-green transition-colors transition-transform duration-300 hover:scale-110 hover:-translate-y-1"
                     aria-label={`Follow us on ${social.name}`}
                   >
                     <IconComponent size={20} />

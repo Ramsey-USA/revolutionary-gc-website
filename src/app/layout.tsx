@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
       <body className="font-saira m-0 p-0" style={{ fontFamily: 'Saira, sans-serif' }}>
         {children}
       </body>

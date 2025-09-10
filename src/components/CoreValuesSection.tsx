@@ -7,7 +7,7 @@ const CoreValuesSection = () => {
     {
       icon: Lightbulb,
       title: "Innovation Leadership",
-      description: "We pioneer cutting-edge construction technology, from AI-powered estimating to immersive 3D project visualization. As the first contractor in the Pacific Northwest to offer these advanced tools, we're building the future of construction today.",
+  description: "We lead with innovation—bringing AI-powered estimating and 3D visualization to every project. As pioneers in the Pacific Northwest, we build the future of construction.",
       color: "text-army-gold"
     },
     {
@@ -25,7 +25,7 @@ const CoreValuesSection = () => {
     {
       icon: Award,
       title: "Quality Craftsmanship",
-      description: "We use only premium materials and proven construction techniques. Every project showcases our commitment to durability, functionality, and aesthetic excellence that stands the test of time.",
+  description: "We use premium materials and proven techniques. Every project reflects our commitment to durability, functionality, and lasting excellence.",
       color: "text-army-green"
     },
     {

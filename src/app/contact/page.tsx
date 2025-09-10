@@ -233,7 +233,7 @@ export default function ContactPage() {
                   const IconComponent = info.icon
                   return (
                     <div key={index} className="flex items-start space-x-4">
-                      <div className="flex items-center justify-center w-12 h-12 bg-mh-forest-green text-white rounded-lg flex-shrink-0">
+                      <div className="flex items-center justify-center w-12 h-12 bg-mh-forest-green text-white rounded-lg flex-shrink-0 transition-transform duration-300 hover:scale-110 hover:-translate-y-1">
                         <IconComponent size={24} />
                       </div>
                       <div>
