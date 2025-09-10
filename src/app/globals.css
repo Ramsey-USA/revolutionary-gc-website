@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary MH Construction Colors */
+  --mh-forest-green: #396851;
+  --mh-warm-tan: #BD9264;
+  
+  /* Army Military Colors */
+  --army-black: #000000;
+  --army-gold: #FFD700;
+  --army-green: #4B5320;
+  --field-tan: #967117;
+  --field-gray: #6C6C6C;
+
+  /* Utility Colors */
+  --white: #FFFFFF;
+  --light-gray: #F8F9FA;
+  --dark-gray: #343A40;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Saira', sans-serif;
+}
+
+body {
+  color: var(--army-black);
+  background: var(--white);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Saira', sans-serif;
+}
+
+body {
+  color: var(--army-black);
+  background: var(--white);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}

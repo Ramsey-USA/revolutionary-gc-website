@@ -1,0 +1,35 @@
+{
+  "name": "revolutionary-gc-website",
+  "version": "1.0.0",
+  "description": "MH Construction Revolutionary Website 🚀 QUICK START FOR DEVELOPER 🎯 Phase 1 - Initial Build Priority 1: Core Website Homepage (listed in order below) with military color scheme and Saira font Header with responsive navigation with mobile hamburger menu Hero section with timelapse video background (on home page only) AI Tools section with AI Estimator MVP, Sandbox, and 3D Explorer Core values section with flip animations (no individual page, mentioned on other pages) Project gallery with 6 featured projects with buttons to individual page with more info Team member profile dropdown menu that leads to individual page with photos and roles Blog/News Section with a carousel function, showing one article at a time Footer with social media feeds and basic company info, etc. Basic Firebase deployment and hosting Priority 2: Develop all individual pages Enhance the core values sections on all pages Enhance the Projects section and individual page Enhance the Team member section and individual page (add team members) Mobile optimization for all features Priority 3: Firebase Set-Up 🔄 PHASE 2 - AI Features Advanced Features Always-visible chatbot with construction expertise 5-step estimator wizard with basic calculations Timeline display with phase breakdown Cost ranges (±15% accuracy) Interactive Sandbox with drag-and-drop building 3D Project Exploration with clickable elements 📝 WEBSITE HOME PAGE LAYOUT | ADDITIONAL PAGE INFO Hero Section | Home page only Headline: \"Building Tomorrow with Today's Technology\" Subheadline: \"Veteran-owned construction excellence powered by cutting-edge AI technology. Experience the future of construction with transparent pricing, immersive project visualization, and military-grade precision.\" Primary CTA Button: \"Get Your AI Estimate\" Secondary CTA Button: \"Explore Our Projects\" Time Lapse video in the background (to be integrated ASAP) AI Tools Section Section Title: \"Revolutionary AI-Powered Tools\" Section Subtitle: \"Experience construction planning like never before\"",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build && next export",
+    "deploy": "npm run export && firebase deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^24.3.1",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "autoprefixer": "^10.4.21",
+    "firebase": "^12.2.1",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.543.0",
+    "next": "^15.5.2",
+    "postcss": "^8.5.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-hook-form": "^7.62.0",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.9.2"
+  }
+}
