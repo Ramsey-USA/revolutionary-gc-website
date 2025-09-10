@@ -260,8 +260,10 @@ export default function BlogPage() {
         </div>
       </section>
 
-  <WhyChooseSection />
-  <Footer />
+  <div className="mt-auto">
+    <WhyChooseSection />
+    <Footer />
+  </div>
     </main>
   )
 }

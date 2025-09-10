@@ -20,8 +20,12 @@ const Footer = () => {
     { name: 'Projects', href: '/projects' },
     { name: 'Services', href: '/services' },
     { name: 'Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Contact', href: '/contact' },
+    { name: 'Estimate', href: '/estimate' },
+    { name: '3D Explorer', href: '/3d-explorer' },
+    { name: 'Sandbox', href: '/sandbox' }
   ]
 
   const services = [
@@ -65,10 +69,9 @@ const Footer = () => {
     <footer className="bg-army-black text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          
-          {/* Company Info */}
-          <div className="lg:col-span-1">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 items-start">
+          {/* Company Info - left */}
+          <div className="md:col-span-1 lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
               <div className="bg-mh-forest-green text-white p-2 rounded-lg">
                 <span className="text-xl font-bold">MH</span>
@@ -78,12 +81,10 @@ const Footer = () => {
                 <span className="text-army-gold text-xs font-semibold">VETERAN OWNED</span>
               </div>
             </div>
-            
             <p className="text-gray-300 mb-6 leading-relaxed">
               Building tomorrow with today's technology. Veteran-owned construction excellence 
               powered by cutting-edge AI technology throughout the Pacific Northwest.
             </p>
-
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
@@ -113,44 +114,41 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
+          {/* Quick Links - center left, two columns on desktop */}
+          <div className="md:col-span-1 lg:col-span-1">
             <h3 className="text-army-gold font-bold text-lg mb-6">Quick Links</h3>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link 
-                    href={link.href}
-                    className="text-gray-300 hover:text-army-gold transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6">
+              <ul className="space-y-3">
+                {quickLinks.slice(0, Math.ceil(quickLinks.length / 2)).map((link) => (
+                  <li key={link.name}>
+                    <Link 
+                      href={link.href}
+                      className="text-gray-300 hover:text-army-gold transition-colors text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <ul className="space-y-3">
+                {quickLinks.slice(Math.ceil(quickLinks.length / 2)).map((link) => (
+                  <li key={link.name}>
+                    <Link 
+                      href={link.href}
+                      className="text-gray-300 hover:text-army-gold transition-colors text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-army-gold font-bold text-lg mb-6">Our Services</h3>
-            <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service.name}>
-                  <Link 
-                    href={service.href}
-                    className="text-gray-300 hover:text-army-gold transition-colors text-sm"
-                  >
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
 
-          {/* Social Media & Newsletter */}
-          <div>
+          {/* Social Media & Newsletter - right */}
+          <div className="md:col-span-1 lg:col-span-2">
             <h3 className="text-army-gold font-bold text-lg mb-6">Connect With Us</h3>
-            
             {/* Social Media Links */}
             <div className="flex space-x-4 mb-6">
               {socialLinks.map((social) => {
@@ -169,7 +167,6 @@ const Footer = () => {
                 )
               })}
             </div>
-
             {/* Newsletter Signup */}
             <div>
               <p className="text-gray-300 text-sm mb-4">

@@ -24,8 +24,10 @@ export default function ProjectsPage() {
           </div>
         </div>
       </div>
-  <WhyChooseSection />
-  <Footer />
+  <div className="mt-auto">
+    <WhyChooseSection />
+    <Footer />
+  </div>
     </main>
   )
 }

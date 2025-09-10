@@ -218,8 +218,10 @@ export default function TeamPage() {
         </div>
       </section>
 
-  <WhyChooseSection />
-  <Footer />
+  <div className="mt-auto">
+    <WhyChooseSection />
+    <Footer />
+  </div>
     </main>
   )
 }

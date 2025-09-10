@@ -83,8 +83,10 @@ export default function CareersPage() {
           </form>
         </div>
       </section>
-  <WhyChooseSection />
-  <Footer />
+  <div className="mt-auto">
+    <WhyChooseSection />
+    <Footer />
+  </div>
     </main>
   )
 }

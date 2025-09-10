@@ -78,7 +78,7 @@ export default function ContactPage() {
   ]
 
   return (
-    <main className="min-h-screen">
+  <main className="min-h-screen flex flex-col">
       <Header />
       
       {/* Hero Section */}
@@ -439,8 +439,10 @@ export default function ContactPage() {
         </div>
       </section>
 
-  <WhyChooseSection />
-  <Footer />
+  <div className="mt-auto">
+    <WhyChooseSection />
+    <Footer />
+  </div>
     </main>
   )
 }

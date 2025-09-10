@@ -9,15 +9,17 @@ import WhyChooseSection from '../components/WhyChooseSection'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen flex flex-col">
       <Header />
       <HeroSection />
       <AIToolsSection />
       <CoreValuesSection />
       <FeaturedProjectsSection />
-  <BlogNewsSection />
-  <WhyChooseSection />
-  <Footer />
+      <BlogNewsSection />
+      <div className="mt-auto">
+        <WhyChooseSection />
+        <Footer />
+      </div>
     </main>
   )
 }

@@ -140,9 +140,10 @@ export default function ServicesPage() {
       {/* Core Values Section */}
       <CoreValuesSection />
 
-  <WhyChooseSection />
-
-      <Footer />
+  <div className="mt-auto">
+    <WhyChooseSection />
+    <Footer />
+  </div>
     </main>
   )
 }
