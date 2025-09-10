@@ -7,6 +7,7 @@ import { Menu, X, ChevronDown } from 'lucide-react'
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isTeamDropdownOpen, setIsTeamDropdownOpen] = useState(false)
+  let teamDropdownTimeout: NodeJS.Timeout | null = null
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -48,27 +49,59 @@ const Header = () => {
             {/* Team Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={() => setIsTeamDropdownOpen(true)}
-              onMouseLeave={() => setIsTeamDropdownOpen(false)}
+              onMouseEnter={() => {
+                if (teamDropdownTimeout) clearTimeout(teamDropdownTimeout)
+                setIsTeamDropdownOpen(true)
+              }}
+              onMouseLeave={() => {
+                teamDropdownTimeout = setTimeout(() => setIsTeamDropdownOpen(false), 120)
+              }}
             >
-              <button className="flex items-center text-army-black hover:text-mh-forest-green transition-colors font-medium">
+              <button
+                className="flex items-center text-army-black hover:text-mh-forest-green transition-colors font-medium"
+                onClick={e => {
+                  e.preventDefault()
+                  setIsTeamDropdownOpen(open => !open)
+                }}
+                aria-haspopup="true"
+                aria-expanded={isTeamDropdownOpen}
+                tabIndex={0}
+                onFocus={() => setIsTeamDropdownOpen(true)}
+                onBlur={e => {
+                  // Only close if focus moves outside the dropdown
+                  if (!e.currentTarget.contains(e.relatedTarget)) {
+                    setIsTeamDropdownOpen(false)
+                  }
+                }}
+              >
                 Team
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              
               {isTeamDropdownOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-2">
+                <div
+                  className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-2"
+                  onMouseEnter={() => {
+                    if (teamDropdownTimeout) clearTimeout(teamDropdownTimeout)
+                    setIsTeamDropdownOpen(true)
+                  }}
+                  onMouseLeave={() => {
+                    teamDropdownTimeout = setTimeout(() => setIsTeamDropdownOpen(false), 120)
+                  }}
+                >
                   <Link href="/team" className="block px-4 py-2 text-army-black hover:bg-mh-forest-green hover:text-white transition-colors">
                     Meet Our Team
                   </Link>
-                  <Link href="/team/leadership" className="block px-4 py-2 text-army-black hover:bg-mh-forest-green hover:text-white transition-colors">
+                  <Link href="/team#leadership" className="block px-4 py-2 text-army-black hover:bg-mh-forest-green hover:text-white transition-colors">
                     Leadership
                   </Link>
-                  <Link href="/team/project-management" className="block px-4 py-2 text-army-black hover:bg-mh-forest-green hover:text-white transition-colors">
+                  <Link href="/team#project-management" className="block px-4 py-2 text-army-black hover:bg-mh-forest-green hover:text-white transition-colors">
                     Project Management
                   </Link>
-                  <Link href="/team/field-operations" className="block px-4 py-2 text-army-black hover:bg-mh-forest-green hover:text-white transition-colors">
+                  <Link href="/team#field-operations" className="block px-4 py-2 text-army-black hover:bg-mh-forest-green hover:text-white transition-colors">
                     Field Operations
+                  </Link>
+                  <Link href="/team#administration" className="block px-4 py-2 text-army-black hover:bg-mh-forest-green hover:text-white transition-colors">
+                    Administration & Support
                   </Link>
                 </div>
               )}
@@ -77,10 +110,12 @@ const Header = () => {
             <Link href="/blog" className="text-army-black hover:text-mh-forest-green transition-colors font-medium">
               News
             </Link>
+            <Link href="/careers" className="text-army-black hover:text-mh-forest-green transition-colors font-medium">
+              Careers
+            </Link>
             <Link href="/contact" className="text-army-black hover:text-mh-forest-green transition-colors font-medium">
               Contact
             </Link>
-            
             {/* CTA Button */}
             <Link 
               href="/estimate" 
@@ -139,6 +174,13 @@ const Header = () => {
                 onClick={closeMenu}
               >
                 News
+              </Link>
+              <Link 
+                href="/careers" 
+                className="block px-3 py-2 text-army-black hover:text-mh-forest-green transition-colors font-medium"
+                onClick={closeMenu}
+              >
+                Careers
               </Link>
               <Link 
                 href="/contact" 

@@ -89,7 +89,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <MapPin size={16} className="text-army-gold flex-shrink-0" />
                 <span className="text-gray-300 text-sm">
-                  Yakima, Washington & Surrounding Areas
+                  Pasco, Washington & Surrounding Areas
                 </span>
               </div>
               <div className="flex items-center space-x-3">
@@ -104,10 +104,10 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-army-gold flex-shrink-0" />
                 <a 
-                  href="mailto:info@mhconstruction.com" 
+                  href="mailto:info@mhc-gc.com" 
                   className="text-gray-300 text-sm hover:text-army-gold transition-colors"
                 >
-                  info@mhconstruction.com
+                  info@mhc-gc.com
                 </a>
               </div>
             </div>

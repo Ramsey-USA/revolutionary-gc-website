@@ -47,7 +47,7 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Service Area",
-      details: ["Yakima, Washington", "Greater Pacific Northwest", "Custom projects nationwide"]
+  details: ["Pasco, Washington", "Greater Pacific Northwest", "Custom projects nationwide"]
     },
     {
       icon: Phone,
@@ -57,7 +57,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email",
-      details: ["info@mhconstruction.com", "estimates@mhconstruction.com"]
+  details: ["info@mhc-gc.com", "estimates@mhc-gc.com"]
     },
     {
       icon: Clock,
@@ -303,7 +303,7 @@ export default function ContactPage() {
               Our Service Area
             </h2>
             <p className="text-xl text-field-gray max-w-3xl mx-auto">
-              Proudly serving the Pacific Northwest with headquarters in Yakima, Washington
+              Proudly serving the Pacific Northwest with headquarters in Pasco, Washington
             </p>
           </div>
           
@@ -314,9 +314,9 @@ export default function ContactPage() {
               <p className="text-gray-600 text-lg">
                 Interactive map integration coming soon
               </p>
-              <p className="text-gray-500">
-                Currently serving Yakima, WA and surrounding areas
-              </p>
+                <p className="text-gray-500">
+                  Currently serving Pasco, WA and surrounding areas
+                </p>
             </div>
           </div>
         </div>
