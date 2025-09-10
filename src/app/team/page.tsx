@@ -7,11 +7,18 @@ export default function TeamPage() {
   const leadership = [
     {
       name: "Jeremy Thamert",
-      title: "Owner & Visionary Veteran",
-      description: "Jeremy is the visionary behind MH Construction's pioneering approach. His extensive experience and commitment to integrating cutting-edge technology, like AI-powered tools, are what set the company apart. He founded MH Construction with a focus on military precision and a dedication to building the future of construction today.",
+      title: "Owner & General Manager",
+      description: "Jeremy has served as General Manager of MH Construction for 2 years and became owner in January 2025. He is the visionary behind MH Construction's pioneering approach, with extensive experience and a commitment to integrating cutting-edge technology, like AI-powered tools. Jeremy continues the company's tradition of military precision and a dedication to building the future of construction today.",
       image: "/images/team/jeremy-thamert.jpg",
-  email: "jeremy@mhc-gc.com",
+      email: "jeremy@mhc-gc.com",
       linkedin: "https://linkedin.com/in/jeremy-thamert"
+    },
+    {
+      name: "Mike Holstein",
+      title: "Founder (Retired)",
+      description: "Mike Holstein founded MH Construction and established its reputation for integrity, quality, and military-grade precision. Now retired, Mike's leadership and vision continue to inspire the team and guide the company's values.",
+      image: "/images/team/mike-holstein.jpg",
+      email: "info@mhc-gc.com"
     },
     {
       name: "Arnold Garcia",
@@ -25,11 +32,11 @@ export default function TeamPage() {
 
   const projectManagement = [
     {
-      name: "Makayla",
+      name: "Makayla Holstein",
       title: "Project Manager",
-      description: "Makayla is a highly-skilled Project Manager who excels at navigating complex project timelines and coordinating all project phases to ensure on-time delivery. Her expertise in communication and problem-solving keeps projects on track and clients informed.",
+      description: "Makayla Holstein, daughter of founder Mike Holstein, is a highly-skilled Project Manager who excels at navigating complex project timelines and coordinating all project phases to ensure on-time delivery. Her expertise in communication and problem-solving keeps projects on track and clients informed.",
       image: "/images/team/makayla.jpg",
-  email: "makayla@mhc-gc.com"
+      email: "makayla@mhc-gc.com"
     },
     {
       name: "Ben Woodall",
@@ -94,11 +101,11 @@ export default function TeamPage() {
   email: "brooks@mhc-gc.com"
     },
     {
-      name: "Brittney",
+      name: "Brittney Holstein",
       title: "HR Manager",
-      description: "Brittney is the backbone of the company's human resources department. She is dedicated to building a strong, supportive, and skilled team by managing recruitment, employee relations, and professional development.",
+      description: "Brittney Holstein, daughter of founder Mike Holstein, is the backbone of the company's human resources department. She is dedicated to building a strong, supportive, and skilled team by managing recruitment, employee relations, and professional development.",
       image: "/images/team/brittney.jpg",
-  email: "brittney@mhc-gc.com"
+      email: "brittney@mhc-gc.com"
     },
     {
       name: "Matt Ramsey",
