@@ -39,3 +39,9 @@ next-env.d.ts
 .firebase/
 firebase-debug.log
 firestore-debug.log
+/functions/node_modules/
+/functions/.env
+/functions/firebase-debug.log
+
+# Test files
+/src/app/test-firebase/

@@ -1,6 +1,7 @@
 {
   "projects": {
-    "initial build": "mhc-gc-website"
+    "initial build": "mhc-gc-website",
+    "(beta)": "mhc-gc-website"
   },
   "targets": {},
   "etags": {}
