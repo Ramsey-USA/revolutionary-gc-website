@@ -3,9 +3,31 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import WhyChooseSection from '../../components/WhyChooseSection'
 import { useState } from 'react'
-import { db, functions } from '../../lib/firebase'
-import { collection, addDoc, Timestamp } from 'firebase/firestore'
-import { httpsCallable } from 'firebase/functions'
+
+// Only import Firebase in client environment with proper error handling
+let db: any = null
+let functions: any = null
+let addDoc: any = null
+let collection: any = null
+let Timestamp: any = null
+let httpsCallable: any = null
+
+if (typeof window !== 'undefined') {
+  try {
+    const firebaseLib = require('../../lib/firebase')
+    const firestoreLib = require('firebase/firestore')
+    const functionsLib = require('firebase/functions')
+    
+    db = firebaseLib.db
+    functions = firebaseLib.functions
+    addDoc = firestoreLib.addDoc
+    collection = firestoreLib.collection
+    Timestamp = firestoreLib.Timestamp
+    httpsCallable = functionsLib.httpsCallable
+  } catch (error) {
+    console.warn('Firebase not available:', error)
+  }
+}
 
 export default function CareersPage() {
   const [formData, setFormData] = useState({
@@ -31,15 +53,29 @@ export default function CareersPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    
     try {
+      // Check if Firebase is available
+      if (!db || !addDoc || !collection || !Timestamp) {
+        throw new Error('Firebase not configured')
+      }
+      
       // Save to Firestore
       await addDoc(collection(db, 'applications'), {
         ...formData,
         createdAt: Timestamp.now()
       })
-      // Call Cloud Function to send email
-      const sendContactEmail = httpsCallable(functions, 'sendContactEmail')
-      await sendContactEmail({ ...formData })
+      
+      // Try to call Cloud Function if available
+      if (functions && httpsCallable) {
+        try {
+          const sendContactEmail = httpsCallable(functions, 'sendContactEmail')
+          await sendContactEmail({ ...formData })
+        } catch (funcError) {
+          console.warn('Email function not available:', funcError)
+        }
+      }
+      
       alert('Thank you for your application! We will review and contact you soon.')
       setFormData({
         name: '',
@@ -53,8 +89,10 @@ export default function CareersPage() {
         message: ''
       })
     } catch (error) {
-      alert('There was an error submitting your application. Please try again later.')
+      console.error('Application submission error:', error)
+      alert('There was an error submitting your application. Please try again later or email us directly.')
     }
+    
     setIsSubmitting(false)
   }
 
