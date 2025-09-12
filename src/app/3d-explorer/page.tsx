@@ -2,6 +2,7 @@
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import WhyChooseSection from '../../components/WhyChooseSection'
+import StarDecorations from '../../components/StarDecorations'
 import { Eye, MousePointer, Camera, Info } from 'lucide-react'
 
 export default function ThreeDExplorerPage() {
@@ -31,8 +32,18 @@ export default function ThreeDExplorerPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-army-gold to-yellow-500 text-army-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 bg-gradient-to-r from-army-gold to-yellow-500 text-army-black overflow-hidden">
+        {/* Star decorations - adjusted for gold background */}
+        <div className="absolute top-4 right-4 md:top-8 md:right-16 text-army-black/20 text-2xl md:text-4xl animate-pulse">★</div>
+        <div className="absolute top-12 right-1/4 text-white/30 text-xl md:text-2xl animate-pulse delay-300">★</div>
+        <div className="absolute top-20 right-2 md:top-32 md:right-8 text-army-black/15 text-2xl md:text-3xl animate-pulse delay-700">★</div>
+        <div className="absolute bottom-8 left-4 md:bottom-12 md:left-16 text-white/40 text-3xl md:text-5xl animate-pulse delay-500">★</div>
+        <div className="absolute bottom-16 left-1/3 md:bottom-28 text-army-black/25 text-xl md:text-2xl animate-pulse delay-1000">★</div>
+        <div className="absolute bottom-4 left-2 md:bottom-8 md:left-8 text-white/35 text-2xl md:text-3xl animate-pulse delay-200">★</div>
+        <div className="absolute top-1/2 right-6 md:right-12 text-army-black/10 text-xl md:text-2xl animate-pulse delay-800">★</div>
+        <div className="absolute top-1/3 left-8 md:left-20 text-white/20 text-2xl md:text-4xl animate-pulse delay-600">★</div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center w-20 h-20 bg-white bg-opacity-20 rounded-full mx-auto mb-6">
               <Eye size={40} />

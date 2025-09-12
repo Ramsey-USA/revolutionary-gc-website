@@ -22,7 +22,9 @@ const Footer = () => {
     { name: 'Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact Us', href: '/contact' },
+    { name: 'Subcontractors', href: '/subcontractors' },
+    { name: 'FAQs', href: '/faqs' },
     { name: 'Estimate', href: '/estimate' },
     { name: '3D Explorer', href: '/3d-explorer' },
     { name: 'Sandbox', href: '/sandbox' }
@@ -66,9 +68,19 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-army-black text-white">
+    <footer className="bg-army-black text-white relative overflow-hidden">
+      {/* Star decorations */}
+      <div className="absolute top-4 right-4 md:top-8 md:right-16 text-army-gold/20 text-2xl md:text-4xl animate-pulse">★</div>
+      <div className="absolute top-12 right-1/4 text-white/10 text-xl md:text-2xl animate-pulse delay-300">★</div>
+      <div className="absolute top-20 right-2 md:top-32 md:right-8 text-army-gold/15 text-2xl md:text-3xl animate-pulse delay-700">★</div>
+      <div className="absolute bottom-8 left-4 md:bottom-12 md:left-16 text-white/20 text-3xl md:text-5xl animate-pulse delay-500">★</div>
+      <div className="absolute bottom-16 left-1/3 md:bottom-28 text-army-gold/25 text-xl md:text-2xl animate-pulse delay-1000">★</div>
+      <div className="absolute bottom-4 left-2 md:bottom-8 md:left-8 text-white/15 text-2xl md:text-3xl animate-pulse delay-200">★</div>
+      <div className="absolute top-1/2 right-6 md:right-12 text-army-gold/10 text-xl md:text-2xl animate-pulse delay-800">★</div>
+      <div className="absolute top-1/3 left-8 md:left-20 text-white/10 text-2xl md:text-4xl animate-pulse delay-600">★</div>
+      
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 items-start">
           {/* Company Info - left */}
           <div className="md:col-span-1 lg:col-span-2">
@@ -191,8 +203,8 @@ const Footer = () => {
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div className="border-t border-gray-800 relative">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
               © {currentYear} MH Construction. All rights reserved.

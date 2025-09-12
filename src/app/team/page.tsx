@@ -117,7 +117,37 @@ export default function TeamPage() {
     }
   ]
 
-  const TeamSection = ({ title, members, bgColor = "bg-white", id }: { title: string, members: any[], bgColor?: string, id?: string }) => (
+  const TeamSection = ({ title, members, bgColor = "bg-white", id }: { title: string, members: any[], bgColor?: string, id?: string }) => {
+    // Dynamic border colors that rotate through theme palette
+    const getBorderColor = (index: number) => {
+      const colors = [
+        "border-mh-forest-green",
+        "border-army-gold", 
+        "border-blue-600",
+        "border-orange-500"
+      ]
+      return colors[index % colors.length]
+    }
+
+    // Skill tags for each team member
+    const getSkillTags = (member: any) => {
+      const skillMap: { [key: string]: string[] } = {
+        "Makayla Holstein": ["Project Management", "Communication", "Timeline Management"],
+        "Ben Woodall": ["Budget Management", "Planning", "Project Oversight"],
+        "Todd Schoeff": ["Cost Estimation", "Commercial Projects", "Medical Projects"],
+        "Ronaldo Garcia": ["Drywall Systems", "Interior Finishing", "Specialty Systems"],
+        "Steve McClary": ["Site Safety", "Quality Control", "20+ Years Experience"],
+        "Reagan Massey": ["Crew Management", "Daily Operations", "10+ Years Experience"],
+        "Porter Cline": ["Industrial Projects", "Large-Scale Operations", "5+ Years Experience"],
+        "Brooks Morris": ["Financial Management", "Budget Analysis", "Reporting"],
+        "Brittney Holstein": ["Recruitment", "Employee Relations", "Team Development"],
+        "Matt Ramsey": ["Veteran", "Marketing", "Technology Showcase"],
+        "Jennifer Tenehuerta": ["Administration", "Scheduling", "Communication"]
+      }
+      return skillMap[member.name] || ["Construction Expert", "Team Member"]
+    }
+
+    return (
     <section className={`py-16 ${bgColor}`} id={id}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-army-black text-center mb-12">
@@ -125,50 +155,71 @@ export default function TeamPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {members.map((member, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between h-full">
-              <div>
-                <div className="aspect-square relative">
+            <div key={index} className={`group relative rounded-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between h-full border-2 ${getBorderColor(index)}`}>
+              {/* Enhanced card with gradient background */}
+              <div className="bg-white rounded-xl h-full relative overflow-hidden">
+                {/* Image with hover effects */}
+                <div className="aspect-square relative overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
+                  {/* Gradient overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
+                
+                {/* Card content */}
                 <div className="p-6 pb-0">
-                  <h3 className="text-xl font-bold text-army-black mb-1">{member.name}</h3>
+                  <h3 className="text-xl font-bold text-army-black mb-1 group-hover:text-mh-forest-green transition-colors">{member.name}</h3>
                   <p className="text-army-gold font-semibold mb-3">{member.title}</p>
                   <p className="text-field-gray text-sm leading-relaxed mb-4">
                     {member.description}
                   </p>
+                  
+                  {/* Skill badges */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {getSkillTags(member).map((skill, skillIndex) => (
+                      <span 
+                        key={skillIndex} 
+                        className="px-3 py-1 bg-mh-forest-green/10 text-mh-forest-green rounded-full text-xs font-medium"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div className="flex justify-center space-x-4 mt-4 mb-6">
-                <a
-                  href={`mailto:${member.email}`}
-                  className="flex items-center justify-center w-10 h-10 bg-mh-forest-green text-white rounded-full transition-colors transition-transform duration-300 hover:bg-army-green hover:scale-110 hover:-translate-y-1"
-                  aria-label={`Email ${member.name}`}
-                >
-                  <Mail size={18} />
-                </a>
-                <a
-                  href={member.linkedin ? member.linkedin : "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full transition-colors transition-transform duration-300 hover:bg-blue-700 hover:scale-110 hover:-translate-y-1"
-                  aria-label={`LinkedIn for ${member.name}`}
-                >
-                  <Linkedin size={18} />
-                </a>
+                
+                {/* Enhanced contact buttons */}
+                <div className="flex justify-center space-x-4 mt-4 mb-6">
+                  <a
+                    href={`mailto:${member.email}`}
+                    className="flex items-center justify-center w-10 h-10 bg-mh-forest-green text-white rounded-full transition-all duration-300 hover:bg-army-green hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                    aria-label={`Email ${member.name}`}
+                  >
+                    <Mail size={18} />
+                  </a>
+                  <a
+                    href={member.linkedin ? member.linkedin : "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full transition-all duration-300 hover:bg-blue-700 hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                    aria-label={`LinkedIn for ${member.name}`}
+                  >
+                    <Linkedin size={18} />
+                  </a>
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
+    )
+  }
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-20">
       <Header />
       
       {/* Hero Section */}

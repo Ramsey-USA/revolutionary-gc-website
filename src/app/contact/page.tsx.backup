@@ -1,0 +1,1546 @@
+'use client'
+
+import { useState } from 'react'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
+import WhyChooseSection from '../../components/WhyChooseSection'
+import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
+
+// Only import Firebase in client environment with proper error handling
+let db: any = null
+let functions: any = null
+let addDoc: any = null
+let collection: any = null
+let Timestamp: any = null
+let httpsCallable: any = null
+
+if (typeof window !== 'undefined') {
+  try {
+    const firebaseLib = require('../../lib/firebase')
+    const firestoreLib = require('firebase/firestore')
+    const functionsLib = require('firebase/functions')
+    
+    db = firebaseLib.db
+    functions = firebaseLib.functions
+    addDoc = firestoreLib.addDoc
+    collection = firestoreLib.collection
+    Timestamp = firestoreLib.Timestamp
+    httpsCallable = functionsLib.httpsCallable
+  } catch (error) {
+    console.warn('Firebase not available:', error)
+  }
+}
+
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    projectType: '',
+    message: '',
+    jobRole: '',
+    projectStage: '',
+    projectTypeDetail: '',
+    budgetRange: '',
+    howHeard: ''
+  })
+
+  const [subcontractorData, setSubcontractorData] = useState({
+    companyName: '',
+    licenseNumber: '',
+    primaryTrade: '',
+    yearsInBusiness: '',
+    contactName: '',
+    contactTitle: '',
+    email: '',
+    phone: '',
+    additionalTrades: [],
+    insuranceCoverage: '',
+    bondingCapacity: '',
+    preferredProjectSize: '',
+    serviceArea: '',
+    projectTypesInterest: []
+  })
+
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmittingSubcontractor, setIsSubmittingSubcontractor] = useState(false)
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }))
+  }
+
+  const handleSubcontractorChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setSubcontractorData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }))
+  }
+
+  const handleCheckboxChange = (field: 'additionalTrades' | 'projectTypesInterest', value: string) => {
+    setSubcontractorData(prev => ({
+      ...prev,
+      [field]: prev[field].includes(value)
+        ? prev[field].filter(item => item !== value)
+        : [...prev[field], value]
+    }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    
+    try {
+      // Check if Firebase is available
+      if (!db || !addDoc || !collection || !Timestamp) {
+        throw new Error('Firebase not configured')
+      }
+      
+      // Save to Firestore
+      await addDoc(collection(db, 'contacts'), {
+        ...formData,
+        createdAt: Timestamp.now()
+      })
+      
+      // Try to call Cloud Function if available
+      if (functions && httpsCallable) {
+        try {
+          const sendContactEmail = httpsCallable(functions, 'sendContactEmail')
+          await sendContactEmail({ ...formData })
+        } catch (funcError) {
+          console.warn('Email function not available:', funcError)
+        }
+      }
+      
+      alert('Thank you for your message! We will get back to you within 24 hours.')
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        projectType: '',
+        message: '',
+        jobRole: '',
+        projectStage: '',
+        projectTypeDetail: '',
+        budgetRange: '',
+        howHeard: ''
+      })
+    } catch (error) {
+      console.error('Form submission error:', error)
+      alert('There was an error submitting your message. Please try again later or call us directly.')
+    }
+    
+    setIsSubmitting(false)
+  }
+
+  const handleSubcontractorSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmittingSubcontractor(true)
+    
+    try {
+      // Check if Firebase is available
+      if (!db || !addDoc || !collection || !Timestamp) {
+        throw new Error('Firebase not configured')
+      }
+      
+      // Save to Firestore with a separate collection for subcontractors
+      await addDoc(collection(db, 'subcontractors'), {
+        ...subcontractorData,
+        createdAt: Timestamp.now(),
+        status: 'pending_review'
+      })
+      
+      // Try to call Cloud Function if available
+      if (functions && httpsCallable) {
+        try {
+          const sendSubcontractorEmail = httpsCallable(functions, 'sendSubcontractorEmail')
+          await sendSubcontractorEmail({ ...subcontractorData })
+        } catch (funcError) {
+          console.warn('Email function not available:', funcError)
+        }
+      }
+      
+      alert('Thank you for joining our subcontractor bid list! We will review your information and contact you about upcoming opportunities.')
+      setSubcontractorData({
+        companyName: '',
+        licenseNumber: '',
+        primaryTrade: '',
+        yearsInBusiness: '',
+        contactName: '',
+        contactTitle: '',
+        email: '',
+        phone: '',
+        additionalTrades: [],
+        insuranceCoverage: '',
+        bondingCapacity: '',
+        preferredProjectSize: '',
+        serviceArea: '',
+        projectTypesInterest: []
+      })
+    } catch (error) {
+      console.error('Subcontractor registration error:', error)
+      alert('There was an error submitting your registration. Please try again later or call us directly.')
+    }
+    
+    setIsSubmittingSubcontractor(false)
+  }
+
+  const contactInfo = [
+    {
+      icon: MapPin,
+      title: "Service Area",
+      details: ["Pasco, Washington", "Greater Pacific Northwest", "Custom projects nationwide"]
+    },
+    {
+      icon: Phone,
+      title: "Phone",
+      details: ["(509) 555-0123", "Available 7 days a week"]
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      details: ["info@mhc-gc.com", "estimates@mhc-gc.com"]
+    },
+    {
+      icon: Clock,
+      title: "Business Hours",
+      details: ["Monday - Friday: 7:00 AM - 6:00 PM", "Saturday: 8:00 AM - 4:00 PM", "Sunday: Emergency calls only"]
+    }
+  ]
+
+  return (
+    <main className="min-h-screen flex flex-col">
+      <Header />
+      
+      {/* Hero Section with Statistics */}
+      <section className="relative py-20 bg-gradient-to-r from-mh-forest-green to-army-green text-white overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
+              Get In Touch
+            </h1>
+            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed opacity-90">
+              Ready to start your construction project? Contact our veteran-owned team 
+              for a free consultation and AI-powered estimate.
+            </p>
+          </div>
+
+          {/* Contact Statistics */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
+              <div className="text-3xl md:text-4xl font-bold text-army-gold mb-2 animate-fade-in-up">&lt;24h</div>
+              <div className="text-white/90 font-medium">Response Time</div>
+            </div>
+            
+            <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
+              <div className="text-3xl md:text-4xl font-bold text-army-gold mb-2 animate-fade-in-up">100+</div>
+              <div className="text-white/90 font-medium">Miles Service Area</div>
+            </div>
+            
+            <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
+              <div className="text-3xl md:text-4xl font-bold text-army-gold mb-2 animate-fade-in-up">500+</div>
+              <div className="text-white/90 font-medium">Projects Completed</div>
+            </div>
+            
+            <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
+              <div className="text-3xl md:text-4xl font-bold text-army-gold mb-2 animate-fade-in-up">98%</div>
+              <div className="text-white/90 font-medium">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Methods Grid */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-army-black mb-4">
+              How to Reach Us
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose the best way to contact our team. We're here to help with your construction needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Phone Contact */}
+            <div className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-mh-forest-green">
+              <div className="w-16 h-16 bg-mh-forest-green/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-forest-green/20 transition-colors">
+                <Phone className="w-8 h-8 text-mh-forest-green" />
+              </div>
+              <h3 className="text-xl font-bold text-army-black mb-4">Call Us</h3>
+              <div className="space-y-2 mb-4">
+                <p className="text-gray-600 font-semibold">(509) 555-0123</p>
+                <p className="text-gray-500 text-sm">Available 7 days a week</p>
+                <p className="text-gray-500 text-sm">Mon-Fri: 7AM-6PM</p>
+                <p className="text-gray-500 text-sm">Sat: 8AM-4PM</p>
+              </div>
+              <a 
+                href="tel:+15095550123" 
+                className="inline-flex items-center px-4 py-2 bg-mh-forest-green text-white rounded-lg font-medium hover:bg-army-green transition-colors"
+              >
+                Call Now
+                <Phone className="w-4 h-4 ml-2" />
+              </a>
+            </div>
+
+            {/* Email Contact */}
+            <div className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-army-gold">
+              <div className="w-16 h-16 bg-army-gold/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-army-gold/20 transition-colors">
+                <Mail className="w-8 h-8 text-army-gold" />
+              </div>
+              <h3 className="text-xl font-bold text-army-black mb-4">Email Us</h3>
+              <div className="space-y-2 mb-4">
+                <p className="text-gray-600 font-semibold">info@mhc-gc.com</p>
+                <p className="text-gray-500 text-sm">General inquiries</p>
+                <p className="text-gray-600 font-semibold">estimates@mhc-gc.com</p>
+                <p className="text-gray-500 text-sm">Project estimates</p>
+              </div>
+              <a 
+                href="mailto:info@mhc-gc.com" 
+                className="inline-flex items-center px-4 py-2 bg-army-gold text-army-black rounded-lg font-medium hover:bg-yellow-500 transition-colors"
+              >
+                Send Email
+                <Mail className="w-4 h-4 ml-2" />
+              </a>
+            </div>
+
+            {/* Location */}
+            <div className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-blue-600">
+              <div className="w-16 h-16 bg-blue-600/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
+                <MapPin className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-army-black mb-4">Visit Us</h3>
+              <div className="space-y-2 mb-4">
+                <p className="text-gray-600 font-semibold">3111 N. Capital Ave</p>
+                <p className="text-gray-600">Pasco, WA 99301</p>
+                <p className="text-gray-500 text-sm">100-mile service radius</p>
+                <p className="text-gray-500 text-sm">Pacific Northwest</p>
+              </div>
+              <button 
+                onClick={() => document.getElementById('service-map')?.scrollIntoView({ behavior: 'smooth' })}
+                className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              >
+                View Map
+                <MapPin className="w-4 h-4 ml-2" />
+              </button>
+            </div>
+
+            {/* Emergency Contact */}
+            <div className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-red-600">
+              <div className="w-16 h-16 bg-red-600/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-red-600/20 transition-colors">
+                <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-army-black mb-4">Emergency</h3>
+              <div className="space-y-2 mb-4">
+                <p className="text-gray-600 font-semibold">(509) 555-HELP</p>
+                <p className="text-gray-500 text-sm">24/7 Emergency Line</p>
+                <p className="text-gray-500 text-sm">Construction emergencies</p>
+                <p className="text-gray-500 text-sm">Urgent project issues</p>
+              </div>
+              <a 
+                href="tel:+15095554357" 
+                className="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors"
+              >
+                Emergency Call
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form and Information */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            
+            {/* Contact Form - Takes 2/3 width */}
+            <div className="lg:col-span-2">
+              <div className="bg-gray-50 rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100">
+                <div className="text-center mb-8 pb-6 border-b border-gray-200">
+                  <h2 className="text-3xl md:text-4xl font-bold text-army-black mb-4">
+                    Send Us a Message
+                  </h2>
+                  <p className="text-gray-600">
+                    Fill out the form below and we'll get back to you within 24 hours
+                  </p>
+                </div>
+                
+                <form onSubmit={handleSubmit} className="space-y-8">
+                  {/* Personal Information Section */}
+                  <div className="space-y-6">
+                    <h3 className="text-lg font-semibold text-army-black flex items-center">
+                      <svg className="w-5 h-5 mr-2 text-mh-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                      Personal Information
+                    </h3>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label htmlFor="name" className="block text-sm font-medium text-army-black">
+                          Full Name *
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          required
+                          value={formData.name}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400"
+                          placeholder="Your full name"
+                        />
+                      </div>
+                      
+                      <div className="space-y-2">
+                        <label htmlFor="email" className="block text-sm font-medium text-army-black">
+                          Email Address *
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          required
+                          value={formData.email}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400"
+                          placeholder="your.email@example.com"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label htmlFor="phone" className="block text-sm font-medium text-army-black">
+                          Phone Number *
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          required
+                          value={formData.phone}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400"
+                          placeholder="(509) 555-0123"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <label htmlFor="company" className="block text-sm font-medium text-army-black">
+                          Company/Organization
+                        </label>
+                        <input
+                          type="text"
+                          id="company"
+                          name="company"
+                          value={formData.company}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400"
+                          placeholder="Your company name"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Project Information Section */}
+                  <div className="space-y-6">
+                    <h3 className="text-lg font-semibold text-army-black flex items-center">
+                      <svg className="w-5 h-5 mr-2 text-mh-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                      </svg>
+                      Project Information
+                    </h3>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label htmlFor="jobRole" className="block text-sm font-medium text-army-black">
+                          Your Role *
+                        </label>
+                        <select
+                          id="jobRole"
+                          name="jobRole"
+                          required
+                          value={formData.jobRole || ''}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400"
+                        >
+                          <option value="">Select your role</option>
+                          <option value="owner">Owner/Decision Maker</option>
+                          <option value="architect">Architect/Designer</option>
+                          <option value="engineer">Engineer</option>
+                          <option value="contractor">Contractor/Subcontractor</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                      <div className="space-y-2">
+                        <label htmlFor="projectStage" className="block text-sm font-medium text-army-black">
+                          Project Stage *
+                        </label>
+                        <select
+                          id="projectStage"
+                          name="projectStage"
+                          required
+                          value={formData.projectStage || ''}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400"
+                        >
+                          <option value="">Select stage</option>
+                          <option value="planning">Planning/Concept</option>
+                          <option value="design">Design/Engineering</option>
+                          <option value="bidding">Bidding/Estimating</option>
+                          <option value="construction">Under Construction</option>
+                          <option value="completed">Completed</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label htmlFor="projectType" className="block text-sm font-medium text-army-black">
+                          Project Type *
+                        </label>
+                        <select
+                          id="projectType"
+                          name="projectType"
+                          required
+                          value={formData.projectType}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400"
+                        >
+                          <option value="">Select project type</option>
+                          <option value="commercial">Commercial Building</option>
+                          <option value="industrial">Industrial Facility</option>
+                          <option value="healthcare">Healthcare Facility</option>
+                          <option value="emergency">Emergency Services</option>
+                          <option value="specialty">Specialty Project</option>
+                          <option value="renovation">Renovation/Remodel</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                      <div className="space-y-2">
+                        <label htmlFor="budgetRange" className="block text-sm font-medium text-army-black">
+                          Budget Range *
+                        </label>
+                        <select
+                          id="budgetRange"
+                          name="budgetRange"
+                          required
+                          value={formData.budgetRange || ''}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400"
+                        >
+                          <option value="">Select range</option>
+                          <option value="under-250k">Under $250,000</option>
+                          <option value="250k-1m">$250,000 - $1M</option>
+                          <option value="1m-5m">$1M - $5M</option>
+                          <option value="5m-10m">$5M - $10M</option>
+                          <option value="10m-plus">$10M+</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <label htmlFor="howHeard" className="block text-sm font-medium text-army-black">
+                        How Did You Hear About Us? *
+                      </label>
+                      <select
+                        id="howHeard"
+                        name="howHeard"
+                        required
+                        value={formData.howHeard || ''}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400"
+                      >
+                        <option value="">Select option</option>
+                        <option value="referral">Referral/Word of Mouth</option>
+                        <option value="search">Search Engine</option>
+                        <option value="social">Social Media</option>
+                        <option value="event">Event/Trade Show</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* Project Details Section */}
+                  <div className="space-y-6">
+                    <h3 className="text-lg font-semibold text-army-black flex items-center">
+                      <svg className="w-5 h-5 mr-2 text-mh-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                      Project Details
+                    </h3>
+
+                    <div className="space-y-2">
+                      <label htmlFor="message" className="block text-sm font-medium text-army-black">
+                        Project Description
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        rows={6}
+                        value={formData.message}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400 resize-vertical"
+                        placeholder="Please describe your project, timeline, specific requirements, and any questions you have..."
+                      />
+                    </div>
+                  </div>
+
+                  {/* Submit Button */}
+                  <div className="pt-6 border-t border-gray-200">
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-army-gold text-army-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-xl flex items-center justify-center"
+                    >
+                      {isSubmitting ? (
+                        <span className="flex items-center">
+                          <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-army-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          Sending Message...
+                        </span>
+                      ) : (
+                        <>
+                          Send Message
+                          <Send className="ml-2" size={20} />
+                        </>
+                      )}
+                    </button>
+
+                    <p className="text-center text-sm text-gray-500 mt-4">
+                      * Required fields. We typically respond within 24 hours.
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            {/* Contact Information Sidebar - Takes 1/3 width */}
+            <div className="space-y-8">
+              <h2 className="text-2xl font-bold text-army-black mb-6">
+                Quick Contact Info
+              </h2>
+              
+              <div className="space-y-6">
+                {contactInfo.map((info, index) => {
+                  const IconComponent = info.icon
+                  return (
+                    <div key={index} className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+                      <div className="flex items-center justify-center w-12 h-12 bg-mh-forest-green text-white rounded-lg flex-shrink-0">
+                        <IconComponent size={20} />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-bold text-army-black mb-2">
+                          {info.title}
+                        </h3>
+                        {info.details.map((detail, detailIndex) => (
+                          <p key={detailIndex} className="text-gray-600 text-sm">
+                            {detail}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+
+              {/* Quick Actions */}
+              <div className="space-y-4 pt-6 border-t border-gray-200">
+                <h3 className="text-lg font-bold text-army-black mb-4">
+                  Quick Actions
+                </h3>
+                <div className="space-y-3">
+                  <a
+                    href="/estimate"
+                    className="block bg-mh-forest-green text-white px-6 py-3 rounded-lg font-semibold hover:bg-army-green transition-colors text-center"
+                  >
+                    Get AI Estimate
+                  </a>
+                  <a
+                    href="/services"
+                    className="block border border-mh-forest-green text-mh-forest-green px-6 py-3 rounded-lg font-semibold hover:bg-mh-forest-green hover:text-white transition-colors text-center"
+                  >
+                    View Our Services
+                  </a>
+                  <a
+                    href="/projects"
+                    className="block border border-mh-forest-green text-mh-forest-green px-6 py-3 rounded-lg font-semibold hover:bg-mh-forest-green hover:text-white transition-colors text-center"
+                  >
+                    See Our Work
+                  </a>
+                </div>
+              </div>
+
+              {/* Emergency Contact Card */}
+              <div className="p-6 bg-red-50 border border-red-200 rounded-lg">
+                <h3 className="text-xl font-bold text-red-800 mb-2 flex items-center">
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                  </svg>
+                  Emergency Contact
+                </h3>
+                <p className="text-red-700 mb-3 text-sm">
+                  For construction emergencies or urgent project issues, call our 24/7 emergency line:
+                </p>
+                <a 
+                  href="tel:+15095554357"
+                  className="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors"
+                >
+                  <span className="text-lg font-bold">(509) 555-HELP</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Subcontractor Bid List Section */}
+      <section className="py-20 bg-gradient-to-br from-army-green/5 via-mh-forest-green/3 to-army-gold/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Enhanced Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-army-gold rounded-full mb-6 mx-auto">
+              <svg className="w-10 h-10 text-army-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-army-black mb-6">
+              Join Our Elite Subcontractor Network
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Partner with MH Construction and gain access to high-value public projects. Join our vetted network of professional subcontractors and grow your business with military precision and reliability.
+            </p>
+            
+            {/* Network Statistics */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto">
+              <div className="text-center p-4 bg-white/50 backdrop-blur-sm rounded-xl border border-white/30">
+                <div className="text-2xl md:text-3xl font-bold text-mh-forest-green mb-1">150+</div>
+                <div className="text-gray-600 text-sm font-medium">Active Subcontractors</div>
+              </div>
+              <div className="text-center p-4 bg-white/50 backdrop-blur-sm rounded-xl border border-white/30">
+                <div className="text-2xl md:text-3xl font-bold text-army-gold mb-1">$50M+</div>
+                <div className="text-gray-600 text-sm font-medium">Annual Project Value</div>
+              </div>
+              <div className="text-center p-4 bg-white/50 backdrop-blur-sm rounded-xl border border-white/30">
+                <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-1">98%</div>
+                <div className="text-gray-600 text-sm font-medium">On-Time Payment</div>
+              </div>
+              <div className="text-center p-4 bg-white/50 backdrop-blur-sm rounded-xl border border-white/30">
+                <div className="text-2xl md:text-3xl font-bold text-red-600 mb-1">24hr</div>
+                <div className="text-gray-600 text-sm font-medium">Bid Response Time</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 xl:grid-cols-4 gap-8">
+            {/* Enhanced Benefits Column */}
+            <div className="xl:col-span-1 space-y-6">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
+                <h3 className="text-2xl font-bold text-army-black mb-6 flex items-center">
+                  <svg className="w-6 h-6 mr-3 text-army-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Network Benefits
+                </h3>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-8 h-8 bg-mh-forest-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-army-black mb-1">High-Value Public Projects</h4>
+                      <p className="text-gray-600 text-sm">Access to government contracts, schools, hospitals, and infrastructure projects with competitive rates</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-8 h-8 bg-army-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <svg className="w-4 h-4 text-army-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-army-black mb-1">Priority Notifications</h4>
+                      <p className="text-gray-600 text-sm">Be first to know about upcoming opportunities with detailed project specifications and requirements</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-army-black mb-1">Guaranteed Payments</h4>
+                      <p className="text-gray-600 text-sm">Reliable payment terms with our 98% on-time payment record and veteran-owned integrity</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-army-black mb-1">Professional Network</h4>
+                      <p className="text-gray-600 text-sm">Connect with quality contractors and potential partnerships for complex multi-trade projects</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-army-black mb-1">Business Growth Support</h4>
+                      <p className="text-gray-600 text-sm">Access to training resources, compliance assistance, and business development opportunities</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Quick Stats */}
+                <div className="mt-8 pt-6 border-t border-gray-200">
+                  <h4 className="font-semibold text-army-black mb-4">Registration Facts</h4>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Processing Time:</span>
+                      <span className="font-medium text-mh-forest-green">24-48 hours</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Annual Fee:</span>
+                      <span className="font-medium text-mh-forest-green">$0 (Free)</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Minimum Insurance:</span>
+                      <span className="font-medium text-army-black">$1M General</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">License Required:</span>
+                      <span className="font-medium text-army-black">WA State</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Enhanced Registration Form */}
+            <div className="xl:col-span-3">
+              <div className="bg-white rounded-2xl p-8 md:p-12 shadow-2xl border border-gray-100 relative overflow-hidden">
+                {/* Background Pattern */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-army-gold/5 to-mh-forest-green/5 rounded-full -translate-y-32 translate-x-32"></div>
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-blue-500/5 to-army-green/5 rounded-full translate-y-24 -translate-x-24"></div>
+                
+                <div className="relative z-10">
+                  <div className="text-center mb-8 pb-6 border-b border-gray-200">
+                    <h3 className="text-3xl font-bold text-army-black mb-4">
+                      Subcontractor Registration
+                    </h3>
+                    <p className="text-gray-600 max-w-2xl mx-auto">
+                      Complete this form to join our network of qualified subcontractors. All information is kept confidential and used solely for project matching and communications.
+                    </p>
+                    <div className="flex items-center justify-center mt-4 space-x-4 text-sm text-gray-500">
+                      <div className="flex items-center">
+                        <svg className="w-4 h-4 mr-1 text-mh-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                        Secure & Confidential
+                      </div>
+                      <div className="flex items-center">
+                        <svg className="w-4 h-4 mr-1 text-army-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        Fast Processing
+                      </div>
+                    </div>
+                  </div>
+                
+                <form onSubmit={handleSubcontractorSubmit} className="space-y-8">
+                  {/* Company Information */}
+                  <div className="space-y-6">
+                    <div className="flex items-center justify-between">
+                      <h4 className="text-xl font-semibold text-army-black flex items-center">
+                        <div className="w-8 h-8 bg-mh-forest-green rounded-full flex items-center justify-center mr-3">
+                          <span className="text-white font-bold text-sm">1</span>
+                        </div>
+                        Company Information
+                      </h4>
+                      <span className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Required</span>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label className="block text-sm font-medium text-army-black">Company Name *</label>
+                        <input
+                          type="text"
+                          name="companyName"
+                          required
+                          value={subcontractorData.companyName}
+                          onChange={handleSubcontractorChange}
+                          className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-all duration-200 bg-white hover:border-gray-400 shadow-sm"
+                          placeholder="Your company name"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="block text-sm font-medium text-army-black">WA State License Number *</label>
+                        <input
+                          type="text"
+                          name="licenseNumber"
+                          required
+                          value={subcontractorData.licenseNumber}
+                          onChange={handleSubcontractorChange}
+                          className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-all duration-200 bg-white hover:border-gray-400 shadow-sm"
+                          placeholder="WA-######-##"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label className="block text-sm font-medium text-army-black">Primary Trade *</label>
+                        <select
+                          name="primaryTrade"
+                          required
+                          value={subcontractorData.primaryTrade}
+                          onChange={handleSubcontractorChange}
+                          className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-all duration-200 bg-white hover:border-gray-400 shadow-sm"
+                        >
+                          <option value="">Select your primary trade</option>
+                          <option value="electrical">⚡ Electrical</option>
+                          <option value="plumbing">🔧 Plumbing</option>
+                          <option value="hvac">❄️ HVAC</option>
+                          <option value="concrete">🏗️ Concrete & Masonry</option>
+                          <option value="roofing">🏠 Roofing</option>
+                          <option value="flooring">📐 Flooring</option>
+                          <option value="drywall">🧱 Drywall & Insulation</option>
+                          <option value="painting">🎨 Painting & Finishing</option>
+                          <option value="carpentry">🔨 Carpentry & Framing</option>
+                          <option value="masonry">🧱 Masonry & Stonework</option>
+                          <option value="steel">⚙️ Structural Steel</option>
+                          <option value="sitework">🚜 Site Work & Excavation</option>
+                          <option value="specialty">🔬 Specialty Systems</option>
+                          <option value="other">📋 Other</option>
+                        </select>
+                      </div>
+                      <div className="space-y-2">
+                        <label className="block text-sm font-medium text-army-black">Years in Business *</label>
+                        <select
+                          name="yearsInBusiness"
+                          required
+                          value={subcontractorData.yearsInBusiness}
+                          onChange={handleSubcontractorChange}
+                          className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-all duration-200 bg-white hover:border-gray-400 shadow-sm"
+                        >
+                          <option value="">Select experience level</option>
+                          <option value="1-2">1-2 years (Emerging)</option>
+                          <option value="3-5">3-5 years (Established)</option>
+                          <option value="6-10">6-10 years (Experienced)</option>
+                          <option value="11-20">11-20 years (Veteran)</option>
+                          <option value="20+">20+ years (Industry Leader)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Contact Information */}
+                  <div className="space-y-6">
+                    <div className="flex items-center justify-between">
+                      <h4 className="text-xl font-semibold text-army-black flex items-center">
+                        <div className="w-8 h-8 bg-army-gold rounded-full flex items-center justify-center mr-3">
+                          <span className="text-army-black font-bold text-sm">2</span>
+                        </div>
+                        Primary Contact Information
+                      </h4>
+                      <span className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Required</span>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label className="block text-sm font-medium text-army-black">Contact Name *</label>
+                        <input
+                          type="text"
+                          name="contactName"
+                          required
+                          value={subcontractorData.contactName}
+                          onChange={handleSubcontractorChange}
+                          className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-all duration-200 bg-white hover:border-gray-400 shadow-sm"
+                          placeholder="Full name of primary contact"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="block text-sm font-medium text-army-black">Title/Position *</label>
+                        <input
+                          type="text"
+                          name="contactTitle"
+                          required
+                          value={subcontractorData.contactTitle}
+                          onChange={handleSubcontractorChange}
+                          className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-all duration-200 bg-white hover:border-gray-400 shadow-sm"
+                          placeholder="e.g., Owner, Project Manager, Estimator"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label className="block text-sm font-medium text-army-black">Email Address *</label>
+                        <input
+                          type="email"
+                          name="email"
+                          required
+                          value={subcontractorData.email}
+                          onChange={handleSubcontractorChange}
+                          className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-all duration-200 bg-white hover:border-gray-400 shadow-sm"
+                          placeholder="contact@yourcompany.com"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="block text-sm font-medium text-army-black">Phone Number *</label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          required
+                          value={subcontractorData.phone}
+                          onChange={handleSubcontractorChange}
+                          className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-all duration-200 bg-white hover:border-gray-400 shadow-sm"
+                          placeholder="(509) 555-0123"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Enhanced Capabilities & Certifications */}
+                  <div className="space-y-6">
+                    <div className="flex items-center justify-between">
+                      <h4 className="text-xl font-semibold text-army-black flex items-center">
+                        <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                          <span className="text-white font-bold text-sm">3</span>
+                        </div>
+                        Capabilities & Certifications
+                      </h4>
+                      <span className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Optional</span>
+                    </div>
+
+                    <div className="space-y-4">
+                      <div>
+                        <label className="block text-sm font-medium text-army-black mb-3">Additional Trades & Services</label>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+                          {[
+                            { name: 'Electrical', icon: '⚡' },
+                            { name: 'Plumbing', icon: '🔧' },
+                            { name: 'HVAC', icon: '❄️' },
+                            { name: 'Concrete', icon: '🏗️' },
+                            { name: 'Roofing', icon: '🏠' },
+                            { name: 'Flooring', icon: '📐' },
+                            { name: 'Drywall', icon: '🧱' },
+                            { name: 'Painting', icon: '🎨' },
+                            { name: 'Carpentry', icon: '🔨' },
+                            { name: 'Masonry', icon: '⚒️' },
+                            { name: 'Steel Work', icon: '⚙️' },
+                            { name: 'Site Work', icon: '🚜' }
+                          ].map((trade) => (
+                            <label key={trade.name} className="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
+                              <input 
+                                type="checkbox" 
+                                checked={subcontractorData.additionalTrades.includes(trade.name)}
+                                onChange={() => handleCheckboxChange('additionalTrades', trade.name)}
+                                className="text-mh-forest-green focus:ring-mh-forest-green border-gray-300 rounded" 
+                              />
+                              <span className="mr-1">{trade.icon}</span>
+                              <span className="text-gray-700 font-medium">{trade.name}</span>
+                            </label>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <label className="block text-sm font-medium text-army-black">General Liability Insurance *</label>
+                          <select
+                            name="insuranceCoverage"
+                            required
+                            value={subcontractorData.insuranceCoverage}
+                            onChange={handleSubcontractorChange}
+                            className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-all duration-200 bg-white hover:border-gray-400 shadow-sm"
+                          >
+                            <option value="">Select coverage amount</option>
+                            <option value="500k">$500,000</option>
+                            <option value="1m">$1,000,000</option>
+                            <option value="2m">$2,000,000</option>
+                            <option value="5m">$5,000,000+</option>
+                          </select>
+                        </div>
+                        <div className="space-y-2">
+                          <label className="block text-sm font-medium text-army-black">Bonding Capacity</label>
+                          <select
+                            name="bondingCapacity"
+                            value={subcontractorData.bondingCapacity}
+                            onChange={handleSubcontractorChange}
+                            className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-all duration-200 bg-white hover:border-gray-400 shadow-sm"
+                          >
+                            <option value="">Select bonding capacity</option>
+                            <option value="100k">Up to $100,000</option>
+                            <option value="500k">Up to $500,000</option>
+                            <option value="1m">Up to $1,000,000</option>
+                            <option value="5m">Up to $5,000,000</option>
+                            <option value="unlimited">Unlimited</option>
+                            <option value="none">No bonding available</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Enhanced Project Preferences */}
+                  <div className="space-y-6">
+                    <div className="flex items-center justify-between">
+                      <h4 className="text-xl font-semibold text-army-black flex items-center">
+                        <div className="w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center mr-3">
+                          <span className="text-white font-bold text-sm">4</span>
+                        </div>
+                        Project Preferences
+                      </h4>
+                      <span className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Optional</span>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label className="block text-sm font-medium text-army-black">Preferred Project Size</label>
+                        <select 
+                          name="preferredProjectSize"
+                          value={subcontractorData.preferredProjectSize}
+                          onChange={handleSubcontractorChange}
+                          className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-all duration-200 bg-white hover:border-gray-400 shadow-sm"
+                        >
+                          <option value="">Any project size</option>
+                          <option value="small">Small Projects (Under $100k)</option>
+                          <option value="medium">Medium Projects ($100k - $1M)</option>
+                          <option value="large">Large Projects ($1M - $10M)</option>
+                          <option value="mega">Mega Projects ($10M+)</option>
+                        </select>
+                      </div>
+                      <div className="space-y-2">
+                        <label className="block text-sm font-medium text-army-black">Service Area Radius</label>
+                        <select
+                          name="serviceArea"
+                          value={subcontractorData.serviceArea}
+                          onChange={handleSubcontractorChange}
+                          className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-all duration-200 bg-white hover:border-gray-400 shadow-sm"
+                        >
+                          <option value="">Select service area</option>
+                          <option value="25">Within 25 miles of Pasco</option>
+                          <option value="50">Within 50 miles of Pasco</option>
+                          <option value="100">Within 100 miles of Pasco</option>
+                          <option value="statewide">Statewide (Washington)</option>
+                          <option value="regional">Regional (Pacific Northwest)</option>
+                          <option value="national">National</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-army-black mb-3">Project Types of Interest</label>
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
+                        {[
+                          { name: 'Commercial', icon: '🏢', desc: 'Office buildings, retail' },
+                          { name: 'Industrial', icon: '🏭', desc: 'Manufacturing, warehouses' },
+                          { name: 'Healthcare', icon: '🏥', desc: 'Hospitals, clinics' },
+                          { name: 'Government', icon: '🏛️', desc: 'Federal, state, local' },
+                          { name: 'Educational', icon: '🎓', desc: 'Schools, universities' },
+                          { name: 'Emergency Services', icon: '🚒', desc: 'Fire stations, police' }
+                        ].map((type) => (
+                          <label key={type.name} className="flex items-start space-x-3 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
+                            <input 
+                              type="checkbox" 
+                              checked={subcontractorData.projectTypesInterest.includes(type.name)}
+                              onChange={() => handleCheckboxChange('projectTypesInterest', type.name)}
+                              className="text-mh-forest-green focus:ring-mh-forest-green border-gray-300 rounded mt-1" 
+                            />
+                            <div>
+                              <div className="flex items-center space-x-2">
+                                <span>{type.icon}</span>
+                                <span className="font-medium text-gray-900">{type.name}</span>
+                              </div>
+                              <div className="text-gray-500 text-xs mt-1">{type.desc}</div>
+                            </div>
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Enhanced Submit Section */}
+                  <div className="pt-8 border-t border-gray-200">
+                    <div className="bg-gradient-to-r from-mh-forest-green/5 to-army-gold/5 rounded-2xl p-6 mb-6">
+                      <h5 className="font-semibold text-army-black mb-3 flex items-center">
+                        <svg className="w-5 h-5 mr-2 text-mh-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Registration Benefits Summary
+                      </h5>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
+                        <div className="flex items-center">
+                          <span className="w-2 h-2 bg-mh-forest-green rounded-full mr-2"></span>
+                          Immediate access to bid opportunities
+                        </div>
+                        <div className="flex items-center">
+                          <span className="w-2 h-2 bg-army-gold rounded-full mr-2"></span>
+                          Priority notifications for your trades
+                        </div>
+                        <div className="flex items-center">
+                          <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+                          Professional network connections
+                        </div>
+                        <div className="flex items-center">
+                          <span className="w-2 h-2 bg-red-600 rounded-full mr-2"></span>
+                          Guaranteed payment terms
+                        </div>
+                      </div>
+                    </div>
+
+                    <button
+                      type="submit"
+                      disabled={isSubmittingSubcontractor}
+                      className="w-full bg-gradient-to-r from-army-gold to-yellow-500 text-army-black px-8 py-5 rounded-xl text-lg font-bold hover:from-yellow-500 hover:to-army-gold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none relative overflow-hidden"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                      <span className="relative z-10 flex items-center">
+                        {isSubmittingSubcontractor ? (
+                          <>
+                            <svg className="animate-spin -ml-1 mr-3 h-6 w-6 text-army-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                            Processing Registration...
+                          </>
+                        ) : (
+                          <>
+                            <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Join Elite Subcontractor Network
+                            <svg className="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                          </>
+                        )}
+                      </span>
+                    </button>
+                    
+                    <div className="mt-6 text-center space-y-2">
+                      <p className="text-sm text-gray-500">
+                        By submitting this form, you agree to receive bid notifications and project communications from MH Construction.
+                      </p>
+                      <p className="text-xs text-gray-400">
+                        ✓ Your information is secure and confidential • ✓ No spam, only relevant opportunities • ✓ Unsubscribe anytime
+                      </p>
+                    </div>
+                  </div>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Enhanced Information Cards */}
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-8 bg-white rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="w-20 h-20 bg-gradient-to-br from-mh-forest-green to-army-green rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-army-black mb-3">High-Value Public Projects</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                Access government contracts, educational facilities, healthcare projects, and infrastructure work with competitive rates and guaranteed payment terms.
+              </p>
+              <div className="flex items-center justify-center text-sm text-mh-forest-green font-medium">
+                <span className="w-2 h-2 bg-mh-forest-green rounded-full mr-2"></span>
+                $50M+ Annual Project Volume
+              </div>
+            </div>
+
+            <div className="text-center p-8 bg-white rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="w-20 h-20 bg-gradient-to-br from-army-gold to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-10 h-10 text-army-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-army-black mb-3">Priority Bid Notifications</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                Receive early notifications about upcoming bid opportunities with detailed project specifications, timelines, and requirements tailored to your capabilities.
+              </p>
+              <div className="flex items-center justify-center text-sm text-army-gold font-medium">
+                <span className="w-2 h-2 bg-army-gold rounded-full mr-2"></span>
+                24-Hour Response Guarantee
+              </div>
+            </div>
+
+            <div className="text-center p-8 bg-white rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-army-black mb-3">Elite Professional Network</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                Connect with other qualified subcontractors, share resources, and collaborate on complex multi-trade projects while building lasting business relationships.
+              </p>
+              <div className="flex items-center justify-center text-sm text-blue-600 font-medium">
+                <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+                150+ Active Network Members
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action Banner */}
+          <div className="mt-16">
+            <div className="bg-gradient-to-r from-army-green via-mh-forest-green to-army-green rounded-2xl p-8 md:p-12 text-white relative overflow-hidden">
+              <div className="absolute inset-0 bg-black/10"></div>
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32"></div>
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-army-gold/10 rounded-full translate-y-24 -translate-x-24"></div>
+              
+              <div className="relative z-10 text-center max-w-4xl mx-auto">
+                <h3 className="text-3xl md:text-4xl font-bold mb-4">Ready to Grow Your Business?</h3>
+                <p className="text-xl mb-8 opacity-90 leading-relaxed">
+                  Join MH Construction's elite subcontractor network and access high-value public projects with guaranteed payment terms. 
+                  Our veteran-owned company values integrity, quality, and professional partnerships.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <button
+                    onClick={() => document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="inline-flex items-center px-8 py-4 bg-army-gold text-army-black rounded-xl font-bold hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
+                  >
+                    <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Register Now - It's Free
+                  </button>
+                  
+                  <a
+                    href="tel:+15095550123"
+                    className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white rounded-xl font-semibold hover:bg-white/10 transition-all duration-300"
+                  >
+                    <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    Questions? Call Us
+                  </a>
+                </div>
+                
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                  <div className="flex items-center justify-center">
+                    <svg className="w-5 h-5 mr-2 text-army-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-sm">No Registration Fees</span>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <svg className="w-5 h-5 mr-2 text-army-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-sm">Immediate Access</span>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <svg className="w-5 h-5 mr-2 text-army-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-sm">Cancel Anytime</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-army-black mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-gray-600">
+              Common questions about our contact process and services
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {/* FAQ 1 */}
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+              <h3 className="text-lg font-bold text-army-black mb-3">
+                How quickly will you respond to my inquiry?
+              </h3>
+              <p className="text-gray-600">
+                We typically respond to all inquiries within 24 hours, often much sooner. For urgent matters or emergencies, please call our emergency line at (509) 555-HELP for immediate assistance.
+              </p>
+            </div>
+
+            {/* FAQ 2 */}
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+              <h3 className="text-lg font-bold text-army-black mb-3">
+                What information should I include in my project inquiry?
+              </h3>
+              <p className="text-gray-600">
+                Please include your project type, approximate budget range, timeline, location, and any specific requirements. The more details you provide, the more accurate our initial assessment and response will be.
+              </p>
+            </div>
+
+            {/* FAQ 3 */}
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+              <h3 className="text-lg font-bold text-army-black mb-3">
+                Do you provide free estimates?
+              </h3>
+              <p className="text-gray-600">
+                Yes! We provide free initial consultations and estimates for all projects. Our AI-powered estimation tool can also provide quick preliminary estimates through our website.
+              </p>
+            </div>
+
+            {/* FAQ 4 */}
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+              <h3 className="text-lg font-bold text-army-black mb-3">
+                What is your service area?
+              </h3>
+              <p className="text-gray-600">
+                We serve a 100-mile radius from our headquarters in Pasco, Washington, covering the greater Pacific Northwest. For larger or specialized projects, we can work nationwide.
+              </p>
+            </div>
+
+            {/* FAQ 5 */}
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+              <h3 className="text-lg font-bold text-army-black mb-3">
+                What types of projects do you handle?
+              </h3>
+              <p className="text-gray-600">
+                We specialize in commercial buildings, industrial facilities, healthcare facilities, emergency services buildings, and specialty projects. We handle everything from new construction to renovations and tenant improvements.
+              </p>
+            </div>
+
+            {/* FAQ 6 */}
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+              <h3 className="text-lg font-bold text-army-black mb-3">
+                Can I schedule an on-site consultation?
+              </h3>
+              <p className="text-gray-600">
+                Absolutely! After our initial discussion, we can schedule an on-site consultation to better understand your project requirements and provide a more detailed assessment and proposal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Map Section */}
+      <section id="service-map" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-army-black mb-4">
+              Our Service Area
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Serving a 100-mile radius from our headquarters in Pasco, Washington. Proudly serving the Pacific Northwest with military precision and excellence.
+            </p>
+          </div>
+          
+          {/* Service Area Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="text-center p-6 bg-gray-50 rounded-xl">
+              <div className="w-16 h-16 bg-mh-forest-green rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-army-black mb-2">Headquarters</h3>
+              <p className="text-gray-600">3111 N. Capital Ave<br />Pasco, WA 99301</p>
+            </div>
+            
+            <div className="text-center p-6 bg-gray-50 rounded-xl">
+              <div className="w-16 h-16 bg-army-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-army-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-army-black mb-2">Service Radius</h3>
+              <p className="text-gray-600">100-Mile Coverage<br />Pacific Northwest</p>
+            </div>
+            
+            <div className="text-center p-6 bg-gray-50 rounded-xl">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-army-black mb-2">Special Projects</h3>
+              <p className="text-gray-600">Nationwide<br />Custom Solutions</p>
+            </div>
+          </div>
+          
+          {/* Interactive Google Map */}
+          <div className="bg-gray-300 h-96 rounded-xl overflow-hidden shadow-xl border border-gray-200">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d731073.1551939894!2d-119.70000000000002!3d46.2396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54984c8f8c8c8c8c%3A0x8c8c8c8c8c8c8c8c!2s3111%20N%20Capital%20Ave%2C%20Pasco%2C%20WA%2099301%2C%20USA!5e0!3m2!1sen!2sus!4v1726167700000!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="MH Construction - 3111 N Capital Ave, Pasco, WA - 100 Mile Service Area"
+            ></iframe>
+          </div>
+          
+          {/* Service Area Description */}
+          <div className="mt-12 text-center">
+            <div className="bg-mh-forest-green/5 border border-mh-forest-green/20 rounded-xl p-8 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-army-black mb-4">Ready to Start Your Project?</h3>
+              <p className="text-gray-600 mb-6">
+                Whether you're in our local service area or need a custom solution anywhere in the country, our veteran-owned team is ready to bring military-grade precision to your construction project.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={() => document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="inline-flex items-center px-8 py-3 bg-army-gold text-army-black rounded-lg font-semibold hover:bg-yellow-500 transition-colors"
+                >
+                  Get Started Today
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </button>
+                <a
+                  href="tel:+15095550123"
+                  className="inline-flex items-center px-8 py-3 border-2 border-mh-forest-green text-mh-forest-green rounded-lg font-semibold hover:bg-mh-forest-green hover:text-white transition-colors"
+                >
+                  Call Now
+                  <Phone className="w-5 h-5 ml-2" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="mt-auto">
+        <WhyChooseSection />
+        <Footer />
+      </div>
+    </main>
+  )
+}

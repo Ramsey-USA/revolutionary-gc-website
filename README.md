@@ -81,7 +81,7 @@ Value 5: Transparent Communication
 Title on front: "Transparent Communication"
 Description on back: "No surprises, no hidden costs, no communication gaps. Our clients have real-time access to project progress, timeline updates, and detailed explanations of every construction decision we make."
 Team Experience Section | Page
-Section Title: "Meet Our Expert Team" Section Subtitle: "Decades of combined construction expertise"
+Section Title: "Meet Our Expert Team" Section Subtitle: "150+ years of combined construction expertise"
 
 Executive Leadership
 Jeremy Thamert - Owner & General Manager: Jeremy has served as General Manager of MH Construction for 2 years and became owner in January 2025. He is the visionary behind MH Construction's pioneering approach, with extensive experience and a commitment to integrating cutting-edge technology, like AI-powered tools. Jeremy continues the company's tradition of military precision and a dedication to building the future of construction today.

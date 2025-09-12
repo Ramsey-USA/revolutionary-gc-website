@@ -1,6 +1,7 @@
 'use client'
 
 import { Lightbulb, Shield, Users, Award, MessageCircle } from 'lucide-react'
+import styles from '../styles/ProtectiveCase.module.css'
 
 const CoreValuesSection = () => {
   const values = [
@@ -31,7 +32,7 @@ const CoreValuesSection = () => {
     {
       icon: MessageCircle,
       title: "Transparent Communication",
-      description: "No surprises, no hidden costs, no communication gaps. Our clients have real-time access to project progress, timeline updates, and detailed explanations of every construction decision we make.",
+      description: "No surprises, no hidden costs, no communication gaps. Our clients receive detailed explanations of every construction decision we make.",
       color: "text-field-tan"
     }
   ]
@@ -57,18 +58,18 @@ const CoreValuesSection = () => {
             return (
               <div key={index} className="flip-card h-80">
                 <div className="flip-card-inner h-full">
-                  {/* Front of Card */}
-                  <div className="flip-card-front bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl shadow-lg p-6 flex flex-col items-center justify-center border border-gray-200">
+                  {/* Front of Card - Hybrid Protective Case (simplified) */}
+                  <div className={`flip-card-front ${styles.protectiveCase} bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl shadow-lg p-6 flex flex-col items-center justify-center border border-gray-200`}>
                     <div className={`${value.color} mb-6`}>
                       <IconComponent size={48} />
                     </div>
-                    <h3 className="text-xl font-bold text-army-black text-center leading-tight">
+                    <h3 className="text-xl font-bold text-army-gold text-center leading-tight drop-shadow-sm">
                       {value.title}
                     </h3>
                   </div>
 
-                  {/* Back of Card */}
-                  <div className="flip-card-back bg-gradient-to-br from-mh-forest-green to-army-green rounded-xl shadow-lg p-6 flex flex-col justify-center text-white">
+                  {/* Back of Card - Hybrid Protective Case (simplified) */}
+                  <div className={`flip-card-back ${styles.protectiveCase} bg-gradient-to-br from-mh-forest-green to-army-green rounded-xl shadow-lg p-6 flex flex-col justify-center text-white`}>
                     <div className="text-army-gold mb-4 flex justify-center">
                       <IconComponent size={32} />
                     </div>

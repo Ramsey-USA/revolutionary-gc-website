@@ -17,8 +17,8 @@ export default function WhyChooseSection() {
             <div className="bg-army-gold text-army-black w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 transition-transform duration-300 hover:scale-110 hover:-translate-y-1">
               <Trophy size={48} />
             </div>
-            <h3 className="text-xl font-bold text-army-black mb-2">Years Experience</h3>
-            <p className="text-field-gray">Decades of combined construction expertise</p>
+            <h3 className="text-xl font-bold text-army-black mb-2">150+ Years Experience</h3>
+            <p className="text-field-gray">Combined construction expertise across our team</p>
           </div>
           <div className="text-center">
             <div className="bg-mh-forest-green text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 transition-transform duration-300 hover:scale-110 hover:-translate-y-1">

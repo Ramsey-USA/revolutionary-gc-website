@@ -10,7 +10,7 @@ import WhyChooseSection from '../components/WhyChooseSection'
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="min-h-screen flex flex-col pt-20">
       <Header />
       <HeroSection />
       <AIToolsSection />
