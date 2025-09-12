@@ -93,15 +93,14 @@ Ben Woodall - Project Manager: Ben is a dedicated Project Manager with a focus o
 Todd Schoeff - Lead Estimator: Todd's role is crucial in providing clients with accurate and transparent project costs. He is an expert in general construction estimating, with years of experience across commercial, medical, and specialty projects. His precision ensures clients receive realistic and detailed project timelines and costs.
 Ronaldo Garcia - Drywall & Specialty Systems Expert: Ronaldo is the resident specialist in interior finishing. His expertise ensures flawless drywall installation and the masterful execution of specialty wall systems, which adds a high level of craftsmanship to every project.
 Site & Field Operations
-Steve - Senior Superintendent: With over 20 years of experience, Steve is a master of all types of construction builds. He oversees all phases of a project on-site, ensuring safety, quality, and efficiency.
-Reagan - Superintendent: Reagan is a seasoned Superintendent with over a decade of experience in all types of builds. He is responsible for daily on-site operations, managing crews, and ensuring that every project is completed to the highest standards.
+Steve McClary - Senior Superintendent: With over 20 years of experience, Steve McClary is a master of all types of construction builds. He oversees all phases of a project on-site, ensuring safety, quality, and efficiency.
+Reagan Massey - Superintendent: Reagan Massey is a seasoned Superintendent with over a decade of experience in all types of builds. He is responsible for daily on-site operations, managing crews, and ensuring that every project is completed to the highest standards.
 Porter Cline - Superintendent: Porter specializes in industrial builds. His 5+ years of experience in this niche field make him an expert in managing the unique challenges and requirements of large-scale industrial projects.
-Jesse Pachino - Superintendent: Jesse is a highly-skilled Superintendent with over 10 years of experience. His recent builds include several fire stations, demonstrating his expertise in managing specialized infrastructure and complex governmental projects. 
 Administration & Support
-Brooks - Senior Accountant: Brooks manages all financial aspects of MH Construction. With a keen eye for detail, Brooks handles everything from project budgets and financial reporting to invoicing and payroll, ensuring the company's fiscal health.
+Brooks Morris - Senior Accountant: Brooks Morris manages all financial aspects of MH Construction. With a keen eye for detail, Brooks handles everything from project budgets and financial reporting to invoicing and payroll, ensuring the company's fiscal health.
 Brittney Holstein - HR Manager: Brittney Holstein, daughter of founder Mike Holstein, is the backbone of the company's human resources department. She is dedicated to building a strong, supportive, and skilled team by managing recruitment, employee relations, and professional development.
 Matt Ramsey - Project & Marketing Coordinator Veteran: As a veteran, Matt brings a unique perspective to his role. He is the face of MH Construction at trade shows and client presentations, specializing in showcasing the company's advanced technology and AI estimator.
-Jennifer - Admin Assistant: Jennifer is a highly organized and efficient Admin Assistant who keeps the office running smoothly. She supports the entire team with administrative tasks, scheduling, and communication, ensuring a seamless flow of information.
+Jennifer Tenehuerta - Admin Assistant: Jennifer Tenehuerta is a highly organized and efficient Admin Assistant who keeps the office running smoothly. She supports the entire team with administrative tasks, scheduling, and communication, ensuring a seamless flow of information.
 Featured Projects Section | Page
 Section Title: "Featured Projects" Section Subtitle: "Showcasing our construction excellence across the Pacific Northwest"
 

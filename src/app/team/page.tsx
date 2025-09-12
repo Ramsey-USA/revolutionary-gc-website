@@ -63,14 +63,14 @@ export default function TeamPage() {
 
   const fieldOperations = [
     {
-      name: "Steve",
+  name: "Steve McClary",
       title: "Senior Superintendent",
       description: "With over 20 years of experience, Steve is a master of all types of construction builds. He oversees all phases of a project on-site, ensuring safety, quality, and efficiency.",
       image: "/images/team/steve.jpg",
   email: "steve@mhc-gc.com"
     },
     {
-      name: "Reagan",
+  name: "Reagan Massey",
       title: "Superintendent",
       description: "Reagan is a seasoned Superintendent with over a decade of experience in all types of builds. He is responsible for daily on-site operations, managing crews, and ensuring that every project is completed to the highest standards.",
       image: "/images/team/reagan.jpg",
@@ -83,18 +83,12 @@ export default function TeamPage() {
       image: "/images/team/porter-cline.jpg",
   email: "porter@mhc-gc.com"
     },
-    {
-      name: "Jesse Pachino",
-      title: "Superintendent",
-      description: "Jesse is a highly-skilled Superintendent with over 10 years of experience. His recent builds include several fire stations, demonstrating his expertise in managing specialized infrastructure and complex governmental projects.",
-      image: "/images/team/jesse-pachino.jpg",
-  email: "jesse@mhc-gc.com"
-    }
+
   ]
 
   const administration = [
     {
-      name: "Brooks",
+  name: "Brooks Morris",
       title: "Senior Accountant",
       description: "Brooks manages all financial aspects of MH Construction. With a keen eye for detail, Brooks handles everything from project budgets and financial reporting to invoicing and payroll, ensuring the company's fiscal health.",
       image: "/images/team/brooks.jpg",
@@ -115,7 +109,7 @@ export default function TeamPage() {
   email: "matt@mhc-gc.com"
     },
     {
-      name: "Jennifer",
+  name: "Jennifer Tenehuerta",
       title: "Admin Assistant",
       description: "Jennifer is a highly organized and efficient Admin Assistant who keeps the office running smoothly. She supports the entire team with administrative tasks, scheduling, and communication, ensuring a seamless flow of information.",
       image: "/images/team/jennifer.jpg",
