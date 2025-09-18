@@ -112,7 +112,7 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: "Phone",
-      details: ["(509) 555-0123", "Available 7 days a week"]
+      details: ["(509) 308-6489", "Available 7 days a week"]
     },
     {
       icon: Mail,
@@ -189,13 +189,13 @@ export default function ContactPage() {
               </div>
               <h3 className="text-xl font-bold text-army-black mb-4">Call Us</h3>
               <div className="space-y-2 mb-4">
-                <p className="text-gray-600 font-semibold">(509) 555-0123</p>
+                <p className="text-gray-600 font-semibold">(509) 308-6489</p>
                 <p className="text-gray-500 text-sm">Available 7 days a week</p>
                 <p className="text-gray-500 text-sm">Mon-Fri: 7AM-6PM</p>
                 <p className="text-gray-500 text-sm">Sat: 8AM-4PM</p>
               </div>
               <a 
-                href="tel:+15095550123" 
+                href="tel:+15093086489" 
                 className="inline-flex items-center px-4 py-2 bg-mh-forest-green text-white rounded-lg font-medium hover:bg-army-green transition-colors"
               >
                 Call Now
@@ -288,7 +288,6 @@ export default function ContactPage() {
                   <p className="text-gray-600">
                     Fill out the form below and we'll get back to you within 24 hours
                   </p>
-                </div>
                 </div>
                 
                 <form onSubmit={handleSubmit} className="space-y-8">

@@ -1,4 +1,10 @@
 MH Construction Revolutionary Website
+
+**Company Information:**
+- Phone: (509) 308-6489
+- Address: 3111 N. Capital Ave., Pasco, WA 99301
+- Website: Veteran-owned construction company serving the Pacific Northwest
+
 🚀 QUICK START FOR DEVELOPER
 🎯 Phase 1 - Initial Build
 Priority 1: Core Website
@@ -56,30 +62,35 @@ CTA Button: "Explore Projects"
 Core Values Section | On all pages
 Section Title: "Our Core Values" Section Subtitle: "Military precision meets construction excellence"
 
-Value 1: Innovation Leadership
+Value 1: Ethics
 
-Title on front: "Innovation Leadership"
-Description on back: "We pioneer cutting-edge construction technology, from AI-powered estimating to immersive 3D project visualization. As the first contractor in the Pacific Northwest to offer these advanced tools, we're building the future of construction today."
+Title on front: "Ethics"
+Description on back: "We operate with unwavering ethical standards in every aspect of our business. From fair pricing to honest timelines, we ensure that every decision reflects our commitment to doing what's right for our clients and community."
 
-Value 2: Veteran Excellence
+Value 2: Experience
 
-Title on front: "Veteran Excellence"
-Description on back: "Our veteran-owned foundation brings military precision, integrity, and attention to detail to every project. We understand the importance of mission completion, timeline adherence, and exceeding expectations."
+Title on front: "Experience"
+Description on back: "Decades of combined construction expertise backed by military precision. Our team brings extensive knowledge from residential to commercial projects, ensuring your vision becomes reality with proven techniques and innovative solutions."
 
-Value 3: Client Partnership
+Value 3: Integrity
 
-Title on front: "Client Partnership"
-Description on back: "We believe in true collaboration throughout the construction process. Our transparent approach includes real-time project updates, detailed cost breakdowns, and open communication every step of the way."
+Title on front: "Integrity"
+Description on back: "Our word is our bond. We maintain transparency in all communications, deliver on our promises, and take full responsibility for our work. Your trust is earned through consistent, reliable action every single day."
 
-Value 4: Quality Craftsmanship
+Value 4: Honesty
 
-Title on front: "Quality Craftsmanship"
-Description on back: "We use only premium materials and proven construction techniques. Every project showcases our commitment to durability, functionality, and aesthetic excellence that stands the test of time."
+Title on front: "Honesty"
+Description on back: "Open, direct communication is the foundation of successful projects. We provide honest assessments, realistic timelines, and transparent pricing. No hidden costs, no surprises—just straightforward, truthful partnership."
 
-Value 5: Transparent Communication
+Value 5: Trust
 
-Title on front: "Transparent Communication"
-Description on back: "No surprises, no hidden costs, no communication gaps. Our clients have real-time access to project progress, timeline updates, and detailed explanations of every construction decision we make."
+Title on front: "Trust"
+Description on back: "Trust is built through consistent performance and reliability. We earn your confidence by showing up when promised, staying within budget, and delivering quality that exceeds expectations on every project."
+
+Value 6: Professionalism
+
+Title on front: "Professionalism"
+Description on back: "Military-grade professionalism in every interaction. From our initial consultation to project completion, we maintain the highest standards of conduct, punctuality, and respect for your property and schedule."
 Team Experience Section | Page
 Section Title: "Meet Our Expert Team" Section Subtitle: "150+ years of combined construction expertise"
 
@@ -148,7 +159,7 @@ Steve headshot (400x400px, professional background)
 Reagan headshot (400x400px, professional background)
 Porter headshot (400x400px, professional background)
 Icons & Graphics
-Core Values Icons: 5 custom icons (Innovation, Veteran, Partnership, Quality, Communication)
+Core Values Icons: 6 custom icons (Ethics, Experience, Integrity, Honesty, Trust, Professionalism)
 AI Tools Icons: 3 icons (Estimator, Sandbox, 3D Explorer)
 Social Media Icons: Facebook, LinkedIn, Instagram, YouTube, X (SVG format)
 🛠️ TECHNOLOGY STACK

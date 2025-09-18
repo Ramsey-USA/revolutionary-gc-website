@@ -673,7 +673,7 @@ export default function CareersPage() {
                   value={formData.phone} 
                   onChange={handleChange} 
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white hover:border-gray-400" 
-                  placeholder="(509) 555-0123" 
+                  placeholder="(509) 308-6489" 
                 />
               </div>
             </div>

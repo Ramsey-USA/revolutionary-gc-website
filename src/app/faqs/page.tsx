@@ -34,7 +34,7 @@ export default function FAQsPage() {
       id: 'gen3',
       category: 'general',
       question: 'What geographic areas do you serve?',
-      answer: 'We are based in the Tri-Cities area of Washington State and primarily serve the Columbia River region, Eastern Washington, and the broader Pacific Northwest. For larger projects or specialized work, we can expand our service area.'
+      answer: 'We are based at 3111 N. Capital Ave., Pasco, WA 99301 and primarily serve the Columbia River region, Eastern Washington, and the broader Pacific Northwest. For larger projects or specialized work, we can expand our service area.'
     },
     {
       id: 'gen4',

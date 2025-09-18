@@ -106,8 +106,8 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-lg font-bold text-army-black mb-2">Phone</h3>
                       <p className="text-gray-600">Call us directly for immediate assistance</p>
-                      <a href="tel:+15095551234" className="text-mh-forest-green font-semibold hover:text-army-green transition-colors">
-                        (509) 555-1234
+                      <a href="tel:+15093086489" className="text-mh-forest-green font-semibold hover:text-army-green transition-colors">
+                        (509) 308-6489
                       </a>
                     </div>
                   </div>
@@ -142,7 +142,8 @@ export default function ContactPage() {
                       <h3 className="text-lg font-bold text-army-black mb-2">Office Location</h3>
                       <p className="text-gray-600">Visit us for in-person consultations</p>
                       <p className="text-blue-600 font-semibold">
-                        Tri-Cities, Washington<br />
+                        3111 N. Capital Ave.<br />
+                        Pasco, WA 99301<br />
                         <span className="text-sm text-gray-500">(Serving the Columbia River Region)</span>
                       </p>
                     </div>
@@ -252,7 +253,7 @@ export default function ContactPage() {
                       value={contactData.phone}
                       onChange={handleContactChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400"
-                      placeholder="(509) 555-0123"
+                      placeholder="(509) 308-6489"
                     />
                   </div>
                 </div>

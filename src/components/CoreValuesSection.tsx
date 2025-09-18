@@ -1,39 +1,45 @@
 'use client'
 
-import { Lightbulb, Shield, Users, Award, MessageCircle } from 'lucide-react'
+import { Scale, Wrench, Shield, Heart, Handshake, Briefcase } from 'lucide-react'
 import styles from '../styles/ProtectiveCase.module.css'
 
 const CoreValuesSection = () => {
   const values = [
     {
-      icon: Lightbulb,
-      title: "Innovation Leadership",
-  description: "We lead with innovation—bringing AI-powered estimating and 3D visualization to every project. As pioneers in the Pacific Northwest, we build the future of construction.",
+      icon: Scale,
+      title: "Ethics",
+      description: "Rooted in small-town values, we believe in doing what's right. Honesty, transparency, and accountability are the minimum standard in every interaction. We operate with unwavering ethical standards in every aspect of our business. From fair pricing to honest timelines, we ensure that every decision reflects our commitment to doing what's right for our clients and community.",
       color: "text-army-gold"
     },
     {
-      icon: Shield,
-      title: "Veteran Excellence",
-      description: "Our veteran-owned foundation brings military precision, integrity, and attention to detail to every project. We understand the importance of mission completion, timeline adherence, and exceeding expectations.",
+      icon: Wrench,
+      title: "Experience", 
+      description: "Decades of combined construction expertise backed by military precision. Our team brings extensive knowledge from residential to commercial projects, ensuring your vision becomes reality with proven techniques and innovative solutions.",
       color: "text-mh-forest-green"
     },
     {
-      icon: Users,
-      title: "Client Partnership",
-      description: "We believe in true collaboration throughout the construction process. Our transparent approach includes real-time project updates, detailed cost breakdowns, and open communication every step of the way.",
+      icon: Shield,
+      title: "Integrity",
+      description: "Our word is our bond highlights the heart of MH Construction. We maintain transparency in all communications, deliver on our promises, and take full responsibility for our work. By consistently doing what's right - even when on one is watching - we build long lasting trust with our clients and within our team.",
       color: "text-mh-warm-tan"
     },
     {
-      icon: Award,
-      title: "Quality Craftsmanship",
-  description: "We use premium materials and proven techniques. Every project reflects our commitment to durability, functionality, and lasting excellence.",
+      icon: Heart,
+      title: "Honesty",
+      description: "Open, direct communication is the foundation of successful projects. We provide honest assessments, realistic timelines, and transparent pricing. No hidden costs, no surprises—just straightforward, truthful partnership. Honesty isn't just a policy; it's the foundation of our client relationships.",
       color: "text-army-green"
     },
     {
-      icon: MessageCircle,
-      title: "Transparent Communication",
-      description: "No surprises, no hidden costs, no communication gaps. Our clients receive detailed explanations of every construction decision we make.",
+      icon: Handshake,
+      title: "Trust",
+      description: "Trust is built through consistent performance and reliability. We earn your confidence by showing up when promised, staying within budget, and delivering quality that exceeds expectations on every project.",
       color: "text-field-tan"
+    },
+    {
+      icon: Briefcase,
+      title: "Professionalism",
+      description: "Military-grade professionalism in every interaction. From our initial consultation to project completion, we maintain the highest standards of conduct, punctuality, and respect for your property and schedule.",
+      color: "text-army-gold"
     }
   ]
 
@@ -51,7 +57,7 @@ const CoreValuesSection = () => {
         </div>
 
         {/* Values Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {values.map((value, index) => {
             const IconComponent = value.icon
             

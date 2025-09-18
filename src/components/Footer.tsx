@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { 
   MapPin, 
   Phone, 
@@ -81,19 +82,25 @@ const Footer = () => {
       
       {/* Main Footer Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 items-start">
-          {/* Company Info - left */}
-          <div className="md:col-span-1 lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="bg-mh-forest-green text-white p-2 rounded-lg">
-                <span className="text-xl font-bold">MH</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-white font-bold text-lg">MH Construction</span>
-                <span className="text-army-gold text-xs font-semibold">VETERAN OWNED</span>
-              </div>
-            </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
+          {/* Column 1: Logo */}
+          <div className="flex justify-center md:justify-start">
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/images/mhc-logo-light.png"
+                alt="MH Construction Logo"
+                height={192}
+                width={480}
+                className="h-48 w-auto object-contain"
+                priority
+              />
+            </Link>
+          </div>
+
+          {/* Column 2: Company Info & Contact */}
+          <div>
+            <h3 className="text-army-gold font-bold text-lg mb-6">Company Info</h3>
+            <p className="text-gray-300 mb-6 leading-relaxed text-sm">
               Building tomorrow with today's technology. Veteran-owned construction excellence 
               powered by cutting-edge AI technology throughout the Pacific Northwest.
             </p>
@@ -102,16 +109,16 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <MapPin size={16} className="text-army-gold flex-shrink-0" />
                 <span className="text-gray-300 text-sm">
-                  Pasco, Washington & Surrounding Areas
+                  3111 N. Capital Ave., Pasco, WA 99301
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={16} className="text-army-gold flex-shrink-0" />
                 <a 
-                  href="tel:+1-509-555-0123" 
+                  href="tel:+15093086489" 
                   className="text-gray-300 text-sm hover:text-army-gold transition-colors"
                 >
-                  (509) 555-0123
+                  (509) 308-6489
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -126,10 +133,10 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links - center left, two columns on desktop */}
-          <div className="md:col-span-1 lg:col-span-1">
+          {/* Column 3: Quick Links */}
+          <div>
             <h3 className="text-army-gold font-bold text-lg mb-6">Quick Links</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6">
+            <div className="grid grid-cols-2 gap-x-4">
               <ul className="space-y-3">
                 {quickLinks.slice(0, Math.ceil(quickLinks.length / 2)).map((link) => (
                   <li key={link.name}>
@@ -157,12 +164,11 @@ const Footer = () => {
             </div>
           </div>
 
-
-          {/* Social Media & Newsletter - right */}
-          <div className="md:col-span-1 lg:col-span-2">
+          {/* Column 4: Connect With Us */}
+          <div>
             <h3 className="text-army-gold font-bold text-lg mb-6">Connect With Us</h3>
             {/* Social Media Links */}
-            <div className="flex space-x-4 mb-6">
+            <div className="flex flex-wrap gap-3 mb-6">
               {socialLinks.map((social) => {
                 const IconComponent = social.icon
                 return (

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 
 const Header = () => {
@@ -21,14 +22,15 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="bg-mh-forest-green text-white p-2 rounded-lg">
-                <span className="text-xl font-bold">MH</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-mh-forest-green font-bold text-lg">MH Construction</span>
-                <span className="text-army-gold text-xs font-semibold">VETERAN OWNED</span>
-              </div>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/images/mhc-logo-light.png"
+                alt="MH Construction Logo"
+                height={64}
+                width={160}
+                className="h-16 w-auto object-contain"
+                priority
+              />
             </Link>
           </div>
 
