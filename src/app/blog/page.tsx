@@ -6,7 +6,7 @@ import WhyChooseSection from '../../components/WhyChooseSection'
 import StarDecorations from '../../components/StarDecorations'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Calendar, Clock, ArrowRight, Tag, TrendingUp, Users, BookOpen, Award } from 'lucide-react'
+import { Calendar, Clock, ArrowRight, Tag, TrendingUp, Users, BookOpen, Award, MessageSquare } from 'lucide-react'
 
 export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState('All')
@@ -86,11 +86,11 @@ export default function BlogPage() {
     : articles.filter(article => !article.featured && article.category === selectedCategory)
 
   return (
-    <main className="min-h-screen pt-20">
+    <main className="min-h-screen pt-20 bg-white dark:bg-dark-surface transition-colors duration-300">
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-mh-forest-green to-army-green text-white overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-r from-mh-forest-green to-army-green dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -103,10 +103,10 @@ export default function BlogPage() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white dark:text-dark-text">
               Construction Insights & News
             </h1>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed text-white dark:text-dark-text-secondary">
               Stay updated with the latest construction innovations, project highlights, 
               and industry insights from our 150+ years of combined team expertise.
             </p>
@@ -115,7 +115,7 @@ export default function BlogPage() {
           {/* Blog Statistics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center group">
-              <div className="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-army-gold group-hover:bg-opacity-30 transition-all duration-300 group-hover:scale-110">
+              <div className="bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-army-gold group-hover:bg-opacity-30 dark:group-hover:bg-army-gold dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
                 <BookOpen size={28} className="group-hover:text-army-black transition-colors duration-300" />
               </div>
               <div className="text-2xl md:text-3xl font-bold text-army-gold mb-1">50+</div>
@@ -123,7 +123,7 @@ export default function BlogPage() {
             </div>
             
             <div className="text-center group">
-              <div className="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-army-gold group-hover:bg-opacity-30 transition-all duration-300 group-hover:scale-110">
+              <div className="bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-army-gold group-hover:bg-opacity-30 dark:group-hover:bg-army-gold dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
                 <Users size={28} className="group-hover:text-army-black transition-colors duration-300" />
               </div>
               <div className="text-2xl md:text-3xl font-bold text-army-gold mb-1">10K+</div>
@@ -131,7 +131,7 @@ export default function BlogPage() {
             </div>
             
             <div className="text-center group">
-              <div className="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-army-gold group-hover:bg-opacity-30 transition-all duration-300 group-hover:scale-110">
+              <div className="bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-army-gold group-hover:bg-opacity-30 dark:group-hover:bg-army-gold dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
                 <TrendingUp size={28} className="group-hover:text-army-black transition-colors duration-300" />
               </div>
               <div className="text-2xl md:text-3xl font-bold text-army-gold mb-1">95%</div>
@@ -139,7 +139,7 @@ export default function BlogPage() {
             </div>
             
             <div className="text-center group">
-              <div className="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-army-gold group-hover:bg-opacity-30 transition-all duration-300 group-hover:scale-110">
+              <div className="bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:bg-opacity-30 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
                 <Award size={28} className="group-hover:text-army-black transition-colors duration-300" />
               </div>
               <div className="text-2xl md:text-3xl font-bold text-army-gold mb-1">5+</div>
@@ -150,16 +150,16 @@ export default function BlogPage() {
       </section>
 
       {/* Featured Articles */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-army-black text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text text-center mb-12">
             Featured Articles
           </h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
             {featuredArticles.map((article, index) => (
               <article key={article.id} className={`${index === 0 ? 'lg:col-span-2' : ''} group`}>
-                <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:border-army-gold transition-all duration-500 transform hover:-translate-y-2 border border-transparent">
+                <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:border-army-gold dark:hover:border-army-gold transition-all duration-500 transform hover:-translate-y-2 border border-transparent dark:border-dark-border">
                   <div className={`relative ${index === 0 ? 'h-64' : 'h-48'} overflow-hidden`}>
                     {/* Gradient overlay for better text visibility */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
@@ -177,15 +177,15 @@ export default function BlogPage() {
                     {/* Featured badge for main article */}
                     {index === 0 && (
                       <div className="absolute top-4 right-4 z-20">
-                        <span className="bg-mh-forest-green text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+                        <span className="bg-mh-forest-green dark:bg-army-gold text-white dark:text-army-black px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
                           Featured
                         </span>
                       </div>
                     )}
                   </div>
                   
-                  <div className="p-6 group-hover:bg-gradient-to-br group-hover:from-gray-50 group-hover:to-white transition-all duration-300">
-                    <div className="flex items-center text-field-gray text-sm mb-3 group-hover:text-mh-forest-green transition-colors duration-300">
+                  <div className="p-6 group-hover:bg-gradient-to-br group-hover:from-gray-50 dark:group-hover:from-dark-surface-3 group-hover:to-white dark:group-hover:to-dark-surface-2 transition-all duration-300">
+                    <div className="flex items-center text-field-gray dark:text-dark-text-secondary text-sm mb-3 group-hover:text-mh-forest-green dark:group-hover:text-mh-forest-green transition-colors duration-300">
                       <Calendar size={16} className="mr-2" />
                       <span>{article.date}</span>
                       <span className="mx-2">•</span>
@@ -193,17 +193,17 @@ export default function BlogPage() {
                       <span>{article.readTime}</span>
                     </div>
                     
-                    <h3 className={`font-bold text-army-black mb-3 group-hover:text-mh-forest-green transition-colors duration-300 ${index === 0 ? 'text-2xl' : 'text-xl'}`}>
+                    <h3 className={`font-bold text-army-black dark:text-dark-text mb-3 group-hover:text-mh-forest-green dark:group-hover:text-mh-forest-green transition-colors duration-300 ${index === 0 ? 'text-2xl' : 'text-xl'}`}>
                       {article.title}
                     </h3>
                     
-                    <p className="text-field-gray mb-4 leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
+                    <p className="text-field-gray dark:text-dark-text-secondary mb-4 leading-relaxed group-hover:text-gray-800 dark:group-hover:text-dark-text transition-colors duration-300">
                       {article.excerpt}
                     </p>
                     
                     <Link
                       href={`/blog/${article.slug}`}
-                      className="inline-flex items-center text-mh-forest-green font-semibold hover:text-army-green transition-all duration-300 group-hover:translate-x-2"
+                      className="inline-flex items-center text-mh-forest-green dark:text-mh-forest-green font-semibold hover:text-army-green dark:hover:text-army-green transition-all duration-300 group-hover:translate-x-2"
                     >
                       Read More
                       <ArrowRight size={16} className="ml-2 group-hover:ml-3 transition-all duration-300" />
@@ -217,55 +217,55 @@ export default function BlogPage() {
       </section>
 
       {/* Trending Topics & Quick Insights */}
-      <section className="py-16 bg-gradient-to-r from-gray-50 to-white">
+      <section className="py-16 bg-gradient-to-r from-gray-50 dark:from-dark-surface-2 to-white dark:to-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">
               Trending Topics
             </h2>
-            <p className="text-lg text-field-gray max-w-2xl mx-auto">
+            <p className="text-lg text-field-gray dark:text-dark-text-secondary max-w-2xl mx-auto">
               Hot topics and quick insights from the construction industry
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-mh-forest-green">
+            <div className="bg-white dark:bg-dark-surface-2 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-mh-forest-green dark:border-mh-forest-green">
               <div className="flex items-center mb-4">
-                <TrendingUp size={24} className="text-mh-forest-green mr-3" />
-                <h3 className="font-bold text-army-black">AI in Construction</h3>
+                <TrendingUp size={24} className="text-mh-forest-green dark:text-mh-forest-green mr-3" />
+                <h3 className="font-bold text-army-black dark:text-dark-text">AI in Construction</h3>
               </div>
-              <p className="text-field-gray text-sm">The latest developments in AI-powered project planning and estimation tools revolutionizing the industry.</p>
+              <p className="text-field-gray dark:text-dark-text-secondary text-sm">The latest developments in AI-powered project planning and estimation tools revolutionizing the industry.</p>
             </div>
 
-            <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-army-gold">
+            <div className="bg-white dark:bg-dark-surface-2 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-army-gold dark:border-army-gold">
               <div className="flex items-center mb-4">
-                <Award size={24} className="text-army-gold mr-3" />
-                <h3 className="font-bold text-army-black">Safety Standards</h3>
+                <Award size={24} className="text-army-gold dark:text-army-gold mr-3" />
+                <h3 className="font-bold text-army-black dark:text-dark-text">Safety Standards</h3>
               </div>
-              <p className="text-field-gray text-sm">New safety protocols and veteran-inspired approaches to jobsite protection and worker safety.</p>
+              <p className="text-field-gray dark:text-dark-text-secondary text-sm">New safety protocols and veteran-inspired approaches to jobsite protection and worker safety.</p>
             </div>
 
-            <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-army-green">
+            <div className="bg-white dark:bg-dark-surface-2 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-army-green dark:border-army-green">
               <div className="flex items-center mb-4">
-                <BookOpen size={24} className="text-army-green mr-3" />
-                <h3 className="font-bold text-army-black">Best Practices</h3>
+                <BookOpen size={24} className="text-army-green dark:text-army-green mr-3" />
+                <h3 className="font-bold text-army-black dark:text-dark-text">Best Practices</h3>
               </div>
-              <p className="text-field-gray text-sm">Military-grade precision techniques applied to commercial and industrial construction projects.</p>
+              <p className="text-field-gray dark:text-dark-text-secondary text-sm">Military-grade precision techniques applied to commercial and industrial construction projects.</p>
             </div>
 
-            <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-mh-warm-tan">
+            <div className="bg-white dark:bg-dark-surface-2 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-mh-warm-tan dark:border-mh-warm-tan">
               <div className="flex items-center mb-4">
-                <Users size={24} className="text-mh-warm-tan mr-3" />
-                <h3 className="font-bold text-army-black">Team Insights</h3>
+                <Users size={24} className="text-mh-warm-tan dark:text-mh-warm-tan mr-3" />
+                <h3 className="font-bold text-army-black dark:text-dark-text">Team Insights</h3>
               </div>
-              <p className="text-field-gray text-sm">Behind-the-scenes stories and expertise from our 150+ years of combined construction experience.</p>
+              <p className="text-field-gray dark:text-dark-text-secondary text-sm">Behind-the-scenes stories and expertise from our 150+ years of combined construction experience.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* All Articles */}
-      <section className="py-20 bg-light-gray">
+      <section className="py-20 bg-light-gray dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-army-black mb-6 md:mb-0">
@@ -281,7 +281,7 @@ export default function BlogPage() {
                   className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
                     selectedCategory === category
                       ? 'bg-army-gold text-army-black shadow-lg'
-                      : 'border border-mh-forest-green text-mh-forest-green hover:bg-mh-forest-green hover:text-white'
+                      : 'border border-mh-forest-green dark:border-army-gold text-mh-forest-green dark:text-army-gold hover:bg-mh-forest-green dark:hover:bg-army-gold hover:text-white dark:hover:text-army-black'
                   }`}
                 >
                   {category}
@@ -293,7 +293,7 @@ export default function BlogPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredArticles.map((article) => (
               <article key={article.id} className="group">
-                <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:border-army-gold transition-all duration-500 transform hover:-translate-y-2 border border-transparent">
+                <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:border-army-gold dark:hover:border-army-gold transition-all duration-500 transform hover:-translate-y-2 border border-transparent dark:border-dark-border">
                   <div className="relative h-48 overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                     <Image
@@ -309,8 +309,8 @@ export default function BlogPage() {
                     </div>
                   </div>
                   
-                  <div className="p-6 group-hover:bg-gradient-to-br group-hover:from-gray-50 group-hover:to-white transition-all duration-300">
-                    <div className="flex items-center text-field-gray text-sm mb-3 group-hover:text-mh-forest-green transition-colors duration-300">
+                  <div className="p-6 group-hover:bg-gradient-to-br group-hover:from-gray-50 group-hover:to-white dark:group-hover:from-dark-surface-3 dark:group-hover:to-dark-surface-2 transition-all duration-300">
+                    <div className="flex items-center text-field-gray dark:text-dark-text-secondary text-sm mb-3 group-hover:text-mh-forest-green dark:group-hover:text-army-gold transition-colors duration-300">
                       <Calendar size={16} className="mr-2" />
                       <span>{article.date}</span>
                       <span className="mx-2">•</span>
@@ -318,11 +318,11 @@ export default function BlogPage() {
                       <span>{article.readTime}</span>
                     </div>
                     
-                    <h3 className="text-xl font-bold text-army-black mb-3 group-hover:text-mh-forest-green transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-army-black dark:text-army-gold mb-3 group-hover:text-mh-forest-green dark:group-hover:text-white transition-colors duration-300">
                       {article.title}
                     </h3>
                     
-                    <p className="text-field-gray mb-4 leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
+                    <p className="text-field-gray dark:text-dark-text mb-4 leading-relaxed group-hover:text-gray-800 dark:group-hover:text-dark-text transition-colors duration-300">
                       {article.excerpt}
                     </p>
                     
@@ -341,7 +341,7 @@ export default function BlogPage() {
 
           {/* Load More Button */}
           <div className="text-center mt-12">
-            <button className="bg-mh-forest-green text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green transition-colors transform hover:scale-105">
+            <button className="bg-mh-forest-green dark:bg-army-gold text-white dark:text-army-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green dark:hover:bg-yellow-500 transition-colors transform hover:scale-105">
               Load More Articles
             </button>
           </div>
@@ -349,7 +349,7 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-20 bg-gradient-to-r from-army-green to-mh-forest-green text-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-army-green to-mh-forest-green dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text relative overflow-hidden transition-colors duration-300">
         {/* Background decoration */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -376,7 +376,7 @@ export default function BlogPage() {
                 <input
                   type="email"
                   placeholder="Enter your email address"
-                  className="w-full px-4 py-3 rounded-lg text-army-black focus:outline-none focus:ring-2 focus:ring-army-gold bg-white border border-gray-300"
+                  className="w-full px-4 py-3 rounded-lg text-army-black dark:text-dark-text focus:outline-none focus:ring-2 focus:ring-army-gold bg-white dark:bg-dark-surface border border-gray-300 dark:border-dark-border"
                 />
               </div>
               <button

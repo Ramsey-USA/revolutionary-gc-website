@@ -50,15 +50,15 @@ export default function SubcontractorsPage() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-mh-forest-green to-army-black py-32 overflow-hidden">
+        <section className="relative bg-gradient-to-r from-mh-forest-green to-army-black dark:from-dark-surface-2 dark:to-dark-surface-3 py-32 overflow-hidden">
           <StarDecorations />
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                Join Our <span className="text-army-gold">Network</span>
+              <h1 className="text-5xl md:text-7xl font-bold text-white dark:text-dark-text mb-6">
+                Join Our <span className="text-army-gold dark:text-army-gold">Network</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-300 dark:text-dark-text-secondary max-w-3xl mx-auto leading-relaxed">
                 Partner with MH Contracting for exceptional opportunities. We're building a network of 
                 elite subcontractors who share our commitment to excellence.
               </p>
@@ -67,14 +67,14 @@ export default function SubcontractorsPage() {
         </section>
 
         {/* Main Content */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100">
+            <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100 dark:border-dark-border transition-colors duration-300">
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-army-black mb-4">
+                <h2 className="text-4xl font-bold text-army-black dark:text-dark-text mb-4">
                   Subcontractor Application
                 </h2>
-                <p className="text-xl text-gray-600">
+                <p className="text-xl text-gray-600 dark:text-dark-text-secondary">
                   Tell us about your company and capabilities
                 </p>
               </div>
@@ -82,7 +82,7 @@ export default function SubcontractorsPage() {
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="companyName" className="block text-sm font-medium text-army-black">
+                    <label htmlFor="companyName" className="block text-sm font-medium text-army-black dark:text-dark-text">
                       Company Name *
                     </label>
                     <input
@@ -92,12 +92,12 @@ export default function SubcontractorsPage() {
                       value={formData.companyName}
                       onChange={handleInputChange}
                       required
-                      className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-mh-forest-green focus:border-transparent"
+                      className="mt-1 block w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:outline-none focus:ring-2 focus:ring-mh-forest-green focus:border-transparent bg-white dark:bg-dark-surface-3 dark:text-dark-text"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-army-black">
+                    <label htmlFor="email" className="block text-sm font-medium text-army-black dark:text-dark-text">
                       Email Address *
                     </label>
                     <input
@@ -107,12 +107,12 @@ export default function SubcontractorsPage() {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-mh-forest-green focus:border-transparent"
+                      className="mt-1 block w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:outline-none focus:ring-2 focus:ring-mh-forest-green focus:border-transparent bg-white dark:bg-dark-surface-3 dark:text-dark-text"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-army-black">
+                    <label htmlFor="phone" className="block text-sm font-medium text-army-black dark:text-dark-text">
                       Phone Number *
                     </label>
                     <input
@@ -122,13 +122,13 @@ export default function SubcontractorsPage() {
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
-                      className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-mh-forest-green focus:border-transparent"
+                      className="mt-1 block w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:outline-none focus:ring-2 focus:ring-mh-forest-green focus:border-transparent bg-white dark:bg-dark-surface-3 dark:text-dark-text"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-army-black">
+                  <label htmlFor="message" className="block text-sm font-medium text-army-black dark:text-dark-text">
                     Tell us about your company and services *
                   </label>
                   <textarea
@@ -139,7 +139,7 @@ export default function SubcontractorsPage() {
                     onChange={handleInputChange}
                     required
                     placeholder="Please describe your company, services offered, years in business, licensing, insurance coverage, and project experience..."
-                    className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-mh-forest-green focus:border-transparent"
+                    className="mt-1 block w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:outline-none focus:ring-2 focus:ring-mh-forest-green focus:border-transparent bg-white dark:bg-dark-surface-3 dark:text-dark-text"
                   />
                 </div>
 

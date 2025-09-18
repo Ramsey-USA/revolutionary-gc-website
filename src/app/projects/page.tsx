@@ -4,7 +4,7 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import WhyChooseSection from '../../components/WhyChooseSection'
 import StarDecorations from '../../components/StarDecorations'
-import { Building, Factory, HeartPulse, Shield, Hammer, Grape, MapPin, Clock, Users, Award } from 'lucide-react'
+import { Building, Factory, HeartPulse, Shield, Hammer, MapPin, Clock, Users, Award, Ruler, Grape } from 'lucide-react'
 
 export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState('All')
@@ -111,11 +111,11 @@ export default function ProjectsPage() {
   ]
 
   return (
-    <main className="min-h-screen pt-20">
+    <main className="min-h-screen pt-20 bg-white dark:bg-dark-surface transition-colors duration-300">
       <Header />
       
       {/* Hero Section with Parallax Background */}
-      <section className="relative py-20 bg-gradient-to-r from-mh-forest-green to-army-green text-white overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-r from-mh-forest-green to-army-green dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -128,10 +128,10 @@ export default function ProjectsPage() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white dark:text-dark-text">
               Our Construction Portfolio
             </h1>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed text-white dark:text-dark-text-secondary">
               Showcasing 150+ years of combined expertise across commercial, industrial, 
               healthcare, and specialty construction projects throughout the Pacific Northwest
             </p>
@@ -143,11 +143,11 @@ export default function ProjectsPage() {
               const IconComponent = stat.icon
               return (
                 <div key={index} className="text-center group">
-                  <div className="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-army-gold group-hover:bg-opacity-30 transition-all duration-300 group-hover:scale-110">
-                    <IconComponent size={28} className="group-hover:text-army-black transition-colors duration-300" />
+                  <div className="bg-white dark:bg-dark-surface-2 bg-opacity-20 dark:bg-opacity-80 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:bg-opacity-30 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
+                    <IconComponent size={28} className="text-white dark:text-dark-text group-hover:text-army-black dark:group-hover:text-army-black transition-colors duration-300" />
                   </div>
-                  <div className="text-2xl md:text-3xl font-bold text-army-gold mb-1">{stat.value}</div>
-                  <div className="text-sm md:text-base text-gray-200">{stat.label}</div>
+                  <div className="text-2xl md:text-3xl font-bold text-army-gold dark:text-army-gold mb-1">{stat.value}</div>
+                  <div className="text-sm md:text-base text-gray-200 dark:text-dark-text-secondary">{stat.label}</div>
                 </div>
               )
             })}
@@ -156,13 +156,13 @@ export default function ProjectsPage() {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-army-black mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-army-black dark:text-dark-text mb-4">
               Featured Projects
             </h2>
-            <p className="text-xl text-field-gray max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-field-gray dark:text-dark-text-secondary max-w-3xl mx-auto mb-8">
               Showcasing our construction excellence across diverse project types
             </p>
 
@@ -174,8 +174,8 @@ export default function ProjectsPage() {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
                     selectedCategory === category
-                      ? 'bg-army-gold text-army-black shadow-lg'
-                      : 'bg-white text-field-gray border border-gray-300 hover:bg-mh-forest-green hover:text-white hover:border-mh-forest-green'
+                      ? 'bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black shadow-lg'
+                      : 'bg-white dark:bg-dark-surface-2 text-field-gray dark:text-dark-text border border-gray-300 dark:border-dark-border hover:bg-mh-forest-green dark:hover:bg-mh-forest-green hover:text-white dark:hover:text-white hover:border-mh-forest-green dark:hover:border-mh-forest-green'
                   }`}
                 >
                   {category}
@@ -191,7 +191,7 @@ export default function ProjectsPage() {
               const IconComponent = project.icon
               
               return (
-                <div key={project.id} className="group bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-2xl hover:border-army-gold transition-all duration-500 transform hover:-translate-y-2">
+                <div key={project.id} className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg border border-gray-200 dark:border-dark-border overflow-hidden hover:shadow-2xl hover:border-army-gold dark:hover:border-army-gold transition-all duration-500 transform hover:-translate-y-2">
                   {/* Project Image */}
                   <div className="relative h-64 bg-gradient-to-br from-mh-forest-green to-army-green overflow-hidden">
                     <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-300"></div>
@@ -200,12 +200,12 @@ export default function ProjectsPage() {
                     </div>
                     {/* Project Category Badge */}
                     <div className="absolute top-4 left-4">
-                      <span className="bg-army-gold text-army-black px-3 py-1 rounded-full text-sm font-semibold">
+                      <span className="bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-3 py-1 rounded-full text-sm font-semibold">
                         {project.category}
                       </span>
                     </div>
                     {/* Project Details Overlay */}
-                    <div className="absolute bottom-4 right-4 text-white text-right">
+                    <div className="absolute bottom-4 right-4 text-white dark:text-white text-right">
                       <div className="text-sm opacity-80">{project.details.year}</div>
                       <div className="text-xs opacity-60">{project.details.location}</div>
                     </div>
@@ -213,40 +213,40 @@ export default function ProjectsPage() {
 
                   {/* Project Content */}
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-army-black mb-2 group-hover:text-mh-forest-green transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-forest-green dark:group-hover:text-mh-forest-green transition-colors duration-300">
                       {project.title}
                     </h3>
-                    <p className="text-field-gray mb-4 leading-relaxed">
+                    <p className="text-field-gray dark:text-dark-text-secondary mb-4 leading-relaxed">
                       {project.description}
                     </p>
 
                     {/* Project Stats */}
-                    <div className="grid grid-cols-2 gap-4 mb-4 p-3 bg-gray-50 rounded-lg">
+                    <div className="grid grid-cols-2 gap-4 mb-4 p-3 bg-gray-50 dark:bg-dark-surface-3 rounded-lg">
                       <div className="text-center">
-                        <div className="text-sm font-semibold text-mh-forest-green">{project.details.size}</div>
-                        <div className="text-xs text-field-gray">Size</div>
+                        <div className="text-sm font-semibold text-mh-forest-green dark:text-mh-forest-green">{project.details.size}</div>
+                        <div className="text-xs text-field-gray dark:text-dark-text-secondary">Size</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-sm font-semibold text-mh-forest-green">{project.details.duration}</div>
-                        <div className="text-xs text-field-gray">Duration</div>
+                        <div className="text-sm font-semibold text-mh-forest-green dark:text-mh-forest-green">{project.details.duration}</div>
+                        <div className="text-xs text-field-gray dark:text-dark-text-secondary">Duration</div>
                       </div>
                     </div>
 
                     {/* Key Features */}
                     <div className="space-y-2 mb-6">
-                      <h4 className="font-semibold text-army-black text-sm">Key Features:</h4>
+                      <h4 className="font-semibold text-army-black dark:text-dark-text text-sm">Key Features:</h4>
                       <div className="grid grid-cols-2 gap-1">
                         {project.features.map((feature, featureIndex) => (
                           <div key={featureIndex} className="flex items-center space-x-1">
-                            <div className="w-1.5 h-1.5 bg-army-gold rounded-full"></div>
-                            <span className="text-field-gray text-xs">{feature}</span>
+                            <div className="w-1.5 h-1.5 bg-army-gold dark:bg-army-gold rounded-full"></div>
+                            <span className="text-field-gray dark:text-dark-text-secondary text-xs">{feature}</span>
                           </div>
                         ))}
                       </div>
                     </div>
 
                     {/* Action Button */}
-                    <button className="w-full bg-mh-forest-green text-white py-2 px-4 rounded-lg font-semibold hover:bg-army-green transition-colors duration-300 transform hover:scale-105 opacity-0 group-hover:opacity-100">
+                    <button className="w-full bg-mh-forest-green dark:bg-mh-forest-green text-white dark:text-white py-2 px-4 rounded-lg font-semibold hover:bg-army-green dark:hover:bg-army-green transition-colors duration-300 transform hover:scale-105 opacity-0 group-hover:opacity-100">
                       View Project Details
                     </button>
                   </div>
@@ -258,13 +258,13 @@ export default function ProjectsPage() {
       </section>
 
       {/* Project Development Process */}
-      <section className="py-20 bg-gradient-to-r from-gray-50 to-white">
+      <section className="py-20 bg-gradient-to-r from-gray-50 to-white dark:from-dark-surface-2 dark:to-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">
               From Vision to Reality
             </h2>
-            <p className="text-lg text-field-gray max-w-2xl mx-auto">
+            <p className="text-lg text-field-gray dark:text-dark-text-secondary max-w-2xl mx-auto">
               Our proven project development process ensures every build meets military-grade standards
             </p>
           </div>
@@ -273,77 +273,77 @@ export default function ProjectsPage() {
             {/* Phase 1 */}
             <div className="text-center group">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-mh-forest-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold group-hover:scale-110 transition-all duration-300 shadow-lg">
+                <div className="w-20 h-20 bg-mh-forest-green dark:bg-mh-forest-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:scale-110 transition-all duration-300 shadow-lg">
                   <MapPin size={32} className="text-white group-hover:text-army-black transition-colors duration-300" />
                 </div>
                 <div className="absolute -top-2 -right-2 w-8 h-8 bg-army-gold rounded-full flex items-center justify-center text-army-black font-bold text-sm">1</div>
                 {/* Connector Line */}
-                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-forest-green to-gray-300"></div>
+                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-forest-green to-gray-300 dark:from-mh-forest-green dark:to-dark-border"></div>
               </div>
-              <h3 className="text-lg font-bold text-army-black mb-2 group-hover:text-mh-forest-green transition-colors duration-300">Site Assessment</h3>
-              <p className="text-field-gray text-sm">Comprehensive site analysis and feasibility studies</p>
+              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-forest-green transition-colors duration-300">Site Assessment</h3>
+              <p className="text-field-gray dark:text-dark-text-secondary text-sm">Comprehensive site analysis and feasibility studies</p>
             </div>
 
             {/* Phase 2 */}
             <div className="text-center group">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-mh-forest-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold group-hover:scale-110 transition-all duration-300 shadow-lg">
+                <div className="w-20 h-20 bg-mh-forest-green dark:bg-mh-forest-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:scale-110 transition-all duration-300 shadow-lg">
                   <Building size={32} className="text-white group-hover:text-army-black transition-colors duration-300" />
                 </div>
                 <div className="absolute -top-2 -right-2 w-8 h-8 bg-army-gold rounded-full flex items-center justify-center text-army-black font-bold text-sm">2</div>
                 {/* Connector Line */}
-                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-forest-green to-gray-300"></div>
+                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-forest-green to-gray-300 dark:from-mh-forest-green dark:to-dark-border"></div>
               </div>
-              <h3 className="text-lg font-bold text-army-black mb-2 group-hover:text-mh-forest-green transition-colors duration-300">Design & Planning</h3>
-              <p className="text-field-gray text-sm">AI-powered design with 3D visualization and detailed blueprints</p>
+              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-forest-green transition-colors duration-300">Design & Planning</h3>
+              <p className="text-field-gray dark:text-dark-text-secondary text-sm">AI-powered design with 3D visualization and detailed blueprints</p>
             </div>
 
             {/* Phase 3 */}
             <div className="text-center group">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-mh-forest-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold group-hover:scale-110 transition-all duration-300 shadow-lg">
+                <div className="w-20 h-20 bg-mh-forest-green dark:bg-mh-forest-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:scale-110 transition-all duration-300 shadow-lg">
                   <Shield size={32} className="text-white group-hover:text-army-black transition-colors duration-300" />
                 </div>
                 <div className="absolute -top-2 -right-2 w-8 h-8 bg-army-gold rounded-full flex items-center justify-center text-army-black font-bold text-sm">3</div>
                 {/* Connector Line */}
-                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-forest-green to-gray-300"></div>
+                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-forest-green to-gray-300 dark:from-mh-forest-green dark:to-dark-border"></div>
               </div>
-              <h3 className="text-lg font-bold text-army-black mb-2 group-hover:text-mh-forest-green transition-colors duration-300">Permits & Approval</h3>
-              <p className="text-field-gray text-sm">Navigate regulatory requirements with veteran precision</p>
+              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-forest-green transition-colors duration-300">Permits & Approval</h3>
+              <p className="text-field-gray dark:text-dark-text-secondary text-sm">Navigate regulatory requirements with veteran precision</p>
             </div>
 
             {/* Phase 4 */}
             <div className="text-center group">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-mh-forest-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold group-hover:scale-110 transition-all duration-300 shadow-lg">
+                <div className="w-20 h-20 bg-mh-forest-green dark:bg-mh-forest-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:scale-110 transition-all duration-300 shadow-lg">
                   <Hammer size={32} className="text-white group-hover:text-army-black transition-colors duration-300" />
                 </div>
                 <div className="absolute -top-2 -right-2 w-8 h-8 bg-army-gold rounded-full flex items-center justify-center text-army-black font-bold text-sm">4</div>
                 {/* Connector Line */}
-                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-forest-green to-gray-300"></div>
+                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-forest-green to-gray-300 dark:from-mh-forest-green dark:to-dark-border"></div>
               </div>
-              <h3 className="text-lg font-bold text-army-black mb-2 group-hover:text-mh-forest-green transition-colors duration-300">Construction</h3>
-              <p className="text-field-gray text-sm">Expert execution with real-time progress monitoring</p>
+              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-forest-green transition-colors duration-300">Construction</h3>
+              <p className="text-field-gray dark:text-dark-text-secondary text-sm">Expert execution with real-time progress monitoring</p>
             </div>
 
             {/* Phase 5 */}
             <div className="text-center group">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-mh-forest-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold group-hover:scale-110 transition-all duration-300 shadow-lg">
+                <div className="w-20 h-20 bg-mh-forest-green dark:bg-mh-forest-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:scale-110 transition-all duration-300 shadow-lg">
                   <Award size={32} className="text-white group-hover:text-army-black transition-colors duration-300" />
                 </div>
                 <div className="absolute -top-2 -right-2 w-8 h-8 bg-army-gold rounded-full flex items-center justify-center text-army-black font-bold text-sm">5</div>
               </div>
-              <h3 className="text-lg font-bold text-army-black mb-2 group-hover:text-mh-forest-green transition-colors duration-300">Quality Delivery</h3>
-              <p className="text-field-gray text-sm">Final inspection and seamless project handover</p>
+              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-forest-green transition-colors duration-300">Quality Delivery</h3>
+              <p className="text-field-gray dark:text-dark-text-secondary text-sm">Final inspection and seamless project handover</p>
             </div>
           </div>
 
           {/* Process CTA */}
           <div className="text-center mt-16">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-              <h3 className="text-2xl font-bold text-army-black mb-4">Ready to Start Your Project?</h3>
-              <p className="text-field-gray mb-6">Experience our proven process with AI-powered planning and military-grade execution</p>
+            <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-dark-border transition-colors duration-300">
+              <h3 className="text-2xl font-bold text-army-black dark:text-dark-text mb-4">Ready to Start Your Project?</h3>
+              <p className="text-field-gray dark:text-dark-text-secondary mb-6">Experience our proven process with AI-powered planning and military-grade execution</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/estimate"

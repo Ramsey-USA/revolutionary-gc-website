@@ -1,6 +1,7 @@
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import WhyChooseSection from '../../components/WhyChooseSection'
+import StarDecorations from '../../components/StarDecorations'
 import { Mail, Linkedin } from 'lucide-react'
 
 export default function TeamPage() {
@@ -16,7 +17,7 @@ export default function TeamPage() {
     {
       name: "Mike Holstein",
       title: "Founder (Retired)",
-      description: "Mike Holstein founded MH Construction and established its reputation for integrity, quality, and military-grade precision. Now retired, Mike's leadership and vision continue to inspire the team and guide the company's values.",
+      description: "Mike Holstein founded MH Construction and established its reputation for integrity, quality, and extensive knowledge within the construction industry. Now retired, Mike's leadership and vision continue to inspire the team and guide the company's values.",
       image: "/images/team/mike-holstein.jpg",
       email: "info@mhc-gc.com"
     },
@@ -117,7 +118,7 @@ export default function TeamPage() {
     }
   ]
 
-  const TeamSection = ({ title, members, bgColor = "bg-white", id }: { title: string, members: any[], bgColor?: string, id?: string }) => {
+  const TeamSection = ({ title, members, bgColor = "bg-white dark:bg-dark-surface", id }: { title: string, members: any[], bgColor?: string, id?: string }) => {
     // Dynamic border colors that rotate through theme palette
     const getBorderColor = (index: number) => {
       const colors = [
@@ -148,9 +149,9 @@ export default function TeamPage() {
     }
 
     return (
-    <section className={`py-16 ${bgColor}`} id={id}>
+    <section className={`py-16 ${bgColor} dark:bg-dark-surface transition-colors duration-300`} id={id}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-army-black text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text text-center mb-12">
           {title}
         </h2>
         <div className={`grid gap-8 ${
@@ -159,9 +160,9 @@ export default function TeamPage() {
             : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
         }`}>
           {members.map((member, index) => (
-            <div key={index} className={`group relative rounded-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between h-full border-2 ${getBorderColor(index)}`}>
+            <div key={index} className={`group relative rounded-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between h-full border-2 ${getBorderColor(index)} dark:border-opacity-80`}>
               {/* Enhanced card with gradient background */}
-              <div className="bg-white rounded-xl h-full relative overflow-hidden">
+              <div className="bg-white dark:bg-dark-surface-2 rounded-xl h-full relative overflow-hidden border dark:border-dark-border transition-colors duration-300">
                 {/* Image with hover effects */}
                 <div className="aspect-square relative overflow-hidden">
                   <img
@@ -175,9 +176,9 @@ export default function TeamPage() {
                 
                 {/* Card content */}
                 <div className="p-6 pb-0">
-                  <h3 className="text-xl font-bold text-army-black mb-1 group-hover:text-mh-forest-green transition-colors">{member.name}</h3>
-                  <p className="text-army-gold font-semibold mb-3">{member.title}</p>
-                  <p className="text-field-gray text-sm leading-relaxed mb-4">
+                  <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-1 group-hover:text-mh-forest-green dark:group-hover:text-mh-forest-green transition-colors">{member.name}</h3>
+                  <p className="text-army-gold dark:text-army-gold font-semibold mb-3">{member.title}</p>
+                  <p className="text-field-gray dark:text-dark-text-secondary text-sm leading-relaxed mb-4">
                     {member.description}
                   </p>
                   
@@ -186,7 +187,7 @@ export default function TeamPage() {
                     {getSkillTags(member).map((skill, skillIndex) => (
                       <span 
                         key={skillIndex} 
-                        className="px-3 py-1 bg-mh-forest-green/10 text-mh-forest-green rounded-full text-xs font-medium"
+                        className="px-3 py-1 bg-mh-forest-green/10 dark:bg-mh-forest-green/20 text-mh-forest-green dark:text-mh-forest-green rounded-full text-xs font-medium"
                       >
                         {skill}
                       </span>
@@ -198,7 +199,7 @@ export default function TeamPage() {
                 <div className="flex justify-center space-x-4 mt-4 mb-6">
                   <a
                     href={`mailto:${member.email}`}
-                    className="flex items-center justify-center w-10 h-10 bg-mh-forest-green text-white rounded-full transition-all duration-300 hover:bg-army-green hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                    className="flex items-center justify-center w-10 h-10 bg-mh-forest-green dark:bg-mh-forest-green text-white dark:text-white rounded-full transition-all duration-300 hover:bg-army-green dark:hover:bg-army-green hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
                     aria-label={`Email ${member.name}`}
                   >
                     <Mail size={18} />
@@ -207,7 +208,7 @@ export default function TeamPage() {
                     href={member.linkedin ? member.linkedin : "#"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full transition-all duration-300 hover:bg-blue-700 hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                    className="flex items-center justify-center w-10 h-10 bg-blue-600 dark:bg-blue-600 text-white dark:text-white rounded-full transition-all duration-300 hover:bg-blue-700 dark:hover:bg-blue-700 hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
                     aria-label={`LinkedIn for ${member.name}`}
                   >
                     <Linkedin size={18} />
@@ -227,13 +228,16 @@ export default function TeamPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-mh-forest-green to-army-green text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-army-black via-mh-forest-green to-army-green dark:from-dark-surface dark:via-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text overflow-hidden">
+        {/* Star decorations */}
+        <StarDecorations />
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white dark:text-dark-text">
               Meet Our Expert Team
             </h1>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed text-white dark:text-dark-text-secondary">
               Decades of combined construction expertise powered by military precision 
               and innovative technology. Our veteran-owned team brings unmatched dedication 
               to every project.
@@ -247,27 +251,27 @@ export default function TeamPage() {
   <TeamSection title="Executive Leadership" members={leadership} id="leadership" />
 
   {/* Project Management */}
-  <TeamSection title="Project Management & Estimating" members={projectManagement} bgColor="bg-light-gray" id="project-management" />
+  <TeamSection title="Project Management & Estimating" members={projectManagement} bgColor="bg-light-gray dark:bg-dark-surface-2" id="project-management" />
 
   {/* Field Operations */}
   <TeamSection title="Site & Field Operations" members={fieldOperations} id="field-operations" />
 
   {/* Administration */}
-  <TeamSection title="Administration & Support" members={administration} bgColor="bg-light-gray" id="administration" />
+  <TeamSection title="Administration & Support" members={administration} bgColor="bg-light-gray dark:bg-dark-surface-2" id="administration" />
 
       {/* Join Our Team CTA */}
-      <section className="py-20 bg-gradient-to-r from-army-green to-mh-forest-green text-white">
+      <section className="py-20 bg-gradient-to-r from-army-green to-mh-forest-green dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white dark:text-dark-text">
             Join Our Growing Team
           </h2>
-          <p className="text-xl mb-8 leading-relaxed">
+          <p className="text-xl mb-8 leading-relaxed text-white dark:text-dark-text-secondary">
             We're always looking for skilled professionals who share our commitment 
             to excellence, innovation, and military-grade precision.
           </p>
           <a
             href="/contact"
-            className="inline-block bg-army-gold text-army-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-500 transition-colors transform hover:scale-105"
+            className="inline-block bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-500 dark:hover:bg-yellow-500 transition-colors transform hover:scale-105"
           >
             Explore Careers
           </a>

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
+import ThemeToggle from './ThemeToggle'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,7 +18,7 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-white shadow-lg fixed top-0 left-0 right-0 z-[100] backdrop-blur-sm border-b border-gray-100">
+    <header className="bg-white dark:bg-dark-surface shadow-lg fixed top-0 left-0 right-0 z-[100] backdrop-blur-sm border-b border-gray-100 dark:border-dark-border transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
@@ -36,21 +37,24 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/team" className="text-army-black hover:text-mh-forest-green transition-colors font-medium">
+            <Link href="/team" className="text-army-black dark:text-dark-text hover:text-mh-forest-green dark:hover:text-army-gold transition-colors font-medium">
               About
             </Link>
-            <Link href="/services" className="text-army-black hover:text-mh-forest-green transition-colors font-medium">
+            <Link href="/services" className="text-army-black dark:text-dark-text hover:text-mh-forest-green dark:hover:text-army-gold transition-colors font-medium">
               Services
             </Link>
-            <Link href="/projects" className="text-army-black hover:text-mh-forest-green transition-colors font-medium">
+            <Link href="/projects" className="text-army-black dark:text-dark-text hover:text-mh-forest-green dark:hover:text-army-gold transition-colors font-medium">
               Projects
             </Link>
-            <Link href="/wounded-warrior" className="text-army-black hover:text-mh-forest-green transition-colors font-medium">
+            <Link href="/wounded-warrior" className="text-army-black dark:text-dark-text hover:text-mh-forest-green dark:hover:text-army-gold transition-colors font-medium">
               Wounded Warrior
             </Link>
-            <Link href="/contact" className="text-army-black hover:text-mh-forest-green transition-colors font-medium">
+            <Link href="/contact" className="text-army-black dark:text-dark-text hover:text-mh-forest-green dark:hover:text-army-gold transition-colors font-medium">
               Contact
             </Link>
+
+            {/* Theme Toggle */}
+            <ThemeToggle />
 
             {/* CTA Button */}
             <Link 
@@ -61,11 +65,12 @@ const Header = () => {
             </Link>
           </nav>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile menu button and theme toggle */}
+          <div className="md:hidden flex items-center space-x-3">
+            <ThemeToggle />
             <button
               onClick={toggleMenu}
-              className="text-army-black hover:text-mh-forest-green"
+              className="text-army-black dark:text-dark-text hover:text-mh-forest-green dark:hover:text-army-gold"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -75,38 +80,38 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-dark-surface border-t border-gray-200 dark:border-dark-border">
               <Link 
                 href="/team" 
-                className="block px-3 py-2 text-army-black hover:text-mh-forest-green transition-colors font-medium"
+                className="block px-3 py-2 text-army-black dark:text-dark-text hover:text-mh-forest-green dark:hover:text-army-gold transition-colors font-medium"
                 onClick={closeMenu}
               >
                 About
               </Link>
               <Link 
                 href="/services" 
-                className="block px-3 py-2 text-army-black hover:text-mh-forest-green transition-colors font-medium"
+                className="block px-3 py-2 text-army-black dark:text-dark-text hover:text-mh-forest-green dark:hover:text-army-gold transition-colors font-medium"
                 onClick={closeMenu}
               >
                 Services
               </Link>
               <Link 
                 href="/projects" 
-                className="block px-3 py-2 text-army-black hover:text-mh-forest-green transition-colors font-medium"
+                className="block px-3 py-2 text-army-black dark:text-dark-text hover:text-mh-forest-green dark:hover:text-army-gold transition-colors font-medium"
                 onClick={closeMenu}
               >
                 Projects
               </Link>
               <Link 
                 href="/wounded-warrior" 
-                className="block px-3 py-2 text-army-black hover:text-mh-forest-green transition-colors font-medium"
+                className="block px-3 py-2 text-army-black dark:text-dark-text hover:text-mh-forest-green dark:hover:text-army-gold transition-colors font-medium"
                 onClick={closeMenu}
               >
                 Wounded Warrior
               </Link>
               <Link 
                 href="/contact" 
-                className="block px-3 py-2 text-army-black hover:text-mh-forest-green transition-colors font-medium"
+                className="block px-3 py-2 text-army-black dark:text-dark-text hover:text-mh-forest-green dark:hover:text-army-gold transition-colors font-medium"
                 onClick={closeMenu}
               >
                 Contact

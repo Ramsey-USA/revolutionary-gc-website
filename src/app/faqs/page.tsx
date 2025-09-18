@@ -128,15 +128,15 @@ export default function FAQsPage() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-mh-forest-green to-army-black py-32 overflow-hidden">
+        <section className="relative bg-gradient-to-r from-mh-forest-green to-army-black dark:from-dark-surface-2 dark:to-dark-surface-3 py-32 overflow-hidden">
           <StarDecorations />
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                Frequently Asked <span className="text-army-gold">Questions</span>
+              <h1 className="text-5xl md:text-7xl font-bold text-white dark:text-dark-text mb-6">
+                Frequently Asked <span className="text-army-gold dark:text-army-gold">Questions</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-300 dark:text-dark-text-secondary max-w-3xl mx-auto leading-relaxed">
                 Find answers to common questions about our construction services, 
                 government contracting expertise, and subcontractor partnerships.
               </p>
@@ -145,7 +145,7 @@ export default function FAQsPage() {
         </section>
 
         {/* FAQ Content */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             
             {/* Category Navigation */}
@@ -159,8 +159,8 @@ export default function FAQsPage() {
                   }}
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2 ${
                     activeCategory === category.id
-                      ? 'bg-mh-forest-green text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                      ? 'bg-mh-forest-green dark:bg-mh-forest-green text-white dark:text-white shadow-lg'
+                      : 'bg-white dark:bg-dark-surface-2 text-gray-700 dark:text-dark-text hover:bg-gray-100 dark:hover:bg-dark-surface-3 border border-gray-200 dark:border-dark-border'
                   }`}
                 >
                   <span className="text-lg">{category.icon}</span>
@@ -174,17 +174,17 @@ export default function FAQsPage() {
               {filteredFAQs.map(faq => (
                 <div
                   key={faq.id}
-                  className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden"
+                  className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg border border-gray-100 dark:border-dark-border overflow-hidden transition-colors duration-300"
                 >
                   <button
                     onClick={() => toggleFAQ(faq.id)}
-                    className="w-full px-8 py-6 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between"
+                    className="w-full px-8 py-6 text-left hover:bg-gray-50 dark:hover:bg-dark-surface-3 transition-colors duration-200 flex items-center justify-between"
                   >
-                    <h3 className="text-lg font-semibold text-army-black pr-4">
+                    <h3 className="text-lg font-semibold text-army-black dark:text-dark-text pr-4">
                       {faq.question}
                     </h3>
                     <svg
-                      className={`w-6 h-6 text-mh-forest-green transform transition-transform duration-200 flex-shrink-0 ${
+                      className={`w-6 h-6 text-mh-forest-green dark:text-mh-forest-green transform transition-transform duration-200 flex-shrink-0 ${
                         openFAQ === faq.id ? 'rotate-180' : ''
                       }`}
                       fill="none"
@@ -197,8 +197,8 @@ export default function FAQsPage() {
                   
                   {openFAQ === faq.id && (
                     <div className="px-8 pb-6">
-                      <div className="pt-4 border-t border-gray-100">
-                        <p className="text-gray-600 leading-relaxed">
+                      <div className="pt-4 border-t border-gray-100 dark:border-dark-border">
+                        <p className="text-gray-600 dark:text-dark-text-secondary leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>
@@ -210,11 +210,11 @@ export default function FAQsPage() {
 
             {/* Contact CTA */}
             <div className="mt-16 text-center">
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
-                <h3 className="text-2xl font-bold text-army-black mb-4">
+              <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-xl border border-gray-100 dark:border-dark-border transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-army-black dark:text-dark-text mb-4">
                   Still Have Questions?
                 </h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 dark:text-dark-text-secondary mb-6">
                   Our team is here to help! Contact us for more information about our services or to discuss your project requirements.
                 </p>
                 <a

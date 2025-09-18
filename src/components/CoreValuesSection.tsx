@@ -44,14 +44,14 @@ const CoreValuesSection = () => {
   ]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-army-black mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-army-black dark:text-dark-text mb-4">
             Our Core Values
           </h2>
-          <p className="text-xl text-field-gray max-w-3xl mx-auto">
+          <p className="text-xl text-field-gray dark:text-dark-text-secondary max-w-3xl mx-auto">
             Military precision meets construction excellence
           </p>
         </div>
@@ -65,7 +65,7 @@ const CoreValuesSection = () => {
               <div key={index} className="flip-card h-80">
                 <div className="flip-card-inner h-full">
                   {/* Front of Card - Hybrid Protective Case (simplified) */}
-                  <div className={`flip-card-front ${styles.protectiveCase} bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl shadow-lg p-6 flex flex-col items-center justify-center border border-gray-200`}>
+                  <div className={`flip-card-front ${styles.protectiveCase} bg-gradient-to-br from-gray-50 to-gray-100 dark:from-dark-surface-2 dark:to-dark-surface-3 rounded-xl shadow-lg p-6 flex flex-col items-center justify-center border border-gray-200 dark:border-dark-border`}>
                     <div className={`${value.color} mb-6`}>
                       <IconComponent size={48} />
                     </div>
@@ -94,7 +94,7 @@ const CoreValuesSection = () => {
 
         {/* Bottom Text */}
         <div className="text-center mt-16">
-          <p className="text-lg text-field-gray max-w-4xl mx-auto">
+          <p className="text-lg text-field-gray dark:text-dark-text-secondary max-w-4xl mx-auto">
             These values guide every decision we make, from project planning to final delivery. 
             When you choose MH Construction, you're choosing a partner committed to excellence, 
             innovation, and integrity.

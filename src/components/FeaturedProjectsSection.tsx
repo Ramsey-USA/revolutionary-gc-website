@@ -56,14 +56,14 @@ const FeaturedProjectsSection = () => {
   ]
 
   return (
-    <section className="py-20 bg-light-gray">
+    <section className="py-20 bg-light-gray dark:bg-dark-surface transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-army-black mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-army-black dark:text-dark-text mb-4">
             Featured Projects
           </h2>
-          <p className="text-xl text-field-gray max-w-3xl mx-auto">
+          <p className="text-xl text-field-gray dark:text-dark-text-secondary max-w-3xl mx-auto">
             Showcasing our construction excellence across the Pacific Northwest
           </p>
         </div>
@@ -87,10 +87,10 @@ const FeaturedProjectsSection = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <span className="inline-block bg-army-gold text-army-black px-3 py-1 rounded-full text-sm font-semibold mb-2">
+                      <span className="inline-block bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-3 py-1 rounded-full text-sm font-semibold mb-2">
                         {project.category}
                       </span>
-                      <h3 className="text-2xl font-bold text-white">
+                      <h3 className="text-2xl font-bold text-white dark:text-white">
                         {project.title}
                       </h3>
                     </div>
@@ -98,15 +98,15 @@ const FeaturedProjectsSection = () => {
                 </div>
 
                 {/* Back of Card - Description */}
-                <div className="flip-card-back bg-gradient-to-br from-mh-forest-green to-army-green rounded-xl shadow-lg p-6 flex flex-col justify-between text-white">
+                <div className="flip-card-back bg-gradient-to-br from-mh-forest-green to-army-green dark:from-dark-surface-2 dark:to-dark-surface-3 rounded-xl shadow-lg p-6 flex flex-col justify-between text-white dark:text-dark-text">
                   <div>
-                    <span className="inline-block bg-army-gold text-army-black px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                    <span className="inline-block bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-3 py-1 rounded-full text-sm font-semibold mb-4">
                       {project.category}
                     </span>
-                    <h3 className="text-2xl font-bold mb-4 text-army-gold">
+                    <h3 className="text-2xl font-bold mb-4 text-army-gold dark:text-army-gold">
                       {project.title}
                     </h3>
-                    <p className="text-gray-200 leading-relaxed mb-6">
+                    <p className="text-gray-200 dark:text-dark-text-secondary leading-relaxed mb-6">
                       {project.description}
                     </p>
                   </div>
@@ -114,13 +114,13 @@ const FeaturedProjectsSection = () => {
                   <div className="space-y-3">
                     <Link
                       href={`/projects/${project.slug}`}
-                      className="block w-full bg-army-gold text-army-black text-center py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-colors"
+                      className="block w-full bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black text-center py-3 rounded-lg font-semibold hover:bg-yellow-500 dark:hover:bg-yellow-500 transition-colors"
                     >
                       View Project Details
                     </Link>
                     <Link
                       href="/estimate"
-                      className="block w-full bg-transparent border-2 border-white text-white text-center py-2 rounded-lg font-semibold hover:bg-white hover:text-army-black transition-colors"
+                      className="block w-full bg-transparent border-2 border-white dark:border-dark-text text-white dark:text-dark-text text-center py-2 rounded-lg font-semibold hover:bg-white dark:hover:bg-dark-text hover:text-army-black dark:hover:text-army-black transition-colors"
                     >
                       Get Similar Estimate
                     </Link>
@@ -135,7 +135,7 @@ const FeaturedProjectsSection = () => {
         <div className="text-center mt-16">
           <Link
             href="/projects"
-            className="inline-block bg-mh-forest-green text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green transition-colors transform hover:scale-105"
+            className="inline-block bg-mh-forest-green dark:bg-mh-forest-green text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green dark:hover:bg-army-green transition-colors transform hover:scale-105"
           >
             View All Projects
           </Link>

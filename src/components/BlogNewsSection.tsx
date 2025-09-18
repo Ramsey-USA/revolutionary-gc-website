@@ -75,14 +75,14 @@ const BlogNewsSection = () => {
   const currentItem = articles[currentArticle]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-army-black mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-army-black dark:text-dark-text mb-4">
             Latest News & Insights
           </h2>
-          <p className="text-xl text-field-gray max-w-3xl mx-auto">
+          <p className="text-xl text-field-gray dark:text-dark-text-secondary max-w-3xl mx-auto">
             Stay updated with our latest projects, industry insights, and construction innovations
           </p>
         </div>
@@ -90,7 +90,7 @@ const BlogNewsSection = () => {
         {/* Carousel Container */}
         <div className="relative">
           {/* Main Article Display */}
-          <div className="bg-gradient-to-r from-mh-forest-green to-army-green rounded-2xl overflow-hidden shadow-2xl">
+          <div className="bg-gradient-to-r from-mh-forest-green to-army-green dark:from-dark-surface-2 dark:to-dark-surface-3 rounded-2xl overflow-hidden shadow-2xl border dark:border-dark-border">
             <div className="grid grid-cols-1 lg:grid-cols-2 h-96 lg:h-80">
               {/* Article Image */}
               <div className="relative">
@@ -101,32 +101,32 @@ const BlogNewsSection = () => {
                   className="object-cover"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-army-gold text-army-black px-3 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-3 py-1 rounded-full text-sm font-semibold">
                     {currentItem.category}
                   </span>
                 </div>
               </div>
 
               {/* Article Content */}
-              <div className="p-8 flex flex-col justify-center text-white">
-                <div className="flex items-center text-army-gold mb-4">
+              <div className="p-8 flex flex-col justify-center text-white dark:text-dark-text">
+                <div className="flex items-center text-army-gold dark:text-army-gold mb-4">
                   <Calendar size={16} className="mr-2" />
                   <span className="text-sm">{currentItem.date}</span>
                   <span className="mx-2">•</span>
                   <span className="text-sm">{currentItem.readTime}</span>
                 </div>
 
-                <h3 className="text-2xl lg:text-3xl font-bold mb-4 leading-tight">
+                <h3 className="text-2xl lg:text-3xl font-bold mb-4 leading-tight text-white dark:text-dark-text">
                   {currentItem.title}
                 </h3>
 
-                <p className="text-gray-200 mb-6 leading-relaxed">
+                <p className="text-gray-200 dark:text-dark-text-secondary mb-6 leading-relaxed">
                   {currentItem.excerpt}
                 </p>
 
                 <Link
                   href={`/blog/${currentItem.slug}`}
-                  className="inline-flex items-center bg-army-gold text-army-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-colors w-fit"
+                  className="inline-flex items-center bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 dark:hover:bg-yellow-500 transition-colors w-fit"
                 >
                   Read Full Article
                   <ArrowRight size={16} className="ml-2" />
@@ -138,7 +138,7 @@ const BlogNewsSection = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevArticle}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-2 rounded-full transition-colors z-10"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 hover:bg-opacity-30 dark:hover:bg-opacity-90 text-white dark:text-dark-text p-2 rounded-full transition-colors z-10"
             aria-label="Previous article"
           >
             <ChevronLeft size={24} />
@@ -146,7 +146,7 @@ const BlogNewsSection = () => {
 
           <button
             onClick={nextArticle}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-2 rounded-full transition-colors z-10"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 hover:bg-opacity-30 dark:hover:bg-opacity-90 text-white dark:text-dark-text p-2 rounded-full transition-colors z-10"
             aria-label="Next article"
           >
             <ChevronRight size={24} />
@@ -161,8 +161,8 @@ const BlogNewsSection = () => {
               onClick={() => goToArticle(index)}
               className={`w-3 h-3 rounded-full transition-colors ${
                 index === currentArticle 
-                  ? 'bg-mh-forest-green' 
-                  : 'bg-gray-300 hover:bg-gray-400'
+                  ? 'bg-mh-forest-green dark:bg-army-gold' 
+                  : 'bg-gray-300 dark:bg-dark-border hover:bg-gray-400 dark:hover:bg-gray-500'
               }`}
               aria-label={`Go to article ${index + 1}`}
             />
@@ -173,7 +173,7 @@ const BlogNewsSection = () => {
         <div className="text-center mt-12">
           <Link
             href="/blog"
-            className="inline-block bg-mh-forest-green text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green transition-colors transform hover:scale-105"
+            className="inline-block bg-mh-forest-green dark:bg-mh-forest-green text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green dark:hover:bg-army-green transition-colors transform hover:scale-105"
           >
             View All News & Insights
           </Link>

@@ -51,100 +51,100 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="min-h-screen flex flex-col pt-20">
+    <main className="min-h-screen flex flex-col pt-20 bg-white dark:bg-dark-surface transition-colors duration-300">
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-army-green via-mh-forest-green to-army-green text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-army-green via-mh-forest-green to-army-green dark:from-dark-surface-2 dark:via-dark-surface-3 dark:to-dark-surface-2 text-white dark:text-dark-text overflow-hidden">
+        <div className="absolute inset-0 bg-black/20 dark:bg-black/40"></div>
         
         {/* Star decorations */}
         <StarDecorations />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-army-gold rounded-full mb-6 mx-auto">
-            <svg className="w-10 h-10 text-army-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-army-gold dark:bg-army-gold rounded-full mb-6 mx-auto">
+            <svg className="w-10 h-10 text-army-black dark:text-army-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white dark:text-dark-text">
             Get Your Project Started
           </h1>
-          <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed opacity-90">
+          <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed opacity-90 text-white dark:text-dark-text-secondary">
             Ready to build something exceptional? Let's discuss your project and create a customized solution that meets your needs with military precision and excellence.
           </p>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-army-black mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-6">
                   <span className="bg-gradient-to-r from-mh-forest-green to-army-green bg-clip-text text-transparent">
                     Let's Build Together
                   </span>
                 </h2>
-                <p className="text-xl text-gray-600 leading-relaxed">
+                <p className="text-xl text-gray-600 dark:text-dark-text-secondary leading-relaxed">
                   Our team is ready to turn your vision into reality. Whether it's a government facility, educational building, or commercial project, we bring veteran leadership and construction excellence to every job.
                 </p>
               </div>
 
               {/* Contact Cards */}
               <div className="space-y-6">
-                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-dark-border hover:shadow-xl transition-shadow">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-mh-forest-green rounded-full flex items-center justify-center flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-12 h-12 bg-mh-forest-green dark:bg-mh-forest-green rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-6 h-6 text-white dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-army-black mb-2">Phone</h3>
-                      <p className="text-gray-600">Call us directly for immediate assistance</p>
-                      <a href="tel:+15093086489" className="text-mh-forest-green font-semibold hover:text-army-green transition-colors">
+                      <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2">Phone</h3>
+                      <p className="text-gray-600 dark:text-dark-text-secondary">Call us directly for immediate assistance</p>
+                      <a href="tel:+15093086489" className="text-mh-forest-green dark:text-mh-forest-green font-semibold hover:text-army-green dark:hover:text-army-green transition-colors">
                         (509) 308-6489
                       </a>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-dark-border hover:shadow-xl transition-shadow">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-army-gold rounded-full flex items-center justify-center flex-shrink-0">
-                      <svg className="w-6 h-6 text-army-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-12 h-12 bg-army-gold dark:bg-army-gold rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-6 h-6 text-army-black dark:text-army-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-army-black mb-2">Email</h3>
-                      <p className="text-gray-600">Send us your project details</p>
-                      <a href="mailto:info@mhconstruction.com" className="text-army-gold font-semibold hover:text-amber-600 transition-colors">
+                      <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2">Email</h3>
+                      <p className="text-gray-600 dark:text-dark-text-secondary">Send us your project details</p>
+                      <a href="mailto:info@mhconstruction.com" className="text-army-gold dark:text-army-gold font-semibold hover:text-amber-600 dark:hover:text-amber-600 transition-colors">
                         info@mhconstruction.com
                       </a>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-dark-border hover:shadow-xl transition-shadow">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-12 h-12 bg-blue-600 dark:bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-6 h-6 text-white dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-army-black mb-2">Office Location</h3>
-                      <p className="text-gray-600">Visit us for in-person consultations</p>
-                      <p className="text-blue-600 font-semibold">
+                      <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2">Office Location</h3>
+                      <p className="text-gray-600 dark:text-dark-text-secondary">Visit us for in-person consultations</p>
+                      <p className="text-blue-600 dark:text-blue-400 font-semibold">
                         3111 N. Capital Ave.<br />
                         Pasco, WA 99301<br />
-                        <span className="text-sm text-gray-500">(Serving the Columbia River Region)</span>
+                        <span className="text-sm text-gray-500 dark:text-dark-text-secondary">(Serving the Columbia River Region)</span>
                       </p>
                     </div>
                   </div>
@@ -152,14 +152,14 @@ export default function ContactPage() {
               </div>
 
               {/* Business Hours */}
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <h3 className="text-lg font-bold text-army-black mb-4 flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-mh-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-dark-border">
+                <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-4 flex items-center">
+                  <svg className="w-5 h-5 mr-2 text-mh-forest-green dark:text-mh-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   Business Hours
                 </h3>
-                <div className="space-y-2 text-gray-600">
+                <div className="space-y-2 text-gray-600 dark:text-dark-text-secondary">
                   <div className="flex justify-between">
                     <span>Monday - Friday</span>
                     <span className="font-semibold">7:00 AM - 6:00 PM</span>
@@ -172,7 +172,7 @@ export default function ContactPage() {
                     <span>Sunday</span>
                     <span className="font-semibold">Closed</span>
                   </div>
-                  <div className="text-sm text-mh-forest-green mt-3">
+                  <div className="text-sm text-mh-forest-green dark:text-mh-forest-green mt-3">
                     * Emergency services available 24/7
                   </div>
                 </div>
@@ -180,12 +180,12 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100">
+            <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100 dark:border-dark-border">
               <div className="text-center mb-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-army-black mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-army-black dark:text-dark-text mb-4">
                   Start Your Project
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-dark-text-secondary">
                   Tell us about your project and we'll provide a detailed proposal
                 </p>
               </div>
@@ -193,7 +193,7 @@ export default function ContactPage() {
               <form onSubmit={handleContactSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="block text-sm font-medium text-army-black">
+                    <label htmlFor="name" className="block text-sm font-medium text-army-black dark:text-dark-text">
                       Full Name *
                     </label>
                     <input
@@ -203,13 +203,13 @@ export default function ContactPage() {
                       required
                       value={contactData.name}
                       onChange={handleContactChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500"
                       placeholder="Your full name"
                     />
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="company" className="block text-sm font-medium text-army-black">
+                    <label htmlFor="company" className="block text-sm font-medium text-army-black dark:text-dark-text">
                       Organization
                     </label>
                     <input
@@ -218,7 +218,7 @@ export default function ContactPage() {
                       name="company"
                       value={contactData.company}
                       onChange={handleContactChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500"
                       placeholder="Company or organization"
                     />
                   </div>
@@ -226,7 +226,7 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="email" className="block text-sm font-medium text-army-black">
+                    <label htmlFor="email" className="block text-sm font-medium text-army-black dark:text-dark-text">
                       Email Address *
                     </label>
                     <input
@@ -236,13 +236,13 @@ export default function ContactPage() {
                       required
                       value={contactData.email}
                       onChange={handleContactChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500"
                       placeholder="your.email@example.com"
                     />
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="phone" className="block text-sm font-medium text-army-black">
+                    <label htmlFor="phone" className="block text-sm font-medium text-army-black dark:text-dark-text">
                       Phone Number *
                     </label>
                     <input
@@ -252,7 +252,7 @@ export default function ContactPage() {
                       required
                       value={contactData.phone}
                       onChange={handleContactChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500"
                       placeholder="(509) 308-6489"
                     />
                   </div>
@@ -260,7 +260,7 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="projectType" className="block text-sm font-medium text-army-black">
+                    <label htmlFor="projectType" className="block text-sm font-medium text-army-black dark:text-dark-text">
                       Project Type *
                     </label>
                     <select
@@ -269,7 +269,7 @@ export default function ContactPage() {
                       required
                       value={contactData.projectType}
                       onChange={handleContactChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500"
                     >
                       <option value="">Select project type</option>
                       <option value="government">Government Building</option>
@@ -286,7 +286,7 @@ export default function ContactPage() {
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="projectLocation" className="block text-sm font-medium text-army-black">
+                    <label htmlFor="projectLocation" className="block text-sm font-medium text-army-black dark:text-dark-text">
                       Project Location *
                     </label>
                     <input
@@ -296,7 +296,7 @@ export default function ContactPage() {
                       required
                       value={contactData.projectLocation}
                       onChange={handleContactChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500"
                       placeholder="City, State"
                     />
                   </div>
@@ -304,7 +304,7 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="projectTimeline" className="block text-sm font-medium text-army-black">
+                    <label htmlFor="projectTimeline" className="block text-sm font-medium text-army-black dark:text-dark-text">
                       Project Timeline *
                     </label>
                     <select
@@ -313,7 +313,7 @@ export default function ContactPage() {
                       required
                       value={contactData.projectTimeline}
                       onChange={handleContactChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500"
                     >
                       <option value="">Select timeline</option>
                       <option value="immediate">Immediate (within 30 days)</option>
@@ -326,7 +326,7 @@ export default function ContactPage() {
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="budget" className="block text-sm font-medium text-army-black">
+                    <label htmlFor="budget" className="block text-sm font-medium text-army-black dark:text-dark-text">
                       Project Budget
                     </label>
                     <select
@@ -334,7 +334,7 @@ export default function ContactPage() {
                       name="budget"
                       value={contactData.budget}
                       onChange={handleContactChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500"
                     >
                       <option value="">Select budget range</option>
                       <option value="under-500k">Under $500K</option>
@@ -348,7 +348,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="message" className="block text-sm font-medium text-army-black">
+                  <label htmlFor="message" className="block text-sm font-medium text-army-black dark:text-dark-text">
                     Project Details *
                   </label>
                   <textarea
@@ -358,7 +358,7 @@ export default function ContactPage() {
                     value={contactData.message}
                     onChange={handleContactChange}
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white hover:border-gray-400 resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-forest-green focus:border-mh-forest-green transition-colors bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500 resize-none"
                     placeholder="Please describe your project, including size, specific requirements, and any special considerations..."
                   />
                 </div>
@@ -366,7 +366,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={isSubmittingContact}
-                  className="w-full bg-gradient-to-r from-mh-forest-green to-army-green text-white px-8 py-4 rounded-xl text-lg font-bold hover:from-army-green hover:to-mh-forest-green transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-2xl flex items-center justify-center"
+                  className="w-full bg-gradient-to-r from-mh-forest-green to-army-green dark:from-mh-forest-green dark:to-army-green text-white dark:text-white px-8 py-4 rounded-xl text-lg font-bold hover:from-army-green hover:to-mh-forest-green dark:hover:from-army-green dark:hover:to-mh-forest-green transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-2xl flex items-center justify-center"
                 >
                   {isSubmittingContact ? (
                     <span className="flex items-center">
@@ -386,7 +386,7 @@ export default function ContactPage() {
                   )}
                 </button>
 
-                <p className="text-center text-sm text-gray-500">
+                <p className="text-center text-sm text-gray-500 dark:text-dark-text-secondary">
                   * Required fields. We typically respond within 24 hours.
                 </p>
               </form>

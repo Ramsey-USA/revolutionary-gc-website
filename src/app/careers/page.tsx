@@ -189,8 +189,8 @@ export default function CareersPage() {
     <main className="min-h-screen">
       <Header />
       {/* Hero Section with Statistics */}
-      <section className="relative py-20 bg-gradient-to-r from-army-green to-mh-forest-green text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="relative pt-32 pb-20 bg-gradient-to-r from-army-green to-mh-forest-green dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text overflow-hidden">
+        <div className="absolute inset-0 bg-black/20 dark:bg-black/40"></div>
         
         {/* Star decorations */}
         <StarDecorations />
@@ -207,22 +207,22 @@ export default function CareersPage() {
 
           {/* Career Statistics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
-              <div className="text-3xl md:text-4xl font-bold text-army-gold mb-2 animate-fade-in-up">12+</div>
-              <div className="text-white/90 font-medium">Open Positions</div>
+            <div className="text-center p-6 bg-white/10 dark:bg-dark-surface/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-dark-border/30 hover:bg-white/15 dark:hover:bg-dark-surface/30 transition-all duration-300 transform hover:scale-105">
+              <div className="text-3xl md:text-4xl font-bold text-army-gold dark:text-army-gold mb-2 animate-fade-in-up">12+</div>
+              <div className="text-white/90 dark:text-dark-text/90 font-medium">Open Positions</div>
             </div>
             
-            <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
-              <div className="text-3xl md:text-4xl font-bold text-army-gold mb-2 animate-fade-in-up">85%</div>
-              <div className="text-white/90 font-medium">Veteran Team</div>
+            <div className="text-center p-6 bg-white/10 dark:bg-dark-surface/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-dark-border/30 hover:bg-white/15 dark:hover:bg-dark-surface/30 transition-all duration-300 transform hover:scale-105">
+              <div className="text-3xl md:text-4xl font-bold text-army-gold dark:text-army-gold mb-2 animate-fade-in-up">85%</div>
+              <div className="text-white/90 dark:text-dark-text/90 font-medium">Veteran Team</div>
             </div>
             
-            <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
-              <div className="text-3xl md:text-4xl font-bold text-army-gold mb-2 animate-fade-in-up">150+</div>
-              <div className="text-white/90 font-medium">Years Combined Experience</div>
+            <div className="text-center p-6 bg-white/10 dark:bg-dark-surface/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-dark-border/30 hover:bg-white/15 dark:hover:bg-dark-surface/30 transition-all duration-300 transform hover:scale-105">
+              <div className="text-3xl md:text-4xl font-bold text-army-gold dark:text-army-gold mb-2 animate-fade-in-up">150+</div>
+              <div className="text-white/90 dark:text-dark-text/90 font-medium">Years Combined Experience</div>
             </div>
             
-            <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
+            <div className="text-center p-6 bg-white/10 dark:bg-dark-surface/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-dark-border/30 hover:bg-white/15 dark:hover:bg-dark-surface/30 transition-all duration-300 transform hover:scale-105">
               <div className="text-3xl md:text-4xl font-bold text-army-gold mb-2 animate-fade-in-up">95%</div>
               <div className="text-white/90 font-medium">Employee Satisfaction</div>
             </div>
@@ -231,28 +231,28 @@ export default function CareersPage() {
       </section>
 
       {/* Benefits & Culture Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">
               Why Join MH Construction?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
               We believe in taking care of our team. Discover the benefits and culture that make MH Construction a great place to build your career.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Competitive Compensation */}
-            <div className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-army-gold">
-              <div className="w-16 h-16 bg-army-gold/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-army-gold/20 transition-colors">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-army-gold">
+              <div className="w-16 h-16 bg-army-gold/10 dark:bg-army-gold/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-army-gold/20 dark:group-hover:bg-army-gold/30 transition-colors">
                 <svg className="w-8 h-8 text-army-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-army-black mb-4">Competitive Compensation</h3>
-              <p className="text-gray-600 mb-4">Industry-leading salaries with performance bonuses and profit sharing opportunities.</p>
-              <ul className="text-sm text-gray-500 space-y-2">
+              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4">Competitive Compensation</h3>
+              <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Industry-leading salaries with performance bonuses and profit sharing opportunities.</p>
+              <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
                 <li>• Annual performance reviews</li>
                 <li>• Merit-based increases</li>
                 <li>• Quarterly bonus programs</li>
@@ -260,15 +260,15 @@ export default function CareersPage() {
             </div>
 
             {/* Health & Wellness */}
-            <div className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-mh-forest-green">
-              <div className="w-16 h-16 bg-mh-forest-green/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-forest-green/20 transition-colors">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-mh-forest-green">
+              <div className="w-16 h-16 bg-mh-forest-green/10 dark:bg-mh-forest-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-forest-green/20 dark:group-hover:bg-mh-forest-green/30 transition-colors">
                 <svg className="w-8 h-8 text-mh-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-army-black mb-4">Health & Wellness</h3>
-              <p className="text-gray-600 mb-4">Comprehensive health coverage and wellness programs for you and your family.</p>
-              <ul className="text-sm text-gray-500 space-y-2">
+              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4">Health & Wellness</h3>
+              <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Comprehensive health coverage and wellness programs for you and your family.</p>
+              <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
                 <li>• Medical, dental, vision</li>
                 <li>• Mental health support</li>
                 <li>• Wellness stipends</li>
@@ -276,15 +276,15 @@ export default function CareersPage() {
             </div>
 
             {/* Veteran Support */}
-            <div className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-army-green">
-              <div className="w-16 h-16 bg-army-green/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-army-green/20 transition-colors">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-army-green">
+              <div className="w-16 h-16 bg-army-green/10 dark:bg-army-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-army-green/20 dark:group-hover:bg-army-green/30 transition-colors">
                 <svg className="w-8 h-8 text-army-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-army-black mb-4">Veteran Support</h3>
-              <p className="text-gray-600 mb-4">Dedicated support for our veteran team members with specialized programs.</p>
-              <ul className="text-sm text-gray-500 space-y-2">
+              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4">Veteran Support</h3>
+              <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Dedicated support for our veteran team members with specialized programs.</p>
+              <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
                 <li>• Veteran mentorship program</li>
                 <li>• Military skill translation</li>
                 <li>• VA benefit assistance</li>
@@ -292,15 +292,15 @@ export default function CareersPage() {
             </div>
 
             {/* Professional Development */}
-            <div className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-blue-600">
-              <div className="w-16 h-16 bg-blue-600/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-blue-600">
+              <div className="w-16 h-16 bg-blue-600/10 dark:bg-blue-600/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-600/20 dark:group-hover:bg-blue-600/30 transition-colors">
                 <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-army-black mb-4">Professional Development</h3>
-              <p className="text-gray-600 mb-4">Continuous learning opportunities and career advancement programs.</p>
-              <ul className="text-sm text-gray-500 space-y-2">
+              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4">Professional Development</h3>
+              <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Continuous learning opportunities and career advancement programs.</p>
+              <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
                 <li>• Training & certifications</li>
                 <li>• Conference attendance</li>
                 <li>• Leadership development</li>
@@ -308,15 +308,15 @@ export default function CareersPage() {
             </div>
 
             {/* Work-Life Balance */}
-            <div className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-amber-700">
-              <div className="w-16 h-16 bg-amber-700/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-amber-700/20 transition-colors">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-amber-700">
+              <div className="w-16 h-16 bg-amber-700/10 dark:bg-amber-700/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-amber-700/20 dark:group-hover:bg-amber-700/30 transition-colors">
                 <svg className="w-8 h-8 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-army-black mb-4">Work-Life Balance</h3>
-              <p className="text-gray-600 mb-4">Flexible schedules and time off policies that respect your personal time.</p>
-              <ul className="text-sm text-gray-500 space-y-2">
+              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4">Work-Life Balance</h3>
+              <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Flexible schedules and time off policies that respect your personal time.</p>
+              <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
                 <li>• Flexible work arrangements</li>
                 <li>• Generous PTO policy</li>
                 <li>• Family-first culture</li>
@@ -324,15 +324,15 @@ export default function CareersPage() {
             </div>
 
             {/* Team Culture */}
-            <div className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-amber-600">
-              <div className="w-16 h-16 bg-amber-600/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-amber-600/20 transition-colors">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-amber-600">
+              <div className="w-16 h-16 bg-amber-600/10 dark:bg-amber-600/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-amber-600/20 dark:group-hover:bg-amber-600/30 transition-colors">
                 <svg className="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-army-black mb-4">Team Culture</h3>
-              <p className="text-gray-600 mb-4">Join a tight-knit team that values collaboration, respect, and shared success.</p>
-              <ul className="text-sm text-gray-500 space-y-2">
+              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4">Team Culture</h3>
+              <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Join a tight-knit team that values collaboration, respect, and shared success.</p>
+              <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
                 <li>• Team building events</li>
                 <li>• Open communication</li>
                 <li>• Recognition programs</li>
@@ -343,13 +343,13 @@ export default function CareersPage() {
       </section>
 
       {/* Open Positions Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">
               Current Opportunities
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
               Explore our open positions and find the perfect role to advance your career in construction.
             </p>
           </div>
@@ -362,8 +362,8 @@ export default function CareersPage() {
                 onClick={() => setSelectedDepartment(dept)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   selectedDepartment === dept
-                    ? 'bg-army-green text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-army-green dark:bg-army-green text-white dark:text-white shadow-lg'
+                    : 'bg-gray-100 dark:bg-dark-surface-2 text-gray-700 dark:text-dark-text hover:bg-gray-200 dark:hover:bg-dark-surface-3'
                 }`}
               >
                 {dept === 'all' ? 'All Departments' : dept}
@@ -376,27 +376,27 @@ export default function CareersPage() {
             {filteredPositions.map(position => (
               <div
                 key={position.id}
-                className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+                className="bg-white dark:bg-dark-surface-2 border border-gray-200 dark:border-dark-border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
               >
                 <div className="p-8">
                   <div className="flex justify-between items-start mb-4">
                     <div>
-                      <h3 className="text-xl font-bold text-army-black mb-2">{position.title}</h3>
+                      <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-2">{position.title}</h3>
                       <div className="flex flex-wrap gap-2 mb-4">
-                        <span className="px-3 py-1 bg-army-green/10 text-army-green rounded-full text-sm font-medium">
+                        <span className="px-3 py-1 bg-army-green/10 dark:bg-army-green/20 text-army-green dark:text-army-green rounded-full text-sm font-medium">
                           {position.department}
                         </span>
-                        <span className="px-3 py-1 bg-blue-600/10 text-blue-600 rounded-full text-sm font-medium">
+                        <span className="px-3 py-1 bg-blue-600/10 dark:bg-blue-600/20 text-blue-600 dark:text-blue-600 rounded-full text-sm font-medium">
                           {position.type}
                         </span>
-                        <span className="px-3 py-1 bg-amber-700/10 text-amber-700 rounded-full text-sm font-medium">
+                        <span className="px-3 py-1 bg-amber-700/10 dark:bg-amber-700/20 text-amber-700 dark:text-amber-700 rounded-full text-sm font-medium">
                           {position.experience}
                         </span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex items-center text-gray-600 mb-4">
+                  <div className="flex items-center text-gray-600 dark:text-dark-text-secondary mb-4">
                     <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -404,30 +404,30 @@ export default function CareersPage() {
                     {position.location}
                   </div>
 
-                  <p className="text-gray-600 mb-6 line-clamp-3">{position.description}</p>
+                  <p className="text-gray-600 dark:text-dark-text-secondary mb-6 line-clamp-3">{position.description}</p>
 
                   {/* Expandable Details */}
                   {expandedPosition === position.id && (
-                    <div className="space-y-6 mb-6 border-t pt-6">
+                    <div className="space-y-6 mb-6 border-t dark:border-dark-border pt-6">
                       <div>
-                        <h4 className="font-semibold text-army-black mb-3">Requirements:</h4>
+                        <h4 className="font-semibold text-army-black dark:text-dark-text mb-3">Requirements:</h4>
                         <ul className="space-y-2">
                           {position.requirements.map((req, index) => (
                             <li key={index} className="flex items-start">
-                              <span className="w-2 h-2 bg-army-green rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                              <span className="text-gray-600">{req}</span>
+                              <span className="w-2 h-2 bg-army-green dark:bg-army-green rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                              <span className="text-gray-600 dark:text-dark-text-secondary">{req}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-army-black mb-3">Benefits:</h4>
+                        <h4 className="font-semibold text-army-black dark:text-dark-text mb-3">Benefits:</h4>
                         <ul className="space-y-2">
                           {position.benefits.map((benefit, index) => (
                             <li key={index} className="flex items-start">
-                              <span className="w-2 h-2 bg-army-gold rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                              <span className="text-gray-600">{benefit}</span>
+                              <span className="w-2 h-2 bg-army-gold dark:bg-army-gold rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                              <span className="text-gray-600 dark:text-dark-text-secondary">{benefit}</span>
                             </li>
                           ))}
                         </ul>
@@ -440,7 +440,7 @@ export default function CareersPage() {
                       onClick={() => setExpandedPosition(
                         expandedPosition === position.id ? null : position.id
                       )}
-                      className="flex-1 px-6 py-3 border-2 border-army-green text-army-green rounded-lg font-medium hover:bg-army-green hover:text-white transition-colors duration-300"
+                      className="flex-1 px-6 py-3 border-2 border-army-green dark:border-army-green text-army-green dark:text-army-green rounded-lg font-medium hover:bg-army-green dark:hover:bg-army-green hover:text-white dark:hover:text-white transition-colors duration-300"
                     >
                       {expandedPosition === position.id ? 'Show Less' : 'Learn More'}
                     </button>
@@ -468,36 +468,36 @@ export default function CareersPage() {
       </section>
 
       {/* Career Path Timeline */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">
               Your Career Journey
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
               At MH Construction, we believe in promoting from within. See how you can advance your career with us.
             </p>
           </div>
 
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-army-green/20 hidden lg:block"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-army-green/20 dark:bg-army-green/30 hidden lg:block"></div>
 
             <div className="space-y-12 lg:space-y-24">
               {/* Entry Level */}
               <div className="relative flex flex-col lg:flex-row items-center">
                 <div className="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0">
-                  <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-500">
+                  <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-blue-500">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
-                        <span className="text-white font-bold">1</span>
+                      <div className="w-12 h-12 bg-blue-500 dark:bg-blue-400 rounded-full flex items-center justify-center mr-4">
+                        <span className="text-white dark:text-white font-bold">1</span>
                       </div>
-                      <h3 className="text-xl font-bold text-army-black">Entry Level</h3>
+                      <h3 className="text-xl font-bold text-army-black dark:text-dark-text">Entry Level</h3>
                     </div>
-                    <p className="text-gray-600 mb-4">
+                    <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
                       Start your career with hands-on experience and comprehensive training programs.
                     </p>
-                    <ul className="text-sm text-gray-500 space-y-2">
+                    <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
                       <li>• Field Technician</li>
                       <li>• Junior Estimator</li>
                       <li>• Assistant Project Coordinator</li>
@@ -505,11 +505,11 @@ export default function CareersPage() {
                     </ul>
                   </div>
                 </div>
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 dark:bg-blue-400 rounded-full border-4 border-white dark:border-dark-surface shadow-lg"></div>
                 <div className="lg:w-1/2 lg:pl-12">
                   <div className="text-center lg:text-left">
-                    <div className="text-4xl font-bold text-blue-500 mb-2">0-2 Years</div>
-                    <div className="text-gray-600">Experience Range</div>
+                    <div className="text-4xl font-bold text-blue-500 dark:text-blue-400 mb-2">0-2 Years</div>
+                    <div className="text-gray-600 dark:text-dark-text-secondary">Experience Range</div>
                   </div>
                 </div>
               </div>
@@ -517,17 +517,17 @@ export default function CareersPage() {
               {/* Mid Level */}
               <div className="relative flex flex-col lg:flex-row-reverse items-center">
                 <div className="lg:w-1/2 lg:pl-12 mb-8 lg:mb-0">
-                  <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-green-500">
+                  <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-green-500">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
-                        <span className="text-white font-bold">2</span>
+                      <div className="w-12 h-12 bg-green-500 dark:bg-green-400 rounded-full flex items-center justify-center mr-4">
+                        <span className="text-white dark:text-white font-bold">2</span>
                       </div>
-                      <h3 className="text-xl font-bold text-army-black">Mid Level</h3>
+                      <h3 className="text-xl font-bold text-army-black dark:text-dark-text">Mid Level</h3>
                     </div>
-                    <p className="text-gray-600 mb-4">
+                    <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
                       Take on more responsibility and lead smaller projects while developing specialized skills.
                     </p>
-                    <ul className="text-sm text-gray-500 space-y-2">
+                    <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
                       <li>• Project Coordinator</li>
                       <li>• Estimator</li>
                       <li>• Field Supervisor</li>
@@ -535,11 +535,11 @@ export default function CareersPage() {
                     </ul>
                   </div>
                 </div>
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-green-500 dark:bg-green-400 rounded-full border-4 border-white dark:border-dark-surface shadow-lg"></div>
                 <div className="lg:w-1/2 lg:pr-12">
                   <div className="text-center lg:text-right">
-                    <div className="text-4xl font-bold text-green-500 mb-2">3-7 Years</div>
-                    <div className="text-gray-600">Experience Range</div>
+                    <div className="text-4xl font-bold text-green-500 dark:text-green-400 mb-2">3-7 Years</div>
+                    <div className="text-gray-600 dark:text-dark-text-secondary">Experience Range</div>
                   </div>
                 </div>
               </div>
@@ -547,17 +547,17 @@ export default function CareersPage() {
               {/* Senior Level */}
               <div className="relative flex flex-col lg:flex-row items-center">
                 <div className="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0">
-                  <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-army-green">
+                  <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-army-green">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-army-green rounded-full flex items-center justify-center mr-4">
-                        <span className="text-white font-bold">3</span>
+                      <div className="w-12 h-12 bg-army-green dark:bg-army-green rounded-full flex items-center justify-center mr-4">
+                        <span className="text-white dark:text-white font-bold">3</span>
                       </div>
-                      <h3 className="text-xl font-bold text-army-black">Senior Level</h3>
+                      <h3 className="text-xl font-bold text-army-black dark:text-dark-text">Senior Level</h3>
                     </div>
-                    <p className="text-gray-600 mb-4">
+                    <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
                       Lead major projects and mentor junior team members while expanding your expertise.
                     </p>
-                    <ul className="text-sm text-gray-500 space-y-2">
+                    <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
                       <li>• Senior Project Manager</li>
                       <li>• Senior Estimator</li>
                       <li>• Construction Superintendent</li>
@@ -565,11 +565,11 @@ export default function CareersPage() {
                     </ul>
                   </div>
                 </div>
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-army-green rounded-full border-4 border-white shadow-lg"></div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-army-green dark:bg-army-green rounded-full border-4 border-white dark:border-dark-surface shadow-lg"></div>
                 <div className="lg:w-1/2 lg:pl-12">
                   <div className="text-center lg:text-left">
-                    <div className="text-4xl font-bold text-army-green mb-2">8-15 Years</div>
-                    <div className="text-gray-600">Experience Range</div>
+                    <div className="text-4xl font-bold text-army-green dark:text-army-green mb-2">8-15 Years</div>
+                    <div className="text-gray-600 dark:text-dark-text-secondary">Experience Range</div>
                   </div>
                 </div>
               </div>
@@ -577,17 +577,17 @@ export default function CareersPage() {
               {/* Leadership */}
               <div className="relative flex flex-col lg:flex-row-reverse items-center">
                 <div className="lg:w-1/2 lg:pl-12 mb-8 lg:mb-0">
-                  <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-army-gold">
+                  <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-army-gold">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-army-gold rounded-full flex items-center justify-center mr-4">
-                        <span className="text-army-black font-bold">4</span>
+                      <div className="w-12 h-12 bg-army-gold dark:bg-army-gold rounded-full flex items-center justify-center mr-4">
+                        <span className="text-army-black dark:text-army-black font-bold">4</span>
                       </div>
-                      <h3 className="text-xl font-bold text-army-black">Leadership</h3>
+                      <h3 className="text-xl font-bold text-army-black dark:text-dark-text">Leadership</h3>
                     </div>
-                    <p className="text-gray-600 mb-4">
+                    <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
                       Shape the future of the company as a leader, setting strategy and mentoring the next generation.
                     </p>
-                    <ul className="text-sm text-gray-500 space-y-2">
+                    <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
                       <li>• Operations Manager</li>
                       <li>• Division Director</li>
                       <li>• Vice President</li>
@@ -595,11 +595,11 @@ export default function CareersPage() {
                     </ul>
                   </div>
                 </div>
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-army-gold rounded-full border-4 border-white shadow-lg"></div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-army-gold dark:bg-army-gold rounded-full border-4 border-white dark:border-dark-surface shadow-lg"></div>
                 <div className="lg:w-1/2 lg:pr-12">
                   <div className="text-center lg:text-right">
-                    <div className="text-4xl font-bold text-army-gold mb-2">15+ Years</div>
-                    <div className="text-gray-600">Experience Range</div>
+                    <div className="text-4xl font-bold text-army-gold dark:text-army-gold mb-2">15+ Years</div>
+                    <div className="text-gray-600 dark:text-dark-text-secondary">Experience Range</div>
                   </div>
                 </div>
               </div>
@@ -608,25 +608,25 @@ export default function CareersPage() {
         </div>
       </section>
 
-      <section id="application-form" className="py-20 bg-white">
+      <section id="application-form" className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black mb-4">Apply Today</h2>
-            <p className="text-xl text-gray-600">
+            <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">Apply Today</h2>
+            <p className="text-xl text-gray-600 dark:text-dark-text-secondary">
               Ready to start your career with MH Construction? Submit your application below.
             </p>
           </div>
           
-          <form className="space-y-8 bg-gray-50 p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100" onSubmit={handleSubmit}>
+          <form className="space-y-8 bg-gray-50 dark:bg-dark-surface-2 p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100 dark:border-dark-border transition-colors duration-300" onSubmit={handleSubmit}>
             {/* Form Header */}
-            <div className="text-center pb-6 border-b border-gray-200">
-              <h3 className="text-2xl font-bold text-army-black mb-2">Job Application</h3>
-              <p className="text-gray-600">All fields marked with * are required</p>
+            <div className="text-center pb-6 border-b border-gray-200 dark:border-dark-border">
+              <h3 className="text-2xl font-bold text-army-black dark:text-dark-text mb-2">Job Application</h3>
+              <p className="text-gray-600 dark:text-dark-text-secondary">All fields marked with * are required</p>
             </div>
 
             {/* Personal Information Section */}
             <div className="space-y-6">
-              <h4 className="text-lg font-semibold text-army-black flex items-center">
+              <h4 className="text-lg font-semibold text-army-black dark:text-dark-text flex items-center">
                 <svg className="w-5 h-5 mr-2 text-army-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
@@ -635,7 +635,7 @@ export default function CareersPage() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="block text-sm font-medium text-army-black">Full Name *</label>
+                  <label htmlFor="name" className="block text-sm font-medium text-army-black dark:text-dark-text">Full Name *</label>
                   <input 
                     type="text" 
                     id="name" 
@@ -643,13 +643,13 @@ export default function CareersPage() {
                     required 
                     value={formData.name} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white hover:border-gray-400" 
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500" 
                     placeholder="Your full name" 
                   />
                 </div>
                 
                 <div className="space-y-2">
-                  <label htmlFor="email" className="block text-sm font-medium text-army-black">Email Address *</label>
+                  <label htmlFor="email" className="block text-sm font-medium text-army-black dark:text-dark-text">Email Address *</label>
                   <input 
                     type="email" 
                     id="email" 
@@ -657,14 +657,14 @@ export default function CareersPage() {
                     required 
                     value={formData.email} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white hover:border-gray-400" 
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500" 
                     placeholder="your.email@example.com" 
                   />
                 </div>
               </div>
               
               <div className="space-y-2">
-                <label htmlFor="phone" className="block text-sm font-medium text-army-black">Phone Number *</label>
+                <label htmlFor="phone" className="block text-sm font-medium text-army-black dark:text-dark-text">Phone Number *</label>
                 <input 
                   type="tel" 
                   id="phone" 
@@ -672,7 +672,7 @@ export default function CareersPage() {
                   required 
                   value={formData.phone} 
                   onChange={handleChange} 
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white hover:border-gray-400" 
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500" 
                   placeholder="(509) 308-6489" 
                 />
               </div>
@@ -680,7 +680,7 @@ export default function CareersPage() {
 
             {/* Position Information Section */}
             <div className="space-y-6">
-              <h4 className="text-lg font-semibold text-army-black flex items-center">
+              <h4 className="text-lg font-semibold text-army-black dark:text-dark-text flex items-center">
                 <svg className="w-5 h-5 mr-2 text-army-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 002 2h2a1 1 0 001-1v-1a2 2 0 00-2-2H8a2 2 0 00-2 2v1a1 1 0 001 1h2a2 2 0 002-2z" />
                 </svg>
@@ -689,7 +689,7 @@ export default function CareersPage() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="position" className="block text-sm font-medium text-army-black">Position Interested In *</label>
+                  <label htmlFor="position" className="block text-sm font-medium text-army-black dark:text-dark-text">Position Interested In *</label>
                   <input 
                     type="text" 
                     id="position" 
@@ -697,20 +697,20 @@ export default function CareersPage() {
                     required 
                     value={formData.position} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white hover:border-gray-400" 
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500" 
                     placeholder="e.g. Project Manager, Estimator, Superintendent" 
                   />
                 </div>
                 
                 <div className="space-y-2">
-                  <label htmlFor="experienceLevel" className="block text-sm font-medium text-army-black">Experience Level *</label>
+                  <label htmlFor="experienceLevel" className="block text-sm font-medium text-army-black dark:text-dark-text">Experience Level *</label>
                   <select 
                     id="experienceLevel" 
                     name="experienceLevel" 
                     required 
                     value={formData.experienceLevel} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white hover:border-gray-400"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500"
                   >
                     <option value="">Select experience level</option>
                     <option value="entry">Entry Level (0-2 years)</option>
@@ -723,14 +723,14 @@ export default function CareersPage() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="workPreference" className="block text-sm font-medium text-army-black">Work Preference *</label>
+                  <label htmlFor="workPreference" className="block text-sm font-medium text-army-black dark:text-dark-text">Work Preference *</label>
                   <select 
                     id="workPreference" 
                     name="workPreference" 
                     required 
                     value={formData.workPreference} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white hover:border-gray-400"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500"
                   >
                     <option value="">Select preference</option>
                     <option value="onsite">On-site</option>
@@ -740,14 +740,14 @@ export default function CareersPage() {
                 </div>
                 
                 <div className="space-y-2">
-                  <label htmlFor="desiredDepartment" className="block text-sm font-medium text-army-black">Desired Department *</label>
+                  <label htmlFor="desiredDepartment" className="block text-sm font-medium text-army-black dark:text-dark-text">Desired Department *</label>
                   <select 
                     id="desiredDepartment" 
                     name="desiredDepartment" 
                     required 
                     value={formData.desiredDepartment} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white hover:border-gray-400"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500"
                   >
                     <option value="">Select department</option>
                     <option value="field">Field Operations</option>
@@ -762,7 +762,7 @@ export default function CareersPage() {
 
             {/* Additional Information Section */}
             <div className="space-y-6">
-              <h4 className="text-lg font-semibold text-army-black flex items-center">
+              <h4 className="text-lg font-semibold text-army-black dark:text-dark-text flex items-center">
                 <svg className="w-5 h-5 mr-2 text-army-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
@@ -770,14 +770,14 @@ export default function CareersPage() {
               </h4>
               
               <div className="space-y-2">
-                <label htmlFor="howHeard" className="block text-sm font-medium text-army-black">How Did You Hear About Us? *</label>
+                <label htmlFor="howHeard" className="block text-sm font-medium text-army-black dark:text-dark-text">How Did You Hear About Us? *</label>
                 <select 
                   id="howHeard" 
                   name="howHeard" 
                   required 
                   value={formData.howHeard} 
                   onChange={handleChange} 
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white hover:border-gray-400"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500"
                 >
                   <option value="">Select option</option>
                   <option value="referral">Referral/Word of Mouth</option>
@@ -789,7 +789,7 @@ export default function CareersPage() {
               </div>
               
               <div className="space-y-2">
-                <label htmlFor="message" className="block text-sm font-medium text-army-black">Tell Us About Yourself *</label>
+                <label htmlFor="message" className="block text-sm font-medium text-army-black dark:text-dark-text">Tell Us About Yourself *</label>
                 <textarea 
                   id="message" 
                   name="message" 
@@ -797,14 +797,14 @@ export default function CareersPage() {
                   rows={6} 
                   value={formData.message} 
                   onChange={handleChange} 
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white hover:border-gray-400 resize-vertical" 
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-army-green focus:border-army-green transition-colors bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500 resize-vertical" 
                   placeholder="Share your experience, skills, and why you want to join MH Construction..."
                 />
               </div>
             </div>
 
             {/* Submit Button */}
-            <div className="pt-6 border-t border-gray-200">
+            <div className="pt-6 border-t border-gray-200 dark:border-dark-border">
               <button 
                 type="submit" 
                 disabled={isSubmitting} 
@@ -823,7 +823,7 @@ export default function CareersPage() {
                 )}
               </button>
               
-              <p className="text-center text-sm text-gray-500 mt-4">
+              <p className="text-center text-sm text-gray-500 dark:text-dark-text-secondary mt-4">
                 By submitting this form, you consent to MH Construction processing your personal data for recruitment purposes.
               </p>
             </div>
@@ -832,28 +832,28 @@ export default function CareersPage() {
       </section>
 
       {/* Employee Testimonials Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">
               What Our Team Says
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
               Hear directly from our employees about their experience working at MH Construction.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Testimonial 1 */}
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-army-green rounded-full flex items-center justify-center mr-4">
                   <span className="text-white font-bold text-xl">SG</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-army-black">Sarah G.</h4>
-                  <p className="text-gray-600 text-sm">Senior Project Manager</p>
-                  <p className="text-gray-500 text-xs">8 years with MH Construction</p>
+                  <h4 className="font-bold text-army-black dark:text-dark-text">Sarah G.</h4>
+                  <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Senior Project Manager</p>
+                  <p className="text-gray-500 dark:text-dark-text-secondary text-xs">8 years with MH Construction</p>
                 </div>
               </div>
               <div className="flex items-center mb-4">
@@ -863,21 +863,21 @@ export default function CareersPage() {
                   </svg>
                 ))}
               </div>
-              <p className="text-gray-600 italic">
+              <p className="text-gray-600 dark:text-dark-text-secondary italic">
                 "MH Construction gave me the opportunity to grow from a junior coordinator to a senior project manager. The veteran leadership understands teamwork and creates an environment where you can truly excel."
               </p>
             </div>
 
             {/* Testimonial 2 */}
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-dark-border">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-mh-forest-green rounded-full flex items-center justify-center mr-4">
                   <span className="text-white font-bold text-xl">MT</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-army-black">Mike T.</h4>
-                  <p className="text-gray-600 text-sm">Construction Superintendent</p>
-                  <p className="text-gray-500 text-xs">12 years with MH Construction</p>
+                  <h4 className="font-bold text-army-black dark:text-army-gold">Mike T.</h4>
+                  <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Construction Superintendent</p>
+                  <p className="text-gray-500 dark:text-dark-text-secondary text-xs">12 years with MH Construction</p>
                 </div>
               </div>
               <div className="flex items-center mb-4">
@@ -887,21 +887,21 @@ export default function CareersPage() {
                   </svg>
                 ))}
               </div>
-              <p className="text-gray-600 italic">
+              <p className="text-gray-600 dark:text-dark-text italic">
                 "As a veteran myself, I appreciate the military values and precision that MH Construction brings to every project. The benefits are excellent and the work-life balance is the best I've experienced in construction."
               </p>
             </div>
 
             {/* Testimonial 3 */}
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-dark-border">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-army-gold rounded-full flex items-center justify-center mr-4">
                   <span className="text-army-black font-bold text-xl">JR</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-army-black">Jessica R.</h4>
-                  <p className="text-gray-600 text-sm">Senior Estimator</p>
-                  <p className="text-gray-500 text-xs">6 years with MH Construction</p>
+                  <h4 className="font-bold text-army-black dark:text-army-gold">Jessica R.</h4>
+                  <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Senior Estimator</p>
+                  <p className="text-gray-500 dark:text-dark-text-secondary text-xs">6 years with MH Construction</p>
                 </div>
               </div>
               <div className="flex items-center mb-4">
@@ -911,21 +911,21 @@ export default function CareersPage() {
                   </svg>
                 ))}
               </div>
-              <p className="text-gray-600 italic">
+              <p className="text-gray-600 dark:text-dark-text italic">
                 "The professional development opportunities here are incredible. MH Construction invested in my training and certifications, and I've been able to advance my career faster than I ever imagined possible."
               </p>
             </div>
 
             {/* Testimonial 4 */}
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-dark-border">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mr-4">
                   <span className="text-white font-bold text-xl">DL</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-army-black">David L.</h4>
-                  <p className="text-gray-600 text-sm">Safety Coordinator</p>
-                  <p className="text-gray-500 text-xs">4 years with MH Construction</p>
+                  <h4 className="font-bold text-army-black dark:text-army-gold">David L.</h4>
+                  <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Safety Coordinator</p>
+                  <p className="text-gray-500 dark:text-dark-text-secondary text-xs">4 years with MH Construction</p>
                 </div>
               </div>
               <div className="flex items-center mb-4">
@@ -935,21 +935,21 @@ export default function CareersPage() {
                   </svg>
                 ))}
               </div>
-              <p className="text-gray-600 italic">
+              <p className="text-gray-600 dark:text-dark-text italic">
                 "Safety is truly the top priority here, not just a slogan. The company provides the best training and equipment, and everyone genuinely cares about getting home safely every day."
               </p>
             </div>
 
             {/* Testimonial 5 */}
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-dark-border">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-amber-700 rounded-full flex items-center justify-center mr-4">
                   <span className="text-white font-bold text-xl">AK</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-army-black">Amanda K.</h4>
-                  <p className="text-gray-600 text-sm">Project Coordinator</p>
-                  <p className="text-gray-500 text-xs">3 years with MH Construction</p>
+                  <h4 className="font-bold text-army-black dark:text-army-gold">Amanda K.</h4>
+                  <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Project Coordinator</p>
+                  <p className="text-gray-500 dark:text-dark-text-secondary text-xs">3 years with MH Construction</p>
                 </div>
               </div>
               <div className="flex items-center mb-4">
@@ -959,21 +959,21 @@ export default function CareersPage() {
                   </svg>
                 ))}
               </div>
-              <p className="text-gray-600 italic">
+              <p className="text-gray-600 dark:text-dark-text italic">
                 "The team here feels like family. Everyone supports each other, and there's a real sense of pride in the quality work we do. I love coming to work every day."
               </p>
             </div>
 
             {/* Testimonial 6 */}
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-dark-border">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mr-4">
                   <span className="text-white font-bold text-xl">RC</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-army-black">Robert C.</h4>
-                  <p className="text-gray-600 text-sm">Field Technician</p>
-                  <p className="text-gray-500 text-xs">2 years with MH Construction</p>
+                  <h4 className="font-bold text-army-black dark:text-army-gold">Robert C.</h4>
+                  <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Field Technician</p>
+                  <p className="text-gray-500 dark:text-dark-text-secondary text-xs">2 years with MH Construction</p>
                 </div>
               </div>
               <div className="flex items-center mb-4">
@@ -983,7 +983,7 @@ export default function CareersPage() {
                   </svg>
                 ))}
               </div>
-              <p className="text-gray-600 italic">
+              <p className="text-gray-600 dark:text-dark-text italic">
                 "Starting here as an entry-level worker, I've learned so much from the experienced team. The mentorship program is fantastic, and I can see a clear path for my career growth."
               </p>
             </div>

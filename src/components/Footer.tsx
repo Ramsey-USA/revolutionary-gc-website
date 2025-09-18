@@ -69,7 +69,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-army-black text-white relative overflow-hidden">
+    <footer className="bg-army-black dark:bg-dark-surface text-white dark:text-dark-text relative overflow-hidden transition-colors duration-300">
       {/* Star decorations */}
       <div className="absolute top-4 right-4 md:top-8 md:right-16 text-army-gold/20 text-2xl md:text-4xl animate-pulse">★</div>
       <div className="absolute top-12 right-1/4 text-white/10 text-xl md:text-2xl animate-pulse delay-300">★</div>
@@ -99,33 +99,33 @@ const Footer = () => {
 
           {/* Column 2: Company Info & Contact */}
           <div>
-            <h3 className="text-army-gold font-bold text-lg mb-6">Company Info</h3>
-            <p className="text-gray-300 mb-6 leading-relaxed text-sm">
+            <h3 className="text-army-gold dark:text-army-gold font-bold text-lg mb-6">Company Info</h3>
+            <p className="text-gray-300 dark:text-dark-text-secondary mb-6 leading-relaxed text-sm">
               Building tomorrow with today's technology. Veteran-owned construction excellence 
               powered by cutting-edge AI technology throughout the Pacific Northwest.
             </p>
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <MapPin size={16} className="text-army-gold flex-shrink-0" />
-                <span className="text-gray-300 text-sm">
+                <MapPin size={16} className="text-army-gold dark:text-army-gold flex-shrink-0" />
+                <span className="text-gray-300 dark:text-dark-text-secondary text-sm">
                   3111 N. Capital Ave., Pasco, WA 99301
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone size={16} className="text-army-gold flex-shrink-0" />
+                <Phone size={16} className="text-army-gold dark:text-army-gold flex-shrink-0" />
                 <a 
                   href="tel:+15093086489" 
-                  className="text-gray-300 text-sm hover:text-army-gold transition-colors"
+                  className="text-gray-300 dark:text-dark-text-secondary text-sm hover:text-army-gold dark:hover:text-army-gold transition-colors"
                 >
                   (509) 308-6489
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail size={16} className="text-army-gold flex-shrink-0" />
+                <Mail size={16} className="text-army-gold dark:text-army-gold flex-shrink-0" />
                 <a 
                   href="mailto:info@mhc-gc.com" 
-                  className="text-gray-300 text-sm hover:text-army-gold transition-colors"
+                  className="text-gray-300 dark:text-dark-text-secondary text-sm hover:text-army-gold dark:hover:text-army-gold transition-colors"
                 >
                   info@mhc-gc.com
                 </a>
@@ -135,14 +135,14 @@ const Footer = () => {
 
           {/* Column 3: Quick Links */}
           <div>
-            <h3 className="text-army-gold font-bold text-lg mb-6">Quick Links</h3>
+            <h3 className="text-army-gold dark:text-army-gold font-bold text-lg mb-6">Quick Links</h3>
             <div className="grid grid-cols-2 gap-x-4">
               <ul className="space-y-3">
                 {quickLinks.slice(0, Math.ceil(quickLinks.length / 2)).map((link) => (
                   <li key={link.name}>
                     <Link 
                       href={link.href}
-                      className="text-gray-300 hover:text-army-gold transition-colors text-sm"
+                      className="text-gray-300 dark:text-dark-text-secondary hover:text-army-gold dark:hover:text-army-gold transition-colors text-sm"
                     >
                       {link.name}
                     </Link>
@@ -154,7 +154,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link 
                       href={link.href}
-                      className="text-gray-300 hover:text-army-gold transition-colors text-sm"
+                      className="text-gray-300 dark:text-dark-text-secondary hover:text-army-gold dark:hover:text-army-gold transition-colors text-sm"
                     >
                       {link.name}
                     </Link>
@@ -166,7 +166,7 @@ const Footer = () => {
 
           {/* Column 4: Connect With Us */}
           <div>
-            <h3 className="text-army-gold font-bold text-lg mb-6">Connect With Us</h3>
+            <h3 className="text-army-gold dark:text-army-gold font-bold text-lg mb-6">Connect With Us</h3>
             {/* Social Media Links */}
             <div className="flex flex-wrap gap-3 mb-6">
               {socialLinks.map((social) => {
@@ -177,7 +177,7 @@ const Footer = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gray-800 p-2 rounded-lg hover:bg-mh-forest-green transition-colors transition-transform duration-300 hover:scale-110 hover:-translate-y-1"
+                    className="bg-gray-800 dark:bg-dark-surface-2 p-2 rounded-lg hover:bg-mh-forest-green dark:hover:bg-mh-forest-green transition-colors transition-transform duration-300 hover:scale-110 hover:-translate-y-1"
                     aria-label={`Follow us on ${social.name}`}
                   >
                     <IconComponent size={20} />
@@ -187,18 +187,18 @@ const Footer = () => {
             </div>
             {/* Newsletter Signup */}
             <div>
-              <p className="text-gray-300 text-sm mb-4">
+              <p className="text-gray-300 dark:text-dark-text-secondary text-sm mb-4">
                 Stay updated with our latest projects and construction insights.
               </p>
               <form className="space-y-3">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full px-4 py-2 bg-gray-800 text-white rounded-lg border border-gray-700 focus:border-army-gold focus:outline-none"
+                  className="w-full px-4 py-2 bg-gray-800 dark:bg-dark-surface-2 text-white dark:text-dark-text rounded-lg border border-gray-700 dark:border-dark-border focus:border-army-gold dark:focus:border-army-gold focus:outline-none"
                 />
                 <button
                   type="submit"
-                  className="w-full bg-army-gold text-army-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition-colors"
+                  className="w-full bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 dark:hover:bg-yellow-500 transition-colors"
                 >
                   Subscribe
                 </button>
@@ -209,33 +209,33 @@ const Footer = () => {
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-gray-800 relative">
+      <div className="border-t border-gray-800 dark:border-dark-border relative">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
+            <div className="text-gray-400 dark:text-dark-text-secondary text-sm">
               © {currentYear} MH Construction. All rights reserved.
             </div>
             
             <div className="flex flex-wrap items-center space-x-6 text-sm">
               <Link 
                 href="/privacy-policy" 
-                className="text-gray-400 hover:text-army-gold transition-colors"
+                className="text-gray-400 dark:text-dark-text-secondary hover:text-army-gold dark:hover:text-army-gold transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link 
                 href="/terms-of-service" 
-                className="text-gray-400 hover:text-army-gold transition-colors"
+                className="text-gray-400 dark:text-dark-text-secondary hover:text-army-gold dark:hover:text-army-gold transition-colors"
               >
                 Terms of Service
               </Link>
               <Link 
                 href="/accessibility" 
-                className="text-gray-400 hover:text-army-gold transition-colors"
+                className="text-gray-400 dark:text-dark-text-secondary hover:text-army-gold dark:hover:text-army-gold transition-colors"
               >
                 Accessibility
               </Link>
-              <span className="text-gray-400">
+              <span className="text-gray-400 dark:text-dark-text-secondary">
                 Veteran-Owned Business
               </span>
             </div>

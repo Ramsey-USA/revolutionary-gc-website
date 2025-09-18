@@ -32,14 +32,14 @@ const AIToolsSection = () => {
   ]
 
   return (
-    <section className="py-20 bg-light-gray">
+    <section className="py-20 bg-light-gray dark:bg-dark-surface transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-army-black mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-army-black dark:text-dark-text mb-4">
             Revolutionary AI-Powered Tools
           </h2>
-          <p className="text-xl text-field-gray max-w-3xl mx-auto">
+          <p className="text-xl text-field-gray dark:text-dark-text-secondary max-w-3xl mx-auto">
             Experience construction planning like never before
           </p>
         </div>
@@ -52,25 +52,25 @@ const AIToolsSection = () => {
             return (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+                className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 border dark:border-dark-border"
               >
                 {/* Card Header with Icon */}
                 <div className={`bg-gradient-to-r ${tool.gradient} p-6 text-white`}>
                   <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-4">
                     <IconComponent size={32} />
                   </div>
-                  <h3 className="text-2xl font-bold text-center">{tool.title}</h3>
+                  <h3 className="text-2xl font-bold text-center text-white dark:text-white">{tool.title}</h3>
                 </div>
 
                 {/* Card Content */}
                 <div className="p-6">
-                  <p className="text-field-gray mb-6 leading-relaxed">
+                  <p className="text-field-gray dark:text-dark-text-secondary mb-6 leading-relaxed">
                     {tool.description}
                   </p>
                   
                   <Link
                     href={tool.ctaLink}
-                    className="block w-full bg-army-black text-white text-center py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
+                    className="block w-full bg-army-black dark:bg-dark-surface-3 text-white dark:text-dark-text text-center py-3 rounded-lg font-semibold hover:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
                   >
                     {tool.ctaText}
                   </Link>
@@ -82,12 +82,12 @@ const AIToolsSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <p className="text-lg text-field-gray mb-6">
+          <p className="text-lg text-field-gray dark:text-dark-text-secondary mb-6">
             Ready to revolutionize your construction project?
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-mh-forest-green text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green transition-colors transform hover:scale-105"
+            className="inline-block bg-mh-forest-green dark:bg-mh-forest-green text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green dark:hover:bg-army-green transition-colors transform hover:scale-105"
           >
             Schedule a Demo
           </Link>
