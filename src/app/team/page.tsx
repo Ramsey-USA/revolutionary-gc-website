@@ -153,7 +153,11 @@ export default function TeamPage() {
         <h2 className="text-3xl md:text-4xl font-bold text-army-black text-center mb-12">
           {title}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className={`grid gap-8 ${
+          title === "Executive Leadership" 
+            ? "grid-cols-1 md:grid-cols-3 lg:grid-cols-3" 
+            : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+        }`}>
           {members.map((member, index) => (
             <div key={index} className={`group relative rounded-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between h-full border-2 ${getBorderColor(index)}`}>
               {/* Enhanced card with gradient background */}

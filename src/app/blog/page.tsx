@@ -86,7 +86,7 @@ export default function BlogPage() {
     : articles.filter(article => !article.featured && article.category === selectedCategory)
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-20">
       <Header />
       
       {/* Hero Section */}
