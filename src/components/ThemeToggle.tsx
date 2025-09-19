@@ -80,27 +80,55 @@ const ThemeToggle = () => {
     </button>
   )
 
-  // Style 4: Military-themed Toggle
+  // Style 4: Enhanced Military Toggle - Matches brand design
   const MilitaryToggle = () => (
     <button
       onClick={toggleTheme}
-      className="relative inline-flex items-center justify-center w-12 h-7 bg-army-black dark:bg-gray-800 rounded border border-army-gold dark:border-army-gold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-army-gold focus:ring-offset-2 dark:focus:ring-offset-dark-surface hover:bg-gray-800 dark:hover:bg-gray-700 group"
+      className="relative inline-flex items-center justify-center w-16 h-8 bg-gradient-to-r from-mh-hunter-green to-army-green dark:from-dark-surface-2 dark:to-dark-surface-3 rounded-lg border-2 border-mh-hunter-green dark:border-army-red transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-army-red focus:ring-offset-2 dark:focus:ring-offset-dark-surface hover:shadow-lg hover:scale-105 group"
       aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
     >
-      {/* Military-style indicator */}
-      <div className={`absolute w-2 h-2 bg-army-gold rounded-full transition-all duration-300 ${
-        theme === 'dark' ? 'translate-x-4' : '-translate-x-4'
-      }`}></div>
-      
-      {/* Icons */}
-      <div className="flex items-center justify-between w-full px-2">
-        <Sun size={12} className={`transition-all duration-300 ${
-          theme === 'light' ? 'text-army-gold' : 'text-gray-500'
-        }`} />
-        <Moon size={12} className={`transition-all duration-300 ${
-          theme === 'dark' ? 'text-army-gold' : 'text-gray-500'
-        }`} />
+      {/* Background Track */}
+      <div className="absolute inset-1 bg-army-black dark:bg-dark-surface rounded-md">
+        {/* Track indicators */}
+        <div className="absolute left-1 top-1/2 transform -translate-y-1/2 w-1 h-3 bg-mh-hunter-green dark:bg-army-red rounded-full opacity-50"></div>
+        <div className="absolute right-1 top-1/2 transform -translate-y-1/2 w-1 h-3 bg-mh-hunter-green dark:bg-army-red rounded-full opacity-50"></div>
       </div>
+      
+      {/* Sliding Handle */}
+      <div className={`relative z-10 w-6 h-6 bg-gradient-to-b from-army-gold to-mh-leather-tan dark:from-army-red dark:to-army-gold rounded-md transition-all duration-500 ease-out transform shadow-lg ${
+        theme === 'dark' ? 'translate-x-4' : '-translate-x-4'
+      } group-hover:shadow-xl border border-field-tan dark:border-army-red`}>
+        {/* Handle texture lines */}
+        <div className="absolute inset-1 flex flex-col justify-center items-center space-y-0.5">
+          <div className="w-3 h-0.5 bg-army-black/30 rounded-full"></div>
+          <div className="w-3 h-0.5 bg-army-black/30 rounded-full"></div>
+        </div>
+        
+        {/* Active mode indicator */}
+        <div className="absolute -top-1 -right-1 w-2 h-2 rounded-full transition-all duration-300">
+          {theme === 'light' ? (
+            <Sun size={8} className="text-army-gold drop-shadow-sm" />
+          ) : (
+            <Moon size={8} className="text-army-red drop-shadow-sm" />
+          )}
+        </div>
+      </div>
+      
+      {/* Mode Labels */}
+      <div className="absolute -top-6 left-1 text-xs font-mono font-bold text-mh-hunter-green dark:text-army-red tracking-wider">
+        LT
+      </div>
+      <div className="absolute -top-6 right-1 text-xs font-mono font-bold text-mh-hunter-green dark:text-army-red tracking-wider">
+        DK
+      </div>
+      
+      {/* Status LEDs */}
+      <div className={`absolute -bottom-1 left-2 w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+        theme === 'light' ? 'bg-army-gold shadow-army-gold/60 shadow-md' : 'bg-field-gray'
+      }`}></div>
+      <div className={`absolute -bottom-1 right-2 w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+        theme === 'dark' ? 'bg-army-red shadow-army-red/60 shadow-md' : 'bg-field-gray'
+      }`}></div>
     </button>
   )
 

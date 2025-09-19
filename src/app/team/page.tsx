@@ -160,9 +160,9 @@ export default function TeamPage() {
             : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
         }`}>
           {members.map((member, index) => (
-            <div key={index} className={`group relative rounded-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 flex flex-col justify-between h-full border-2 ${getBorderColor(index)} dark:border-opacity-80 hover:border-opacity-100`}>
+            <div key={index} className={`group relative rounded-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 flex flex-col h-full border-2 ${getBorderColor(index)} dark:border-opacity-80 hover:border-opacity-100`}>
               {/* Enhanced card with gradient background */}
-              <div className="bg-white dark:bg-dark-surface-2 rounded-xl h-full relative overflow-hidden border dark:border-dark-border transition-all duration-500 group-hover:bg-gray-50 dark:group-hover:bg-dark-surface-3">
+              <div className="bg-white dark:bg-dark-surface-2 rounded-xl h-full relative overflow-hidden border dark:border-dark-border transition-all duration-500 group-hover:bg-gray-50 dark:group-hover:bg-dark-surface-3 flex flex-col">
                 {/* Image with hover effects */}
                 <div className="aspect-square relative overflow-hidden">
                   <img
@@ -175,10 +175,10 @@ export default function TeamPage() {
                 </div>
                 
                 {/* Card content */}
-                <div className="p-6 pb-0">
+                <div className="p-6 pb-0 flex flex-col flex-grow">
                   <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-1 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">{member.name}</h3>
                   <p className="text-army-gold dark:text-army-gold font-semibold mb-3">{member.title}</p>
-                  <p className="text-field-gray dark:text-dark-text-secondary text-sm leading-relaxed mb-4">
+                  <p className="text-field-gray dark:text-dark-text-secondary text-sm leading-relaxed mb-4 flex-grow">
                     {member.description}
                   </p>
                   
@@ -196,22 +196,22 @@ export default function TeamPage() {
                 </div>
                 
                 {/* Enhanced contact buttons */}
-                <div className="flex justify-center space-x-4 mt-4 mb-6">
+                <div className="flex justify-center space-x-4 mt-auto pb-6 pt-4">
                   <a
                     href={`mailto:${member.email}`}
-                    className="flex items-center justify-center w-10 h-10 bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white rounded-full transition-all duration-300 hover:bg-army-green dark:hover:bg-army-green hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                    className="flex items-center justify-center w-12 h-12 bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white rounded-full transition-all duration-300 hover:bg-army-green dark:hover:bg-army-green hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
                     aria-label={`Email ${member.name}`}
                   >
-                    <Mail size={18} />
+                    <Mail size={20} />
                   </a>
                   <a
                     href={member.linkedin ? member.linkedin : "#"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-10 h-10 bg-blue-600 dark:bg-blue-600 text-white dark:text-white rounded-full transition-all duration-300 hover:bg-blue-700 dark:hover:bg-blue-700 hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                    className="flex items-center justify-center w-12 h-12 bg-blue-600 dark:bg-blue-600 text-white dark:text-white rounded-full transition-all duration-300 hover:bg-blue-700 dark:hover:bg-blue-700 hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
                     aria-label={`LinkedIn for ${member.name}`}
                   >
-                    <Linkedin size={18} />
+                    <Linkedin size={20} />
                   </a>
                 </div>
               </div>

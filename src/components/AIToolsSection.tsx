@@ -27,12 +27,12 @@ const AIToolsSection = () => {
       description: "Tour our completed projects in immersive 3D detail. Click on any element to discover the builder's insights and learn why we made each construction decision.",
       ctaText: "Explore Projects",
       ctaLink: "/3d-explorer",
-      gradient: "from-army-gold to-yellow-500"
+      gradient: "from-mh-hunter-green to-army-black"
     }
   ]
 
   return (
-    <section className="py-20 bg-light-gray dark:bg-dark-surface transition-colors duration-300">
+    <section className="py-20 bg-white/45 dark:bg-dark-surface/55 backdrop-blur-sm transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -52,7 +52,7 @@ const AIToolsSection = () => {
             return (
               <div
                 key={index}
-                className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-500 border dark:border-dark-border hover:shadow-xl group"
+                className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-500 border dark:border-dark-border hover:shadow-xl group flex flex-col h-full"
               >
                 {/* Card Header with Icon */}
                 <div className={`bg-gradient-to-r ${tool.gradient} p-6 text-white transition-all duration-300 group-hover:brightness-110`}>
@@ -63,14 +63,14 @@ const AIToolsSection = () => {
                 </div>
 
                 {/* Card Content */}
-                <div className="p-6">
-                  <p className="text-field-gray dark:text-dark-text-secondary mb-6 leading-relaxed">
+                <div className="p-6 flex flex-col flex-grow">
+                  <p className="text-field-gray dark:text-dark-text-secondary mb-6 leading-relaxed flex-grow">
                     {tool.description}
                   </p>
                   
                   <Link
                     href={tool.ctaLink}
-                    className="block w-full bg-army-black dark:bg-dark-surface-3 text-white dark:text-dark-text text-center py-3 rounded-lg font-semibold hover:bg-gray-800 dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                    className="block w-full bg-army-black dark:bg-dark-surface-3 text-white dark:text-dark-text text-center py-4 rounded-lg font-semibold hover:bg-gray-800 dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 mt-auto"
                   >
                     {tool.ctaText}
                   </Link>

@@ -13,6 +13,7 @@ module.exports = {
         'mh-leather-tan': '#BD9264',
         'army-black': '#000000',
         'army-gold': '#FFD700',
+        'army-red': '#C60C38',
         'army-green': '#4B5320',
         'field-tan': '#967117',
         'field-gray': '#6C6C6C',
