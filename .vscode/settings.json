@@ -1,3 +1,22 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "css.validate": false,
+    "scss.validate": false,
+    "less.validate": false,
+    "tailwindCSS.includeLanguages": {
+        "typescript": "typescript",
+        "javascript": "javascript",
+        "typescriptreact": "typescriptreact",
+        "javascriptreact": "javascriptreact"
+    },
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "emmet.includeLanguages": {
+        "typescript": "typescriptreact",
+        "javascript": "javascriptreact"
+    }
 }

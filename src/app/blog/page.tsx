@@ -90,7 +90,7 @@ export default function BlogPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-r from-mh-forest-green to-army-green dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-r from-mh-hunter-green to-army-green dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -115,34 +115,34 @@ export default function BlogPage() {
           {/* Blog Statistics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center group">
-              <div className="bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-army-gold group-hover:bg-opacity-30 dark:group-hover:bg-army-gold dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
+              <div className="bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-army-gold group-hover:bg-opacity-30 dark:group-hover:bg-army-gold dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12">
                 <BookOpen size={28} className="group-hover:text-army-black transition-colors duration-300" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-army-gold mb-1">50+</div>
+              <div className="text-2xl md:text-3xl font-bold text-army-gold mb-1 transition-all duration-300 group-hover:scale-110">50+</div>
               <div className="text-sm md:text-base text-gray-200">Articles Published</div>
             </div>
             
             <div className="text-center group">
-              <div className="bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-army-gold group-hover:bg-opacity-30 dark:group-hover:bg-army-gold dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
+              <div className="bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-army-gold group-hover:bg-opacity-30 dark:group-hover:bg-army-gold dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12">
                 <Users size={28} className="group-hover:text-army-black transition-colors duration-300" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-army-gold mb-1">10K+</div>
+              <div className="text-2xl md:text-3xl font-bold text-army-gold mb-1 transition-all duration-300 group-hover:scale-110">10K+</div>
               <div className="text-sm md:text-base text-gray-200">Monthly Readers</div>
             </div>
             
             <div className="text-center group">
-              <div className="bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-army-gold group-hover:bg-opacity-30 dark:group-hover:bg-army-gold dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
+              <div className="bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-army-gold group-hover:bg-opacity-30 dark:group-hover:bg-army-gold dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12">
                 <TrendingUp size={28} className="group-hover:text-army-black transition-colors duration-300" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-army-gold mb-1">95%</div>
+              <div className="text-2xl md:text-3xl font-bold text-army-gold mb-1 transition-all duration-300 group-hover:scale-110">95%</div>
               <div className="text-sm md:text-base text-gray-200">Industry Accuracy</div>
             </div>
             
             <div className="text-center group">
-              <div className="bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:bg-opacity-30 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
+              <div className="bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:bg-opacity-30 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12">
                 <Award size={28} className="group-hover:text-army-black transition-colors duration-300" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-army-gold mb-1">5+</div>
+              <div className="text-2xl md:text-3xl font-bold text-army-gold mb-1 transition-all duration-300 group-hover:scale-110">5+</div>
               <div className="text-sm md:text-base text-gray-200">Years Publishing</div>
             </div>
           </div>
@@ -170,14 +170,14 @@ export default function BlogPage() {
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute top-4 left-4 z-20">
-                      <span className="bg-army-gold text-army-black px-3 py-1 rounded-full text-sm font-semibold shadow-lg group-hover:bg-white group-hover:text-mh-forest-green transition-colors duration-300">
+                      <span className="bg-army-gold text-army-black px-3 py-1 rounded-full text-sm font-semibold shadow-lg group-hover:bg-white group-hover:text-mh-hunter-green transition-colors duration-300">
                         {article.category}
                       </span>
                     </div>
                     {/* Featured badge for main article */}
                     {index === 0 && (
                       <div className="absolute top-4 right-4 z-20">
-                        <span className="bg-mh-forest-green dark:bg-army-gold text-white dark:text-army-black px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+                        <span className="bg-mh-hunter-green dark:bg-army-gold text-white dark:text-army-black px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
                           Featured
                         </span>
                       </div>
@@ -185,7 +185,7 @@ export default function BlogPage() {
                   </div>
                   
                   <div className="p-6 group-hover:bg-gradient-to-br group-hover:from-gray-50 dark:group-hover:from-dark-surface-3 group-hover:to-white dark:group-hover:to-dark-surface-2 transition-all duration-300">
-                    <div className="flex items-center text-field-gray dark:text-dark-text-secondary text-sm mb-3 group-hover:text-mh-forest-green dark:group-hover:text-mh-forest-green transition-colors duration-300">
+                    <div className="flex items-center text-field-gray dark:text-dark-text-secondary text-sm mb-3 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">
                       <Calendar size={16} className="mr-2" />
                       <span>{article.date}</span>
                       <span className="mx-2">•</span>
@@ -193,7 +193,7 @@ export default function BlogPage() {
                       <span>{article.readTime}</span>
                     </div>
                     
-                    <h3 className={`font-bold text-army-black dark:text-dark-text mb-3 group-hover:text-mh-forest-green dark:group-hover:text-mh-forest-green transition-colors duration-300 ${index === 0 ? 'text-2xl' : 'text-xl'}`}>
+                    <h3 className={`font-bold text-army-black dark:text-dark-text mb-3 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300 ${index === 0 ? 'text-2xl' : 'text-xl'}`}>
                       {article.title}
                     </h3>
                     
@@ -203,7 +203,7 @@ export default function BlogPage() {
                     
                     <Link
                       href={`/blog/${article.slug}`}
-                      className="inline-flex items-center text-mh-forest-green dark:text-mh-forest-green font-semibold hover:text-army-green dark:hover:text-army-green transition-all duration-300 group-hover:translate-x-2"
+                      className="inline-flex items-center text-mh-hunter-green dark:text-mh-hunter-green font-semibold hover:text-army-green dark:hover:text-army-green transition-all duration-300 group-hover:translate-x-2"
                     >
                       Read More
                       <ArrowRight size={16} className="ml-2 group-hover:ml-3 transition-all duration-300" />
@@ -229,33 +229,33 @@ export default function BlogPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white dark:bg-dark-surface-2 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-mh-forest-green dark:border-mh-forest-green">
+            <div className="bg-white dark:bg-dark-surface-2 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-500 border-l-4 border-mh-hunter-green dark:border-mh-hunter-green transform hover:-translate-y-2 group">
               <div className="flex items-center mb-4">
-                <TrendingUp size={24} className="text-mh-forest-green dark:text-mh-forest-green mr-3" />
+                <TrendingUp size={24} className="text-mh-hunter-green dark:text-mh-hunter-green mr-3 transition-transform duration-300 group-hover:scale-110" />
                 <h3 className="font-bold text-army-black dark:text-dark-text">AI in Construction</h3>
               </div>
               <p className="text-field-gray dark:text-dark-text-secondary text-sm">The latest developments in AI-powered project planning and estimation tools revolutionizing the industry.</p>
             </div>
 
-            <div className="bg-white dark:bg-dark-surface-2 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-army-gold dark:border-army-gold">
+            <div className="bg-white dark:bg-dark-surface-2 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-500 border-l-4 border-army-gold dark:border-army-gold transform hover:-translate-y-2 group">
               <div className="flex items-center mb-4">
-                <Award size={24} className="text-army-gold dark:text-army-gold mr-3" />
+                <Award size={24} className="text-army-gold dark:text-army-gold mr-3 transition-transform duration-300 group-hover:scale-110" />
                 <h3 className="font-bold text-army-black dark:text-dark-text">Safety Standards</h3>
               </div>
               <p className="text-field-gray dark:text-dark-text-secondary text-sm">New safety protocols and veteran-inspired approaches to jobsite protection and worker safety.</p>
             </div>
 
-            <div className="bg-white dark:bg-dark-surface-2 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-army-green dark:border-army-green">
+            <div className="bg-white dark:bg-dark-surface-2 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-500 border-l-4 border-army-green dark:border-army-green transform hover:-translate-y-2 group">
               <div className="flex items-center mb-4">
-                <BookOpen size={24} className="text-army-green dark:text-army-green mr-3" />
+                <BookOpen size={24} className="text-army-green dark:text-army-green mr-3 transition-transform duration-300 group-hover:scale-110" />
                 <h3 className="font-bold text-army-black dark:text-dark-text">Best Practices</h3>
               </div>
               <p className="text-field-gray dark:text-dark-text-secondary text-sm">Military-grade precision techniques applied to commercial and industrial construction projects.</p>
             </div>
 
-            <div className="bg-white dark:bg-dark-surface-2 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-mh-warm-tan dark:border-mh-warm-tan">
+            <div className="bg-white dark:bg-dark-surface-2 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-500 border-l-4 border-mh-leather-tan dark:border-mh-leather-tan transform hover:-translate-y-2 group">
               <div className="flex items-center mb-4">
-                <Users size={24} className="text-mh-warm-tan dark:text-mh-warm-tan mr-3" />
+                <Users size={24} className="text-mh-leather-tan dark:text-mh-leather-tan mr-3 transition-transform duration-300 group-hover:scale-110" />
                 <h3 className="font-bold text-army-black dark:text-dark-text">Team Insights</h3>
               </div>
               <p className="text-field-gray dark:text-dark-text-secondary text-sm">Behind-the-scenes stories and expertise from our 150+ years of combined construction experience.</p>
@@ -281,7 +281,7 @@ export default function BlogPage() {
                   className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
                     selectedCategory === category
                       ? 'bg-army-gold text-army-black shadow-lg'
-                      : 'border border-mh-forest-green dark:border-army-gold text-mh-forest-green dark:text-army-gold hover:bg-mh-forest-green dark:hover:bg-army-gold hover:text-white dark:hover:text-army-black'
+                      : 'border border-mh-hunter-green dark:border-army-gold text-mh-hunter-green dark:text-army-gold hover:bg-mh-hunter-green dark:hover:bg-army-gold hover:text-white dark:hover:text-army-black'
                   }`}
                 >
                   {category}
@@ -303,14 +303,14 @@ export default function BlogPage() {
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute top-4 left-4 z-20">
-                      <span className="bg-army-gold text-army-black px-3 py-1 rounded-full text-sm font-semibold shadow-lg group-hover:bg-white group-hover:text-mh-forest-green transition-colors duration-300">
+                      <span className="bg-army-gold text-army-black px-3 py-1 rounded-full text-sm font-semibold shadow-lg group-hover:bg-white group-hover:text-mh-hunter-green transition-colors duration-300">
                         {article.category}
                       </span>
                     </div>
                   </div>
                   
                   <div className="p-6 group-hover:bg-gradient-to-br group-hover:from-gray-50 group-hover:to-white dark:group-hover:from-dark-surface-3 dark:group-hover:to-dark-surface-2 transition-all duration-300">
-                    <div className="flex items-center text-field-gray dark:text-dark-text-secondary text-sm mb-3 group-hover:text-mh-forest-green dark:group-hover:text-army-gold transition-colors duration-300">
+                    <div className="flex items-center text-field-gray dark:text-dark-text-secondary text-sm mb-3 group-hover:text-mh-hunter-green dark:group-hover:text-army-gold transition-colors duration-300">
                       <Calendar size={16} className="mr-2" />
                       <span>{article.date}</span>
                       <span className="mx-2">•</span>
@@ -318,7 +318,7 @@ export default function BlogPage() {
                       <span>{article.readTime}</span>
                     </div>
                     
-                    <h3 className="text-xl font-bold text-army-black dark:text-army-gold mb-3 group-hover:text-mh-forest-green dark:group-hover:text-white transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-army-black dark:text-army-gold mb-3 group-hover:text-mh-hunter-green dark:group-hover:text-white transition-colors duration-300">
                       {article.title}
                     </h3>
                     
@@ -328,7 +328,7 @@ export default function BlogPage() {
                     
                     <Link
                       href={`/blog/${article.slug}`}
-                      className="inline-flex items-center text-mh-forest-green font-semibold hover:text-army-green transition-all duration-300 group-hover:translate-x-2"
+                      className="inline-flex items-center text-mh-hunter-green font-semibold hover:text-army-green transition-all duration-300 group-hover:translate-x-2"
                     >
                       Read More
                       <ArrowRight size={16} className="ml-2 group-hover:ml-3 transition-all duration-300" />
@@ -341,7 +341,7 @@ export default function BlogPage() {
 
           {/* Load More Button */}
           <div className="text-center mt-12">
-            <button className="bg-mh-forest-green dark:bg-army-gold text-white dark:text-army-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green dark:hover:bg-yellow-500 transition-colors transform hover:scale-105">
+            <button className="bg-mh-hunter-green dark:bg-army-gold text-white dark:text-army-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green dark:hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
               Load More Articles
             </button>
           </div>
@@ -349,7 +349,7 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-20 bg-gradient-to-r from-army-green to-mh-forest-green dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text relative overflow-hidden transition-colors duration-300">
+      <section className="py-20 bg-gradient-to-r from-army-green to-mh-hunter-green dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text relative overflow-hidden transition-colors duration-300">
         {/* Background decoration */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -359,7 +359,7 @@ export default function BlogPage() {
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="mb-8">
-            <BookOpen size={48} className="text-army-gold mx-auto mb-6" />
+            <BookOpen size={48} className="text-army-gold mx-auto mb-6 transition-transform duration-300 hover:scale-110 hover:rotate-12" />
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Stay Updated with Construction Insights
             </h2>
@@ -370,18 +370,18 @@ export default function BlogPage() {
             </p>
           </div>
           
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 mb-8">
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 mb-8 transition-all duration-300 hover:bg-opacity-15">
             <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
               <div className="flex-1">
                 <input
                   type="email"
                   placeholder="Enter your email address"
-                  className="w-full px-4 py-3 rounded-lg text-army-black dark:text-dark-text focus:outline-none focus:ring-2 focus:ring-army-gold bg-white dark:bg-dark-surface border border-gray-300 dark:border-dark-border"
+                  className="w-full px-4 py-3 rounded-lg text-army-black dark:text-dark-text focus:outline-none focus:ring-2 focus:ring-army-gold bg-white dark:bg-dark-surface border border-gray-300 dark:border-dark-border transition-all duration-300 hover:shadow-md"
                 />
               </div>
               <button
                 type="submit"
-                className="bg-army-gold text-army-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="bg-army-gold text-army-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Subscribe Now
               </button>
@@ -395,15 +395,15 @@ export default function BlogPage() {
 
           {/* Social proof */}
           <div className="flex flex-wrap justify-center items-center gap-8 text-gray-300">
-            <div className="flex items-center">
+            <div className="flex items-center transition-all duration-300 hover:text-army-gold transform hover:scale-105">
               <Users size={20} className="mr-2 text-army-gold" />
               <span>10K+ Subscribers</span>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center transition-all duration-300 hover:text-army-gold transform hover:scale-105">
               <Award size={20} className="mr-2 text-army-gold" />
               <span>Industry Recognized</span>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center transition-all duration-300 hover:text-army-gold transform hover:scale-105">
               <TrendingUp size={20} className="mr-2 text-army-gold" />
               <span>98% Satisfaction</span>
             </div>

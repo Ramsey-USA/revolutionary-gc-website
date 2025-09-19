@@ -90,18 +90,18 @@ const BlogNewsSection = () => {
         {/* Carousel Container */}
         <div className="relative">
           {/* Main Article Display */}
-          <div className="bg-gradient-to-r from-mh-forest-green to-army-green dark:from-dark-surface-2 dark:to-dark-surface-3 rounded-2xl overflow-hidden shadow-2xl border dark:border-dark-border">
+          <div className="bg-gradient-to-r from-mh-hunter-green to-army-green dark:from-dark-surface-2 dark:to-dark-surface-3 rounded-2xl overflow-hidden shadow-2xl border dark:border-dark-border transition-all duration-500 hover:shadow-3xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 h-96 lg:h-80">
               {/* Article Image */}
-              <div className="relative">
+              <div className="relative group">
                 <Image
                   src={currentItem.image}
                   alt={currentItem.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-3 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
                     {currentItem.category}
                   </span>
                 </div>
@@ -126,7 +126,7 @@ const BlogNewsSection = () => {
 
                 <Link
                   href={`/blog/${currentItem.slug}`}
-                  className="inline-flex items-center bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 dark:hover:bg-yellow-500 transition-colors w-fit"
+                  className="inline-flex items-center bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 dark:hover:bg-yellow-500 transition-all duration-300 w-fit transform hover:scale-105 hover:-translate-y-1"
                 >
                   Read Full Article
                   <ArrowRight size={16} className="ml-2" />
@@ -138,7 +138,7 @@ const BlogNewsSection = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevArticle}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 hover:bg-opacity-30 dark:hover:bg-opacity-90 text-white dark:text-dark-text p-2 rounded-full transition-colors z-10"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 dark:bg-dark-surface/80 hover:bg-white/30 dark:hover:bg-dark-surface/90 text-white dark:text-dark-text p-3 rounded-full transition-all duration-300 z-10 backdrop-blur-sm hover:scale-110"
             aria-label="Previous article"
           >
             <ChevronLeft size={24} />
@@ -146,7 +146,7 @@ const BlogNewsSection = () => {
 
           <button
             onClick={nextArticle}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 hover:bg-opacity-30 dark:hover:bg-opacity-90 text-white dark:text-dark-text p-2 rounded-full transition-colors z-10"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 dark:bg-dark-surface/80 hover:bg-white/30 dark:hover:bg-dark-surface/90 text-white dark:text-dark-text p-3 rounded-full transition-all duration-300 z-10 backdrop-blur-sm hover:scale-110"
             aria-label="Next article"
           >
             <ChevronRight size={24} />
@@ -159,10 +159,10 @@ const BlogNewsSection = () => {
             <button
               key={index}
               onClick={() => goToArticle(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentArticle 
-                  ? 'bg-mh-forest-green dark:bg-army-gold' 
-                  : 'bg-gray-300 dark:bg-dark-border hover:bg-gray-400 dark:hover:bg-gray-500'
+                  ? 'bg-mh-hunter-green dark:bg-army-gold scale-125' 
+                  : 'bg-gray-300 dark:bg-dark-border hover:bg-gray-400 dark:hover:bg-gray-500 hover:scale-110'
               }`}
               aria-label={`Go to article ${index + 1}`}
             />
@@ -173,7 +173,7 @@ const BlogNewsSection = () => {
         <div className="text-center mt-12">
           <Link
             href="/blog"
-            className="inline-block bg-mh-forest-green dark:bg-mh-forest-green text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green dark:hover:bg-army-green transition-colors transform hover:scale-105"
+            className="inline-block bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green dark:hover:bg-army-green transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg"
           >
             View All News & Insights
           </Link>

@@ -8,7 +8,7 @@ MH Construction Revolutionary Website
 🚀 QUICK START FOR DEVELOPER
 🎯 Phase 1 - Initial Build
 Priority 1: Core Website
-Homepage (listed in order below) with military color scheme and Saira font
+Homepage (listed in order below) with military color scheme and new typography system
 Header with responsive navigation with mobile hamburger menu
 Hero section with timelapse video background (on home page only)
 AI Tools section with AI Estimator MVP, Sandbox, and 3D Explorer
@@ -187,9 +187,9 @@ Offline Capability: Basic functionality for trade show demos
 Variables
 * Primary MH Construction Colors *
 
-  --mh-forest-green: #396851;    /* Primary brand color */
+  --mh-hunter-green: #386851;    /* Primary brand color */
 
-  --mh-warm-tan: #BD9264;        /* Secondary brand color */
+  --mh-leather-tan: #BD9264;     /* Secondary brand color */
 
   
   /* Army Military Colors */
@@ -212,6 +212,16 @@ Variables
   --light-gray: #F8F9FA;
 
   --dark-gray: #343A40;
+
+🎨 TYPOGRAPHY GUIDE
+Font Specifications
+* Primary Fonts *
+
+  Heading: Tactic Sans Bold         /* All major headings */
+
+  Subheading: Tactic Sans Medium    /* Section subtitles and subheadings */
+
+  Body Copy: Adobe Garamond Pro     /* All body text and content */
 
 🤖 BASIC AI ESTIMATOR SPECIFICATIONS
 Timeline Phases (Standard Speed)

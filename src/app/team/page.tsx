@@ -122,10 +122,10 @@ export default function TeamPage() {
     // Dynamic border colors that rotate through theme palette
     const getBorderColor = (index: number) => {
       const colors = [
-        "border-mh-forest-green",
+        "border-mh-hunter-green",
         "border-army-gold", 
         "border-blue-600",
-        "border-orange-500"
+        "border-mh-leather-tan"
       ]
       return colors[index % colors.length]
     }
@@ -160,23 +160,23 @@ export default function TeamPage() {
             : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
         }`}>
           {members.map((member, index) => (
-            <div key={index} className={`group relative rounded-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between h-full border-2 ${getBorderColor(index)} dark:border-opacity-80`}>
+            <div key={index} className={`group relative rounded-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 flex flex-col justify-between h-full border-2 ${getBorderColor(index)} dark:border-opacity-80 hover:border-opacity-100`}>
               {/* Enhanced card with gradient background */}
-              <div className="bg-white dark:bg-dark-surface-2 rounded-xl h-full relative overflow-hidden border dark:border-dark-border transition-colors duration-300">
+              <div className="bg-white dark:bg-dark-surface-2 rounded-xl h-full relative overflow-hidden border dark:border-dark-border transition-all duration-500 group-hover:bg-gray-50 dark:group-hover:bg-dark-surface-3">
                 {/* Image with hover effects */}
                 <div className="aspect-square relative overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110"
                   />
                   {/* Gradient overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                 </div>
                 
                 {/* Card content */}
                 <div className="p-6 pb-0">
-                  <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-1 group-hover:text-mh-forest-green dark:group-hover:text-mh-forest-green transition-colors">{member.name}</h3>
+                  <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-1 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">{member.name}</h3>
                   <p className="text-army-gold dark:text-army-gold font-semibold mb-3">{member.title}</p>
                   <p className="text-field-gray dark:text-dark-text-secondary text-sm leading-relaxed mb-4">
                     {member.description}
@@ -187,7 +187,7 @@ export default function TeamPage() {
                     {getSkillTags(member).map((skill, skillIndex) => (
                       <span 
                         key={skillIndex} 
-                        className="px-3 py-1 bg-mh-forest-green/10 dark:bg-mh-forest-green/20 text-mh-forest-green dark:text-mh-forest-green rounded-full text-xs font-medium"
+                        className="px-3 py-1 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 text-mh-hunter-green dark:text-mh-hunter-green rounded-full text-xs font-medium transition-all duration-300 hover:bg-mh-hunter-green/20 dark:hover:bg-mh-hunter-green/30"
                       >
                         {skill}
                       </span>
@@ -199,7 +199,7 @@ export default function TeamPage() {
                 <div className="flex justify-center space-x-4 mt-4 mb-6">
                   <a
                     href={`mailto:${member.email}`}
-                    className="flex items-center justify-center w-10 h-10 bg-mh-forest-green dark:bg-mh-forest-green text-white dark:text-white rounded-full transition-all duration-300 hover:bg-army-green dark:hover:bg-army-green hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                    className="flex items-center justify-center w-10 h-10 bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white rounded-full transition-all duration-300 hover:bg-army-green dark:hover:bg-army-green hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
                     aria-label={`Email ${member.name}`}
                   >
                     <Mail size={18} />
@@ -228,7 +228,7 @@ export default function TeamPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-army-black via-mh-forest-green to-army-green dark:from-dark-surface dark:via-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-army-black via-mh-hunter-green to-army-green dark:from-dark-surface dark:via-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text overflow-hidden">
         {/* Star decorations */}
         <StarDecorations />
         
@@ -260,7 +260,7 @@ export default function TeamPage() {
   <TeamSection title="Administration & Support" members={administration} bgColor="bg-light-gray dark:bg-dark-surface-2" id="administration" />
 
       {/* Join Our Team CTA */}
-      <section className="py-20 bg-gradient-to-r from-army-green to-mh-forest-green dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text">
+      <section className="py-20 bg-gradient-to-r from-army-green to-mh-hunter-green dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white dark:text-dark-text">
             Join Our Growing Team

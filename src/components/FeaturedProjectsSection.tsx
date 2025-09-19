@@ -73,24 +73,24 @@ const FeaturedProjectsSection = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="flip-card h-96 cursor-pointer"
+              className="flip-card h-96 cursor-pointer group"
             >
               <div className="flip-card-inner h-full">
                 {/* Front of Card - Image */}
-                <div className="flip-card-front relative rounded-xl overflow-hidden shadow-lg">
+                <div className="flip-card-front relative rounded-xl overflow-hidden shadow-lg transition-all duration-500 group-hover:shadow-xl">
                   <div className="relative h-full">
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover"
+                      className="object-cover transition-all duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-60 transition-opacity duration-300"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <span className="inline-block bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-3 py-1 rounded-full text-sm font-semibold mb-2">
+                      <span className="inline-block bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-3 py-1 rounded-full text-sm font-semibold mb-2 transition-transform duration-300 group-hover:scale-105">
                         {project.category}
                       </span>
-                      <h3 className="text-2xl font-bold text-white dark:text-white">
+                      <h3 className="text-2xl font-bold text-white dark:text-white transition-all duration-300 group-hover:text-army-gold">
                         {project.title}
                       </h3>
                     </div>
@@ -98,7 +98,7 @@ const FeaturedProjectsSection = () => {
                 </div>
 
                 {/* Back of Card - Description */}
-                <div className="flip-card-back bg-gradient-to-br from-mh-forest-green to-army-green dark:from-dark-surface-2 dark:to-dark-surface-3 rounded-xl shadow-lg p-6 flex flex-col justify-between text-white dark:text-dark-text">
+                <div className="flip-card-back bg-gradient-to-br from-mh-hunter-green to-army-green dark:from-dark-surface-2 dark:to-dark-surface-3 rounded-xl shadow-lg p-6 flex flex-col justify-between text-white dark:text-dark-text border border-mh-hunter-green/20">
                   <div>
                     <span className="inline-block bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-3 py-1 rounded-full text-sm font-semibold mb-4">
                       {project.category}
@@ -114,13 +114,13 @@ const FeaturedProjectsSection = () => {
                   <div className="space-y-3">
                     <Link
                       href={`/projects/${project.slug}`}
-                      className="block w-full bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black text-center py-3 rounded-lg font-semibold hover:bg-yellow-500 dark:hover:bg-yellow-500 transition-colors"
+                      className="block w-full bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black text-center py-3 rounded-lg font-semibold hover:bg-yellow-500 dark:hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105"
                     >
                       View Project Details
                     </Link>
                     <Link
                       href="/estimate"
-                      className="block w-full bg-transparent border-2 border-white dark:border-dark-text text-white dark:text-dark-text text-center py-2 rounded-lg font-semibold hover:bg-white dark:hover:bg-dark-text hover:text-army-black dark:hover:text-army-black transition-colors"
+                      className="block w-full bg-transparent border-2 border-white dark:border-dark-text text-white dark:text-dark-text text-center py-2 rounded-lg font-semibold hover:bg-white dark:hover:bg-dark-text hover:text-army-black dark:hover:text-army-black transition-all duration-300"
                     >
                       Get Similar Estimate
                     </Link>
@@ -135,7 +135,7 @@ const FeaturedProjectsSection = () => {
         <div className="text-center mt-16">
           <Link
             href="/projects"
-            className="inline-block bg-mh-forest-green dark:bg-mh-forest-green text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green dark:hover:bg-army-green transition-colors transform hover:scale-105"
+            className="inline-block bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green dark:hover:bg-army-green transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg"
           >
             View All Projects
           </Link>

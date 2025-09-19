@@ -13,32 +13,32 @@ export default function WhyChooseSection() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 transition-transform duration-300 hover:scale-110 hover:-translate-y-1">
+          <div className="text-center group">
+            <div className="bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-500 hover:scale-110 hover:-translate-y-2 shadow-lg group-hover:shadow-xl group-hover:rotate-6">
               <Trophy size={48} />
             </div>
-            <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-2">150+ Years Experience</h3>
+            <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-army-gold dark:group-hover:text-army-gold transition-colors duration-300">150+ Years Experience</h3>
             <p className="text-field-gray dark:text-dark-text-secondary">Combined construction expertise across our team</p>
           </div>
-          <div className="text-center">
-            <div className="bg-mh-forest-green dark:bg-mh-forest-green text-white dark:text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 transition-transform duration-300 hover:scale-110 hover:-translate-y-1">
+          <div className="text-center group">
+            <div className="bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-500 hover:scale-110 hover:-translate-y-2 shadow-lg group-hover:shadow-xl group-hover:rotate-6">
               <Star size={48} />
             </div>
-            <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-2">Veteran Owned</h3>
+            <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Veteran Owned</h3>
             <p className="text-field-gray dark:text-dark-text-secondary">Military precision and integrity in every project</p>
           </div>
-          <div className="text-center">
-            <div className="bg-army-green dark:bg-army-green text-white dark:text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 transition-transform duration-300 hover:scale-110 hover:-translate-y-1">
+          <div className="text-center group">
+            <div className="bg-army-green dark:bg-army-green text-white dark:text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-500 hover:scale-110 hover:-translate-y-2 shadow-lg group-hover:shadow-xl group-hover:rotate-6">
               <Bot size={48} />
             </div>
-            <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-2">Technology Leader</h3>
+            <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-army-green dark:group-hover:text-army-green transition-colors duration-300">Technology Leader</h3>
             <p className="text-field-gray dark:text-dark-text-secondary">First in the Pacific Northwest with AI estimating</p>
           </div>
-          <div className="text-center">
-            <div className="bg-mh-warm-tan dark:bg-mh-warm-tan text-white dark:text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 transition-transform duration-300 hover:scale-110 hover:-translate-y-1">
+          <div className="text-center group">
+            <div className="bg-mh-leather-tan dark:bg-mh-leather-tan text-white dark:text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-500 hover:scale-110 hover:-translate-y-2 shadow-lg group-hover:shadow-xl group-hover:rotate-6">
               <Headphones size={48} />
             </div>
-            <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-2">Project Support</h3>
+            <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Project Support</h3>
             <p className="text-field-gray dark:text-dark-text-secondary">Real-time updates and transparent communication</p>
           </div>
         </div>

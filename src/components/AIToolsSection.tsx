@@ -11,7 +11,7 @@ const AIToolsSection = () => {
       description: "Get accurate cost estimates and comprehensive project timelines in minutes. Our AI analyzes your project requirements and provides detailed phase-by-phase breakdowns with 15% accuracy.",
       ctaText: "Start Your Estimate",
       ctaLink: "/estimate",
-      gradient: "from-mh-forest-green to-army-green"
+      gradient: "from-mh-hunter-green to-army-green"
     },
     {
       icon: Wrench,
@@ -19,7 +19,7 @@ const AIToolsSection = () => {
       description: "Build your project virtually before construction begins. Drag and drop walls, doors, windows, and finishes while watching costs update in real-time.",
       ctaText: "Build Virtually",
       ctaLink: "/sandbox",
-      gradient: "from-mh-warm-tan to-field-tan"
+      gradient: "from-mh-leather-tan to-field-tan"
     },
     {
       icon: Eye,
@@ -52,11 +52,11 @@ const AIToolsSection = () => {
             return (
               <div
                 key={index}
-                className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 border dark:border-dark-border"
+                className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-500 border dark:border-dark-border hover:shadow-xl group"
               >
                 {/* Card Header with Icon */}
-                <div className={`bg-gradient-to-r ${tool.gradient} p-6 text-white`}>
-                  <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-4">
+                <div className={`bg-gradient-to-r ${tool.gradient} p-6 text-white transition-all duration-300 group-hover:brightness-110`}>
+                  <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
                     <IconComponent size={32} />
                   </div>
                   <h3 className="text-2xl font-bold text-center text-white dark:text-white">{tool.title}</h3>
@@ -70,7 +70,7 @@ const AIToolsSection = () => {
                   
                   <Link
                     href={tool.ctaLink}
-                    className="block w-full bg-army-black dark:bg-dark-surface-3 text-white dark:text-dark-text text-center py-3 rounded-lg font-semibold hover:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
+                    className="block w-full bg-army-black dark:bg-dark-surface-3 text-white dark:text-dark-text text-center py-3 rounded-lg font-semibold hover:bg-gray-800 dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
                   >
                     {tool.ctaText}
                   </Link>
@@ -87,7 +87,7 @@ const AIToolsSection = () => {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-mh-forest-green dark:bg-mh-forest-green text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green dark:hover:bg-army-green transition-colors transform hover:scale-105"
+            className="inline-block bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green dark:hover:bg-army-green transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg"
           >
             Schedule a Demo
           </Link>

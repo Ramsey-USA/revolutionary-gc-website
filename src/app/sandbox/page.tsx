@@ -11,22 +11,69 @@ export default function SandboxPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-r from-mh-warm-tan to-field-tan dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-mh-hunter-green via-army-black to-mh-hunter-green overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        
         {/* Star decorations */}
         <StarDecorations />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center w-20 h-20 bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full mx-auto mb-6">
-              <Wrench size={40} className="text-white dark:text-dark-text" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-white">
+              <div className="flex items-center justify-center w-20 h-20 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-8 transform hover:scale-110 hover:rotate-12 transition-all duration-300">
+                <Wrench size={40} className="text-army-gold" />
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Interactive Project
+                <span className="block text-army-gold">Sandbox</span>
+              </h1>
+              <p className="text-xl lg:text-2xl mb-8 text-gray-200 leading-relaxed">
+                Build your project virtually before construction begins. Drag and drop components 
+                while watching costs and timelines update in real-time with military precision.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <a 
+                  href="/contact" 
+                  className="group bg-army-gold hover:bg-army-gold/90 text-army-black px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-center"
+                >
+                  Request Demo
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
+                </a>
+                <a 
+                  href="/estimate" 
+                  className="group border border-army-gold text-army-gold hover:bg-army-gold hover:text-army-black px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-center"
+                >
+                  Get Traditional Estimate
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
+                </a>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white dark:text-dark-text">
-              Interactive Project Sandbox
-            </h1>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
-              Build your project virtually before construction begins. Drag and drop walls, 
-              doors, windows, and finishes while watching costs update in real-time.
-            </p>
+            
+            <div className="relative">
+              {/* Sandbox Stats Cards */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 transform hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl font-bold text-army-gold mb-2">Real-Time</div>
+                  <div className="text-sm text-gray-200">Cost Updates</div>
+                  <div className="text-xs text-gray-300 mt-1">Instant Calculations</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 transform hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl font-bold text-army-gold mb-2">3D</div>
+                  <div className="text-sm text-gray-200">Visualization</div>
+                  <div className="text-xs text-gray-300 mt-1">Advanced Rendering</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 transform hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl font-bold text-army-gold mb-2">AI</div>
+                  <div className="text-sm text-gray-200">Powered</div>
+                  <div className="text-xs text-gray-300 mt-1">Smart Suggestions</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 transform hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl font-bold text-army-gold mb-2">Cloud</div>
+                  <div className="text-sm text-gray-200">Synchronized</div>
+                  <div className="text-xs text-gray-300 mt-1">Always Available</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -34,72 +81,92 @@ export default function SandboxPage() {
       {/* Coming Soon Section */}
       <section className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-army-black dark:text-army-gold mb-8">
-              🚧 Coming Soon
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">
+              🚧 Revolutionary Tool in Development
             </h2>
-            <p className="text-xl text-field-gray dark:text-dark-text max-w-4xl mx-auto mb-12 leading-relaxed">
-              Our revolutionary Interactive Project Sandbox is currently in development. 
-              This cutting-edge tool will allow you to design and modify your construction 
-              project in real-time, with instant cost and timeline updates.
+            <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto leading-relaxed">
+              Our cutting-edge Interactive Project Sandbox is being built with military precision. 
+              Design, modify, and visualize your construction project with real-time cost and timeline updates.
             </p>
+          </div>
 
-            {/* Features Preview */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-              <div className="bg-light-gray dark:bg-dark-surface-2 p-6 rounded-xl">
-                <div className="flex items-center justify-center w-16 h-16 bg-mh-warm-tan dark:bg-army-gold text-white dark:text-army-black rounded-full mx-auto mb-4">
-                  <Wrench size={24} />
-                </div>
-                <h3 className="text-xl font-bold text-army-black mb-3">Drag & Drop Design</h3>
-                <p className="text-field-gray">Intuitive interface for placing walls, doors, windows, and fixtures</p>
+          {/* Features Preview */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border border-gray-100 dark:border-dark-border">
+              <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-army-gold rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                <Wrench size={24} className="text-white" />
               </div>
-
-              <div className="bg-light-gray dark:bg-dark-surface-2 p-6 rounded-xl">
-                <div className="flex items-center justify-center w-16 h-16 bg-mh-forest-green dark:bg-army-green text-white rounded-full mx-auto mb-4">
-                  <Settings size={24} />
-                </div>
-                <h3 className="text-xl font-bold text-army-black mb-3">Real-Time Costs</h3>
-                <p className="text-field-gray">Watch project costs update instantly as you make design changes</p>
-              </div>
-
-              <div className="bg-light-gray dark:bg-dark-surface-2 p-6 rounded-xl">
-                <div className="flex items-center justify-center w-16 h-16 bg-army-gold text-army-black rounded-full mx-auto mb-4">
-                  <Save size={24} />
-                </div>
-                <h3 className="text-xl font-bold text-army-black mb-3">Save & Share</h3>
-                <p className="text-field-gray">Save multiple design versions and share with your team</p>
-              </div>
-
-              <div className="bg-light-gray dark:bg-dark-surface-2 p-6 rounded-xl">
-                <div className="flex items-center justify-center w-16 h-16 bg-army-green text-white rounded-full mx-auto mb-4">
-                  <Download size={24} />
-                </div>
-                <h3 className="text-xl font-bold text-army-black mb-3">Export Plans</h3>
-                <p className="text-field-gray">Generate detailed blueprints and material lists</p>
-              </div>
+              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-3 group-hover:text-mh-hunter-green transition-colors duration-300">
+                Drag & Drop Design
+              </h3>
+              <p className="text-gray-600 dark:text-dark-text-secondary group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300">
+                Intuitive interface for placing walls, doors, windows, and fixtures with precision control
+              </p>
             </div>
 
-            {/* Demo Request */}
-            <div className="bg-gradient-to-r from-mh-warm-tan to-field-tan dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text p-8 rounded-xl">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border border-gray-100 dark:border-dark-border">
+              <div className="w-16 h-16 bg-gradient-to-r from-army-gold to-mh-hunter-green rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                <Settings size={24} className="text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-3 group-hover:text-army-gold transition-colors duration-300">
+                Real-Time Costs
+              </h3>
+              <p className="text-gray-600 dark:text-dark-text-secondary group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300">
+                Watch project costs update instantly as you make design changes with AI-powered calculations
+              </p>
+            </div>
+
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border border-gray-100 dark:border-dark-border">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-mh-hunter-green rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                <Save size={24} className="text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                Save & Share
+              </h3>
+              <p className="text-gray-600 dark:text-dark-text-secondary group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300">
+                Save multiple design versions and collaborate with your team in real-time
+              </p>
+            </div>
+
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border border-gray-100 dark:border-dark-border">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-army-gold rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                <Download size={24} className="text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-3 group-hover:text-green-600 transition-colors duration-300">
+                Export Plans
+              </h3>
+              <p className="text-gray-600 dark:text-dark-text-secondary group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300">
+                Generate detailed blueprints, material lists, and professional documentation
+              </p>
+            </div>
+          </div>
+
+          {/* Demo Request */}
+          <div className="bg-gradient-to-r from-mh-hunter-green to-army-black rounded-xl p-8 text-white relative overflow-hidden">
+            <div className="absolute inset-0 bg-black/20"></div>
+            <div className="relative">
               <h3 className="text-2xl font-bold mb-4">
                 Want a Sneak Peek?
               </h3>
-              <p className="text-lg mb-6">
+              <p className="text-lg mb-6 text-gray-200">
                 Request a private demo of our Interactive Project Sandbox and see how 
-                this revolutionary tool will transform your construction planning process.
+                this revolutionary tool will transform your construction planning process with military precision.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="bg-white dark:bg-dark-surface text-mh-warm-tan dark:text-army-gold px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:hover:bg-dark-surface-2 transition-colors"
+                  className="group bg-army-gold hover:bg-army-gold/90 text-army-black px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-center"
                 >
                   Request Demo
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
                 </a>
                 <a
                   href="/estimate"
-                  className="bg-army-gold text-army-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 dark:hover:bg-yellow-600 transition-colors"
+                  className="group border border-army-gold text-army-gold hover:bg-army-gold hover:text-army-black px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-center"
                 >
                   Get Traditional Estimate
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
                 </a>
               </div>
             </div>
@@ -108,39 +175,61 @@ export default function SandboxPage() {
       </section>
 
       {/* Technology Preview */}
-      <section className="py-20 bg-light-gray dark:bg-dark-surface-2">
+      <section className="py-20 bg-gray-50 dark:bg-dark-surface-2 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">
               Revolutionary Technology
             </h2>
-            <p className="text-xl text-field-gray max-w-3xl mx-auto">
-              Built with cutting-edge web technologies for seamless performance
+            <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
+              Built with cutting-edge web technologies for seamless performance and military-grade precision
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg text-center border border-gray-100 dark:border-dark-border">
-              <h3 className="text-xl font-bold text-army-black dark:text-army-gold mb-4">3D Visualization</h3>
-              <p className="text-field-gray dark:text-dark-text">
-                Advanced 3D rendering engine for realistic project visualization
-                with real-time lighting and material preview.
+            <div className="group bg-white dark:bg-dark-surface rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border border-gray-100 dark:border-dark-border">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-mh-hunter-green rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                3D Visualization
+              </h3>
+              <p className="text-gray-600 dark:text-dark-text-secondary group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300">
+                Advanced 3D rendering engine for realistic project visualization with real-time lighting, 
+                materials, and environmental effects.
               </p>
             </div>
 
-            <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg text-center border border-gray-100 dark:border-dark-border">
-              <h3 className="text-xl font-bold text-army-black dark:text-army-gold mb-4">AI Integration</h3>
-              <p className="text-field-gray dark:text-dark-text">
-                Machine learning algorithms provide intelligent design suggestions
-                and accurate cost predictions based on historical data.
+            <div className="group bg-white dark:bg-dark-surface rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border border-gray-100 dark:border-dark-border">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-army-gold rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4 group-hover:text-purple-600 transition-colors duration-300">
+                AI Integration
+              </h3>
+              <p className="text-gray-600 dark:text-dark-text-secondary group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300">
+                Machine learning algorithms provide intelligent design suggestions and accurate cost 
+                predictions based on extensive historical construction data.
               </p>
             </div>
 
-            <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg text-center border border-gray-100 dark:border-dark-border">
-              <h3 className="text-xl font-bold text-army-black dark:text-army-gold mb-4">Cloud Sync</h3>
-              <p className="text-field-gray dark:text-dark-text">
-                Seamless cloud synchronization ensures your projects are always
-                accessible and up-to-date across all devices.
+            <div className="group bg-white dark:bg-dark-surface rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border border-gray-100 dark:border-dark-border">
+              <div className="w-16 h-16 bg-gradient-to-r from-teal-600 to-mh-hunter-green rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4 group-hover:text-teal-600 transition-colors duration-300">
+                Cloud Sync
+              </h3>
+              <p className="text-gray-600 dark:text-dark-text-secondary group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300">
+                Seamless cloud synchronization ensures your projects are always accessible, 
+                secure, and up-to-date across all devices and team members.
               </p>
             </div>
           </div>
@@ -162,11 +251,11 @@ export default function SandboxPage() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-warm-tan focus:border-mh-warm-tan bg-white dark:bg-dark-surface-3 dark:text-dark-text"
+              className="flex-1 px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green bg-white dark:bg-dark-surface-3 dark:text-dark-text"
             />
             <button
               type="submit"
-              className="bg-mh-warm-tan text-white px-6 py-3 rounded-lg font-semibold hover:bg-field-tan transition-colors"
+              className="bg-mh-hunter-green text-white px-6 py-3 rounded-lg font-semibold hover:bg-army-gold hover:text-army-black transition-all duration-300 transform hover:scale-105"
             >
               Notify Me
             </button>

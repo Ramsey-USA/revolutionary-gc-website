@@ -115,7 +115,7 @@ export default function ProjectsPage() {
       <Header />
       
       {/* Hero Section with Parallax Background */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-r from-mh-forest-green to-army-green dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-r from-mh-hunter-green to-army-green dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -172,10 +172,10 @@ export default function ProjectsPage() {
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
+                  className={`px-6 py-2 rounded-full font-semibold transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 ${
                     selectedCategory === category
                       ? 'bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black shadow-lg'
-                      : 'bg-white dark:bg-dark-surface-2 text-field-gray dark:text-dark-text border border-gray-300 dark:border-dark-border hover:bg-mh-forest-green dark:hover:bg-mh-forest-green hover:text-white dark:hover:text-white hover:border-mh-forest-green dark:hover:border-mh-forest-green'
+                      : 'bg-white dark:bg-dark-surface-2 text-field-gray dark:text-dark-text border border-gray-300 dark:border-dark-border hover:bg-mh-hunter-green dark:hover:bg-mh-hunter-green hover:text-white dark:hover:text-white hover:border-mh-hunter-green dark:hover:border-mh-hunter-green hover:shadow-md'
                   }`}
                 >
                   {category}
@@ -191,29 +191,29 @@ export default function ProjectsPage() {
               const IconComponent = project.icon
               
               return (
-                <div key={project.id} className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg border border-gray-200 dark:border-dark-border overflow-hidden hover:shadow-2xl hover:border-army-gold dark:hover:border-army-gold transition-all duration-500 transform hover:-translate-y-2">
+                <div key={project.id} className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg border border-gray-200 dark:border-dark-border overflow-hidden hover:shadow-2xl hover:border-army-gold dark:hover:border-army-gold transition-all duration-500 transform hover:-translate-y-3 hover:scale-105">
                   {/* Project Image */}
-                  <div className="relative h-64 bg-gradient-to-br from-mh-forest-green to-army-green overflow-hidden">
-                    <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                  <div className="relative h-64 bg-gradient-to-br from-mh-hunter-green to-army-green overflow-hidden">
+                    <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-500"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <IconComponent size={64} className="text-white opacity-50 group-hover:opacity-70 transition-opacity duration-300" />
+                      <IconComponent size={64} className="text-white opacity-50 group-hover:opacity-80 group-hover:scale-110 transition-all duration-500" />
                     </div>
                     {/* Project Category Badge */}
                     <div className="absolute top-4 left-4">
-                      <span className="bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-3 py-1 rounded-full text-sm font-semibold">
+                      <span className="bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-3 py-1 rounded-full text-sm font-semibold shadow-lg transition-transform duration-300 group-hover:scale-105">
                         {project.category}
                       </span>
                     </div>
                     {/* Project Details Overlay */}
                     <div className="absolute bottom-4 right-4 text-white dark:text-white text-right">
-                      <div className="text-sm opacity-80">{project.details.year}</div>
-                      <div className="text-xs opacity-60">{project.details.location}</div>
+                      <div className="text-sm opacity-80 transition-opacity duration-300 group-hover:opacity-100">{project.details.year}</div>
+                      <div className="text-xs opacity-60 transition-opacity duration-300 group-hover:opacity-80">{project.details.location}</div>
                     </div>
                   </div>
 
                   {/* Project Content */}
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-forest-green dark:group-hover:text-mh-forest-green transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">
                       {project.title}
                     </h3>
                     <p className="text-field-gray dark:text-dark-text-secondary mb-4 leading-relaxed">
@@ -221,13 +221,13 @@ export default function ProjectsPage() {
                     </p>
 
                     {/* Project Stats */}
-                    <div className="grid grid-cols-2 gap-4 mb-4 p-3 bg-gray-50 dark:bg-dark-surface-3 rounded-lg">
+                    <div className="grid grid-cols-2 gap-4 mb-4 p-3 bg-gray-50 dark:bg-dark-surface-3 rounded-lg transition-colors duration-300 group-hover:bg-mh-hunter-green/5 dark:group-hover:bg-mh-hunter-green/10">
                       <div className="text-center">
-                        <div className="text-sm font-semibold text-mh-forest-green dark:text-mh-forest-green">{project.details.size}</div>
+                        <div className="text-sm font-semibold text-mh-hunter-green dark:text-mh-hunter-green">{project.details.size}</div>
                         <div className="text-xs text-field-gray dark:text-dark-text-secondary">Size</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-sm font-semibold text-mh-forest-green dark:text-mh-forest-green">{project.details.duration}</div>
+                        <div className="text-sm font-semibold text-mh-hunter-green dark:text-mh-hunter-green">{project.details.duration}</div>
                         <div className="text-xs text-field-gray dark:text-dark-text-secondary">Duration</div>
                       </div>
                     </div>
@@ -238,7 +238,7 @@ export default function ProjectsPage() {
                       <div className="grid grid-cols-2 gap-1">
                         {project.features.map((feature, featureIndex) => (
                           <div key={featureIndex} className="flex items-center space-x-1">
-                            <div className="w-1.5 h-1.5 bg-army-gold dark:bg-army-gold rounded-full"></div>
+                            <div className="w-1.5 h-1.5 bg-army-gold dark:bg-army-gold rounded-full transition-transform duration-300 group-hover:scale-125"></div>
                             <span className="text-field-gray dark:text-dark-text-secondary text-xs">{feature}</span>
                           </div>
                         ))}
@@ -246,7 +246,7 @@ export default function ProjectsPage() {
                     </div>
 
                     {/* Action Button */}
-                    <button className="w-full bg-mh-forest-green dark:bg-mh-forest-green text-white dark:text-white py-2 px-4 rounded-lg font-semibold hover:bg-army-green dark:hover:bg-army-green transition-colors duration-300 transform hover:scale-105 opacity-0 group-hover:opacity-100">
+                    <button className="w-full bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white py-2 px-4 rounded-lg font-semibold hover:bg-army-green dark:hover:bg-army-green transition-all duration-300 transform hover:scale-105 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0">
                       View Project Details
                     </button>
                   </div>
@@ -273,68 +273,68 @@ export default function ProjectsPage() {
             {/* Phase 1 */}
             <div className="text-center group">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-mh-forest-green dark:bg-mh-forest-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:scale-110 transition-all duration-300 shadow-lg">
+                <div className="w-20 h-20 bg-mh-hunter-green dark:bg-mh-hunter-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-xl group-hover:rotate-6">
                   <MapPin size={32} className="text-white group-hover:text-army-black transition-colors duration-300" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-army-gold rounded-full flex items-center justify-center text-army-black font-bold text-sm">1</div>
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-army-gold rounded-full flex items-center justify-center text-army-black font-bold text-sm transition-transform duration-300 group-hover:scale-110">1</div>
                 {/* Connector Line */}
-                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-forest-green to-gray-300 dark:from-mh-forest-green dark:to-dark-border"></div>
+                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-hunter-green to-gray-300 dark:from-mh-hunter-green dark:to-dark-border"></div>
               </div>
-              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-forest-green transition-colors duration-300">Site Assessment</h3>
+              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Site Assessment</h3>
               <p className="text-field-gray dark:text-dark-text-secondary text-sm">Comprehensive site analysis and feasibility studies</p>
             </div>
 
             {/* Phase 2 */}
             <div className="text-center group">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-mh-forest-green dark:bg-mh-forest-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:scale-110 transition-all duration-300 shadow-lg">
+                <div className="w-20 h-20 bg-mh-hunter-green dark:bg-mh-hunter-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-xl group-hover:rotate-6">
                   <Building size={32} className="text-white group-hover:text-army-black transition-colors duration-300" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-army-gold rounded-full flex items-center justify-center text-army-black font-bold text-sm">2</div>
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-army-gold rounded-full flex items-center justify-center text-army-black font-bold text-sm transition-transform duration-300 group-hover:scale-110">2</div>
                 {/* Connector Line */}
-                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-forest-green to-gray-300 dark:from-mh-forest-green dark:to-dark-border"></div>
+                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-hunter-green to-gray-300 dark:from-mh-hunter-green dark:to-dark-border"></div>
               </div>
-              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-forest-green transition-colors duration-300">Design & Planning</h3>
+              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Design & Planning</h3>
               <p className="text-field-gray dark:text-dark-text-secondary text-sm">AI-powered design with 3D visualization and detailed blueprints</p>
             </div>
 
             {/* Phase 3 */}
             <div className="text-center group">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-mh-forest-green dark:bg-mh-forest-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:scale-110 transition-all duration-300 shadow-lg">
+                <div className="w-20 h-20 bg-mh-hunter-green dark:bg-mh-hunter-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-xl group-hover:rotate-6">
                   <Shield size={32} className="text-white group-hover:text-army-black transition-colors duration-300" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-army-gold rounded-full flex items-center justify-center text-army-black font-bold text-sm">3</div>
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-army-gold rounded-full flex items-center justify-center text-army-black font-bold text-sm transition-transform duration-300 group-hover:scale-110">3</div>
                 {/* Connector Line */}
-                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-forest-green to-gray-300 dark:from-mh-forest-green dark:to-dark-border"></div>
+                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-hunter-green to-gray-300 dark:from-mh-hunter-green dark:to-dark-border"></div>
               </div>
-              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-forest-green transition-colors duration-300">Permits & Approval</h3>
+              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Permits & Approval</h3>
               <p className="text-field-gray dark:text-dark-text-secondary text-sm">Navigate regulatory requirements with veteran precision</p>
             </div>
 
             {/* Phase 4 */}
             <div className="text-center group">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-mh-forest-green dark:bg-mh-forest-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:scale-110 transition-all duration-300 shadow-lg">
+                <div className="w-20 h-20 bg-mh-hunter-green dark:bg-mh-hunter-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-xl group-hover:rotate-6">
                   <Hammer size={32} className="text-white group-hover:text-army-black transition-colors duration-300" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-army-gold rounded-full flex items-center justify-center text-army-black font-bold text-sm">4</div>
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-army-gold rounded-full flex items-center justify-center text-army-black font-bold text-sm transition-transform duration-300 group-hover:scale-110">4</div>
                 {/* Connector Line */}
-                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-forest-green to-gray-300 dark:from-mh-forest-green dark:to-dark-border"></div>
+                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-hunter-green to-gray-300 dark:from-mh-hunter-green dark:to-dark-border"></div>
               </div>
-              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-forest-green transition-colors duration-300">Construction</h3>
+              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Construction</h3>
               <p className="text-field-gray dark:text-dark-text-secondary text-sm">Expert execution with real-time progress monitoring</p>
             </div>
 
             {/* Phase 5 */}
             <div className="text-center group">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-mh-forest-green dark:bg-mh-forest-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:scale-110 transition-all duration-300 shadow-lg">
+                <div className="w-20 h-20 bg-mh-hunter-green dark:bg-mh-hunter-green rounded-full flex items-center justify-center mx-auto group-hover:bg-army-gold dark:group-hover:bg-army-gold group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-xl group-hover:rotate-6">
                   <Award size={32} className="text-white group-hover:text-army-black transition-colors duration-300" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-army-gold rounded-full flex items-center justify-center text-army-black font-bold text-sm">5</div>
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-army-gold rounded-full flex items-center justify-center text-army-black font-bold text-sm transition-transform duration-300 group-hover:scale-110">5</div>
               </div>
-              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-forest-green transition-colors duration-300">Quality Delivery</h3>
+              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Quality Delivery</h3>
               <p className="text-field-gray dark:text-dark-text-secondary text-sm">Final inspection and seamless project handover</p>
             </div>
           </div>
@@ -347,13 +347,13 @@ export default function ProjectsPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/estimate"
-                  className="bg-army-gold text-army-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-colors duration-300 transform hover:scale-105"
+                  className="bg-army-gold text-army-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg"
                 >
                   Get AI Estimate
                 </a>
                 <a
                   href="/contact"
-                  className="bg-mh-forest-green text-white px-8 py-3 rounded-lg font-semibold hover:bg-army-green transition-colors duration-300 transform hover:scale-105"
+                  className="bg-mh-hunter-green text-white px-8 py-3 rounded-lg font-semibold hover:bg-army-green transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg"
                 >
                   Schedule Consultation
                 </a>

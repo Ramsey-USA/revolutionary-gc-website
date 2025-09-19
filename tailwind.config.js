@@ -9,8 +9,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'mh-forest-green': '#396851',
-        'mh-warm-tan': '#BD9264',
+        'mh-hunter-green': '#386851',
+        'mh-leather-tan': '#BD9264',
         'army-black': '#000000',
         'army-gold': '#FFD700',
         'army-green': '#4B5320',
@@ -27,6 +27,9 @@ module.exports = {
         'dark-border': '#404040',
       },
       fontFamily: {
+        'heading': ['Tactic Sans', 'Saira', 'sans-serif'],
+        'subheading': ['Tactic Sans', 'Saira', 'sans-serif'],
+        'body': ['Adobe Garamond Pro', 'Saira', 'serif'],
         'saira': ['Saira', 'sans-serif'],
       },
     },

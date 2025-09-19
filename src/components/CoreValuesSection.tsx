@@ -1,7 +1,6 @@
 'use client'
 
 import { Scale, Wrench, Shield, Heart, Handshake, Briefcase } from 'lucide-react'
-import styles from '../styles/ProtectiveCase.module.css'
 
 const CoreValuesSection = () => {
   const values = [
@@ -15,13 +14,13 @@ const CoreValuesSection = () => {
       icon: Wrench,
       title: "Experience", 
       description: "Decades of combined construction expertise backed by military precision. Our team brings extensive knowledge from residential to commercial projects, ensuring your vision becomes reality with proven techniques and innovative solutions.",
-      color: "text-mh-forest-green"
+      color: "text-mh-hunter-green"
     },
     {
       icon: Shield,
       title: "Integrity",
       description: "Our word is our bond highlights the heart of MH Construction. We maintain transparency in all communications, deliver on our promises, and take full responsibility for our work. By consistently doing what's right - even when on one is watching - we build long lasting trust with our clients and within our team.",
-      color: "text-mh-warm-tan"
+      color: "text-mh-leather-tan"
     },
     {
       icon: Heart,
@@ -64,9 +63,9 @@ const CoreValuesSection = () => {
             return (
               <div key={index} className="flip-card h-80">
                 <div className="flip-card-inner h-full">
-                  {/* Front of Card - Hybrid Protective Case (simplified) */}
-                  <div className={`flip-card-front ${styles.protectiveCase} bg-gradient-to-br from-gray-50 to-gray-100 dark:from-dark-surface-2 dark:to-dark-surface-3 rounded-xl shadow-lg p-6 flex flex-col items-center justify-center border border-gray-200 dark:border-dark-border`}>
-                    <div className={`${value.color} mb-6`}>
+                  {/* Front of Card - Optimized Design */}
+                  <div className="flip-card-front bg-gradient-to-br from-gray-50 to-gray-100 dark:from-dark-surface-2 dark:to-dark-surface-3 rounded-xl shadow-lg p-6 flex flex-col items-center justify-center border border-gray-200 dark:border-dark-border transition-all duration-300 hover:shadow-xl">
+                    <div className={`${value.color} mb-6 transform transition-transform duration-300 group-hover:scale-110`}>
                       <IconComponent size={48} />
                     </div>
                     <h3 className="text-xl font-bold text-army-gold text-center leading-tight drop-shadow-sm">
@@ -74,15 +73,15 @@ const CoreValuesSection = () => {
                     </h3>
                   </div>
 
-                  {/* Back of Card - Hybrid Protective Case (simplified) */}
-                  <div className={`flip-card-back ${styles.protectiveCase} bg-gradient-to-br from-mh-forest-green to-army-green rounded-xl shadow-lg p-6 flex flex-col justify-center text-white`}>
+                  {/* Back of Card - Optimized Design */}
+                  <div className="flip-card-back bg-gradient-to-br from-mh-hunter-green to-army-green rounded-xl shadow-lg p-6 flex flex-col justify-center text-white border border-mh-hunter-green/20">
                     <div className="text-army-gold mb-4 flex justify-center">
                       <IconComponent size={32} />
                     </div>
                     <h3 className="text-lg font-bold mb-4 text-center text-army-gold">
                       {value.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-center">
+                    <p className="text-sm leading-relaxed text-center text-white/90">
                       {value.description}
                     </p>
                   </div>

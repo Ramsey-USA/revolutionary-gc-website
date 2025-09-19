@@ -28,7 +28,7 @@ const HeroSection = () => {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-all duration-1000"
           poster="/images/hero-poster.jpg"
         >
           <source src="/videos/summers-hub-timelapse.mp4" type="video/mp4" />
@@ -41,17 +41,17 @@ const HeroSection = () => {
           />
         </video>
         
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black bg-opacity-50 dark:bg-black dark:bg-opacity-60"></div>
+        {/* Enhanced dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60 dark:from-black/50 dark:via-black/60 dark:to-black/70 transition-all duration-300"></div>
       </div>
 
-      {/* Video Controls */}
+      {/* Video Controls - Enhanced styling */}
       <button
         onClick={toggleVideo}
-        className="absolute top-4 right-4 z-20 bg-black dark:bg-dark-surface bg-opacity-50 dark:bg-opacity-80 text-white dark:text-dark-text p-2 rounded-full hover:bg-opacity-70 dark:hover:bg-opacity-90 transition-colors"
+        className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 bg-black/60 dark:bg-dark-surface/80 backdrop-blur-sm text-white dark:text-dark-text p-2 sm:p-3 rounded-full hover:bg-black/70 dark:hover:bg-dark-surface/90 transition-all duration-300 hover:scale-110 shadow-lg touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"
         aria-label={isVideoPlaying ? 'Pause video' : 'Play video'}
       >
-        {isVideoPlaying ? <Pause size={20} /> : <Play size={20} />}
+        {isVideoPlaying ? <Pause size={18} className="sm:w-5 sm:h-5" /> : <Play size={18} className="sm:w-5 sm:h-5" />}
       </button>
 
       {/* Hero Content */}
@@ -68,26 +68,26 @@ const HeroSection = () => {
         </p>
 
         {/* Call to Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
           <Link
             href="/estimate"
-            className="bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-500 dark:hover:bg-yellow-500 transition-colors transform hover:scale-105 shadow-lg"
+            className="w-full sm:w-auto bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-yellow-500 dark:hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl touch-manipulation min-h-[48px] text-center"
           >
             Get Your AI Estimate
           </Link>
           
           <Link
             href="/projects"
-            className="bg-transparent border-2 border-white dark:border-white text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white dark:hover:bg-white hover:text-army-black dark:hover:text-army-black transition-colors transform hover:scale-105"
+            className="w-full sm:w-auto bg-transparent border-2 border-white dark:border-white text-white dark:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-white dark:hover:bg-white hover:text-army-black dark:hover:text-army-black transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg touch-manipulation min-h-[48px] text-center"
           >
             Explore Our Projects
           </Link>
         </div>
 
-        {/* Scroll Indicator */}
+        {/* Enhanced scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white dark:border-white rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white dark:bg-white rounded-full mt-2 animate-pulse"></div>
+          <div className="w-6 h-10 border-2 border-white/80 dark:border-white/80 rounded-full flex justify-center backdrop-blur-sm">
+            <div className="w-1 h-3 bg-white dark:bg-white rounded-full mt-2 animate-pulse shadow-sm"></div>
           </div>
         </div>
       </div>
