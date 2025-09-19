@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { ThemeProvider } from '../contexts/ThemeContext'
+import Chatbot from '../components/Chatbot'
 
 export const metadata: Metadata = {
   title: 'MH Construction - Building Tomorrow with Today\'s Technology',
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className="font-saira m-0 p-0 bg-white dark:bg-dark-surface text-army-black dark:text-dark-text transition-colors duration-300" style={{ fontFamily: 'Saira, sans-serif' }}>
         <ThemeProvider>
           {children}
+          <Chatbot />
         </ThemeProvider>
       </body>
     </html>
