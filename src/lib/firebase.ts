@@ -15,17 +15,39 @@ const firebaseConfig = {
 }
 
 // Validate required config
-if (!firebaseConfig.apiKey || !firebaseConfig.projectId) {
-  console.warn('Firebase configuration incomplete. Some features may not work.')
+const isConfigValid = firebaseConfig.apiKey && firebaseConfig.projectId && 
+  firebaseConfig.apiKey !== "your-api-key-here" && 
+  firebaseConfig.projectId !== "your-project-id"
+
+if (!isConfigValid) {
+  console.error('Firebase configuration missing or using placeholder values:', {
+    hasApiKey: !!firebaseConfig.apiKey,
+    hasProjectId: !!firebaseConfig.projectId,
+    apiKeyLength: firebaseConfig.apiKey?.length || 0,
+    isPlaceholder: firebaseConfig.apiKey === "your-api-key-here"
+  })
 }
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig)
+// Initialize Firebase only if config is valid
+let app: any = null
+let auth: any = null
+let db: any = null
+let storage: any = null
+let functions: any = null
 
-// Initialize Firebase services
-export const auth = getAuth(app)
-export const db = getFirestore(app)
-export const storage = getStorage(app)
-export const functions = getFunctions(app)
+if (isConfigValid) {
+  try {
+    app = initializeApp(firebaseConfig)
+    auth = getAuth(app)
+    db = getFirestore(app)
+    storage = getStorage(app)
+    functions = getFunctions(app)
+  } catch (error) {
+    console.error('Firebase initialization failed:', error)
+  }
+} else {
+  console.warn('Firebase services disabled due to invalid configuration')
+}
 
+export { auth, db, storage, functions }
 export default app
