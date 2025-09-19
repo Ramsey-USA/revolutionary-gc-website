@@ -5,6 +5,7 @@ import { createPortal } from 'react-dom'
 import { X, Calendar, Clock, User, Phone, Mail, Building, MapPin } from 'lucide-react'
 import { db } from '../lib/firebase'
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
+import { sendTeamNotification, sendClientConfirmation } from '../lib/notifications'
 
 interface CalendarSchedulerProps {
   isOpen: boolean
@@ -59,11 +60,56 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
 
     try {
       // Save to Firebase Firestore
-      await addDoc(collection(db, 'consultationScheduling'), {
+      const consultationRef = await addDoc(collection(db, 'consultationScheduling'), {
         ...formData,
         status: 'pending',
         createdAt: serverTimestamp(),
         type: 'consultation'
+      })
+
+      // Send team notification
+      await sendTeamNotification({
+        type: 'consultation-scheduled',
+        title: 'New Consultation Request',
+        message: `${formData.name} has requested a consultation for ${formData.preferredDate} at ${formData.preferredTime}. Project type: ${formData.projectType || 'Not specified'}.`,
+        clientInfo: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company
+        },
+        appointmentDetails: {
+          date: formData.preferredDate,
+          time: formData.preferredTime,
+          projectType: formData.projectType,
+          location: formData.projectLocation
+        },
+        priority: 'medium',
+        metadata: {
+          consultationId: consultationRef.id,
+          scheduledVia: 'schedule-button',
+          message: formData.message
+        }
+      })
+
+      // Send client confirmation
+      await sendClientConfirmation({
+        type: 'consultation-scheduled',
+        title: 'Consultation Request Received - MH Construction',
+        message: `Thank you for your consultation request. We've received your request for ${formData.preferredDate} at ${formData.preferredTime}. Our team will contact you within 24 hours to confirm your appointment and discuss your project needs.`,
+        clientInfo: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company
+        },
+        appointmentDetails: {
+          date: formData.preferredDate,
+          time: formData.preferredTime,
+          projectType: formData.projectType,
+          location: formData.projectLocation
+        },
+        priority: 'medium'
       })
 
       setSubmitSuccess(true)
@@ -88,7 +134,7 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
 
     } catch (error) {
       console.error('Error scheduling consultation:', error)
-      alert('There was an error scheduling your consultation. Please try again or call us directly.')
+      alert('There was an error scheduling your consultation. Please try again or call us directly at (509) 308-6489.')
       setIsSubmitting(false)
     }
   }
@@ -102,10 +148,10 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
   if (!isOpen || !mounted) return null
 
   const modalContent = (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
-      <div className="bg-white dark:bg-dark-surface-2 rounded-2xl shadow-2xl max-w-2xl w-full my-4 sm:my-8 relative mx-2 sm:mx-0">
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] flex items-center justify-center p-2 sm:p-4">
+      <div className="bg-white dark:bg-dark-surface-2 rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] relative mx-2 sm:mx-0 flex flex-col">
         {/* Header */}
-        <div className="bg-gradient-to-r from-mh-hunter-green to-army-gold p-4 sm:p-6 rounded-t-2xl">
+        <div className="bg-gradient-to-r from-mh-hunter-green to-army-gold p-4 sm:p-6 rounded-t-2xl flex-shrink-0">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2 sm:space-x-3">
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center">
@@ -128,7 +174,7 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
 
         {/* Success Message */}
         {submitSuccess && (
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 p-3 sm:p-4 m-3 sm:m-6 rounded-lg">
+          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 p-3 sm:p-4 m-3 sm:m-6 rounded-lg flex-shrink-0">
             <div className="flex items-center space-x-3">
               <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-full flex items-center justify-center">
                 <span className="text-white text-xs sm:text-sm">✓</span>
@@ -141,8 +187,8 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
           </div>
         )}
 
-        {/* Form */}
-        <div className="overflow-y-auto">
+        {/* Form - Scrollable Content */}
+        <div className="flex-1 overflow-y-auto">
           <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-4 sm:space-y-6">
             {/* Personal Information */}
             <div className="space-y-4">

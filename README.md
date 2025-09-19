@@ -1,37 +1,337 @@
-MH Construction Revolutionary Website
+# MH Construction Revolutionary Website
 
 **Company Information:**
 - Phone: (509) 308-6489
 - Address: 3111 N. Capital Ave., Pasco, WA 99301
 - Website: Veteran-owned construction company serving the Pacific Northwest
 
-🚀 QUICK START FOR DEVELOPER
-🎯 Phase 1 - Initial Build
-Priority 1: Core Website
-Homepage (listed in order below) with military color scheme and new typography system
-Header with responsive navigation with mobile hamburger menu
-Hero section with timelapse video background (on home page only)
-AI Tools section with AI Estimator MVP, Sandbox, and 3D Explorer
-Core values section with flip animations (no individual page, mentioned on other pages)
-Project gallery with 6 featured projects with buttons to individual page with more info
-Team member profile dropdown menu that leads to individual page with photos and roles
-Blog/News Section with a carousel function, showing one article at a time
-Footer with social media feeds and basic company info, etc.
-Basic Firebase deployment and hosting
-Priority 2: Develop all individual pages
-Enhance the core values sections on all pages
-Enhance the Projects section and individual page
-Enhance the Team member section and individual page (add team members)
-Mobile optimization for all features
-Priority 3: Firebase Set-Up
-🔄 PHASE 2 - AI Features
-Advanced Features
-Always-visible chatbot with construction expertise
-5-step estimator wizard with basic calculations
-Timeline display with phase breakdown
-Cost ranges (±15% accuracy)
-Interactive Sandbox with drag-and-drop building
-3D Project Exploration with clickable elements
+---
+
+## 🚀 QUICK START FOR DEVELOPER
+
+### Development Setup
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Deploy to Firebase
+npm run deploy
+```
+
+### 🎯 **RECENT MAJOR UPDATES (September 2025)**
+
+#### ✅ **Visual Calendar System**
+- **Location**: Contact page (`/contact`)
+- **Features**: Interactive calendar with 8am-3pm Pacific time slots
+- **Booking**: Personal consultations with form integration
+- **Components**: `VisualCalendar.tsx`, integrated with Firebase
+
+#### ✅ **Unified Scheduling System** 
+- **Components**: `ScheduleButton.tsx`, `useScheduler.tsx`, `CalendarScheduler.tsx`
+- **Integration**: All "Schedule Consultation" buttons use unified system
+- **Pages Updated**: Estimate, Projects, Services, Contact
+
+#### ✅ **Comprehensive Notification System**
+- **Team Notifications**: Real-time alerts for new consultations
+- **Client Confirmations**: Automatic confirmation system
+- **Firebase Collections**: `consultationScheduling`, `teamNotifications`, `clientConfirmations`
+- **Dashboard**: Team monitoring interface at `/team-dashboard`
+
+#### ✅ **Dashboard API System**
+- **Purpose**: External dashboard integration
+- **Endpoints**: `/api/consultations`, `/api/notifications`, `/api/dashboard-stats`
+- **Documentation**: `API-DOCUMENTATION.md`
+- **Real-time**: WebSocket subscriptions available
+
+#### ✅ **Enhanced Home Page**
+- **Parallax**: Logo background visibility optimized (25% opacity)
+- **Sections**: AI Tools, Core Values, Featured Projects, Blog News
+- **Firebase**: Error handling and graceful fallbacks
+
+#### ✅ **AI Estimator Widget**
+- **Location**: Estimate page (`/estimate`)
+- **Features**: 5-step wizard with real calculations
+- **Integration**: Unified scheduling system
+- **Component**: `AIEstimatorWidget.tsx`
+
+---
+
+## 📊 **NOTIFICATION & DASHBOARD SYSTEM**
+
+### **For Team Management**
+1. **Team Dashboard**: Access at `/team-dashboard`
+   - Real-time consultation monitoring
+   - Notification management
+   - Status updates (pending → confirmed → completed)
+   - Client contact information
+
+2. **API Endpoints** (for external dashboards):
+   ```
+   GET /api/consultations          # All consultation requests
+   GET /api/consultations/[id]     # Specific consultation
+   GET /api/notifications          # Team notifications
+   GET /api/dashboard-stats        # Summary statistics
+   GET /api/export-data           # Full data export
+   ```
+
+3. **Real-time Updates**:
+   - Firebase subscriptions
+   - Live notification feed
+   - Automatic status tracking
+
+### **Data Collections (Firebase)**
+```
+consultationScheduling/     # All consultation requests
+├── clientInfo             # Name, email, phone, company
+├── appointmentDetails     # Date, time, project type
+├── status                 # pending, confirmed, completed, cancelled
+└── createdAt             # Timestamp
+
+teamNotifications/         # Team alert system
+├── clientInfo            # Client details
+├── appointmentDetails    # Appointment info
+├── priority              # low, medium, high
+└── status               # unread, read, acknowledged
+
+clientConfirmations/       # Client confirmation tracking
+├── recipient             # Client email
+├── status               # sent, delivered, failed
+└── createdAt            # Timestamp
+```
+
+---
+
+## 🎯 **DEVELOPMENT PHASES**
+
+### ✅ **Phase 1 - Complete**
+- Core website with military color scheme
+- Responsive navigation with mobile menu
+- Hero section with parallax background
+- AI Tools section (Estimator, Sandbox, 3D Explorer)
+- Core values with flip animations
+- Project gallery with featured projects
+- Team member profiles
+- Blog/News carousel
+- Footer with social feeds
+- Firebase deployment
+
+### ✅ **Phase 2 - Complete** 
+- Individual pages for all sections
+- Enhanced core values on all pages
+- Project details and individual pages
+- Team member detailed pages
+- Mobile optimization
+- Firebase integration
+
+### ✅ **Phase 3 - Complete**
+- Visual calendar system
+- Unified scheduling
+- Notification system
+- Team dashboard
+- API endpoints
+- Real-time updates
+
+### 🔄 **Phase 4 - AI Features Enhancement**
+- Advanced chatbot integration
+- Enhanced 5-step estimator wizard
+- Interactive sandbox improvements
+- 3D project exploration enhancements
+
+---
+
+## 📝 **WEBSITE STRUCTURE & CONTENT**
+
+### **Pages Available**
+- `/` - Home page with all main sections
+- `/contact` - Contact form + Visual calendar
+- `/estimate` - AI Estimator widget
+- `/projects` - Project gallery
+- `/services` - Service offerings  
+- `/team` - Team member profiles
+- `/blog` - News and articles
+- `/3d-explorer` - 3D project exploration
+- `/sandbox` - Interactive building tool
+- `/team-dashboard` - Team management interface
+
+### **Key Components**
+```
+src/components/
+├── Header.tsx              # Navigation with mobile menu
+├── Footer.tsx              # Company info and social links
+├── HeroSection.tsx         # Parallax background section
+├── AIToolsSection.tsx      # AI features showcase
+├── CoreValuesSection.tsx   # Flip card animations
+├── FeaturedProjectsSection.tsx  # Project gallery
+├── BlogNewsSection.tsx     # News carousel
+├── VisualCalendar.tsx      # Interactive calendar
+├── CalendarScheduler.tsx   # Scheduling modal
+├── ScheduleButton.tsx      # Unified CTA button
+├── AIEstimatorWidget.tsx   # Cost estimation tool
+└── TeamDashboard.tsx       # Admin interface
+```
+
+---
+
+## 🔧 **TECHNICAL SPECIFICATIONS**
+
+### **Technology Stack**
+- **Framework**: Next.js 15.5.2 with TypeScript
+- **Styling**: Tailwind CSS with custom military theme
+- **Database**: Firebase Firestore
+- **Authentication**: Firebase Auth (ready for implementation)
+- **Storage**: Firebase Storage
+- **Hosting**: Firebase Hosting
+- **Forms**: React Hook Form + Firebase integration
+
+### **Performance Targets**
+- Page Load Speed: <3 seconds on 3G
+- Lighthouse Score: 90+ (Performance, Accessibility, SEO)
+- Mobile Optimization: 100% responsive
+- Offline Capability: Basic functionality
+
+### **Browser Support**
+- Chrome, Safari, Firefox (latest versions)
+- Mobile: iPhone Safari, Android Chrome
+- Responsive: All screen sizes
+
+---
+
+## 🎨 **DESIGN SYSTEM**
+
+### **Colors**
+```css
+/* Primary MH Construction Colors */
+--mh-hunter-green: #386851;    /* Primary brand */
+--mh-leather-tan: #BD9264;     /* Secondary brand */
+
+/* Army Military Colors */
+--army-black: #000000;         /* Text and headers */
+--army-gold: #FFD700;          /* Accent and CTA */
+--army-green: #4B5320;         /* Supporting elements */
+--field-tan: #967117;          /* Background accents */
+--field-gray: #6C6C6C;         /* Subtle text */
+```
+
+### **Typography**
+- **Headings**: Tactic Sans Bold
+- **Subheadings**: Tactic Sans Medium  
+- **Body Text**: Adobe Garamond Pro
+
+### **Component Variants**
+```typescript
+// ScheduleButton variants
+variant: 'primary' | 'secondary' | 'outline' | 'ghost'
+size: 'sm' | 'md' | 'lg'
+
+// Notification priorities
+priority: 'low' | 'medium' | 'high'
+
+// Consultation status
+status: 'pending' | 'confirmed' | 'completed' | 'cancelled'
+```
+
+---
+
+## 🤖 **AI ESTIMATOR SPECIFICATIONS**
+
+### **Timeline Phases (Standard Speed)**
+- Plans & Permits: 2-4 months
+- Foundation/Concrete: 2-3 weeks
+- Framing: 3-4 weeks
+- Exterior Walls: 2-3 weeks
+- Roofing: 1-2 weeks
+- Trades/Systems (MEP): 4-6 weeks
+- Drywall & Paint: 3-4 weeks
+- Cabinets: 2-3 weeks
+- Flooring: 1-2 weeks
+- Trim & Finishes: 2-3 weeks
+- Landscaping: 1-2 weeks
+
+### **Speed Multipliers**
+- **Standard**: 1.0x (base timeline)
+- **Premium**: 1.15x (+15% timeline, higher quality)
+- **Expedite**: 1.30x (+30% timeline, rush job)
+
+### **Seasonal Restrictions**
+- **Restricted Work**: Concrete, Landscaping, Roadways
+- **Restricted Period**: October 15 - March 31
+- **Timeline Adjustment**: Add 2-4 weeks for winter projects
+
+---
+
+## 📞 **CONSULTATION SCHEDULING**
+
+### **Business Hours**
+- **Personal Consultations**: Monday-Friday, 8:00 AM - 3:00 PM (Pacific)
+- **General Business**: Monday-Friday 7:00 AM - 6:00 PM, Saturday 8:00 AM - 4:00 PM
+- **Emergency Services**: Available 24/7
+
+### **Scheduling Methods**
+1. **Visual Calendar** (Contact page): Interactive date/time selection
+2. **Schedule Button** (All pages): Quick consultation booking
+3. **Direct Contact**: Phone (509) 308-6489 or email info@mhconstruction.com
+
+---
+
+## 🔐 **FIREBASE CONFIGURATION**
+
+### **Environment Variables Required**
+```env
+NEXT_PUBLIC_FIREBASE_API_KEY=
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
+NEXT_PUBLIC_FIREBASE_APP_ID=
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=
+```
+
+### **Security Rules**
+- Consultation data: Write access for website, read access for team
+- Notifications: Team read/write access
+- Client confirmations: System write, team read access
+
+---
+
+## 📋 **MAINTENANCE & UPDATES**
+
+### **Regular Tasks**
+- Monitor consultation requests via team dashboard
+- Update project portfolio as new projects complete
+- Review and respond to notifications within 24 hours
+- Export data monthly for backup (`/api/export-data`)
+
+### **Team Access**
+- **Dashboard URL**: `/team-dashboard`
+- **API Access**: Full REST API available
+- **Real-time Updates**: Firebase subscriptions
+- **Mobile Access**: Responsive dashboard design
+
+---
+
+## 📚 **DOCUMENTATION FILES**
+- `API-DOCUMENTATION.md` - Complete API reference
+- `NOTIFICATION-SYSTEM.md` - Notification system guide
+- `IMPLEMENTATION.md` - Technical implementation details
+- `ASSETS-NEEDED.md` - Required assets checklist
+
+---
+
+## 🏗️ **SUPPORT & CONTACT**
+
+For technical issues or questions:
+1. Check team dashboard for system status
+2. Review API documentation for integration help
+3. Contact development team for code modifications
+4. Use Firebase console for direct data access
+
+**This comprehensive README provides everything needed to understand, maintain, and extend MH Construction's revolutionary website with its advanced scheduling and notification systems!** 🏗️
 📝 WEBSITE HOME PAGE LAYOUT | ADDITIONAL PAGE INFO
 Hero Section | Home page only
 Headline: "Building Tomorrow with Today's Technology"

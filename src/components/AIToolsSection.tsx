@@ -32,7 +32,7 @@ const AIToolsSection = () => {
   ]
 
   return (
-    <section className="py-20 bg-white/45 dark:bg-dark-surface/55 backdrop-blur-sm transition-colors duration-300">
+    <section className="py-20 bg-white/25 dark:bg-dark-surface/35 backdrop-blur-sm transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">

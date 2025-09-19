@@ -4,6 +4,7 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import WhyChooseSection from '../../components/WhyChooseSection'
 import StarDecorations from '../../components/StarDecorations'
+import ScheduleButton from '../../components/ScheduleButton'
 import { Building, Factory, HeartPulse, Shield, Hammer, MapPin, Clock, Users, Award, Ruler, Grape } from 'lucide-react'
 
 export default function ProjectsPage() {
@@ -351,12 +352,9 @@ export default function ProjectsPage() {
                 >
                   Get AI Estimate
                 </a>
-                <a
-                  href="/contact"
-                  className="bg-mh-hunter-green text-white px-8 py-3 rounded-lg font-semibold hover:bg-army-green transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg"
-                >
+                <ScheduleButton variant="primary" size="md" showIcon={false}>
                   Schedule Consultation
-                </a>
+                </ScheduleButton>
               </div>
             </div>
           </div>

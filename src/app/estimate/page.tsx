@@ -2,6 +2,8 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import WhyChooseSection from '../../components/WhyChooseSection'
 import StarDecorations from '../../components/StarDecorations'
+import AIEstimatorWidget from '../../components/AIEstimatorWidget'
+import ScheduleButton from '../../components/ScheduleButton'
 import { Calculator, TrendingUp, Clock, DollarSign } from 'lucide-react'
 
 export default function EstimatePage() {
@@ -73,10 +75,13 @@ export default function EstimatePage() {
 
             {/* Quick Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <button className="group bg-army-gold hover:bg-yellow-500 text-army-black px-10 py-4 rounded-xl font-bold text-lg transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 hover:rotate-1 shadow-2xl hover:shadow-3xl">
+              <a
+                href="#ai-estimator"
+                className="group bg-army-gold hover:bg-yellow-500 text-army-black px-10 py-4 rounded-xl font-bold text-lg transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 hover:rotate-1 shadow-2xl hover:shadow-3xl"
+              >
                 Try AI Estimator Now
                 <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300">🤖</span>
-              </button>
+              </a>
               <a
                 href="/contact"
                 className="group border-2 border-white hover:border-army-gold text-white hover:text-army-gold px-10 py-4 rounded-xl font-bold text-lg transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 hover:-rotate-1 hover:bg-white/10"
@@ -162,9 +167,12 @@ export default function EstimatePage() {
                 </ul>
               </div>
 
-              <button className="w-full bg-army-gold hover:bg-yellow-500 text-army-black px-8 py-4 rounded-xl font-bold text-lg mt-8 transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl">
+              <a
+                href="#ai-estimator"
+                className="w-full bg-army-gold hover:bg-yellow-500 text-army-black px-8 py-4 rounded-xl font-bold text-lg mt-8 transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl text-center block"
+              >
                 Try AI Estimator Now
-              </button>
+              </a>
             </div>
 
             {/* In-Person Consultation Card */}
@@ -226,12 +234,9 @@ export default function EstimatePage() {
                 </ul>
               </div>
 
-              <a
-                href="/contact"
-                className="block w-full bg-gradient-to-r from-mh-hunter-green to-army-green text-white px-8 py-4 rounded-xl font-bold text-lg mt-8 transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl text-center"
-              >
+              <ScheduleButton variant="primary" size="lg" block>
                 Schedule Consultation
-              </a>
+              </ScheduleButton>
             </div>
           </div>
 
@@ -295,7 +300,7 @@ export default function EstimatePage() {
       </section>
 
       {/* Main Content - AI Estimator Interface */}
-      <section className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
+      <section id="ai-estimator" className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-army-black dark:text-dark-text mb-6">
@@ -308,90 +313,8 @@ export default function EstimatePage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* AI Estimator Form Mockup */}
-            <div className="bg-gradient-to-br from-mh-hunter-green to-army-black text-white p-8 rounded-2xl shadow-2xl">
-              <div className="flex items-center mb-8">
-                <div className="w-12 h-12 bg-army-gold rounded-full flex items-center justify-center mr-4">
-                  <Calculator size={24} className="text-army-black" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold">AI Estimator MVP</h3>
-                  <p className="text-gray-200">Coming Soon - Advanced Beta</p>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                <div className="space-y-2">
-                  <label className="block text-sm font-medium text-gray-200">Project Type</label>
-                  <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-army-gold focus:border-army-gold transition-all duration-300">
-                    <option value="">Select project type...</option>
-                    <option value="office">Office Building</option>
-                    <option value="warehouse">Warehouse/Industrial</option>
-                    <option value="retail">Retail Space</option>
-                    <option value="government">Government Facility</option>
-                    <option value="healthcare">Healthcare Facility</option>
-                    <option value="education">Educational Building</option>
-                  </select>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-200">Square Footage</label>
-                    <input type="number" placeholder="10,000" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-army-gold focus:border-army-gold transition-all duration-300" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-200">Stories</label>
-                    <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-army-gold focus:border-army-gold transition-all duration-300">
-                      <option value="1">1 Story</option>
-                      <option value="2">2 Stories</option>
-                      <option value="3">3+ Stories</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="block text-sm font-medium text-gray-200">Construction Quality</label>
-                  <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-army-gold focus:border-army-gold transition-all duration-300">
-                    <option value="standard">Standard Grade</option>
-                    <option value="high">High Grade</option>
-                    <option value="premium">Premium Grade</option>
-                  </select>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="block text-sm font-medium text-gray-200">Location</label>
-                  <input type="text" placeholder="Pasco, WA" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-army-gold focus:border-army-gold transition-all duration-300" />
-                </div>
-
-                {/* Special Features */}
-                <div className="space-y-3">
-                  <label className="block text-sm font-medium text-gray-200">Special Features</label>
-                  <div className="grid grid-cols-2 gap-3">
-                    <label className="flex items-center space-x-2 text-sm">
-                      <input type="checkbox" className="rounded border-white/20 bg-white/10 text-army-gold focus:ring-army-gold" />
-                      <span>HVAC System</span>
-                    </label>
-                    <label className="flex items-center space-x-2 text-sm">
-                      <input type="checkbox" className="rounded border-white/20 bg-white/10 text-army-gold focus:ring-army-gold" />
-                      <span>Fire Suppression</span>
-                    </label>
-                    <label className="flex items-center space-x-2 text-sm">
-                      <input type="checkbox" className="rounded border-white/20 bg-white/10 text-army-gold focus:ring-army-gold" />
-                      <span>Security Systems</span>
-                    </label>
-                    <label className="flex items-center space-x-2 text-sm">
-                      <input type="checkbox" className="rounded border-white/20 bg-white/10 text-army-gold focus:ring-army-gold" />
-                      <span>Parking Structure</span>
-                    </label>
-                  </div>
-                </div>
-
-                <button className="w-full bg-army-gold hover:bg-yellow-500 text-army-black px-8 py-4 rounded-xl font-bold text-lg transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl flex items-center justify-center">
-                  <span className="mr-2">🤖</span>
-                  Generate AI Estimate
-                </button>
-              </div>
-            </div>
+            {/* Functional AI Estimator */}
+            <AIEstimatorWidget />
 
             {/* Results Preview */}
             <div className="space-y-6">
@@ -895,12 +818,9 @@ export default function EstimatePage() {
                 <li>• Expert recommendations</li>
                 <li>• Detailed proposals</li>
               </ul>
-              <a
-                href="/contact"
-                className="block w-full border-2 border-white hover:border-army-gold text-white hover:text-army-gold px-8 py-4 rounded-xl font-bold text-lg transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 text-center"
-              >
+              <ScheduleButton variant="outline" size="lg" block>
                 Schedule Consultation
-              </a>
+              </ScheduleButton>
             </div>
           </div>
 
