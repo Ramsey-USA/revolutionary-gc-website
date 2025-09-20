@@ -124,8 +124,8 @@ export default function TeamPage() {
       const colors = [
         "border-mh-hunter-green",
         "border-mh-leather-tan", 
-        "border-charcoal",
-        "border-medium-gray"
+        "border-gray-600",
+        "border-gray-500"
       ]
       return colors[index % colors.length]
     }
@@ -162,32 +162,38 @@ export default function TeamPage() {
           {members.map((member, index) => (
             <div key={index} className={`group relative rounded-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 flex flex-col h-full border-2 ${getBorderColor(index)} dark:border-opacity-80 hover:border-opacity-100`}>
               {/* Enhanced card with gradient background */}
-              <div className="bg-white dark:bg-dark-surface-2 rounded-xl h-full relative overflow-hidden border dark:border-dark-border transition-all duration-500 group-hover:bg-gray-50 dark:group-hover:bg-dark-surface-3 flex flex-col">
-                {/* Image with hover effects */}
+              <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-xl h-full relative overflow-hidden border border-gray-200 dark:border-dark-border transition-all duration-500 group-hover:from-gray-50 group-hover:to-gray-100 dark:group-hover:from-gray-700 dark:group-hover:to-gray-800 flex flex-col shadow-lg group-hover:shadow-2xl">
+                {/* Image with enhanced hover effects */}
                 <div className="aspect-square relative overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110"
                   />
-                  {/* Gradient overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                  {/* Enhanced gradient overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-mh-hunter-green/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                  {/* Subtle overlay border */}
+                  <div className="absolute inset-0 border-2 border-transparent group-hover:border-mh-leather-tan/50 transition-all duration-500 rounded-t-xl"></div>
                 </div>
                 
                 {/* Card content */}
                 <div className="p-6 pb-0 flex flex-col flex-grow">
                   <h3 className="text-xl font-bold text-black dark:text-dark-text mb-1 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">{member.name}</h3>
                   <p className="text-mh-leather-tan dark:text-mh-leather-tan font-semibold mb-3">{member.title}</p>
-                  <p className="text-medium-gray dark:text-dark-text-secondary text-sm leading-relaxed mb-4 flex-grow">
+                  <p className="text-gray-600 dark:text-dark-text-secondary text-sm leading-relaxed mb-4 flex-grow">
                     {member.description}
                   </p>
                   
-                  {/* Skill badges */}
+                  {/* Enhanced skill badges */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {getSkillTags(member).map((skill, skillIndex) => (
                       <span 
                         key={skillIndex} 
-                        className="px-3 py-1 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 text-mh-hunter-green dark:text-mh-hunter-green rounded-full text-xs font-medium transition-all duration-300 hover:bg-mh-hunter-green/20 dark:hover:bg-mh-hunter-green/30"
+                        className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md ${
+                          skillIndex % 2 === 0 
+                            ? 'bg-gradient-to-r from-mh-hunter-green/10 to-mh-hunter-green/20 text-mh-hunter-green hover:from-mh-hunter-green/20 hover:to-mh-hunter-green/30 border border-mh-hunter-green/20' 
+                            : 'bg-gradient-to-r from-mh-leather-tan/10 to-mh-leather-tan/20 text-mh-leather-tan hover:from-mh-leather-tan/20 hover:to-mh-leather-tan/30 border border-mh-leather-tan/20'
+                        }`}
                       >
                         {skill}
                       </span>
@@ -199,19 +205,19 @@ export default function TeamPage() {
                 <div className="flex justify-center space-x-4 mt-auto pb-6 pt-4">
                   <a
                     href={`mailto:${member.email}`}
-                    className="flex items-center justify-center w-12 h-12 bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white rounded-full transition-all duration-300 hover:bg-charcoal dark:hover:bg-charcoal hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                    className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-mh-hunter-green to-mh-hunter-green/80 text-white rounded-full transition-all duration-300 hover:from-mh-leather-tan hover:to-mh-leather-tan/80 hover:scale-110 hover:-translate-y-2 shadow-lg hover:shadow-2xl transform group/btn"
                     aria-label={`Email ${member.name}`}
                   >
-                    <Mail size={20} />
+                    <Mail size={20} className="group-hover/btn:scale-110 transition-transform duration-300" />
                   </a>
                   <a
                     href={member.linkedin ? member.linkedin : "#"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-12 h-12 bg-mh-leather-tan dark:bg-mh-leather-tan text-white dark:text-white rounded-full transition-all duration-300 hover:bg-mh-hunter-green dark:hover:bg-mh-hunter-green hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                    className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-mh-leather-tan to-mh-leather-tan/80 text-white rounded-full transition-all duration-300 hover:from-mh-hunter-green hover:to-mh-hunter-green/80 hover:scale-110 hover:-translate-y-2 shadow-lg hover:shadow-2xl transform group/btn"
                     aria-label={`LinkedIn for ${member.name}`}
                   >
-                    <Linkedin size={20} />
+                    <Linkedin size={20} className="group-hover/btn:scale-110 transition-transform duration-300" />
                   </a>
                 </div>
               </div>
@@ -254,22 +260,35 @@ export default function TeamPage() {
   {/* Administration */}
   <TeamSection title="Administration & Support" members={administration} bgColor="bg-pale-gray dark:bg-dark-surface-2" id="administration" />
 
-      {/* Join Our Team CTA */}
-      <section className="py-20 bg-gradient-to-r from-mh-hunter-green to-charcoal dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white dark:text-dark-text">
+      {/* Enhanced Join Our Team CTA */}
+      <section className="py-20 bg-gradient-to-br from-mh-hunter-green via-gray-800 to-mh-leather-tan relative overflow-hidden">
+        {/* Background pattern overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform rotate-12 translate-x-1/2"></div>
+        </div>
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Join Our Growing Team
           </h2>
-          <p className="text-xl mb-8 leading-relaxed text-white dark:text-dark-text-secondary">
+          <p className="text-xl mb-8 leading-relaxed text-white/90 max-w-2xl mx-auto">
             We're always looking for skilled professionals who share our commitment 
             to excellence, innovation, and military-grade precision.
           </p>
-          <a
-            href="/contact"
-            className="inline-block bg-mh-leather-tan dark:bg-mh-leather-tan text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-mh-hunter-green dark:hover:bg-mh-hunter-green transition-colors transform hover:scale-105"
-          >
-            Explore Careers
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/careers"
+              className="inline-flex items-center justify-center bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-white hover:to-gray-100 hover:text-mh-hunter-green transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
+            >
+              Explore Careers
+            </a>
+            <a
+              href="/contact"
+              className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-mh-hunter-green transition-all duration-300 transform hover:scale-105"
+            >
+              Contact Us
+            </a>
+          </div>
         </div>
       </section>
 

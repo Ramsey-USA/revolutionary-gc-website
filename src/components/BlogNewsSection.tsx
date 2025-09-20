@@ -82,51 +82,52 @@ const BlogNewsSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-dark-text mb-4">
             Latest News & Insights
           </h2>
-          <p className="text-xl text-medium-gray dark:text-dark-text-secondary max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
             Stay updated with our latest projects, industry insights, and construction innovations
           </p>
         </div>
 
         {/* Carousel Container */}
-        <div className="relative">
+        <div className="relative group">
           {/* Main Article Display */}
-          <div className="bg-gradient-to-r from-mh-hunter-green to-charcoal dark:from-dark-surface-2 dark:to-dark-surface-3 rounded-2xl overflow-hidden shadow-2xl border dark:border-dark-border transition-all duration-500 hover:shadow-3xl">
+          <div className="bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-gray-800 dark:via-gray-850 dark:to-gray-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-500 transform group-hover:scale-[1.02]">
             <div className="grid grid-cols-1 lg:grid-cols-2 h-96 lg:h-80">
               {/* Article Image */}
-              <div className="relative group">
+              <div className="relative overflow-hidden">
                 <Image
                   src={currentItem.image}
                   alt={currentItem.title}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-transparent to-transparent"></div>
                 <div className="absolute top-4 left-4">
-                  <span className="bg-mh-leather-tan dark:bg-mh-leather-tan text-white dark:text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+                  <span className="bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg backdrop-blur-sm">
                     {currentItem.category}
                   </span>
                 </div>
               </div>
 
               {/* Article Content */}
-              <div className="p-8 flex flex-col justify-center text-white dark:text-dark-text">
-                <div className="flex items-center text-mh-leather-tan dark:text-mh-leather-tan mb-4">
+              <div className="p-8 flex flex-col justify-center">
+                <div className="flex items-center text-mh-hunter-green dark:text-mh-leather-tan mb-4">
                   <Calendar size={16} className="mr-2" />
-                  <span className="text-sm">{currentItem.date}</span>
-                  <span className="mx-2">•</span>
-                  <span className="text-sm">{currentItem.readTime}</span>
+                  <span className="text-sm font-medium">{currentItem.date}</span>
+                  <span className="mx-2 text-gray-400">•</span>
+                  <span className="text-sm font-medium">{currentItem.readTime}</span>
                 </div>
 
-                <h3 className="text-2xl lg:text-3xl font-bold mb-4 leading-tight text-white dark:text-dark-text">
+                <h3 className="text-2xl lg:text-3xl font-bold mb-4 leading-tight text-gray-900 dark:text-gray-100">
                   {currentItem.title}
                 </h3>
 
-                <p className="text-gray-200 dark:text-dark-text-secondary mb-6 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                   {currentItem.excerpt}
                 </p>
 
                 <Link
                   href={`/blog/${currentItem.slug}`}
-                  className="inline-flex items-center bg-mh-leather-tan dark:bg-mh-leather-tan text-white dark:text-white px-6 py-3 rounded-lg font-semibold hover:bg-mh-hunter-green dark:hover:bg-mh-hunter-green transition-all duration-300 w-fit transform hover:scale-105 hover:-translate-y-1"
+                  className="inline-flex items-center bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white px-6 py-3 rounded-lg font-semibold hover:from-mh-leather-tan hover:to-mh-hunter-green transition-all duration-300 w-fit transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl"
                 >
                   Read Full Article
                   <ArrowRight size={16} className="ml-2" />
@@ -138,7 +139,7 @@ const BlogNewsSection = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevArticle}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 dark:bg-dark-surface/80 hover:bg-white/30 dark:hover:bg-dark-surface/90 text-white dark:text-dark-text p-3 rounded-full transition-all duration-300 z-10 backdrop-blur-sm hover:scale-110"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-700 text-mh-hunter-green dark:text-mh-leather-tan p-3 rounded-full transition-all duration-300 z-10 shadow-lg hover:shadow-xl hover:scale-110 border border-gray-200 dark:border-gray-600"
             aria-label="Previous article"
           >
             <ChevronLeft size={24} />
@@ -146,7 +147,7 @@ const BlogNewsSection = () => {
 
           <button
             onClick={nextArticle}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 dark:bg-dark-surface/80 hover:bg-white/30 dark:hover:bg-dark-surface/90 text-white dark:text-dark-text p-3 rounded-full transition-all duration-300 z-10 backdrop-blur-sm hover:scale-110"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-700 text-mh-hunter-green dark:text-mh-leather-tan p-3 rounded-full transition-all duration-300 z-10 shadow-lg hover:shadow-xl hover:scale-110 border border-gray-200 dark:border-gray-600"
             aria-label="Next article"
           >
             <ChevronRight size={24} />
@@ -154,15 +155,15 @@ const BlogNewsSection = () => {
         </div>
 
         {/* Carousel Indicators */}
-        <div className="flex justify-center mt-8 space-x-2">
+        <div className="flex justify-center mt-8 space-x-3">
           {articles.map((_, index) => (
             <button
               key={index}
               onClick={() => goToArticle(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-3 h-3 rounded-full transition-all duration-300 transform ${
                 index === currentArticle 
-                  ? 'bg-mh-hunter-green dark:bg-mh-leather-tan scale-125' 
-                  : 'bg-gray-300 dark:bg-dark-border hover:bg-gray-400 dark:hover:bg-gray-500 hover:scale-110'
+                  ? 'bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan scale-125 shadow-lg' 
+                  : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 hover:scale-110'
               }`}
               aria-label={`Go to article ${index + 1}`}
             />
@@ -173,9 +174,10 @@ const BlogNewsSection = () => {
         <div className="text-center mt-12">
           <Link
             href="/blog"
-            className="inline-block bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-charcoal dark:hover:bg-charcoal transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg"
+            className="inline-flex items-center bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white px-10 py-4 rounded-lg text-lg font-semibold hover:from-mh-leather-tan hover:to-mh-hunter-green transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl"
           >
             View All News & Insights
+            <ArrowRight size={20} className="ml-2" />
           </Link>
         </div>
       </div>

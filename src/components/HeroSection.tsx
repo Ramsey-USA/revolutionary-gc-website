@@ -56,29 +56,29 @@ const HeroSection = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white dark:text-white mb-6 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white dark:text-white mb-4 sm:mb-6 leading-tight">
           Building Tomorrow with{' '}
           <span className="text-mh-leather-tan dark:text-mh-leather-tan">Today's Technology</span>
         </h1>
         
-        <p className="text-lg md:text-xl lg:text-2xl text-white/90 dark:text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 dark:text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
           Veteran-owned construction excellence powered by cutting-edge AI technology. 
           Experience the future of construction with transparent pricing, immersive project 
           visualization, and military-grade precision.
         </p>
 
         {/* Call to Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center px-4 max-w-lg mx-auto">
           <Link
             href="/estimate"
-            className="w-full sm:w-auto bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-mh-leather-tan dark:hover:bg-mh-leather-tan transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl touch-manipulation min-h-[48px] text-center"
+            className="w-full sm:flex-1 bg-mh-hunter-green text-white px-6 sm:px-8 py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-mh-leather-tan hover:text-white transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl touch-manipulation min-h-[48px] text-center flex items-center justify-center"
           >
             Get Your AI Estimate
           </Link>
           
           <Link
             href="/projects"
-            className="w-full sm:w-auto bg-transparent border-2 border-white dark:border-white text-white dark:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-white dark:hover:bg-white hover:text-charcoal dark:hover:text-charcoal transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg touch-manipulation min-h-[48px] text-center"
+            className="w-full sm:flex-1 bg-transparent border-2 border-white text-white px-6 sm:px-8 py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-mh-leather-tan hover:border-mh-leather-tan hover:text-white transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg touch-manipulation min-h-[48px] text-center flex items-center justify-center"
           >
             Explore Our Projects
           </Link>

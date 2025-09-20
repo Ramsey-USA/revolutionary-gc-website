@@ -78,7 +78,7 @@ export default function ServicesPage() {
                 {/* Accent line */}
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full"></div>
               </h2>
-              <p className="text-xl text-medium-gray dark:text-dark-text-secondary max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto leading-relaxed">
                 From commercial buildings to specialized facilities, we deliver excellence in every project with 
                 <span className="font-semibold text-mh-hunter-green dark:text-mh-hunter-green"> military precision</span> and 
                 <span className="font-semibold text-mh-leather-tan dark:text-mh-leather-tan"> cutting-edge technology</span>
@@ -86,33 +86,41 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          {/* Statistics Section */}
+          {/* Enhanced Statistics Section */}
           <div className="mb-20">
-            <div className="bg-gradient-to-r from-mh-hunter-green to-charcoal rounded-2xl p-8 md:p-12 text-white">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div className="space-y-2">
-                  <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan">150+</div>
-                  <div className="text-sm md:text-base text-gray-200">Years Experience</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan">500+</div>
-                  <div className="text-sm md:text-base text-gray-200">Projects Completed</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan">98%</div>
-                  <div className="text-sm md:text-base text-gray-200">Client Satisfaction</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan">100mi</div>
-                  <div className="text-sm md:text-base text-gray-200">Service Radius</div>
-                </div>
+            <div className="bg-gradient-to-br from-mh-hunter-green via-gray-800 to-mh-leather-tan rounded-2xl p-8 md:p-12 text-white relative overflow-hidden shadow-2xl">
+              {/* Background pattern overlay */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform rotate-12 translate-x-1/2"></div>
+                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/5 to-transparent transform -rotate-12 -translate-x-1/2"></div>
               </div>
               
-              <div className="mt-8 pt-8 border-t border-white border-opacity-20 text-center">
-                <p className="text-lg md:text-xl text-gray-200">
-                  <span className="font-semibold text-mh-leather-tan">Veteran-Owned Excellence</span> — 
-                  150+ years of combined construction expertise with military precision and cutting-edge AI technology
-                </p>
+              <div className="relative z-10">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                  <div className="space-y-2 group hover:scale-105 transition-transform duration-300">
+                    <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan group-hover:text-white transition-colors duration-300">150+</div>
+                    <div className="text-sm md:text-base text-gray-200 group-hover:text-white transition-colors duration-300">Years Experience</div>
+                  </div>
+                  <div className="space-y-2 group hover:scale-105 transition-transform duration-300">
+                    <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan group-hover:text-white transition-colors duration-300">500+</div>
+                    <div className="text-sm md:text-base text-gray-200 group-hover:text-white transition-colors duration-300">Projects Completed</div>
+                  </div>
+                  <div className="space-y-2 group hover:scale-105 transition-transform duration-300">
+                    <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan group-hover:text-white transition-colors duration-300">98%</div>
+                    <div className="text-sm md:text-base text-gray-200 group-hover:text-white transition-colors duration-300">Client Satisfaction</div>
+                  </div>
+                  <div className="space-y-2 group hover:scale-105 transition-transform duration-300">
+                    <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan group-hover:text-white transition-colors duration-300">100mi</div>
+                    <div className="text-sm md:text-base text-gray-200 group-hover:text-white transition-colors duration-300">Service Radius</div>
+                  </div>
+                </div>
+                
+                <div className="mt-8 pt-8 border-t border-white/20 text-center">
+                  <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+                    <span className="font-semibold text-mh-leather-tan">Veteran-Owned Excellence</span> — 
+                    150+ years of combined construction expertise with military precision and cutting-edge AI technology
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -122,39 +130,39 @@ export default function ServicesPage() {
               const IconComponent = service.icon
               
               return (
-                <div key={index} className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg border border-gray-200 dark:border-dark-border overflow-hidden hover:shadow-2xl hover:border-mh-leather-tan dark:hover:border-mh-leather-tan transition-all duration-500 transform hover:-translate-y-2">
-                  {/* Service Header */}
-                  <div className="bg-gradient-to-r from-mh-hunter-green to-charcoal p-6 text-white relative overflow-hidden">
-                    {/* Animated background overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                <div key={index} className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-dark-border overflow-hidden hover:shadow-2xl hover:border-mh-leather-tan dark:hover:border-mh-leather-tan transition-all duration-500 transform hover:-translate-y-3 hover:scale-105">
+                  {/* Enhanced Service Header */}
+                  <div className="bg-gradient-to-br from-mh-hunter-green via-gray-800 to-mh-leather-tan p-6 text-white relative overflow-hidden">
+                    {/* Enhanced animated background overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-mh-leather-tan/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-full group-hover:translate-x-0"></div>
                     
                     <div className="relative z-10">
-                      <div className="flex items-center justify-center w-16 h-16 bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full mx-auto mb-4 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-30 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
-                        <IconComponent size={32} className="group-hover:text-black transition-colors duration-300" />
+                      <div className="flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full mx-auto mb-4 group-hover:bg-mh-leather-tan/20 group-hover:backdrop-blur-md transition-all duration-300 group-hover:scale-110 shadow-lg group-hover:shadow-2xl">
+                        <IconComponent size={32} className="group-hover:scale-110 transition-all duration-300" />
                       </div>
                       <h3 className="text-2xl font-bold text-center group-hover:text-mh-leather-tan transition-colors duration-300">{service.title}</h3>
                     </div>
                   </div>
 
-                  {/* Service Content */}
-                  <div className="p-6 group-hover:bg-gradient-to-br group-hover:from-gray-50 dark:group-hover:from-dark-surface-3 group-hover:to-white dark:group-hover:to-dark-surface-2 transition-all duration-300">
-                    <p className="text-field-gray dark:text-dark-text-secondary mb-6 leading-relaxed group-hover:text-gray-800 dark:group-hover:text-dark-text transition-colors duration-300">
+                  {/* Enhanced Service Content */}
+                  <div className="p-6 group-hover:bg-gradient-to-br group-hover:from-gray-50 dark:group-hover:from-gray-700 group-hover:to-white dark:group-hover:to-gray-800 transition-all duration-300">
+                    <p className="text-gray-600 dark:text-dark-text-secondary mb-6 leading-relaxed group-hover:text-gray-800 dark:group-hover:text-dark-text transition-colors duration-300">
                       {service.description}
                     </p>
                     
-                    <div className="space-y-2">
+                    <div className="space-y-3">
                       <h4 className="font-semibold text-black dark:text-dark-text mb-3 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Key Services:</h4>
                       {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center space-x-2 group-hover:transform group-hover:translate-x-1 transition-transform duration-300" style={{ transitionDelay: `${featureIndex * 50}ms` }}>
-                          <div className="w-2 h-2 bg-mh-leather-tan dark:bg-mh-leather-tan rounded-full group-hover:bg-mh-hunter-green dark:group-hover:bg-mh-hunter-green group-hover:scale-125 transition-all duration-300"></div>
-                          <span className="text-field-gray dark:text-dark-text-secondary text-sm group-hover:text-gray-800 dark:group-hover:text-dark-text group-hover:font-medium transition-all duration-300">{feature}</span>
+                        <div key={featureIndex} className="flex items-center space-x-3 group-hover:transform group-hover:translate-x-2 transition-all duration-300" style={{ transitionDelay: `${featureIndex * 75}ms` }}>
+                          <div className="w-2.5 h-2.5 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full group-hover:scale-125 group-hover:shadow-lg transition-all duration-300"></div>
+                          <span className="text-gray-600 dark:text-dark-text-secondary text-sm group-hover:text-gray-800 dark:group-hover:text-dark-text group-hover:font-medium transition-all duration-300">{feature}</span>
                         </div>
                       ))}
                     </div>
 
-                    {/* Action Button */}
-                    <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <button className="w-full bg-mh-leather-tan dark:bg-mh-leather-tan text-black dark:text-black py-2 px-4 rounded-lg font-semibold hover:bg-mh-leather-tan/80 dark:hover:bg-mh-leather-tan/80 transition-colors duration-300 transform hover:scale-105">
+                    {/* Enhanced Action Button */}
+                    <div className="mt-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                      <button className="w-full bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 text-white py-3 px-4 rounded-lg font-semibold hover:from-mh-hunter-green hover:to-mh-hunter-green/80 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                         Learn More
                       </button>
                     </div>
@@ -164,100 +172,102 @@ export default function ServicesPage() {
             })}
           </div>
 
-          {/* Construction Process Workflow */}
-          <div className="mt-20 py-16 bg-gradient-to-r from-gray-50 dark:from-dark-surface-2 to-white dark:to-dark-surface transition-colors duration-300 rounded-2xl">
+          {/* Enhanced Construction Process Workflow */}
+          <div className="mt-20 py-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 transition-colors duration-300 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700">
             <div className="text-center mb-12">
               <h3 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
                 Our Construction Process
               </h3>
-              <p className="text-lg text-field-gray dark:text-dark-text-secondary max-w-2xl mx-auto">
+              <p className="text-lg text-gray-600 dark:text-dark-text-secondary max-w-2xl mx-auto">
                 Military-grade precision in every phase, from initial consultation to project completion
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Phase 1 */}
+              {/* Enhanced Phase 1 */}
               <div className="text-center group">
                 <div className="relative">
-                  <div className="w-16 h-16 bg-mh-hunter-green dark:bg-mh-hunter-green rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:scale-110 transition-all duration-300">
-                    <span className="text-white dark:text-white text-xl font-bold group-hover:text-black dark:group-hover:text-black">1</span>
+                  <div className="w-16 h-16 bg-gradient-to-br from-mh-hunter-green to-mh-hunter-green/80 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-mh-leather-tan group-hover:to-mh-leather-tan/80 group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-2xl">
+                    <span className="text-white text-xl font-bold group-hover:text-black transition-colors duration-300">1</span>
                   </div>
-                  {/* Connector Line */}
-                  <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-mh-hunter-green to-gray-300 dark:from-mh-hunter-green dark:to-dark-border"></div>
+                  {/* Enhanced Connector Line */}
+                  <div className="hidden lg:block absolute top-8 left-full w-full h-1 bg-gradient-to-r from-mh-hunter-green via-mh-leather-tan to-gray-300 dark:to-dark-border rounded-full group-hover:from-mh-leather-tan group-hover:via-mh-hunter-green transition-all duration-500"></div>
                 </div>
                 <h4 className="text-xl font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Consultation</h4>
-                <p className="text-field-gray dark:text-dark-text-secondary text-sm">AI-powered analysis and detailed project assessment</p>
+                <p className="text-gray-600 dark:text-dark-text-secondary text-sm group-hover:text-gray-800 dark:group-hover:text-dark-text transition-colors duration-300">AI-powered analysis and detailed project assessment</p>
               </div>
 
-              {/* Phase 2 */}
+              {/* Enhanced Phase 2 */}
               <div className="text-center group">
                 <div className="relative">
-                  <div className="w-16 h-16 bg-mh-hunter-green dark:bg-mh-hunter-green rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:scale-110 transition-all duration-300">
-                    <span className="text-white dark:text-white text-xl font-bold group-hover:text-black dark:group-hover:text-black">2</span>
+                  <div className="w-16 h-16 bg-gradient-to-br from-mh-hunter-green to-mh-hunter-green/80 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-mh-leather-tan group-hover:to-mh-leather-tan/80 group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-2xl">
+                    <span className="text-white text-xl font-bold group-hover:text-black transition-colors duration-300">2</span>
                   </div>
-                  {/* Connector Line */}
-                  <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-mh-hunter-green to-gray-300 dark:from-mh-hunter-green dark:to-dark-border"></div>
+                  {/* Enhanced Connector Line */}
+                  <div className="hidden lg:block absolute top-8 left-full w-full h-1 bg-gradient-to-r from-mh-hunter-green via-mh-leather-tan to-gray-300 dark:to-dark-border rounded-full group-hover:from-mh-leather-tan group-hover:via-mh-hunter-green transition-all duration-500"></div>
                 </div>
                 <h4 className="text-xl font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Planning & Design</h4>
-                <p className="text-field-gray dark:text-dark-text-secondary text-sm">Detailed blueprints and 3D visualization development</p>
+                <p className="text-gray-600 dark:text-dark-text-secondary text-sm group-hover:text-gray-800 dark:group-hover:text-dark-text transition-colors duration-300">Detailed blueprints and 3D visualization development</p>
               </div>
 
-              {/* Phase 3 */}
+              {/* Enhanced Phase 3 */}
               <div className="text-center group">
                 <div className="relative">
-                  <div className="w-16 h-16 bg-mh-hunter-green dark:bg-mh-hunter-green rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:scale-110 transition-all duration-300">
-                    <span className="text-white dark:text-white text-xl font-bold group-hover:text-black dark:group-hover:text-black">3</span>
+                  <div className="w-16 h-16 bg-gradient-to-br from-mh-hunter-green to-mh-hunter-green/80 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-mh-leather-tan group-hover:to-mh-leather-tan/80 group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-2xl">
+                    <span className="text-white text-xl font-bold group-hover:text-black transition-colors duration-300">3</span>
                   </div>
-                  {/* Connector Line */}
-                  <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-mh-hunter-green to-gray-300 dark:from-mh-hunter-green dark:to-dark-border"></div>
+                  {/* Enhanced Connector Line */}
+                  <div className="hidden lg:block absolute top-8 left-full w-full h-1 bg-gradient-to-r from-mh-hunter-green via-mh-leather-tan to-gray-300 dark:to-dark-border rounded-full group-hover:from-mh-leather-tan group-hover:via-mh-hunter-green transition-all duration-500"></div>
                 </div>
                 <h4 className="text-xl font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Construction</h4>
-                <p className="text-field-gray dark:text-dark-text-secondary text-sm">Expert execution with real-time progress tracking</p>
+                <p className="text-gray-600 dark:text-dark-text-secondary text-sm group-hover:text-gray-800 dark:group-hover:text-dark-text transition-colors duration-300">Expert execution with real-time progress tracking</p>
               </div>
 
-              {/* Phase 4 */}
+              {/* Enhanced Phase 4 */}
               <div className="text-center group">
                 <div className="relative">
-                  <div className="w-16 h-16 bg-mh-hunter-green dark:bg-mh-hunter-green rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:scale-110 transition-all duration-300">
-                    <span className="text-white dark:text-white text-xl font-bold group-hover:text-black dark:group-hover:text-black">4</span>
+                  <div className="w-16 h-16 bg-gradient-to-br from-mh-hunter-green to-mh-hunter-green/80 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-mh-leather-tan group-hover:to-mh-leather-tan/80 group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-2xl">
+                    <span className="text-white text-xl font-bold group-hover:text-black transition-colors duration-300">4</span>
                   </div>
                 </div>
                 <h4 className="text-xl font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Delivery</h4>
-                <p className="text-field-gray dark:text-dark-text-secondary text-sm">Final inspection and seamless project handover</p>
+                <p className="text-gray-600 dark:text-dark-text-secondary text-sm group-hover:text-gray-800 dark:group-hover:text-dark-text transition-colors duration-300">Final inspection and seamless project handover</p>
               </div>
             </div>
 
-            {/* Process CTA */}
+            {/* Enhanced Process CTA */}
             <div className="text-center mt-12">
-              <p className="text-field-gray dark:text-dark-text-secondary mb-6">Ready to experience our streamlined process?</p>
+              <p className="text-gray-600 dark:text-dark-text-secondary mb-6">Ready to experience our streamlined process?</p>
               <a
                 href="/estimate"
-                className="inline-block bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white px-8 py-3 rounded-lg font-semibold hover:bg-charcoal dark:hover:bg-charcoal transition-colors duration-300 transform hover:scale-105"
+                className="inline-block bg-gradient-to-r from-mh-hunter-green to-mh-hunter-green/80 text-white px-8 py-3 rounded-lg font-semibold hover:from-mh-leather-tan hover:to-mh-leather-tan/80 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Start Your Project Today
               </a>
             </div>
           </div>
 
-          {/* CTA Section */}
+          {/* Enhanced CTA Section */}
           <div className="text-center mt-16">
-            <h3 className="text-2xl font-bold text-black dark:text-dark-text mb-4">
-              Ready to Start Your Project?
-            </h3>
-            <p className="text-lg text-field-gray dark:text-dark-text-secondary mb-8 max-w-2xl mx-auto">
-              Get a free AI-powered estimate and discover how our veteran-owned team 
-              can bring your vision to life with precision and excellence.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/estimate"
-                className="bg-mh-leather-tan dark:bg-mh-leather-tan text-black dark:text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-mh-leather-tan/80 dark:hover:bg-mh-leather-tan/80 transition-colors transform hover:scale-105"
-              >
-                Get AI Estimate
-              </a>
-              <ScheduleButton variant="primary" size="lg" showIcon={false}>
-                Contact Us
-              </ScheduleButton>
+            <div className="bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg">
+              <h3 className="text-2xl font-bold text-black dark:text-dark-text mb-4">
+                Ready to Start Your Project?
+              </h3>
+              <p className="text-lg text-gray-600 dark:text-dark-text-secondary mb-8 max-w-2xl mx-auto">
+                Get a free AI-powered estimate and discover how our veteran-owned team 
+                can bring your vision to life with precision and excellence.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/estimate"
+                  className="bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-mh-hunter-green hover:to-mh-hunter-green/80 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                  Get AI Estimate
+                </a>
+                <ScheduleButton variant="primary" size="lg" showIcon={false}>
+                  Contact Us
+                </ScheduleButton>
+              </div>
             </div>
           </div>
         </div>
@@ -266,8 +276,8 @@ export default function ServicesPage() {
       {/* Core Values Section */}
       <CoreValuesSection />
 
-      {/* Client Testimonials Section */}
-      <section id="testimonials" className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
+      {/* Enhanced Client Testimonials Section */}
+      <section id="testimonials" className="py-20 bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
@@ -280,10 +290,10 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Client Testimonial 1 */}
-            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border border-gray-100 dark:border-dark-border">
+            {/* Enhanced Client Testimonial 1 */}
+            <div className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border border-gray-200 dark:border-dark-border hover:border-mh-hunter-green dark:hover:border-mh-hunter-green">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg group-hover:shadow-2xl">
                   <span className="text-white font-bold text-xl">WC</span>
                 </div>
                 <div>
@@ -291,18 +301,18 @@ export default function ServicesPage() {
                   <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Government Client</p>
                   <div className="flex text-mh-leather-tan mt-1">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                      <svg key={i} className="w-4 h-4 fill-current group-hover:scale-110 transition-transform duration-300" viewBox="0 0 20 20" style={{ transitionDelay: `${i * 50}ms` }}>
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
                   </div>
                 </div>
               </div>
-              <p className="text-gray-700 dark:text-dark-text-secondary italic mb-4 group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300">
+              <p className="text-gray-700 dark:text-dark-text-secondary italic mb-4 group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300 leading-relaxed">
                 "MH Construction delivered our new emergency services facility on time and under budget. Their military precision and attention to detail were exactly what we needed for this critical infrastructure project."
               </p>
-              <div className="flex items-center text-sm text-gray-500 dark:text-dark-text-secondary">
-                <svg className="w-4 h-4 mr-2 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-center text-sm text-gray-500 dark:text-dark-text-secondary group-hover:text-mh-hunter-green transition-colors duration-300">
+                <svg className="w-4 h-4 mr-2 text-mh-hunter-green group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
                 Emergency Services Facility • $2.8M Project
@@ -455,22 +465,22 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          {/* Testimonials Statistics */}
+          {/* Enhanced Testimonials Statistics */}
           <div className="mt-16 text-center">
-            <div className="bg-gradient-to-r from-mh-hunter-green/5 to-mh-leather-tan/5 border border-mh-hunter-green/20 rounded-xl p-8 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-mh-hunter-green/5 via-white to-mh-leather-tan/5 border-2 border-mh-hunter-green/20 rounded-xl p-8 max-w-4xl mx-auto shadow-lg hover:shadow-2xl transition-all duration-500 hover:border-mh-leather-tan/40">
               <h3 className="text-2xl font-bold text-black dark:text-dark-text mb-6">Client Satisfaction Results</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-mh-hunter-green mb-2">98%</div>
-                  <div className="text-gray-600 dark:text-dark-text-secondary">Client Satisfaction Rate</div>
+                <div className="text-center group hover:scale-105 transition-transform duration-300">
+                  <div className="text-3xl font-bold text-mh-hunter-green mb-2 group-hover:text-mh-leather-tan transition-colors duration-300">98%</div>
+                  <div className="text-gray-600 dark:text-dark-text-secondary group-hover:text-black dark:group-hover:text-dark-text transition-colors duration-300">Client Satisfaction Rate</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-mh-leather-tan mb-2">95%</div>
-                  <div className="text-gray-600 dark:text-dark-text-secondary">On-Time Completion</div>
+                <div className="text-center group hover:scale-105 transition-transform duration-300">
+                  <div className="text-3xl font-bold text-mh-leather-tan mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">95%</div>
+                  <div className="text-gray-600 dark:text-dark-text-secondary group-hover:text-black dark:group-hover:text-dark-text transition-colors duration-300">On-Time Completion</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-mh-hunter-green mb-2">92%</div>
-                  <div className="text-gray-600 dark:text-dark-text-secondary">Repeat Clients</div>
+                <div className="text-center group hover:scale-105 transition-transform duration-300">
+                  <div className="text-3xl font-bold text-mh-hunter-green mb-2 group-hover:text-mh-leather-tan transition-colors duration-300">92%</div>
+                  <div className="text-gray-600 dark:text-dark-text-secondary group-hover:text-black dark:group-hover:text-dark-text transition-colors duration-300">Repeat Clients</div>
                 </div>
               </div>
             </div>

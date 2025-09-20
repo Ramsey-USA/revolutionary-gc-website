@@ -79,24 +79,32 @@ export default function SubcontractorsPage() {
         <section id="partnership-benefits" className="py-16 bg-white dark:bg-dark-surface-2 transition-colors duration-300">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              <div className="text-center p-6 bg-mh-hunter-green/5 dark:bg-mh-hunter-green/20 backdrop-blur-sm rounded-xl border border-mh-hunter-green/20 dark:border-mh-hunter-green/30 hover:bg-mh-hunter-green/10 dark:hover:bg-mh-hunter-green/40 transition-all duration-500 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl group">
-                <div className="text-3xl md:text-4xl font-bold text-mh-hunter-green dark:text-mh-hunter-green mb-2 animate-fade-in-up group-hover:scale-110 transition-transform duration-300">150+</div>
-                <div className="text-black dark:text-dark-text font-medium">Active Partners</div>
+              <div className="h-full flex flex-col min-h-[140px]">
+                <div className="text-center p-6 bg-mh-hunter-green/5 dark:bg-mh-hunter-green/20 backdrop-blur-sm rounded-xl border border-mh-hunter-green/20 dark:border-mh-hunter-green/30 hover:bg-mh-hunter-green/10 dark:hover:bg-mh-hunter-green/40 transition-all duration-500 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl group flex flex-col justify-center h-full">
+                  <div className="text-3xl md:text-4xl font-bold text-mh-hunter-green dark:text-mh-hunter-green mb-2 animate-fade-in-up group-hover:scale-110 transition-transform duration-300">150+</div>
+                  <div className="text-black dark:text-dark-text font-medium">Active Partners</div>
+                </div>
               </div>
               
-              <div className="text-center p-6 bg-mh-leather-tan/5 dark:bg-mh-leather-tan/20 backdrop-blur-sm rounded-xl border border-mh-leather-tan/20 dark:border-mh-leather-tan/30 hover:bg-mh-leather-tan/10 dark:hover:bg-mh-leather-tan/40 transition-all duration-500 transform hover:scale-105 hover:-rotate-1 hover:shadow-2xl group">
-                <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-2 animate-fade-in-up group-hover:scale-110 transition-transform duration-300">$50M+</div>
-                <div className="text-black dark:text-dark-text font-medium">Annual Opportunities</div>
+              <div className="h-full flex flex-col min-h-[140px]">
+                <div className="text-center p-6 bg-mh-leather-tan/5 dark:bg-mh-leather-tan/20 backdrop-blur-sm rounded-xl border border-mh-leather-tan/20 dark:border-mh-leather-tan/30 hover:bg-mh-leather-tan/10 dark:hover:bg-mh-leather-tan/40 transition-all duration-500 transform hover:scale-105 hover:-rotate-1 hover:shadow-2xl group flex flex-col justify-center h-full">
+                  <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-2 animate-fade-in-up group-hover:scale-110 transition-transform duration-300">$50M+</div>
+                  <div className="text-black dark:text-dark-text font-medium">Annual Opportunities</div>
+                </div>
               </div>
               
-              <div className="text-center p-6 bg-mh-hunter-green/5 dark:bg-mh-hunter-green/20 backdrop-blur-sm rounded-xl border border-mh-hunter-green/20 dark:border-mh-hunter-green/30 hover:bg-mh-hunter-green/10 dark:hover:bg-mh-hunter-green/40 transition-all duration-500 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl group">
-                <div className="text-3xl md:text-4xl font-bold text-mh-hunter-green dark:text-mh-hunter-green mb-2 animate-fade-in-up group-hover:scale-110 transition-transform duration-300">98%</div>
-                <div className="text-black dark:text-dark-text font-medium">Payment Rate</div>
+              <div className="h-full flex flex-col min-h-[140px]">
+                <div className="text-center p-6 bg-mh-hunter-green/5 dark:bg-mh-hunter-green/20 backdrop-blur-sm rounded-xl border border-mh-hunter-green/20 dark:border-mh-hunter-green/30 hover:bg-mh-hunter-green/10 dark:hover:bg-mh-hunter-green/40 transition-all duration-500 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl group flex flex-col justify-center h-full">
+                  <div className="text-3xl md:text-4xl font-bold text-mh-hunter-green dark:text-mh-hunter-green mb-2 animate-fade-in-up group-hover:scale-110 transition-transform duration-300">98%</div>
+                  <div className="text-black dark:text-dark-text font-medium">Payment Rate</div>
+                </div>
               </div>
               
-              <div className="text-center p-6 bg-mh-leather-tan/5 dark:bg-mh-leather-tan/20 backdrop-blur-sm rounded-xl border border-mh-leather-tan/20 dark:border-mh-leather-tan/30 hover:bg-mh-leather-tan/10 dark:hover:bg-mh-leather-tan/40 transition-all duration-500 transform hover:scale-105 hover:-rotate-1 hover:shadow-2xl group">
-                <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan mb-2 animate-fade-in-up group-hover:scale-110 transition-transform duration-300">25</div>
-                <div className="text-black dark:text-dark-text font-medium">Trade Categories</div>
+              <div className="h-full flex flex-col min-h-[140px]">
+                <div className="text-center p-6 bg-mh-leather-tan/5 dark:bg-mh-leather-tan/20 backdrop-blur-sm rounded-xl border border-mh-leather-tan/20 dark:border-mh-leather-tan/30 hover:bg-mh-leather-tan/10 dark:hover:bg-mh-leather-tan/40 transition-all duration-500 transform hover:scale-105 hover:-rotate-1 hover:shadow-2xl group flex flex-col justify-center h-full">
+                  <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan mb-2 animate-fade-in-up group-hover:scale-110 transition-transform duration-300">25</div>
+                  <div className="text-black dark:text-dark-text font-medium">Trade Categories</div>
+                </div>
               </div>
             </div>
           </div>
@@ -116,99 +124,123 @@ export default function SubcontractorsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Reliable Payments */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8">
-                <div className="w-16 h-16 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
-                  <svg className="w-8 h-8 text-mh-hunter-green group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[320px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8 flex flex-col h-full">
+                  <div className="w-16 h-16 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
+                    <svg className="w-8 h-8 text-mh-hunter-green group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Fast, Reliable Payments</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Net 15-day payment terms with a 98% on-time payment rate. We value our partners and show it through prompt compensation.</p>
+                    <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                      <li>• Electronic payment options</li>
+                      <li>• Clear invoicing process</li>
+                      <li>• Dedicated accounting support</li>
+                    </ul>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Fast, Reliable Payments</h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Net 15-day payment terms with a 98% on-time payment rate. We value our partners and show it through prompt compensation.</p>
-                <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
-                  <li>• Electronic payment options</li>
-                  <li>• Clear invoicing process</li>
-                  <li>• Dedicated accounting support</li>
-                </ul>
               </div>
 
               {/* Consistent Work */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-mh-leather-tan hover:border-l-8">
-                <div className="w-16 h-16 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12">
-                  <svg className="w-8 h-8 text-mh-leather-tan group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[320px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-mh-leather-tan hover:border-l-8 flex flex-col h-full">
+                  <div className="w-16 h-16 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12">
+                    <svg className="w-8 h-8 text-mh-leather-tan group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Consistent Work Opportunities</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Access to a steady pipeline of projects across residential, commercial, and municipal sectors throughout the Pacific Northwest.</p>
+                    <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                      <li>• Year-round project availability</li>
+                      <li>• Multiple project types</li>
+                      <li>• Geographic diversity</li>
+                    </ul>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Consistent Work Opportunities</h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Access to a steady pipeline of projects across residential, commercial, and municipal sectors throughout the Pacific Northwest.</p>
-                <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
-                  <li>• Year-round project availability</li>
-                  <li>• Multiple project types</li>
-                  <li>• Geographic diversity</li>
-                </ul>
               </div>
 
               {/* Professional Support */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8">
-                <div className="w-16 h-16 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
-                  <svg className="w-8 h-8 text-mh-hunter-green group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[320px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8 flex flex-col h-full">
+                  <div className="w-16 h-16 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
+                    <svg className="w-8 h-8 text-mh-hunter-green group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Professional Support</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Dedicated project management and administrative support to help you focus on what you do best - quality workmanship.</p>
+                    <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                      <li>• Dedicated project managers</li>
+                      <li>• Administrative assistance</li>
+                      <li>• Technical support</li>
+                    </ul>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Professional Support</h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Dedicated project management and administrative support to help you focus on what you do best - quality workmanship.</p>
-                <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
-                  <li>• Dedicated project managers</li>
-                  <li>• Administrative assistance</li>
-                  <li>• Technical support</li>
-                </ul>
               </div>
 
               {/* Safety First */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8">
-                <div className="w-16 h-16 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12">
-                  <svg className="w-8 h-8 text-mh-hunter-green group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[320px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8 flex flex-col h-full">
+                  <div className="w-16 h-16 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12">
+                    <svg className="w-8 h-8 text-mh-hunter-green group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Safety-First Culture</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Comprehensive safety programs and training to ensure every project is completed without incidents. Safety is our top priority.</p>
+                    <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                      <li>• Safety training programs</li>
+                      <li>• Regular safety meetings</li>
+                      <li>• Incident prevention protocols</li>
+                    </ul>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Safety-First Culture</h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Comprehensive safety programs and training to ensure every project is completed without incidents. Safety is our top priority.</p>
-                <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
-                  <li>• Safety training programs</li>
-                  <li>• Regular safety meetings</li>
-                  <li>• Incident prevention protocols</li>
-                </ul>
               </div>
 
               {/* Growth Opportunities */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-mh-leather-tan hover:border-l-8">
-                <div className="w-16 h-16 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
-                  <svg className="w-8 h-8 text-mh-leather-tan group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[320px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-mh-leather-tan hover:border-l-8 flex flex-col h-full">
+                  <div className="w-16 h-16 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
+                    <svg className="w-8 h-8 text-mh-leather-tan group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Growth Opportunities</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Opportunities to expand your business through larger projects and long-term partnerships with our growing company.</p>
+                    <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                      <li>• Larger project opportunities</li>
+                      <li>• Long-term partnerships</li>
+                      <li>• Business development support</li>
+                    </ul>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Growth Opportunities</h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Opportunities to expand your business through larger projects and long-term partnerships with our growing company.</p>
-                <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
-                  <li>• Larger project opportunities</li>
-                  <li>• Long-term partnerships</li>
-                  <li>• Business development support</li>
-                </ul>
               </div>
 
               {/* Military Values */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8">
-                <div className="w-16 h-16 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12">
-                  <svg className="w-8 h-8 text-mh-hunter-green group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[320px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8 flex flex-col h-full">
+                  <div className="w-16 h-16 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12">
+                    <svg className="w-8 h-8 text-mh-hunter-green group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Military Values</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Work with a veteran-owned company that operates with integrity, discipline, and respect for all team members and partners.</p>
+                    <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                      <li>• Honor and integrity</li>
+                      <li>• Disciplined approach</li>
+                      <li>• Mutual respect</li>
+                    </ul>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Military Values</h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Work with a veteran-owned company that operates with integrity, discipline, and respect for all team members and partners.</p>
-                <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
-                  <li>• Honor and integrity</li>
-                  <li>• Disciplined approach</li>
-                  <li>• Mutual respect</li>
-                </ul>
               </div>
             </div>
           </div>
@@ -228,108 +260,112 @@ export default function SubcontractorsPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Required Qualifications */}
-              <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-mh-hunter-green rounded-full flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-black dark:text-dark-text">Required Qualifications</h3>
-                </div>
-                
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-mh-hunter-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="font-semibold text-black dark:text-dark-text mb-1">Licensing & Certification</h4>
-                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Current state contractor's license and all relevant trade certifications</p>
+              <div className="h-full flex flex-col min-h-[480px]">
+                <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 flex flex-col h-full">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-mh-hunter-green rounded-full flex items-center justify-center mr-4">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
                     </div>
+                    <h3 className="text-2xl font-bold text-black dark:text-dark-text">Required Qualifications</h3>
                   </div>
                   
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-mh-hunter-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="font-semibold text-black dark:text-dark-text mb-1">Insurance Coverage</h4>
-                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm">General liability ($1M minimum), Workers' compensation, and Auto insurance</p>
+                  <div className="space-y-6 flex-1">
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-mh-hunter-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="font-semibold text-black dark:text-dark-text mb-1">Licensing & Certification</h4>
+                        <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Current state contractor's license and all relevant trade certifications</p>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-mh-hunter-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="font-semibold text-black dark:text-dark-text mb-1">Experience Requirements</h4>
-                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Minimum 3 years in your trade with verifiable project references</p>
+                    
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-mh-hunter-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="font-semibold text-black dark:text-dark-text mb-1">Insurance Coverage</h4>
+                        <p className="text-gray-600 dark:text-dark-text-secondary text-sm">General liability ($1M minimum), Workers' compensation, and Auto insurance</p>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-mh-hunter-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="font-semibold text-black dark:text-dark-text mb-1">Safety Certification</h4>
-                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm">OSHA 10 or 30 certification (we can help you obtain this)</p>
+                    
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-mh-hunter-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="font-semibold text-black dark:text-dark-text mb-1">Experience Requirements</h4>
+                        <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Minimum 3 years in your trade with verifiable project references</p>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-mh-hunter-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="font-semibold text-black dark:text-dark-text mb-1">Financial Stability</h4>
-                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Demonstrated financial capacity and credit references</p>
+                    
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-mh-hunter-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="font-semibold text-black dark:text-dark-text mb-1">Safety Certification</h4>
+                        <p className="text-gray-600 dark:text-dark-text-secondary text-sm">OSHA 10 or 30 certification (we can help you obtain this)</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-mh-hunter-green rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="font-semibold text-black dark:text-dark-text mb-1">Financial Stability</h4>
+                        <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Demonstrated financial capacity and credit references</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Preferred Qualities */}
-              <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-mh-leather-tan rounded-full flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-black dark:text-dark-text">Preferred Qualities</h3>
-                </div>
-                
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-mh-leather-tan rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="font-semibold text-black dark:text-dark-text mb-1">Military Background</h4>
-                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Veterans and military spouses are especially encouraged to apply</p>
+              <div className="h-full flex flex-col min-h-[480px]">
+                <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 flex flex-col h-full">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-mh-leather-tan rounded-full flex items-center justify-center mr-4">
+                      <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                      </svg>
                     </div>
+                    <h3 className="text-2xl font-bold text-black dark:text-dark-text">Preferred Qualities</h3>
                   </div>
                   
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-mh-leather-tan rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="font-semibold text-black dark:text-dark-text mb-1">Technology Adoption</h4>
-                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Willingness to use project management and communication technology</p>
+                  <div className="space-y-6 flex-1">
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-mh-leather-tan rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="font-semibold text-black dark:text-dark-text mb-1">Military Background</h4>
+                        <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Veterans and military spouses are especially encouraged to apply</p>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-mh-leather-tan rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="font-semibold text-black dark:text-dark-text mb-1">Quality Focus</h4>
-                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Commitment to superior craftsmanship and attention to detail</p>
+                    
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-mh-leather-tan rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="font-semibold text-black dark:text-dark-text mb-1">Technology Adoption</h4>
+                        <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Willingness to use project management and communication technology</p>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-mh-leather-tan rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="font-semibold text-black dark:text-dark-text mb-1">Local Presence</h4>
-                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Based in or able to work regularly in the Pacific Northwest region</p>
+                    
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-mh-leather-tan rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="font-semibold text-black dark:text-dark-text mb-1">Quality Focus</h4>
+                        <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Commitment to superior craftsmanship and attention to detail</p>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-mh-leather-tan rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="font-semibold text-black dark:text-dark-text mb-1">Team Collaboration</h4>
-                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Strong communication skills and ability to work as part of a larger team</p>
+                    
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-mh-leather-tan rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="font-semibold text-black dark:text-dark-text mb-1">Local Presence</h4>
+                        <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Based in or able to work regularly in the Pacific Northwest region</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-mh-leather-tan rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="font-semibold text-black dark:text-dark-text mb-1">Team Collaboration</h4>
+                        <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Strong communication skills and ability to work as part of a larger team</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -375,28 +411,30 @@ export default function SubcontractorsPage() {
 
               <div className="space-y-12 lg:space-y-24">
                 {/* Step 1: Application */}
-                <div className="relative flex flex-col lg:flex-row items-center group">
-                  <div className="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0">
-                    <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-mh-hunter-green hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 group-hover:rotate-1">
+                <div className="relative flex flex-col lg:flex-row items-center group min-h-[200px]">
+                  <div className="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0 h-full flex flex-col">
+                    <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-mh-hunter-green hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 group-hover:rotate-1 flex flex-col h-full">
                       <div className="flex items-center mb-4">
                         <div className="w-12 h-12 bg-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                           <span className="text-white font-bold">1</span>
                         </div>
                         <h3 className="text-xl font-bold text-black dark:text-dark-text group-hover:text-mh-hunter-green transition-colors duration-300">Submit Application</h3>
                       </div>
-                      <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
-                        Complete our comprehensive application form with your company details, experience, and capabilities.
-                      </p>
-                      <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
-                        <li>• Company information and history</li>
-                        <li>• Trade specializations</li>
-                        <li>• Project portfolio and references</li>
-                        <li>• Insurance and licensing documentation</li>
-                      </ul>
+                      <div className="flex-1">
+                        <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
+                          Complete our comprehensive application form with your company details, experience, and capabilities.
+                        </p>
+                        <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                          <li>• Company information and history</li>
+                          <li>• Trade specializations</li>
+                          <li>• Project portfolio and references</li>
+                          <li>• Insurance and licensing documentation</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                   <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-mh-hunter-green rounded-full border-4 border-white dark:border-dark-surface shadow-lg group-hover:scale-125 group-hover:shadow-xl transition-all duration-300"></div>
-                  <div className="lg:w-1/2 lg:pl-12">
+                  <div className="lg:w-1/2 lg:pl-12 h-full flex items-center">
                     <div className="text-center lg:text-left">
                       <div className="text-4xl font-bold text-mh-hunter-green mb-2 group-hover:scale-110 transition-transform duration-300">1-2 Days</div>
                       <div className="text-gray-600 dark:text-dark-text-secondary">Initial Review</div>
@@ -405,28 +443,30 @@ export default function SubcontractorsPage() {
                 </div>
 
                 {/* Step 2: Review */}
-                <div className="relative flex flex-col lg:flex-row-reverse items-center group">
-                  <div className="lg:w-1/2 lg:pl-12 mb-8 lg:mb-0">
-                    <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-mh-hunter-green hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 group-hover:-rotate-1">
+                <div className="relative flex flex-col lg:flex-row-reverse items-center group min-h-[200px]">
+                  <div className="lg:w-1/2 lg:pl-12 mb-8 lg:mb-0 h-full flex flex-col">
+                    <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-mh-hunter-green hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 group-hover:-rotate-1 flex flex-col h-full">
                       <div className="flex items-center mb-4">
                         <div className="w-12 h-12 bg-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
                           <span className="text-white font-bold">2</span>
                         </div>
                         <h3 className="text-xl font-bold text-black dark:text-dark-text group-hover:text-mh-hunter-green transition-colors duration-300">Qualification Review</h3>
                       </div>
-                      <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
-                        Our team reviews your application, verifies credentials, and checks references to ensure alignment with our standards.
-                      </p>
-                      <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
-                        <li>• License and insurance verification</li>
-                        <li>• Reference checks</li>
-                        <li>• Financial review</li>
-                        <li>• Safety record assessment</li>
-                      </ul>
+                      <div className="flex-1">
+                        <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
+                          Our team reviews your application, verifies credentials, and checks references to ensure alignment with our standards.
+                        </p>
+                        <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                          <li>• License and insurance verification</li>
+                          <li>• Reference checks</li>
+                          <li>• Financial review</li>
+                          <li>• Safety record assessment</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                   <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-mh-hunter-green rounded-full border-4 border-white dark:border-dark-surface shadow-lg group-hover:scale-125 group-hover:shadow-xl transition-all duration-300"></div>
-                  <div className="lg:w-1/2 lg:pr-12">
+                  <div className="lg:w-1/2 lg:pr-12 h-full flex items-center">
                     <div className="text-center lg:text-right">
                       <div className="text-4xl font-bold text-mh-hunter-green mb-2 group-hover:scale-110 transition-transform duration-300">3-5 Days</div>
                       <div className="text-gray-600 dark:text-dark-text-secondary">Thorough Review</div>
@@ -435,28 +475,30 @@ export default function SubcontractorsPage() {
                 </div>
 
                 {/* Step 3: Interview */}
-                <div className="relative flex flex-col lg:flex-row items-center group">
-                  <div className="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0">
-                    <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-mh-leather-tan hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 group-hover:rotate-1">
+                <div className="relative flex flex-col lg:flex-row items-center group min-h-[200px]">
+                  <div className="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0 h-full flex flex-col">
+                    <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-mh-leather-tan hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 group-hover:rotate-1 flex flex-col h-full">
                       <div className="flex items-center mb-4">
                         <div className="w-12 h-12 bg-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                           <span className="text-black font-bold">3</span>
                         </div>
                         <h3 className="text-xl font-bold text-black dark:text-dark-text group-hover:text-mh-leather-tan transition-colors duration-300">Partnership Meeting</h3>
                       </div>
-                      <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
-                        Meet with our team to discuss partnership opportunities, project types, and establish mutual expectations.
-                      </p>
-                      <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
-                        <li>• Company culture discussion</li>
-                        <li>• Project requirements overview</li>
-                        <li>• Communication protocols</li>
-                        <li>• Payment terms and procedures</li>
-                      </ul>
+                      <div className="flex-1">
+                        <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
+                          Meet with our team to discuss partnership opportunities, project types, and establish mutual expectations.
+                        </p>
+                        <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                          <li>• Company culture discussion</li>
+                          <li>• Project requirements overview</li>
+                          <li>• Communication protocols</li>
+                          <li>• Payment terms and procedures</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                   <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-mh-leather-tan rounded-full border-4 border-white dark:border-dark-surface shadow-lg group-hover:scale-125 group-hover:shadow-xl transition-all duration-300"></div>
-                  <div className="lg:w-1/2 lg:pl-12">
+                  <div className="lg:w-1/2 lg:pl-12 h-full flex items-center">
                     <div className="text-center lg:text-left">
                       <div className="text-4xl font-bold text-mh-leather-tan mb-2 group-hover:scale-110 transition-transform duration-300">1 Hour</div>
                       <div className="text-gray-600 dark:text-dark-text-secondary">Partnership Discussion</div>
@@ -465,28 +507,30 @@ export default function SubcontractorsPage() {
                 </div>
 
                 {/* Step 4: Approval */}
-                <div className="relative flex flex-col lg:flex-row-reverse items-center group">
-                  <div className="lg:w-1/2 lg:pl-12 mb-8 lg:mb-0">
-                    <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-mh-hunter-green hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 group-hover:-rotate-1">
+                <div className="relative flex flex-col lg:flex-row-reverse items-center group min-h-[200px]">
+                  <div className="lg:w-1/2 lg:pl-12 mb-8 lg:mb-0 h-full flex flex-col">
+                    <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-mh-hunter-green hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 group-hover:-rotate-1 flex flex-col h-full">
                       <div className="flex items-center mb-4">
                         <div className="w-12 h-12 bg-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
                           <span className="text-white font-bold">4</span>
                         </div>
                         <h3 className="text-xl font-bold text-black dark:text-dark-text group-hover:text-mh-hunter-green transition-colors duration-300">Partnership Approval</h3>
                       </div>
-                      <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
-                        Welcome to the MH Construction network! Complete onboarding and start receiving project opportunities.
-                      </p>
-                      <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
-                        <li>• Partnership agreement execution</li>
-                        <li>• System access and training</li>
-                        <li>• Project notification setup</li>
-                        <li>• First project assignment</li>
-                      </ul>
+                      <div className="flex-1">
+                        <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
+                          Welcome to the MH Construction network! Complete onboarding and start receiving project opportunities.
+                        </p>
+                        <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                          <li>• Partnership agreement execution</li>
+                          <li>• System access and training</li>
+                          <li>• Project notification setup</li>
+                          <li>• First project assignment</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                   <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-mh-hunter-green rounded-full border-4 border-white dark:border-dark-surface shadow-lg group-hover:scale-125 group-hover:shadow-xl transition-all duration-300"></div>
-                  <div className="lg:w-1/2 lg:pr-12">
+                  <div className="lg:w-1/2 lg:pr-12 h-full flex items-center">
                     <div className="text-center lg:text-right">
                       <div className="text-4xl font-bold text-mh-hunter-green mb-2 group-hover:scale-110 transition-transform duration-300">1-2 Days</div>
                       <div className="text-gray-600 dark:text-dark-text-secondary">Welcome Onboard</div>
@@ -522,182 +566,206 @@ export default function SubcontractorsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Testimonial 1 */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border border-gray-100 dark:border-dark-border">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                    <span className="text-white font-bold text-xl">TE</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-black dark:text-dark-text group-hover:text-mh-hunter-green transition-colors duration-300">Thompson Electric</h4>
-                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Electrical Contractor</p>
-                    <div className="flex text-mh-leather-tan mt-1">
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
+              <div className="h-full flex flex-col min-h-[400px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border border-gray-100 dark:border-dark-border flex flex-col h-full">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                      <span className="text-white font-bold text-xl">TE</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-black dark:text-dark-text group-hover:text-mh-hunter-green transition-colors duration-300">Thompson Electric</h4>
+                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Electrical Contractor</p>
+                      <div className="flex text-mh-leather-tan mt-1">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <p className="text-gray-700 dark:text-dark-text-secondary italic mb-4 group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300">
-                  "Working with MH Construction has been a game-changer for our business. Their payment terms are unmatched, and the project quality is consistently excellent. We've grown our team by 40% since becoming a partner."
-                </p>
-                <div className="flex items-center text-sm text-gray-500 dark:text-dark-text-secondary">
-                  <svg className="w-4 h-4 mr-2 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  Partner since 2019 • Seattle, WA
+                  <div className="flex-1 flex flex-col">
+                    <p className="text-gray-700 dark:text-dark-text-secondary italic mb-4 group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300 flex-1">
+                      "Working with MH Construction has been a game-changer for our business. Their payment terms are unmatched, and the project quality is consistently excellent. We've grown our team by 40% since becoming a partner."
+                    </p>
+                    <div className="flex items-center text-sm text-gray-500 dark:text-dark-text-secondary mt-auto">
+                      <svg className="w-4 h-4 mr-2 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      Partner since 2019 • Seattle, WA
+                    </div>
+                  </div>
                 </div>
               </div>
 
               {/* Testimonial 2 */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border border-gray-100 dark:border-dark-border">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
-                    <span className="text-white font-bold text-xl">PC</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-black dark:text-dark-text group-hover:text-mh-leather-tan transition-colors duration-300">Precision Concrete</h4>
-                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Concrete Specialist</p>
-                    <div className="flex text-mh-leather-tan mt-1">
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
+              <div className="h-full flex flex-col min-h-[400px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border border-gray-100 dark:border-dark-border flex flex-col h-full">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                      <span className="text-white font-bold text-xl">PC</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-black dark:text-dark-text group-hover:text-mh-leather-tan transition-colors duration-300">Precision Concrete</h4>
+                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Concrete Specialist</p>
+                      <div className="flex text-mh-leather-tan mt-1">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <p className="text-gray-700 dark:text-dark-text-secondary italic mb-4 group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300">
-                  "The professionalism and support from MH Construction is outstanding. They treat us like true partners, not just subcontractors. The consistent work flow has allowed us to plan and invest in better equipment."
-                </p>
-                <div className="flex items-center text-sm text-gray-500 dark:text-dark-text-secondary">
-                  <svg className="w-4 h-4 mr-2 text-mh-leather-tan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  Partner since 2020 • Tacoma, WA
+                  <div className="flex-1 flex flex-col">
+                    <p className="text-gray-700 dark:text-dark-text-secondary italic mb-4 group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300 flex-1">
+                      "The professionalism and support from MH Construction is outstanding. They treat us like true partners, not just subcontractors. The consistent work flow has allowed us to plan and invest in better equipment."
+                    </p>
+                    <div className="flex items-center text-sm text-gray-500 dark:text-dark-text-secondary mt-auto">
+                      <svg className="w-4 h-4 mr-2 text-mh-leather-tan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      Partner since 2020 • Tacoma, WA
+                    </div>
+                  </div>
                 </div>
               </div>
 
               {/* Testimonial 3 */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border border-gray-100 dark:border-dark-border">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                    <span className="text-white font-bold text-xl">AR</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-black dark:text-dark-text group-hover:text-mh-leather-tan transition-colors duration-300">Alpine Roofing</h4>
-                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Roofing Contractor</p>
-                    <div className="flex text-mh-leather-tan mt-1">
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
+              <div className="h-full flex flex-col min-h-[400px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border border-gray-100 dark:border-dark-border flex flex-col h-full">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                      <span className="text-white font-bold text-xl">AR</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-black dark:text-dark-text group-hover:text-mh-leather-tan transition-colors duration-300">Alpine Roofing</h4>
+                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Roofing Contractor</p>
+                      <div className="flex text-mh-leather-tan mt-1">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <p className="text-gray-700 dark:text-dark-text-secondary italic mb-4 group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300">
-                  "MH Construction's commitment to safety and quality aligns perfectly with our values. The military precision and attention to detail in every project makes working with them a pleasure. Highly recommended!"
-                </p>
-                <div className="flex items-center text-sm text-gray-500 dark:text-dark-text-secondary">
-                  <svg className="w-4 h-4 mr-2 text-mh-leather-tan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  Partner since 2018 • Spokane, WA
+                  <div className="flex-1 flex flex-col">
+                    <p className="text-gray-700 dark:text-dark-text-secondary italic mb-4 group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300 flex-1">
+                      "MH Construction's commitment to safety and quality aligns perfectly with our values. The military precision and attention to detail in every project makes working with them a pleasure. Highly recommended!"
+                    </p>
+                    <div className="flex items-center text-sm text-gray-500 dark:text-dark-text-secondary mt-auto">
+                      <svg className="w-4 h-4 mr-2 text-mh-leather-tan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      Partner since 2018 • Spokane, WA
+                    </div>
+                  </div>
                 </div>
               </div>
 
               {/* Testimonial 4 */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border border-gray-100 dark:border-dark-border">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
-                    <span className="text-white font-bold text-xl">VP</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-black dark:text-dark-text group-hover:text-mh-hunter-green transition-colors duration-300">Veteran Plumbing</h4>
-                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Plumbing Services</p>
-                    <div className="flex text-mh-leather-tan mt-1">
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
+              <div className="h-full flex flex-col min-h-[400px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border border-gray-100 dark:border-dark-border flex flex-col h-full">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                      <span className="text-white font-bold text-xl">VP</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-black dark:text-dark-text group-hover:text-mh-hunter-green transition-colors duration-300">Veteran Plumbing</h4>
+                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Plumbing Services</p>
+                      <div className="flex text-mh-leather-tan mt-1">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <p className="text-gray-700 dark:text-dark-text-secondary italic mb-4 group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300">
-                  "As a veteran-owned business, we appreciate MH Construction's military heritage and values. The brotherhood extends beyond contracts - they genuinely care about our success and growth."
-                </p>
-                <div className="flex items-center text-sm text-gray-500 dark:text-dark-text-secondary">
-                  <svg className="w-4 h-4 mr-2 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  Partner since 2021 • Bellevue, WA
+                  <div className="flex-1 flex flex-col">
+                    <p className="text-gray-700 dark:text-dark-text-secondary italic mb-4 group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300 flex-1">
+                      "As a veteran-owned business, we appreciate MH Construction's military heritage and values. The brotherhood extends beyond contracts - they genuinely care about our success and growth."
+                    </p>
+                    <div className="flex items-center text-sm text-gray-500 dark:text-dark-text-secondary mt-auto">
+                      <svg className="w-4 h-4 mr-2 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      Partner since 2021 • Bellevue, WA
+                    </div>
+                  </div>
                 </div>
               </div>
 
               {/* Testimonial 5 */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border border-gray-100 dark:border-dark-border">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                    <span className="text-white font-bold text-xl">EH</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-black dark:text-dark-text group-hover:text-mh-hunter-green transition-colors duration-300">Elite HVAC</h4>
-                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm">HVAC Contractor</p>
-                    <div className="flex text-mh-leather-tan mt-1">
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
+              <div className="h-full flex flex-col min-h-[400px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border border-gray-100 dark:border-dark-border flex flex-col h-full">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                      <span className="text-white font-bold text-xl">EH</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-black dark:text-dark-text group-hover:text-mh-hunter-green transition-colors duration-300">Elite HVAC</h4>
+                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm">HVAC Contractor</p>
+                      <div className="flex text-mh-leather-tan mt-1">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <p className="text-gray-700 dark:text-dark-text-secondary italic mb-4 group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300">
-                  "The project management and communication from MH Construction is top-notch. They keep us informed every step of the way and always pay exactly when promised. It's refreshing to work with such a professional organization."
-                </p>
-                <div className="flex items-center text-sm text-gray-500 dark:text-dark-text-secondary">
-                  <svg className="w-4 h-4 mr-2 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  Partner since 2022 • Everett, WA
+                  <div className="flex-1 flex flex-col">
+                    <p className="text-gray-700 dark:text-dark-text-secondary italic mb-4 group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300 flex-1">
+                      "The project management and communication from MH Construction is top-notch. They keep us informed every step of the way and always pay exactly when promised. It's refreshing to work with such a professional organization."
+                    </p>
+                    <div className="flex items-center text-sm text-gray-500 dark:text-dark-text-secondary mt-auto">
+                      <svg className="w-4 h-4 mr-2 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      Partner since 2022 • Everett, WA
+                    </div>
+                  </div>
                 </div>
               </div>
 
               {/* Testimonial 6 */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border border-gray-100 dark:border-dark-border">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
-                    <span className="text-white font-bold text-xl">SF</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-black dark:text-dark-text group-hover:text-mh-leather-tan transition-colors duration-300">Summit Flooring</h4>
-                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Flooring Specialist</p>
-                    <div className="flex text-mh-leather-tan mt-1">
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
+              <div className="h-full flex flex-col min-h-[400px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border border-gray-100 dark:border-dark-border flex flex-col h-full">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                      <span className="text-white font-bold text-xl">SF</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-black dark:text-dark-text group-hover:text-mh-leather-tan transition-colors duration-300">Summit Flooring</h4>
+                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Flooring Specialist</p>
+                      <div className="flex text-mh-leather-tan mt-1">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <p className="text-gray-700 dark:text-dark-text-secondary italic mb-4 group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300">
-                  "MH Construction has helped us scale our business significantly. Their diverse project portfolio means consistent work year-round. The partnership has been instrumental in our growth and success."
-                </p>
-                <div className="flex items-center text-sm text-gray-500 dark:text-dark-text-secondary">
-                  <svg className="w-4 h-4 mr-2 text-mh-leather-tan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  Partner since 2020 • Vancouver, WA
+                  <div className="flex-1 flex flex-col">
+                    <p className="text-gray-700 dark:text-dark-text-secondary italic mb-4 group-hover:text-gray-900 dark:group-hover:text-dark-text transition-colors duration-300 flex-1">
+                      "MH Construction has helped us scale our business significantly. Their diverse project portfolio means consistent work year-round. The partnership has been instrumental in our growth and success."
+                    </p>
+                    <div className="flex items-center text-sm text-gray-500 dark:text-dark-text-secondary mt-auto">
+                      <svg className="w-4 h-4 mr-2 text-mh-leather-tan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      Partner since 2020 • Vancouver, WA
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -739,148 +807,200 @@ export default function SubcontractorsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {/* Electrical */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border">
-                <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[160px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border flex flex-col h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-leather-tan transition-colors duration-300">Electrical</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Licensed electricians for residential, commercial, and industrial projects.</p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-leather-tan transition-colors duration-300">Electrical</h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Licensed electricians for residential, commercial, and industrial projects.</p>
               </div>
 
               {/* Plumbing */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:-rotate-1 border border-gray-100 dark:border-dark-border">
-                <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[160px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:-rotate-1 border border-gray-100 dark:border-dark-border flex flex-col h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-leather-tan transition-colors duration-300">Plumbing</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Certified plumbers for new construction, remodels, and service work.</p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-leather-tan transition-colors duration-300">Plumbing</h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Certified plumbers for new construction, remodels, and service work.</p>
               </div>
 
               {/* HVAC */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border">
-                <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green/80 to-mh-hunter-green rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[160px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border flex flex-col h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green/80 to-mh-hunter-green rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">HVAC</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Heating, ventilation, and air conditioning specialists for all climates.</p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">HVAC</h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Heating, ventilation, and air conditioning specialists for all climates.</p>
               </div>
 
               {/* Concrete */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:-rotate-1 border border-gray-100 dark:border-dark-border">
-                <div className="w-16 h-16 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[160px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:-rotate-1 border border-gray-100 dark:border-dark-border flex flex-col h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-gray-600 transition-colors duration-300">Concrete</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Foundation, flatwork, and decorative concrete specialists.</p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-gray-600 transition-colors duration-300">Concrete</h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Foundation, flatwork, and decorative concrete specialists.</p>
               </div>
 
               {/* Framing */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border">
-                <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[160px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border flex flex-col h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-leather-tan transition-colors duration-300">Framing</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Skilled framers for residential and commercial construction.</p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-leather-tan transition-colors duration-300">Framing</h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Skilled framers for residential and commercial construction.</p>
               </div>
 
               {/* Roofing */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:-rotate-1 border border-gray-100 dark:border-dark-border">
-                <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan/80 to-mh-leather-tan rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2 2z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 4l4-2 4 2v3H8V4z" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[160px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:-rotate-1 border border-gray-100 dark:border-dark-border flex flex-col h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan/80 to-mh-leather-tan rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2 2z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 4l4-2 4 2v3H8V4z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-leather-tan transition-colors duration-300">Roofing</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Licensed roofers for all material types and weather conditions.</p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-leather-tan transition-colors duration-300">Roofing</h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Licensed roofers for all material types and weather conditions.</p>
               </div>
 
               {/* Flooring */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border">
-                <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[160px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border flex flex-col h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Flooring</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Hardwood, tile, carpet, and specialty flooring installation.</p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Flooring</h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Hardwood, tile, carpet, and specialty flooring installation.</p>
               </div>
 
               {/* Drywall */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:-rotate-1 border border-gray-100 dark:border-dark-border">
-                <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[160px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:-rotate-1 border border-gray-100 dark:border-dark-border flex flex-col h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Drywall</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Professional drywall installation, finishing, and texturing.</p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Drywall</h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Professional drywall installation, finishing, and texturing.</p>
               </div>
 
               {/* Painting */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border">
-                <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[160px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border flex flex-col h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-leather-tan transition-colors duration-300">Painting</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Interior and exterior painting for residential and commercial properties.</p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-leather-tan transition-colors duration-300">Painting</h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Interior and exterior painting for residential and commercial properties.</p>
               </div>
 
               {/* Excavation */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:-rotate-1 border border-gray-100 dark:border-dark-border">
-                <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[160px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:-rotate-1 border border-gray-100 dark:border-dark-border flex flex-col h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-leather-tan transition-colors duration-300">Excavation</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Site preparation, grading, and earthwork specialists.</p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-leather-tan transition-colors duration-300">Excavation</h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Site preparation, grading, and earthwork specialists.</p>
               </div>
 
               {/* Landscaping */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border">
-                <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[160px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border flex flex-col h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Landscaping</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Complete landscaping services including design and installation.</p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Landscaping</h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Complete landscaping services including design and installation.</p>
               </div>
 
               {/* Insulation */}
-              <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:-rotate-1 border border-gray-100 dark:border-dark-border">
-                <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[160px]">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:-rotate-1 border border-gray-100 dark:border-dark-border flex flex-col h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Insulation</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Energy-efficient insulation installation for optimal building performance.</p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Insulation</h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Energy-efficient insulation installation for optimal building performance.</p>
               </div>
 
               {/* Additional Trades Card */}
-              <div className="group bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 text-white">
-                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                  </svg>
+              <div className="h-full flex flex-col min-h-[160px]">
+                <div className="group bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 text-white flex flex-col h-full">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold mb-2">Many More Trades</h3>
+                    <p className="text-white/90 text-sm mb-4">We partner with specialists in carpentry, welding, masonry, windows, doors, and many other construction trades.</p>
+                    <div className="text-sm font-medium mt-auto">Don't see your trade? Apply anyway!</div>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold mb-2">Many More Trades</h3>
-                <p className="text-white/90 text-sm mb-4">We partner with specialists in carpentry, welding, masonry, windows, doors, and many other construction trades.</p>
-                <div className="text-sm font-medium">Don't see your trade? Apply anyway!</div>
               </div>
             </div>
 

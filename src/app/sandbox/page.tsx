@@ -188,7 +188,7 @@ export default function SandboxPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-mh-leather-tan mb-6">
             Be the First to Know
           </h2>
-          <p className="text-xl text-field-gray dark:text-dark-text mb-8">
+          <p className="text-xl text-gray-600 dark:text-dark-text mb-8">
             Sign up to be notified when the Interactive Project Sandbox launches
             and get exclusive early access.
           </p>

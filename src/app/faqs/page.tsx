@@ -153,35 +153,35 @@ export default function FAQsPage() {
         <section className="py-16 bg-white dark:bg-dark-surface-2 transition-colors duration-300">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="text-center group">
-                <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
+              <div className="text-center group min-h-[180px] flex flex-col justify-center">
+                <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
                   <span className="text-2xl">❓</span>
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-1">16+</div>
+                <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-2">16+</div>
                 <div className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary">Comprehensive FAQs</div>
               </div>
               
-              <div className="text-center group">
-                <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
+              <div className="text-center group min-h-[180px] flex flex-col justify-center">
+                <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
                   <span className="text-2xl">📁</span>
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-1">4</div>
+                <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-2">4</div>
                 <div className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary">Topic Categories</div>
               </div>
               
-              <div className="text-center group">
-                <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
+              <div className="text-center group min-h-[180px] flex flex-col justify-center">
+                <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
                   <span className="text-2xl">⚡</span>
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-1">&lt;2hrs</div>
+                <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-2">&lt;2hrs</div>
                 <div className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary">Response Time</div>
               </div>
               
-              <div className="text-center group">
-                <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
+              <div className="text-center group min-h-[180px] flex flex-col justify-center">
+                <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
                   <span className="text-2xl">✅</span>
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-1">97%</div>
+                <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-2">97%</div>
                 <div className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary">Satisfaction Rate</div>
               </div>
             </div>
@@ -211,7 +211,7 @@ export default function FAQsPage() {
                     setActiveCategory(category.id)
                     setOpenFAQ(null)
                   }}
-                  className={`group px-8 py-4 rounded-xl font-semibold transition-all duration-500 flex items-center space-x-3 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-2xl ${
+                  className={`group px-8 py-4 rounded-xl font-semibold transition-all duration-500 flex items-center space-x-3 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-2xl min-h-[70px] min-w-[200px] justify-center ${
                     activeCategory === category.id
                       ? 'bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white shadow-2xl scale-105'
                       : 'bg-white dark:bg-dark-surface-2 text-gray-700 dark:text-dark-text hover:bg-gradient-to-r hover:from-mh-hunter-green/10 hover:to-mh-leather-tan/10 border border-gray-200 dark:border-dark-border hover:border-mh-hunter-green/30'
@@ -241,7 +241,7 @@ export default function FAQsPage() {
             <div className="max-w-2xl mx-auto mb-12">
               <div className="relative group">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <svg className="h-6 w-6 text-mh-hunter-green group-focus-within:text-mh-leather-tan transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-5 w-5 sm:h-6 sm:w-6 text-mh-hunter-green group-focus-within:text-mh-leather-tan transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </div>
@@ -250,21 +250,21 @@ export default function FAQsPage() {
                   placeholder="Search frequently asked questions..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="block w-full pl-12 pr-4 py-4 border-2 border-gray-300 dark:border-dark-border rounded-xl focus:outline-none focus:ring-0 focus:border-mh-hunter-green hover:border-mh-hunter-green/50 bg-white dark:bg-dark-surface-2 dark:text-dark-text transition-all duration-300 text-lg placeholder-gray-500 dark:placeholder-dark-text-secondary shadow-lg focus:shadow-2xl transform focus:scale-[1.02]"
+                  className="block w-full pl-10 sm:pl-12 pr-12 py-3 sm:py-4 border-2 border-gray-300 dark:border-dark-border rounded-xl focus:outline-none focus:ring-0 focus:border-mh-hunter-green hover:border-mh-hunter-green/50 bg-white dark:bg-dark-surface-2 dark:text-dark-text transition-all duration-300 text-base sm:text-lg placeholder-gray-500 dark:placeholder-dark-text-secondary shadow-lg focus:shadow-2xl transform focus:scale-[1.02] touch-manipulation"
                 />
                 {searchTerm && (
                   <button
                     onClick={() => setSearchTerm('')}
-                    className="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-mh-hunter-green transition-colors duration-300"
+                    className="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-mh-hunter-green transition-colors duration-300 touch-manipulation min-w-[44px] min-h-[44px] justify-center"
                   >
-                    <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
                 )}
               </div>
               {searchTerm && (
-                <div className="mt-3 text-center text-gray-600 dark:text-dark-text-secondary">
+                <div className="mt-3 text-center text-gray-600 dark:text-dark-text-secondary text-sm sm:text-base">
                   {filteredFAQs.length} result{filteredFAQs.length !== 1 ? 's' : ''} found for "{searchTerm}"
                 </div>
               )}
@@ -286,15 +286,15 @@ export default function FAQsPage() {
                 filteredFAQs.map((faq, index) => (
                   <div
                     key={faq.id}
-                    className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg border border-gray-100 dark:border-dark-border overflow-hidden transition-all duration-500 hover:shadow-2xl transform hover:-translate-y-1 hover:scale-[1.02] animate-fade-in-up"
+                    className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg border border-gray-100 dark:border-dark-border overflow-hidden transition-all duration-500 hover:shadow-2xl transform hover:-translate-y-1 hover:scale-[1.02] animate-fade-in-up min-h-[120px] flex flex-col"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <button
                       onClick={() => toggleFAQ(faq.id)}
-                      className="w-full px-8 py-6 text-left hover:bg-gradient-to-r hover:from-mh-hunter-green/5 hover:to-mh-leather-tan/5 dark:hover:from-mh-hunter-green/10 dark:hover:to-mh-leather-tan/10 transition-all duration-300 flex items-center justify-between group-hover:px-10"
+                      className="w-full px-8 py-6 text-left hover:bg-gradient-to-r hover:from-mh-hunter-green/5 hover:to-mh-leather-tan/5 dark:hover:from-mh-hunter-green/10 dark:hover:to-mh-leather-tan/10 transition-all duration-300 flex items-center justify-between group-hover:px-10 flex-1"
                     >
                       <div className="flex items-center space-x-4 flex-1">
-                        <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
+                        <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0 ${
                           openFAQ === faq.id 
                             ? 'bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white shadow-lg scale-110' 
                             : 'bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 text-mh-hunter-green group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 group-hover:scale-110'
@@ -303,11 +303,11 @@ export default function FAQsPage() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                         </div>
-                        <h3 className="text-lg font-semibold text-black dark:text-dark-text pr-4 group-hover:text-mh-hunter-green transition-colors duration-300">
+                        <h3 className="text-lg font-semibold text-black dark:text-dark-text pr-4 group-hover:text-mh-hunter-green transition-colors duration-300 leading-relaxed">
                           {faq.question}
                         </h3>
                       </div>
-                      <div className={`flex items-center space-x-2 transition-all duration-300 ${
+                      <div className={`flex items-center space-x-2 transition-all duration-300 flex-shrink-0 ${
                         openFAQ === faq.id ? 'text-mh-hunter-green' : 'text-gray-400 group-hover:text-mh-hunter-green'
                       }`}>
                         <span className="text-sm font-medium hidden sm:block">
@@ -377,54 +377,66 @@ export default function FAQsPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Project Guide */}
-                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border">
-                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border min-h-[280px] flex flex-col">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 flex-shrink-0">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </div>
-                  <h4 className="text-xl font-bold text-black dark:text-dark-text mb-3 group-hover:text-mh-hunter-green transition-colors duration-300">Project Planning Guide</h4>
-                  <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Comprehensive guide to planning your construction project from start to finish.</p>
-                  <a href="/guides/project-planning" className="inline-flex items-center text-mh-hunter-green hover:text-mh-leather-tan font-semibold transition-colors duration-300">
-                    Download Guide
-                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                    </svg>
-                  </a>
+                  <div className="flex-1 flex flex-col justify-between">
+                    <div>
+                      <h4 className="text-xl font-bold text-black dark:text-dark-text mb-3 group-hover:text-mh-hunter-green transition-colors duration-300">Project Planning Guide</h4>
+                      <p className="text-gray-600 dark:text-dark-text-secondary mb-4 leading-relaxed">Comprehensive guide to planning your construction project from start to finish.</p>
+                    </div>
+                    <a href="/guides/project-planning" className="inline-flex items-center text-mh-hunter-green hover:text-mh-leather-tan font-semibold transition-colors duration-300 mt-auto">
+                      Download Guide
+                      <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
 
                 {/* Government Contracting */}
-                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:-rotate-1 border border-gray-100 dark:border-dark-border">
-                  <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:-rotate-1 border border-gray-100 dark:border-dark-border min-h-[280px] flex flex-col">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300 flex-shrink-0">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
                   </div>
-                  <h4 className="text-xl font-bold text-black dark:text-dark-text mb-3 group-hover:text-mh-hunter-green transition-colors duration-300">Government Contracting Info</h4>
-                  <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Learn about our government contracting capabilities and experience.</p>
-                  <a href="/services" className="inline-flex items-center text-mh-hunter-green hover:text-mh-leather-tan font-semibold transition-colors duration-300">
-                    Learn More
-                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </a>
+                  <div className="flex-1 flex flex-col justify-between">
+                    <div>
+                      <h4 className="text-xl font-bold text-black dark:text-dark-text mb-3 group-hover:text-mh-hunter-green transition-colors duration-300">Government Contracting Info</h4>
+                      <p className="text-gray-600 dark:text-dark-text-secondary mb-4 leading-relaxed">Learn about our government contracting capabilities and experience.</p>
+                    </div>
+                    <a href="/services" className="inline-flex items-center text-mh-hunter-green hover:text-mh-leather-tan font-semibold transition-colors duration-300 mt-auto">
+                      Learn More
+                      <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
 
                 {/* Contact Support */}
-                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border">
-                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border min-h-[280px] flex flex-col">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 flex-shrink-0">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg>
                   </div>
-                  <h4 className="text-xl font-bold text-black dark:text-dark-text mb-3 group-hover:text-mh-hunter-green transition-colors duration-300">24/7 Support</h4>
-                  <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Get immediate assistance from our dedicated support team.</p>
-                  <a href="/contact" className="inline-flex items-center text-mh-hunter-green hover:text-mh-leather-tan font-semibold transition-colors duration-300">
-                    Get Support
-                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                  </a>
+                  <div className="flex-1 flex flex-col justify-between">
+                    <div>
+                      <h4 className="text-xl font-bold text-black dark:text-dark-text mb-3 group-hover:text-mh-hunter-green transition-colors duration-300">24/7 Support</h4>
+                      <p className="text-gray-600 dark:text-dark-text-secondary mb-4 leading-relaxed">Get immediate assistance from our dedicated support team.</p>
+                    </div>
+                    <a href="/contact" className="inline-flex items-center text-mh-hunter-green hover:text-mh-leather-tan font-semibold transition-colors duration-300 mt-auto">
+                      Get Support
+                      <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -443,47 +455,53 @@ export default function FAQsPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                   {/* Phone */}
-                  <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-100 dark:border-dark-border">
+                  <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-100 dark:border-dark-border min-h-[180px] flex flex-col justify-center">
                     <div className="w-12 h-12 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 group-hover:scale-110 transition-all duration-300">
                       <svg className="w-6 h-6 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </div>
-                    <h4 className="font-bold text-black dark:text-dark-text mb-2">Call Us</h4>
-                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm mb-2">Speak directly with our team</p>
-                    <p className="text-mh-hunter-green font-semibold">(509) 555-0123</p>
+                    <div className="text-center">
+                      <h4 className="font-bold text-black dark:text-dark-text mb-2">Call Us</h4>
+                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm mb-3">Speak directly with our team</p>
+                      <p className="text-mh-hunter-green font-semibold">(509) 555-0123</p>
+                    </div>
                   </div>
 
                   {/* Email */}
-                  <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-100 dark:border-dark-border">
+                  <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-100 dark:border-dark-border min-h-[180px] flex flex-col justify-center">
                     <div className="w-12 h-12 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30 group-hover:scale-110 transition-all duration-300">
                       <svg className="w-6 h-6 text-mh-leather-tan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
-                    <h4 className="font-bold text-black dark:text-dark-text mb-2">Email Us</h4>
-                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm mb-2">Get detailed responses</p>
-                    <p className="text-mh-leather-tan font-semibold">info@mhconstruction.com</p>
+                    <div className="text-center">
+                      <h4 className="font-bold text-black dark:text-dark-text mb-2">Email Us</h4>
+                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm mb-3">Get detailed responses</p>
+                      <p className="text-mh-leather-tan font-semibold">info@mhconstruction.com</p>
+                    </div>
                   </div>
 
                   {/* Office */}
-                  <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-100 dark:border-dark-border">
+                  <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-100 dark:border-dark-border min-h-[180px] flex flex-col justify-center">
                     <div className="w-12 h-12 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 group-hover:scale-110 transition-all duration-300">
                       <svg className="w-6 h-6 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
                     </div>
-                    <h4 className="font-bold text-black dark:text-dark-text mb-2">Visit Us</h4>
-                    <p className="text-gray-600 dark:text-dark-text-secondary text-sm mb-2">Schedule a consultation</p>
-                    <p className="text-mh-hunter-green font-semibold text-sm">3111 N. Capital Ave.<br />Pasco, WA 99301</p>
+                    <div className="text-center">
+                      <h4 className="font-bold text-black dark:text-dark-text mb-2">Visit Us</h4>
+                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm mb-3">Schedule a consultation</p>
+                      <p className="text-mh-hunter-green font-semibold text-sm leading-relaxed">3111 N. Capital Ave.<br />Pasco, WA 99301</p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-lg mx-auto">
                   <a
                     href="/contact"
-                    className="inline-flex items-center bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white font-bold py-4 px-8 rounded-xl hover:from-mh-hunter-green/90 hover:to-mh-leather-tan/90 hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 group"
+                    className="inline-flex items-center bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white font-bold py-4 px-8 rounded-xl hover:from-mh-hunter-green/90 hover:to-mh-leather-tan/90 hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 group w-full sm:w-auto min-w-[200px] justify-center"
                   >
                     Contact Our Team
                     <svg className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -493,7 +511,7 @@ export default function FAQsPage() {
                   
                   <a
                     href="/estimate"
-                    className="inline-flex items-center border-2 border-mh-hunter-green text-mh-hunter-green dark:text-mh-hunter-green font-bold py-4 px-8 rounded-xl hover:bg-mh-hunter-green hover:text-white hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 group"
+                    className="inline-flex items-center border-2 border-mh-hunter-green text-mh-hunter-green dark:text-mh-hunter-green font-bold py-4 px-8 rounded-xl hover:bg-mh-hunter-green hover:text-white hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 group w-full sm:w-auto min-w-[200px] justify-center"
                   >
                     Get Free Estimate
                     <svg className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">

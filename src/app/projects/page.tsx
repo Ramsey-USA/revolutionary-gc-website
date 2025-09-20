@@ -129,19 +129,19 @@ export default function ProjectsPage() {
         }}
       />
 
-      {/* Project Statistics */}
-      <section className="py-16 bg-white dark:bg-dark-surface-2 transition-colors duration-300">
+      {/* Enhanced Project Statistics */}
+      <section className="py-16 bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {projectStats.map((stat, index) => {
               const IconComponent = stat.icon
               return (
                 <div key={index} className="text-center group">
-                  <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
-                    <IconComponent size={28} className="text-mh-hunter-green dark:text-mh-hunter-green group-hover:text-white dark:group-hover:text-white transition-colors duration-300" />
+                  <div className="bg-gradient-to-br from-mh-hunter-green/10 to-mh-hunter-green/5 dark:from-mh-hunter-green/20 dark:to-mh-hunter-green/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:from-mh-leather-tan group-hover:to-mh-leather-tan/80 dark:group-hover:from-mh-leather-tan dark:group-hover:to-mh-leather-tan/80 transition-all duration-300 group-hover:scale-110 shadow-lg group-hover:shadow-2xl">
+                    <IconComponent size={28} className="text-mh-hunter-green dark:text-mh-hunter-green group-hover:text-white dark:group-hover:text-white transition-colors duration-300 group-hover:scale-110" />
                   </div>
-                  <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-1">{stat.value}</div>
-                  <div className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary">{stat.label}</div>
+                  <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-1 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">{stat.value}</div>
+                  <div className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary group-hover:text-black dark:group-hover:text-dark-text transition-colors duration-300">{stat.label}</div>
                 </div>
               )
             })}
@@ -149,27 +149,27 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* Featured Projects Section */}
-      <section className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
+      {/* Enhanced Featured Projects Section */}
+      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-dark-text mb-4">
               Featured Projects
             </h2>
-            <p className="text-xl text-medium-gray dark:text-dark-text-secondary max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto mb-8">
               Showcasing our construction excellence across diverse project types
             </p>
 
-            {/* Project Category Filter */}
+            {/* Enhanced Project Category Filter */}
             <div className="flex flex-wrap justify-center gap-3 mb-8">
               {categories.map((category) => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-2 rounded-full font-semibold transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 ${
+                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 shadow-md hover:shadow-lg ${
                     selectedCategory === category
-                      ? 'bg-mh-leather-tan dark:bg-mh-leather-tan text-white dark:text-white shadow-lg'
-                      : 'bg-white dark:bg-dark-surface-2 text-medium-gray dark:text-dark-text border border-gray-300 dark:border-dark-border hover:bg-mh-hunter-green dark:hover:bg-mh-hunter-green hover:text-white dark:hover:text-white hover:border-mh-hunter-green dark:hover:border-mh-hunter-green hover:shadow-md'
+                      ? 'bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 text-white shadow-lg scale-105'
+                      : 'bg-gradient-to-r from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 text-gray-600 dark:text-dark-text border border-gray-300 dark:border-dark-border hover:from-mh-hunter-green hover:to-mh-hunter-green/80 hover:text-white hover:border-mh-hunter-green'
                   }`}
                 >
                   {category}
@@ -185,62 +185,64 @@ export default function ProjectsPage() {
               const IconComponent = project.icon
               
               return (
-                <div key={project.id} className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg border border-gray-200 dark:border-dark-border overflow-hidden hover:shadow-2xl hover:border-mh-leather-tan dark:hover:border-mh-leather-tan transition-all duration-500 transform hover:-translate-y-3 hover:scale-105">
-                  {/* Project Image */}
-                  <div className="relative h-64 bg-gradient-to-br from-mh-hunter-green to-mh-leather-tan overflow-hidden">
-                    <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-500"></div>
+                <div key={project.id} className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-dark-border overflow-hidden hover:shadow-2xl hover:border-mh-leather-tan dark:hover:border-mh-leather-tan transition-all duration-500 transform hover:-translate-y-3 hover:scale-105">
+                  {/* Enhanced Project Image */}
+                  <div className="relative h-64 bg-gradient-to-br from-mh-hunter-green via-gray-800 to-mh-leather-tan overflow-hidden">
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-500"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <IconComponent size={64} className="text-white opacity-50 group-hover:opacity-80 group-hover:scale-110 transition-all duration-500" />
+                      <IconComponent size={64} className="text-white/50 group-hover:text-white/80 group-hover:scale-110 transition-all duration-500" />
                     </div>
-                    {/* Project Category Badge */}
+                    {/* Enhanced Project Category Badge */}
                     <div className="absolute top-4 left-4">
-                      <span className="bg-mh-leather-tan dark:bg-mh-leather-tan text-white dark:text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg transition-transform duration-300 group-hover:scale-105">
+                      <span className="bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 text-white px-3 py-1.5 rounded-full text-sm font-semibold shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl">
                         {project.category}
                       </span>
                     </div>
-                    {/* Project Details Overlay */}
-                    <div className="absolute bottom-4 right-4 text-white dark:text-white text-right">
-                      <div className="text-sm opacity-80 transition-opacity duration-300 group-hover:opacity-100">{project.details.year}</div>
+                    {/* Enhanced Project Details Overlay */}
+                    <div className="absolute bottom-4 right-4 text-white text-right">
+                      <div className="text-sm opacity-80 transition-opacity duration-300 group-hover:opacity-100 font-medium">{project.details.year}</div>
                       <div className="text-xs opacity-60 transition-opacity duration-300 group-hover:opacity-80">{project.details.location}</div>
                     </div>
+                    {/* Accent line on hover */}
+                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                   </div>
 
-                  {/* Project Content */}
+                  {/* Enhanced Project Content */}
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">
                       {project.title}
                     </h3>
-                    <p className="text-medium-gray dark:text-dark-text-secondary mb-4 leading-relaxed">
+                    <p className="text-gray-600 dark:text-dark-text-secondary mb-4 leading-relaxed group-hover:text-gray-800 dark:group-hover:text-dark-text transition-colors duration-300">
                       {project.description}
                     </p>
 
-                    {/* Project Stats */}
-                    <div className="grid grid-cols-2 gap-4 mb-4 p-3 bg-gray-50 dark:bg-dark-surface-3 rounded-lg transition-colors duration-300 group-hover:bg-mh-hunter-green/5 dark:group-hover:bg-mh-hunter-green/10">
+                    {/* Enhanced Project Stats */}
+                    <div className="grid grid-cols-2 gap-4 mb-4 p-4 bg-gradient-to-r from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-lg transition-all duration-300 group-hover:from-mh-hunter-green/5 group-hover:to-mh-leather-tan/5 border border-gray-200 dark:border-gray-700 group-hover:border-mh-hunter-green/20">
                       <div className="text-center">
-                        <div className="text-sm font-semibold text-mh-hunter-green dark:text-mh-hunter-green">{project.details.size}</div>
-                        <div className="text-xs text-medium-gray dark:text-dark-text-secondary">Size</div>
+                        <div className="text-sm font-semibold text-mh-hunter-green dark:text-mh-hunter-green group-hover:text-mh-leather-tan transition-colors duration-300">{project.details.size}</div>
+                        <div className="text-xs text-gray-600 dark:text-dark-text-secondary group-hover:text-gray-800 dark:group-hover:text-dark-text transition-colors duration-300">Size</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-sm font-semibold text-mh-hunter-green dark:text-mh-hunter-green">{project.details.duration}</div>
-                        <div className="text-xs text-medium-gray dark:text-dark-text-secondary">Duration</div>
+                        <div className="text-sm font-semibold text-mh-hunter-green dark:text-mh-hunter-green group-hover:text-mh-leather-tan transition-colors duration-300">{project.details.duration}</div>
+                        <div className="text-xs text-gray-600 dark:text-dark-text-secondary group-hover:text-gray-800 dark:group-hover:text-dark-text transition-colors duration-300">Duration</div>
                       </div>
                     </div>
 
-                    {/* Key Features */}
+                    {/* Enhanced Key Features */}
                     <div className="space-y-2 mb-6">
-                      <h4 className="font-semibold text-black dark:text-dark-text text-sm">Key Features:</h4>
-                      <div className="grid grid-cols-2 gap-1">
+                      <h4 className="font-semibold text-black dark:text-dark-text text-sm group-hover:text-mh-hunter-green transition-colors duration-300">Key Features:</h4>
+                      <div className="grid grid-cols-2 gap-2">
                         {project.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-center space-x-1">
-                            <div className="w-1.5 h-1.5 bg-mh-leather-tan dark:bg-mh-leather-tan rounded-full transition-transform duration-300 group-hover:scale-125"></div>
-                            <span className="text-medium-gray dark:text-dark-text-secondary text-xs">{feature}</span>
+                          <div key={featureIndex} className="flex items-center space-x-2 group-hover:translate-x-1 transition-transform duration-300" style={{ transitionDelay: `${featureIndex * 50}ms` }}>
+                            <div className="w-2 h-2 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full transition-all duration-300 group-hover:scale-125 group-hover:shadow-sm"></div>
+                            <span className="text-gray-600 dark:text-dark-text-secondary text-xs group-hover:text-gray-800 dark:group-hover:text-dark-text group-hover:font-medium transition-all duration-300">{feature}</span>
                           </div>
                         ))}
                       </div>
                     </div>
 
-                    {/* Action Button */}
-                    <button className="w-full bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white py-2 px-4 rounded-lg font-semibold hover:bg-mh-leather-tan dark:hover:bg-mh-leather-tan transition-all duration-300 transform hover:scale-105 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0">
+                    {/* Enhanced Action Button */}
+                    <button className="w-full bg-gradient-to-r from-mh-hunter-green to-mh-hunter-green/80 text-white py-3 px-4 rounded-lg font-semibold hover:from-mh-leather-tan hover:to-mh-leather-tan/80 transition-all duration-300 transform hover:scale-105 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 shadow-lg hover:shadow-xl">
                       View Project Details
                     </button>
                   </div>
@@ -251,14 +253,14 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* Project Development Process */}
-      <section className="py-20 bg-gradient-to-r from-gray-50 to-white dark:from-dark-surface-2 dark:to-dark-surface transition-colors duration-300">
+      {/* Enhanced Project Development Process */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 transition-colors duration-300 border-t border-gray-200 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
               From Vision to Reality
             </h2>
-            <p className="text-lg text-medium-gray dark:text-dark-text-secondary max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-dark-text-secondary max-w-2xl mx-auto">
               Our proven project development process ensures every build meets military-grade standards
             </p>
           </div>
@@ -275,7 +277,7 @@ export default function ProjectsPage() {
                 <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-hunter-green to-gray-300 dark:from-mh-hunter-green dark:to-dark-border"></div>
               </div>
               <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Site Assessment</h3>
-              <p className="text-medium-gray dark:text-dark-text-secondary text-sm">Comprehensive site analysis and feasibility studies</p>
+              <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Comprehensive site analysis and feasibility studies</p>
             </div>
 
             {/* Phase 2 */}
@@ -289,7 +291,7 @@ export default function ProjectsPage() {
                 <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-hunter-green to-gray-300 dark:from-mh-hunter-green dark:to-dark-border"></div>
               </div>
               <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Design & Planning</h3>
-              <p className="text-medium-gray dark:text-dark-text-secondary text-sm">AI-powered design with 3D visualization and detailed blueprints</p>
+              <p className="text-gray-600 dark:text-dark-text-secondary text-sm">AI-powered design with 3D visualization and detailed blueprints</p>
             </div>
 
             {/* Phase 3 */}
@@ -303,7 +305,7 @@ export default function ProjectsPage() {
                 <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-hunter-green to-gray-300 dark:from-mh-hunter-green dark:to-dark-border"></div>
               </div>
               <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Permits & Approval</h3>
-              <p className="text-medium-gray dark:text-dark-text-secondary text-sm">Navigate regulatory requirements with veteran precision</p>
+              <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Navigate regulatory requirements with veteran precision</p>
             </div>
 
             {/* Phase 4 */}
@@ -317,7 +319,7 @@ export default function ProjectsPage() {
                 <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-hunter-green to-gray-300 dark:from-mh-hunter-green dark:to-dark-border"></div>
               </div>
               <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Construction</h3>
-              <p className="text-medium-gray dark:text-dark-text-secondary text-sm">Expert execution with real-time progress monitoring</p>
+              <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Expert execution with real-time progress monitoring</p>
             </div>
 
             {/* Phase 5 */}
@@ -329,7 +331,7 @@ export default function ProjectsPage() {
                 <div className="absolute -top-2 -right-2 w-8 h-8 bg-mh-leather-tan rounded-full flex items-center justify-center text-white font-bold text-sm transition-transform duration-300 group-hover:scale-110">5</div>
               </div>
               <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Quality Delivery</h3>
-              <p className="text-medium-gray dark:text-dark-text-secondary text-sm">Final inspection and seamless project handover</p>
+              <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Final inspection and seamless project handover</p>
             </div>
           </div>
 
@@ -337,7 +339,7 @@ export default function ProjectsPage() {
           <div className="text-center mt-16">
             <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-dark-border transition-colors duration-300">
               <h3 className="text-2xl font-bold text-black dark:text-dark-text mb-4">Ready to Start Your Project?</h3>
-              <p className="text-medium-gray dark:text-dark-text-secondary mb-6">Experience our proven process with AI-powered planning and military-grade execution</p>
+              <p className="text-gray-600 dark:text-dark-text-secondary mb-6">Experience our proven process with AI-powered planning and military-grade execution</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/estimate"

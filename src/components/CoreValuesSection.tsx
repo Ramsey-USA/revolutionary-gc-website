@@ -7,38 +7,50 @@ const CoreValuesSection = () => {
     {
       icon: Scale,
       title: "Ethics",
-      description: "Rooted in small-town values, we believe in doing what's right. Honesty, transparency, and accountability are the minimum standard in every interaction. We operate with unwavering ethical standards in every aspect of our business. From fair pricing to honest timelines, we ensure that every decision reflects our commitment to doing what's right for our clients and community.",
-      color: "text-mh-leather-tan"
+      description: "Rooted in small-town values, we believe in doing what's right. Honesty, transparency, and accountability are the minimum standard in every interaction. We operate with unwavering ethical standards in every aspect of our business.",
+      color: "text-mh-leather-tan",
+      bgGradient: "from-mh-leather-tan/10 to-mh-leather-tan/5",
+      hoverBg: "group-hover:from-mh-leather-tan/20 group-hover:to-mh-leather-tan/10"
     },
     {
       icon: Wrench,
       title: "Experience", 
-      description: "Decades of combined construction expertise backed by military precision. Our team brings extensive knowledge from residential to commercial projects, ensuring your vision becomes reality with proven techniques and innovative solutions.",
-      color: "text-mh-hunter-green"
+      description: "Decades of combined construction expertise backed by military precision. Our team brings extensive knowledge from residential to commercial projects, ensuring your vision becomes reality with proven techniques.",
+      color: "text-mh-hunter-green",
+      bgGradient: "from-mh-hunter-green/10 to-mh-hunter-green/5",
+      hoverBg: "group-hover:from-mh-hunter-green/20 group-hover:to-mh-hunter-green/10"
     },
     {
       icon: Shield,
       title: "Integrity",
-      description: "Our word is our bond highlights the heart of MH Construction. We maintain transparency in all communications, deliver on our promises, and take full responsibility for our work. By consistently doing what's right - even when on one is watching - we build long lasting trust with our clients and within our team.",
-      color: "text-mh-leather-tan"
+      description: "Our word is our bond highlights the heart of MH Construction. We maintain transparency in all communications, deliver on our promises, and take full responsibility for our work. Building long-lasting trust through consistent actions.",
+      color: "text-mh-leather-tan",
+      bgGradient: "from-mh-leather-tan/10 to-mh-leather-tan/5",
+      hoverBg: "group-hover:from-mh-leather-tan/20 group-hover:to-mh-leather-tan/10"
     },
     {
       icon: Heart,
       title: "Honesty",
-      description: "Open, direct communication is the foundation of successful projects. We provide honest assessments, realistic timelines, and transparent pricing. No hidden costs, no surprises—just straightforward, truthful partnership. Honesty isn't just a policy; it's the foundation of our client relationships.",
-      color: "text-mh-hunter-green"
+      description: "Open, direct communication is the foundation of successful projects. We provide honest assessments, realistic timelines, and transparent pricing. No hidden costs, no surprises—just straightforward, truthful partnership.",
+      color: "text-mh-hunter-green",
+      bgGradient: "from-mh-hunter-green/10 to-mh-hunter-green/5",
+      hoverBg: "group-hover:from-mh-hunter-green/20 group-hover:to-mh-hunter-green/10"
     },
     {
       icon: Handshake,
       title: "Trust",
       description: "Trust is built through consistent performance and reliability. We earn your confidence by showing up when promised, staying within budget, and delivering quality that exceeds expectations on every project.",
-      color: "text-medium-gray"
+      color: "text-mh-leather-tan",
+      bgGradient: "from-mh-leather-tan/10 to-mh-leather-tan/5",
+      hoverBg: "group-hover:from-mh-leather-tan/20 group-hover:to-mh-leather-tan/10"
     },
     {
       icon: Briefcase,
       title: "Professionalism",
       description: "Military-grade professionalism in every interaction. From our initial consultation to project completion, we maintain the highest standards of conduct, punctuality, and respect for your property and schedule.",
-      color: "text-mh-leather-tan"
+      color: "text-mh-hunter-green",
+      bgGradient: "from-mh-hunter-green/10 to-mh-hunter-green/5",
+      hoverBg: "group-hover:from-mh-hunter-green/20 group-hover:to-mh-hunter-green/10"
     }
   ]
 
@@ -50,38 +62,41 @@ const CoreValuesSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-dark-text mb-4">
             Our Core Values
           </h2>
-          <p className="text-xl text-medium-gray dark:text-dark-text-secondary max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
             Military precision meets construction excellence
           </p>
         </div>
 
         {/* Values Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {values.map((value, index) => {
             const IconComponent = value.icon
             
             return (
-              <div key={index} className="flip-card h-80">
+              <div key={index} className="flip-card h-80 group">
                 <div className="flip-card-inner h-full">
-                  {/* Front of Card - Optimized Design */}
-                  <div className="flip-card-front bg-gradient-to-br from-gray-50 to-gray-100 dark:from-dark-surface-2 dark:to-dark-surface-3 rounded-xl shadow-lg p-6 flex flex-col items-center justify-center border border-gray-200 dark:border-dark-border transition-all duration-300 hover:shadow-xl">
-                    <div className={`${value.color} mb-6 transform transition-transform duration-300 group-hover:scale-110`}>
-                      <IconComponent size={48} />
+                  {/* Front of Card - Enhanced Design */}
+                  <div className={`flip-card-front bg-gradient-to-br ${value.bgGradient} ${value.hoverBg} backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl p-6 flex flex-col items-center justify-center border border-gray-200 dark:border-gray-700 transition-all duration-500 group-hover:scale-105`}>
+                    <div className={`p-4 rounded-full bg-gradient-to-br ${value.bgGradient} shadow-lg mb-6 transform group-hover:scale-110 transition-transform duration-300`}>
+                      <IconComponent size={48} className={value.color} />
                     </div>
-                    <h3 className="text-xl font-bold text-charcoal dark:text-dark-text text-center leading-tight drop-shadow-sm">
+                    <h3 className={`text-2xl font-bold ${value.color} text-center leading-tight mb-3`}>
                       {value.title}
                     </h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm text-center">
+                      Hover to discover our commitment
+                    </p>
                   </div>
 
-                  {/* Back of Card - Optimized Design */}
-                  <div className="flip-card-back bg-gradient-to-br from-mh-hunter-green to-mh-leather-tan rounded-xl shadow-lg p-6 flex flex-col justify-center text-white border border-mh-hunter-green/20">
-                    <div className="text-white mb-4 flex justify-center">
-                      <IconComponent size={32} />
+                  {/* Back of Card - Enhanced Design */}
+                  <div className={`flip-card-back bg-gradient-to-br ${value.bgGradient} ${value.hoverBg} backdrop-blur-sm rounded-xl shadow-lg p-6 flex flex-col justify-center border border-gray-200 dark:border-gray-700`}>
+                    <div className={`p-3 rounded-full bg-gradient-to-br ${value.bgGradient} shadow-lg mb-4 mx-auto w-fit`}>
+                      <IconComponent size={32} className={value.color} />
                     </div>
-                    <h3 className="text-lg font-bold mb-4 text-center text-white">
+                    <h3 className={`text-xl font-bold ${value.color} mb-4 text-center`}>
                       {value.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-center text-white/90">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed text-center">
                       {value.description}
                     </p>
                   </div>

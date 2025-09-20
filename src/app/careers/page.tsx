@@ -223,22 +223,22 @@ export default function CareersPage() {
       <section className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center p-6 bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 group border border-mh-leather-tan/20">
+            <div className="text-center p-6 bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 group border border-mh-leather-tan/20 min-h-[140px] flex flex-col justify-center">
               <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan mb-2 group-hover:scale-110 transition-transform duration-300">12+</div>
               <div className="text-gray-600 dark:text-dark-text-secondary font-medium">Open Positions</div>
             </div>
             
-            <div className="text-center p-6 bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 group border border-mh-hunter-green/20">
+            <div className="text-center p-6 bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 group border border-mh-hunter-green/20 min-h-[140px] flex flex-col justify-center">
               <div className="text-3xl md:text-4xl font-bold text-mh-hunter-green mb-2 group-hover:scale-110 transition-transform duration-300">85%</div>
               <div className="text-gray-600 dark:text-dark-text-secondary font-medium">Veteran Team</div>
             </div>
             
-            <div className="text-center p-6 bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 group border border-mh-leather-tan/20">
+            <div className="text-center p-6 bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 group border border-mh-leather-tan/20 min-h-[140px] flex flex-col justify-center">
               <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan mb-2 group-hover:scale-110 transition-transform duration-300">150+</div>
               <div className="text-gray-600 dark:text-dark-text-secondary font-medium">Years Combined Experience</div>
             </div>
             
-            <div className="text-center p-6 bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 group border border-mh-hunter-green/20">
+            <div className="text-center p-6 bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 group border border-mh-hunter-green/20 min-h-[140px] flex flex-col justify-center">
               <div className="text-3xl md:text-4xl font-bold text-mh-hunter-green mb-2 group-hover:scale-110 transition-transform duration-300">95%</div>
               <div className="text-gray-600 dark:text-dark-text-secondary font-medium">Employee Satisfaction</div>
             </div>
@@ -260,99 +260,111 @@ export default function CareersPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Competitive Compensation */}
-            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-mh-leather-tan hover:border-l-8">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-mh-leather-tan hover:border-l-8 min-h-[280px] flex flex-col">
               <div className="w-16 h-16 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12">
                 <svg className="w-8 h-8 text-mh-leather-tan group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Competitive Compensation</h3>
-              <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Industry-leading salaries with performance bonuses and profit sharing opportunities.</p>
-              <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
-                <li>• Annual performance reviews</li>
-                <li>• Merit-based increases</li>
-                <li>• Quarterly bonus programs</li>
-              </ul>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Competitive Compensation</h3>
+                <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Industry-leading salaries with performance bonuses and profit sharing opportunities.</p>
+                <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                  <li>• Annual performance reviews</li>
+                  <li>• Merit-based increases</li>
+                  <li>• Quarterly bonus programs</li>
+                </ul>
+              </div>
             </div>
 
             {/* Health & Wellness */}
-            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8 min-h-[280px] flex flex-col">
               <div className="w-16 h-16 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
                 <svg className="w-8 h-8 text-mh-hunter-green group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text mb-4 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Health & Wellness</h3>
-              <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Comprehensive health coverage and wellness programs for you and your family.</p>
-              <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
-                <li>• Medical, dental, vision</li>
-                <li>• Mental health support</li>
-                <li>• Wellness stipends</li>
-              </ul>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text mb-4 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Health & Wellness</h3>
+                <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Comprehensive health coverage and wellness programs for you and your family.</p>
+                <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                  <li>• Medical, dental, vision</li>
+                  <li>• Mental health support</li>
+                  <li>• Wellness stipends</li>
+                </ul>
+              </div>
             </div>
 
             {/* Veteran Support */}
-            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8 min-h-[280px] flex flex-col">
               <div className="w-16 h-16 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12">
                 <svg className="w-8 h-8 text-mh-hunter-green group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Veteran Support</h3>
-              <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Dedicated support for our veteran team members with specialized programs.</p>
-              <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
-                <li>• Veteran mentorship program</li>
-                <li>• Military skill translation</li>
-                <li>• VA benefit assistance</li>
-              </ul>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Veteran Support</h3>
+                <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Dedicated support for our veteran team members with specialized programs.</p>
+                <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                  <li>• Veteran mentorship program</li>
+                  <li>• Military skill translation</li>
+                  <li>• VA benefit assistance</li>
+                </ul>
+              </div>
             </div>
 
             {/* Professional Development */}
-            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8 min-h-[280px] flex flex-col">
               <div className="w-16 h-16 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
                 <svg className="w-8 h-8 text-mh-hunter-green group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Professional Development</h3>
-              <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Continuous learning opportunities and career advancement programs.</p>
-              <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
-                <li>• Training & certifications</li>
-                <li>• Conference attendance</li>
-                <li>• Leadership development</li>
-              </ul>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Professional Development</h3>
+                <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Continuous learning opportunities and career advancement programs.</p>
+                <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                  <li>• Training & certifications</li>
+                  <li>• Conference attendance</li>
+                  <li>• Leadership development</li>
+                </ul>
+              </div>
             </div>
 
             {/* Work-Life Balance */}
-            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-mh-leather-tan hover:border-l-8">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-mh-leather-tan hover:border-l-8 min-h-[280px] flex flex-col">
               <div className="w-16 h-16 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12">
                 <svg className="w-8 h-8 text-mh-leather-tan group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Work-Life Balance</h3>
-              <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Flexible schedules and time off policies that respect your personal time.</p>
-              <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
-                <li>• Flexible work arrangements</li>
-                <li>• Generous PTO policy</li>
-                <li>• Family-first culture</li>
-              </ul>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Work-Life Balance</h3>
+                <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Flexible schedules and time off policies that respect your personal time.</p>
+                <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                  <li>• Flexible work arrangements</li>
+                  <li>• Generous PTO policy</li>
+                  <li>• Family-first culture</li>
+                </ul>
+              </div>
             </div>
 
             {/* Team Culture */}
-            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-mh-leather-tan hover:border-l-8">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-mh-leather-tan hover:border-l-8 min-h-[280px] flex flex-col">
               <div className="w-16 h-16 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
                 <svg className="w-8 h-8 text-mh-leather-tan group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Team Culture</h3>
-              <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Join a tight-knit team that values collaboration, respect, and shared success.</p>
-              <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
-                <li>• Team building events</li>
-                <li>• Open communication</li>
-                <li>• Recognition programs</li>
-              </ul>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Team Culture</h3>
+                <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Join a tight-knit team that values collaboration, respect, and shared success.</p>
+                <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                  <li>• Team building events</li>
+                  <li>• Open communication</li>
+                  <li>• Recognition programs</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -866,7 +878,7 @@ export default function CareersPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Testimonial 1 */}
-            <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 group">
+            <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 group min-h-[320px] flex flex-col">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                   <span className="text-white font-bold text-xl">SG</span>
@@ -884,13 +896,13 @@ export default function CareersPage() {
                   </svg>
                 ))}
               </div>
-              <p className="text-gray-600 dark:text-dark-text-secondary italic">
+              <p className="text-gray-600 dark:text-dark-text-secondary italic flex-1">
                 "MH Construction gave me the opportunity to grow from a junior coordinator to a senior project manager. The veteran leadership understands teamwork and creates an environment where you can truly excel."
               </p>
             </div>
 
             {/* Testimonial 2 */}
-            <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border border-gray-100 dark:border-dark-border group">
+            <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border border-gray-100 dark:border-dark-border group min-h-[320px] flex flex-col">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
                   <span className="text-white font-bold text-xl">MT</span>
@@ -908,7 +920,7 @@ export default function CareersPage() {
                   </svg>
                 ))}
               </div>
-              <p className="text-gray-600 dark:text-dark-text italic">
+              <p className="text-gray-600 dark:text-dark-text italic flex-1">
                 "As a veteran myself, I appreciate the military values and precision that MH Construction brings to every project. The benefits are excellent and the work-life balance is the best I've experienced in construction."
               </p>
             </div>

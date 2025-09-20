@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { ThemeProvider } from '../contexts/ThemeContext'
 import Chatbot from '../components/Chatbot'
@@ -15,6 +15,13 @@ export const metadata: Metadata = {
     shortcut: '/favicon.png',
     apple: '/images/mhc-logo-light.png',
   },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
 }
 
 export default function RootLayout({

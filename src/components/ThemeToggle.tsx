@@ -124,10 +124,10 @@ const ThemeToggle = () => {
       
       {/* Status LEDs */}
       <div className={`absolute -bottom-1 left-2 w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-        theme === 'light' ? 'bg-mh-leather-tan shadow-mh-leather-tan/60 shadow-md' : 'bg-field-gray'
+        theme === 'light' ? 'bg-mh-leather-tan shadow-mh-leather-tan/60 shadow-md' : 'bg-gray-400'
       }`}></div>
       <div className={`absolute -bottom-1 right-2 w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-        theme === 'dark' ? 'bg-mh-hunter-green shadow-mh-hunter-green/60 shadow-md' : 'bg-field-gray'
+        theme === 'dark' ? 'bg-mh-hunter-green shadow-mh-hunter-green/60 shadow-md' : 'bg-gray-400'
       }`}></div>
     </button>
   )

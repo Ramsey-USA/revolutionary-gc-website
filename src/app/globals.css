@@ -5,13 +5,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Mobile-first viewport meta optimization */
+@viewport {
+  width: device-width;
+  initial-scale: 1;
+}
+
 :root {
-  /* === BRAND COLORS === */
-  /* Primary MH Construction Colors */
+  /* === MH CONSTRUCTION BRAND COLORS === */
+  /* Primary Brand Colors */
   --mh-hunter-green: #386851;
   --mh-leather-tan: #BD9264;
   
-  /* Neutral Color Palette */
+  /* === NEUTRAL COLOR PALETTE === */
   --black: #000000;
   --dark-charcoal: #1A1A1A;
   --charcoal: #2D2D2D;
@@ -22,11 +28,11 @@
   --off-white: #F9FAFB;
   --white: #FFFFFF;
 
-  /* Legacy color mappings for compatibility */
+  /* === LEGACY COLOR MAPPINGS (for compatibility) === */
   --army-black: var(--black);
   --army-gold: var(--mh-leather-tan);
   --army-green: var(--mh-hunter-green);
-  --field-tan: var(--medium-gray);
+  --field-tan: #967117;
   --field-gray: var(--medium-gray);
 
   /* === DARK MODE COLORS === */
@@ -467,16 +473,89 @@ li {
   --medium-gray: var(--dark-text-secondary);
 }
 
+/* === MOBILE OPTIMIZATIONS === */
+
+/* Touch target optimization */
+@media (pointer: coarse) {
+  /* Ensure touch targets are at least 44px */
+  button,
+  .btn,
+  a[role="button"],
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve touch response */
+  button,
+  .btn,
+  input,
+  textarea,
+  select {
+    touch-action: manipulation;
+  }
+}
+
+/* Mobile viewport fixes */
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari specific fixes */
+  body {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
 /* === RESPONSIVE DESIGN === */
 @media (max-width: 640px) {
   :root {
     --header-height: var(--header-height-mobile);
-    --section-padding: var(--space-12);
+    --section-padding: var(--space-8);
     --card-padding: var(--space-4);
+    --button-padding-x: var(--space-4);
+    --button-padding-y: var(--space-2);
   }
   
   .container {
-    padding: 0 var(--space-3);
+    padding: 0 var(--space-4);
+  }
+  
+  /* Mobile typography adjustments */
+  h1 { 
+    font-size: var(--text-3xl);
+    line-height: var(--leading-tight);
+  }
+  h2 { 
+    font-size: var(--text-2xl);
+    line-height: var(--leading-tight);
+  }
+  h3 { 
+    font-size: var(--text-xl);
+    line-height: var(--leading-snug);
+  }
+  
+  /* Mobile button improvements */
+  .btn {
+    width: 100%;
+    justify-content: center;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-base);
+  }
+  
+  /* Mobile form improvements */
+  input,
+  textarea,
+  select {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: var(--space-3);
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container {
+    padding: 0 var(--space-6);
   }
 }
 

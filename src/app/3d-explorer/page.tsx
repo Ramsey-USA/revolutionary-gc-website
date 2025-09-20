@@ -52,7 +52,7 @@ export default function ThreeDExplorerPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-mh-leather-tan mb-4">
               Immersive Project Tours
             </h2>
-            <p className="text-xl text-field-gray dark:text-dark-text max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-dark-text max-w-3xl mx-auto">
               Experience our construction projects like never before with interactive 3D walkthroughs
             </p>
           </div>
@@ -156,7 +156,7 @@ export default function ThreeDExplorerPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-mh-leather-tan mb-4">
               Available Project Tours
             </h2>
-            <p className="text-xl text-field-gray dark:text-dark-text max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-dark-text max-w-3xl mx-auto">
               Explore our completed projects in stunning 3D detail
             </p>
           </div>
@@ -213,7 +213,7 @@ export default function ThreeDExplorerPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
               Cutting-Edge Technology
             </h2>
-            <p className="text-xl text-field-gray dark:text-dark-text-secondary max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
               Our 3D Project Explorer uses the latest web technologies for seamless performance
             </p>
           </div>
