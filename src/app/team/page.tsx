@@ -123,9 +123,9 @@ export default function TeamPage() {
     const getBorderColor = (index: number) => {
       const colors = [
         "border-mh-hunter-green",
-        "border-army-gold", 
-        "border-blue-600",
-        "border-mh-leather-tan"
+        "border-mh-leather-tan", 
+        "border-charcoal",
+        "border-medium-gray"
       ]
       return colors[index % colors.length]
     }
@@ -151,7 +151,7 @@ export default function TeamPage() {
     return (
     <section className={`py-16 ${bgColor} dark:bg-dark-surface transition-colors duration-300`} id={id}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text text-center mb-12">
           {title}
         </h2>
         <div className={`grid gap-8 ${
@@ -176,9 +176,9 @@ export default function TeamPage() {
                 
                 {/* Card content */}
                 <div className="p-6 pb-0 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-1 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">{member.name}</h3>
-                  <p className="text-army-gold dark:text-army-gold font-semibold mb-3">{member.title}</p>
-                  <p className="text-field-gray dark:text-dark-text-secondary text-sm leading-relaxed mb-4 flex-grow">
+                  <h3 className="text-xl font-bold text-black dark:text-dark-text mb-1 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">{member.name}</h3>
+                  <p className="text-mh-leather-tan dark:text-mh-leather-tan font-semibold mb-3">{member.title}</p>
+                  <p className="text-medium-gray dark:text-dark-text-secondary text-sm leading-relaxed mb-4 flex-grow">
                     {member.description}
                   </p>
                   
@@ -199,7 +199,7 @@ export default function TeamPage() {
                 <div className="flex justify-center space-x-4 mt-auto pb-6 pt-4">
                   <a
                     href={`mailto:${member.email}`}
-                    className="flex items-center justify-center w-12 h-12 bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white rounded-full transition-all duration-300 hover:bg-army-green dark:hover:bg-army-green hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                    className="flex items-center justify-center w-12 h-12 bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white rounded-full transition-all duration-300 hover:bg-charcoal dark:hover:bg-charcoal hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
                     aria-label={`Email ${member.name}`}
                   >
                     <Mail size={20} />
@@ -208,7 +208,7 @@ export default function TeamPage() {
                     href={member.linkedin ? member.linkedin : "#"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-12 h-12 bg-blue-600 dark:bg-blue-600 text-white dark:text-white rounded-full transition-all duration-300 hover:bg-blue-700 dark:hover:bg-blue-700 hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                    className="flex items-center justify-center w-12 h-12 bg-mh-leather-tan dark:bg-mh-leather-tan text-white dark:text-white rounded-full transition-all duration-300 hover:bg-mh-hunter-green dark:hover:bg-mh-hunter-green hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
                     aria-label={`LinkedIn for ${member.name}`}
                   >
                     <Linkedin size={20} />
@@ -228,7 +228,7 @@ export default function TeamPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-army-black via-mh-hunter-green to-army-green dark:from-dark-surface dark:via-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-black via-mh-hunter-green to-charcoal dark:from-dark-surface dark:via-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text overflow-hidden">
         {/* Star decorations */}
         <StarDecorations />
         
@@ -251,16 +251,16 @@ export default function TeamPage() {
   <TeamSection title="Executive Leadership" members={leadership} id="leadership" />
 
   {/* Project Management */}
-  <TeamSection title="Project Management & Estimating" members={projectManagement} bgColor="bg-light-gray dark:bg-dark-surface-2" id="project-management" />
+  <TeamSection title="Project Management & Estimating" members={projectManagement} bgColor="bg-pale-gray dark:bg-dark-surface-2" id="project-management" />
 
   {/* Field Operations */}
   <TeamSection title="Site & Field Operations" members={fieldOperations} id="field-operations" />
 
   {/* Administration */}
-  <TeamSection title="Administration & Support" members={administration} bgColor="bg-light-gray dark:bg-dark-surface-2" id="administration" />
+  <TeamSection title="Administration & Support" members={administration} bgColor="bg-pale-gray dark:bg-dark-surface-2" id="administration" />
 
       {/* Join Our Team CTA */}
-      <section className="py-20 bg-gradient-to-r from-army-green to-mh-hunter-green dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text">
+      <section className="py-20 bg-gradient-to-r from-mh-hunter-green to-charcoal dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white dark:text-dark-text">
             Join Our Growing Team
@@ -271,7 +271,7 @@ export default function TeamPage() {
           </p>
           <a
             href="/contact"
-            className="inline-block bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-500 dark:hover:bg-yellow-500 transition-colors transform hover:scale-105"
+            className="inline-block bg-mh-leather-tan dark:bg-mh-leather-tan text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-mh-hunter-green dark:hover:bg-mh-hunter-green transition-colors transform hover:scale-105"
           >
             Explore Careers
           </a>

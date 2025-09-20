@@ -175,7 +175,7 @@ const TeamDashboard = () => {
                 </span>
               </div>
               <div className="flex items-center space-x-2">
-                <Calendar className="w-5 h-5 text-army-gold" />
+                <Calendar className="w-5 h-5 text-mh-leather-tan" />
                 <span className="text-sm font-medium text-gray-900 dark:text-dark-text">
                   {consultations.filter(c => c.status === 'pending').length} pending
                 </span>
@@ -429,7 +429,7 @@ const TeamDashboard = () => {
                     <div className="flex space-x-2">
                       <button
                         onClick={() => updateConsultationStatus(consultation.id, 'confirmed')}
-                        className="px-4 py-2 bg-mh-hunter-green text-white rounded-lg text-sm font-medium hover:bg-army-green transition-colors"
+                        className="px-4 py-2 bg-mh-hunter-green text-white rounded-lg text-sm font-medium hover:bg-charcoal transition-colors"
                       >
                         Confirm
                       </button>

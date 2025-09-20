@@ -60,10 +60,10 @@ const FeaturedProjectsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-army-black dark:text-dark-text mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-dark-text mb-4">
             Featured Projects
           </h2>
-          <p className="text-xl text-field-gray dark:text-dark-text-secondary max-w-3xl mx-auto">
+          <p className="text-xl text-medium-gray dark:text-dark-text-secondary max-w-3xl mx-auto">
             Showcasing our construction excellence across the Pacific Northwest
           </p>
         </div>
@@ -87,10 +87,10 @@ const FeaturedProjectsSection = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-60 transition-opacity duration-300"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <span className="inline-block bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-3 py-1 rounded-full text-sm font-semibold mb-2 transition-transform duration-300 group-hover:scale-105">
+                      <span className="inline-block bg-mh-leather-tan dark:bg-mh-leather-tan text-white dark:text-white px-3 py-1 rounded-full text-sm font-semibold mb-2 transition-transform duration-300 group-hover:scale-105">
                         {project.category}
                       </span>
-                      <h3 className="text-2xl font-bold text-white dark:text-white transition-all duration-300 group-hover:text-army-gold">
+                      <h3 className="text-2xl font-bold text-white dark:text-white transition-all duration-300 group-hover:text-mh-leather-tan">
                         {project.title}
                       </h3>
                     </div>
@@ -98,12 +98,12 @@ const FeaturedProjectsSection = () => {
                 </div>
 
                 {/* Back of Card - Description */}
-                <div className="flip-card-back bg-gradient-to-br from-mh-hunter-green to-army-green dark:from-dark-surface-2 dark:to-dark-surface-3 rounded-xl shadow-lg p-6 flex flex-col justify-between text-white dark:text-dark-text border border-mh-hunter-green/20">
+                <div className="flip-card-back bg-gradient-to-br from-mh-hunter-green to-charcoal dark:from-dark-surface-2 dark:to-dark-surface-3 rounded-xl shadow-lg p-6 flex flex-col justify-between text-white dark:text-dark-text border border-mh-hunter-green/20">
                   <div>
-                    <span className="inline-block bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                    <span className="inline-block bg-mh-leather-tan dark:bg-mh-leather-tan text-white dark:text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">
                       {project.category}
                     </span>
-                    <h3 className="text-2xl font-bold mb-4 text-army-gold dark:text-army-gold">
+                    <h3 className="text-2xl font-bold mb-4 text-mh-leather-tan dark:text-mh-leather-tan">
                       {project.title}
                     </h3>
                     <p className="text-gray-200 dark:text-dark-text-secondary leading-relaxed mb-6">
@@ -114,13 +114,13 @@ const FeaturedProjectsSection = () => {
                   <div className="space-y-3">
                     <Link
                       href={`/projects/${project.slug}`}
-                      className="block w-full bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black text-center py-3 rounded-lg font-semibold hover:bg-yellow-500 dark:hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105"
+                      className="block w-full bg-mh-leather-tan dark:bg-mh-leather-tan text-white dark:text-white text-center py-3 rounded-lg font-semibold hover:bg-mh-hunter-green dark:hover:bg-mh-hunter-green transition-all duration-300 transform hover:scale-105"
                     >
                       View Project Details
                     </Link>
                     <Link
                       href="/estimate"
-                      className="block w-full bg-transparent border-2 border-white dark:border-dark-text text-white dark:text-dark-text text-center py-2 rounded-lg font-semibold hover:bg-white dark:hover:bg-dark-text hover:text-army-black dark:hover:text-army-black transition-all duration-300"
+                      className="block w-full bg-transparent border-2 border-white dark:border-dark-text text-white dark:text-dark-text text-center py-2 rounded-lg font-semibold hover:bg-white dark:hover:bg-dark-text hover:text-charcoal dark:hover:text-charcoal transition-all duration-300"
                     >
                       Get Similar Estimate
                     </Link>
@@ -135,7 +135,7 @@ const FeaturedProjectsSection = () => {
         <div className="text-center mt-16">
           <Link
             href="/projects"
-            className="inline-block bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green dark:hover:bg-army-green transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg"
+            className="inline-block bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-mh-leather-tan dark:hover:bg-mh-leather-tan transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg"
           >
             View All Projects
           </Link>

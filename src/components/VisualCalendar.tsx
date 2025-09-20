@@ -41,87 +41,151 @@ const VisualCalendar = ({ onScheduleComplete }: VisualCalendarProps) => {
     message: ''
   })
 
-  // Available consultation hours (8am to 3pm Pacific)
-  const consultationSlots: TimeSlot[] = [
-    { time: '8:00 AM', available: true, id: '08:00' },
-    { time: '9:00 AM', available: true, id: '09:00' },
-    { time: '10:00 AM', available: true, id: '10:00' },
-    { time: '11:00 AM', available: true, id: '11:00' },
-    { time: '12:00 PM', available: true, id: '12:00' },
-    { time: '1:00 PM', available: true, id: '13:00' },
-    { time: '2:00 PM', available: true, id: '14:00' },
-    { time: '3:00 PM', available: true, id: '15:00' }
-  ]
+  // Available consultation hours (8am to 3pm Pacific) - more logical structure
+  const generateTimeSlots = (): TimeSlot[] => {
+    const slots: TimeSlot[] = []
+    for (let hour = 8; hour <= 15; hour++) {
+      const time12hr = hour <= 12 ? `${hour}:00 ${hour === 12 ? 'PM' : 'AM'}` : `${hour - 12}:00 PM`
+      const timeId = hour.toString().padStart(2, '0') + ':00'
+      
+      slots.push({
+        time: time12hr,
+        available: true, // In a real app, this would check availability from a database
+        id: timeId
+      })
+    }
+    return slots
+  }
 
-  // Get calendar grid for current month
-  const getCalendarDays = () => {
+  const consultationSlots = generateTimeSlots()
+
+  // Enhanced calendar days generation with better logic
+  const getCalendarDays = (): Date[] => {
     const year = currentDate.getFullYear()
     const month = currentDate.getMonth()
-    const firstDay = new Date(year, month, 1)
-    const lastDay = new Date(year, month + 1, 0)
-    const startDate = new Date(firstDay)
-    const endDate = new Date(lastDay)
     
-    // Start from the previous Sunday
+    // First day of the month
+    const firstDay = new Date(year, month, 1)
+    // Last day of the month
+    const lastDay = new Date(year, month + 1, 0)
+    
+    // Start date (Sunday of the week containing the first day)
+    const startDate = new Date(firstDay)
     startDate.setDate(startDate.getDate() - startDate.getDay())
     
-    // End on the next Saturday
+    // End date (Saturday of the week containing the last day)
+    const endDate = new Date(lastDay)
     endDate.setDate(endDate.getDate() + (6 - endDate.getDay()))
 
-    const days = []
-    const current = new Date(startDate)
+    const days: Date[] = []
+    const currentDay = new Date(startDate)
     
-    while (current <= endDate) {
-      days.push(new Date(current))
-      current.setDate(current.getDate() + 1)
+    // Generate all days in the calendar grid
+    while (currentDay <= endDate) {
+      days.push(new Date(currentDay))
+      currentDay.setDate(currentDay.getDate() + 1)
     }
     
     return days
   }
 
-  const isDateAvailable = (date: Date) => {
+  // Improved date availability logic
+  const isDateAvailable = (date: Date): boolean => {
     const today = new Date()
     today.setHours(0, 0, 0, 0)
     
+    const dateToCheck = new Date(date)
+    dateToCheck.setHours(0, 0, 0, 0)
+    
     // Only allow future dates and weekdays (Monday-Friday)
-    const dayOfWeek = date.getDay()
-    return date >= today && dayOfWeek >= 1 && dayOfWeek <= 5
+    const dayOfWeek = dateToCheck.getDay()
+    const isWeekday = dayOfWeek >= 1 && dayOfWeek <= 5
+    const isFutureDate = dateToCheck >= today
+    
+    // Add holiday checking logic here if needed
+    // const isHoliday = checkIfHoliday(dateToCheck)
+    
+    return isFutureDate && isWeekday
   }
 
-  const formatMonth = (date: Date) => {
-    return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+  // Improved month formatting
+  const formatMonth = (date: Date): string => {
+    return date.toLocaleDateString('en-US', { 
+      month: 'long', 
+      year: 'numeric' 
+    })
   }
 
-  const navigateMonth = (direction: 'prev' | 'next') => {
+  // Enhanced month navigation with boundary checking
+  const navigateMonth = (direction: 'prev' | 'next'): void => {
     const newDate = new Date(currentDate)
-    newDate.setMonth(newDate.getMonth() + (direction === 'next' ? 1 : -1))
+    const currentMonth = newDate.getMonth()
+    const currentYear = newDate.getFullYear()
+    
+    if (direction === 'next') {
+      newDate.setMonth(currentMonth + 1)
+    } else {
+      // Don't allow navigation to past months
+      const today = new Date()
+      if (currentYear > today.getFullYear() || 
+          (currentYear === today.getFullYear() && currentMonth > today.getMonth())) {
+        newDate.setMonth(currentMonth - 1)
+      }
+    }
+    
     setCurrentDate(newDate)
   }
 
-  const handleDateSelect = (date: Date) => {
+  // Enhanced date selection with validation
+  const handleDateSelect = (date: Date): void => {
     if (isDateAvailable(date)) {
       setSelectedDate(date)
-      setSelectedTime(null)
+      setSelectedTime(null) // Reset time selection when date changes
     }
   }
 
-  const handleTimeSelect = (timeSlot: TimeSlot) => {
-    if (timeSlot.available) {
+  // Enhanced time selection with validation
+  const handleTimeSelect = (timeSlot: TimeSlot): void => {
+    if (timeSlot.available && selectedDate) {
       setSelectedTime(timeSlot.time)
       setShowBookingForm(true)
     }
   }
 
-  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  // Enhanced form change handler with validation
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>): void => {
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [name]: value.trim()
     }))
   }
 
-  const handleBookingSubmit = async (e: React.FormEvent) => {
+  // Enhanced form validation
+  const isFormValid = (): boolean => {
+    return !!(
+      formData.name.trim() &&
+      formData.email.trim() &&
+      formData.phone.trim() &&
+      selectedDate &&
+      selectedTime
+    )
+  }
+
+  // Enhanced booking submission with better error handling
+  const handleBookingSubmit = async (e: React.FormEvent): Promise<void> => {
     e.preventDefault()
-    if (!selectedDate || !selectedTime) return
+    
+    // Validation check
+    if (!isFormValid()) {
+      alert('Please fill in all required fields.')
+      return
+    }
+
+    if (!selectedDate || !selectedTime) {
+      alert('Please select a date and time for your consultation.')
+      return
+    }
 
     setIsSubmitting(true)
 
@@ -183,7 +247,7 @@ const VisualCalendar = ({ onScheduleComplete }: VisualCalendarProps) => {
 
       setSubmitSuccess(true)
       
-      // Reset after 3 seconds
+      // Reset form with improved cleanup
       setTimeout(() => {
         setFormData({
           name: '',
@@ -213,10 +277,10 @@ const VisualCalendar = ({ onScheduleComplete }: VisualCalendarProps) => {
   return (
     <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-6 md:p-8 shadow-xl border border-gray-100 dark:border-dark-border">
       <div className="text-center mb-8">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-army-gold rounded-full mb-4">
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full mb-4">
           <Calendar className="w-8 h-8 text-white" />
         </div>
-        <h3 className="text-2xl md:text-3xl font-bold text-army-black dark:text-dark-text mb-2">
+        <h3 className="text-2xl md:text-3xl font-bold text-black dark:text-dark-text mb-2">
           Schedule Personal Consultation
         </h3>
         <p className="text-gray-600 dark:text-dark-text-secondary">
@@ -247,7 +311,7 @@ const VisualCalendar = ({ onScheduleComplete }: VisualCalendarProps) => {
             >
               <ArrowLeft className="w-5 h-5 text-gray-600 dark:text-dark-text-secondary" />
             </button>
-            <h4 className="text-xl font-semibold text-army-black dark:text-dark-text">
+            <h4 className="text-xl font-semibold text-black dark:text-dark-text">
               {formatMonth(currentDate)}
             </h4>
             <button
@@ -290,8 +354,8 @@ const VisualCalendar = ({ onScheduleComplete }: VisualCalendarProps) => {
                           ? isSelected
                             ? 'bg-mh-hunter-green text-white shadow-lg'
                             : isToday
-                              ? 'bg-army-gold text-army-black font-bold'
-                              : 'text-army-black dark:text-dark-text hover:bg-gray-100 dark:hover:bg-dark-surface-3'
+                              ? 'bg-mh-leather-tan text-white font-bold'
+                              : 'text-black dark:text-dark-text hover:bg-gray-100 dark:hover:bg-dark-surface-3'
                           : 'text-gray-400 dark:text-gray-500 cursor-not-allowed'
                       }
                     `}
@@ -308,7 +372,7 @@ const VisualCalendar = ({ onScheduleComplete }: VisualCalendarProps) => {
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
                 <Clock className="w-5 h-5 text-mh-hunter-green" />
-                <h4 className="text-lg font-semibold text-army-black dark:text-dark-text">
+                <h4 className="text-lg font-semibold text-black dark:text-dark-text">
                   Available Times for {selectedDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}
                 </h4>
               </div>
@@ -324,7 +388,7 @@ const VisualCalendar = ({ onScheduleComplete }: VisualCalendarProps) => {
                       ${slot.available
                         ? selectedTime === slot.time
                           ? 'border-mh-hunter-green bg-mh-hunter-green text-white shadow-lg'
-                          : 'border-gray-300 dark:border-dark-border text-army-black dark:text-dark-text hover:border-mh-hunter-green hover:bg-mh-hunter-green/10'
+                          : 'border-gray-300 dark:border-dark-border text-black dark:text-dark-text hover:border-mh-hunter-green hover:bg-mh-hunter-green/10'
                         : 'border-gray-200 dark:border-gray-600 text-gray-400 dark:text-gray-500 cursor-not-allowed'
                       }
                     `}
@@ -344,7 +408,7 @@ const VisualCalendar = ({ onScheduleComplete }: VisualCalendarProps) => {
         /* Booking Form */
         <div className="space-y-6">
           <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 p-4 rounded-lg">
-            <h4 className="font-semibold text-army-black dark:text-dark-text mb-2">Selected Appointment</h4>
+            <h4 className="font-semibold text-black dark:text-dark-text mb-2">Selected Appointment</h4>
             <p className="text-mh-hunter-green dark:text-mh-hunter-green">
               {selectedDate?.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })} at {selectedTime}
             </p>
@@ -465,8 +529,8 @@ const VisualCalendar = ({ onScheduleComplete }: VisualCalendarProps) => {
               </button>
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className="flex-1 bg-gradient-to-r from-mh-hunter-green to-army-green text-white px-6 py-3 rounded-lg font-semibold hover:from-army-green hover:to-mh-hunter-green transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-xl flex items-center justify-center"
+                disabled={isSubmitting || !isFormValid()}
+                className="flex-1 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white px-6 py-3 rounded-lg font-semibold hover:from-mh-leather-tan hover:to-mh-hunter-green transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-xl flex items-center justify-center"
               >
                 {isSubmitting ? (
                   <span className="flex items-center">

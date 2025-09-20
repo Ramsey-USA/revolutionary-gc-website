@@ -79,10 +79,10 @@ const BlogNewsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-army-black dark:text-dark-text mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-dark-text mb-4">
             Latest News & Insights
           </h2>
-          <p className="text-xl text-field-gray dark:text-dark-text-secondary max-w-3xl mx-auto">
+          <p className="text-xl text-medium-gray dark:text-dark-text-secondary max-w-3xl mx-auto">
             Stay updated with our latest projects, industry insights, and construction innovations
           </p>
         </div>
@@ -90,7 +90,7 @@ const BlogNewsSection = () => {
         {/* Carousel Container */}
         <div className="relative">
           {/* Main Article Display */}
-          <div className="bg-gradient-to-r from-mh-hunter-green to-army-green dark:from-dark-surface-2 dark:to-dark-surface-3 rounded-2xl overflow-hidden shadow-2xl border dark:border-dark-border transition-all duration-500 hover:shadow-3xl">
+          <div className="bg-gradient-to-r from-mh-hunter-green to-charcoal dark:from-dark-surface-2 dark:to-dark-surface-3 rounded-2xl overflow-hidden shadow-2xl border dark:border-dark-border transition-all duration-500 hover:shadow-3xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 h-96 lg:h-80">
               {/* Article Image */}
               <div className="relative group">
@@ -101,7 +101,7 @@ const BlogNewsSection = () => {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+                  <span className="bg-mh-leather-tan dark:bg-mh-leather-tan text-white dark:text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
                     {currentItem.category}
                   </span>
                 </div>
@@ -109,7 +109,7 @@ const BlogNewsSection = () => {
 
               {/* Article Content */}
               <div className="p-8 flex flex-col justify-center text-white dark:text-dark-text">
-                <div className="flex items-center text-army-gold dark:text-army-gold mb-4">
+                <div className="flex items-center text-mh-leather-tan dark:text-mh-leather-tan mb-4">
                   <Calendar size={16} className="mr-2" />
                   <span className="text-sm">{currentItem.date}</span>
                   <span className="mx-2">•</span>
@@ -126,7 +126,7 @@ const BlogNewsSection = () => {
 
                 <Link
                   href={`/blog/${currentItem.slug}`}
-                  className="inline-flex items-center bg-army-gold dark:bg-army-gold text-army-black dark:text-army-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 dark:hover:bg-yellow-500 transition-all duration-300 w-fit transform hover:scale-105 hover:-translate-y-1"
+                  className="inline-flex items-center bg-mh-leather-tan dark:bg-mh-leather-tan text-white dark:text-white px-6 py-3 rounded-lg font-semibold hover:bg-mh-hunter-green dark:hover:bg-mh-hunter-green transition-all duration-300 w-fit transform hover:scale-105 hover:-translate-y-1"
                 >
                   Read Full Article
                   <ArrowRight size={16} className="ml-2" />
@@ -161,7 +161,7 @@ const BlogNewsSection = () => {
               onClick={() => goToArticle(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentArticle 
-                  ? 'bg-mh-hunter-green dark:bg-army-gold scale-125' 
+                  ? 'bg-mh-hunter-green dark:bg-mh-leather-tan scale-125' 
                   : 'bg-gray-300 dark:bg-dark-border hover:bg-gray-400 dark:hover:bg-gray-500 hover:scale-110'
               }`}
               aria-label={`Go to article ${index + 1}`}
@@ -173,7 +173,7 @@ const BlogNewsSection = () => {
         <div className="text-center mt-12">
           <Link
             href="/blog"
-            className="inline-block bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green dark:hover:bg-army-green transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg"
+            className="inline-block bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-charcoal dark:hover:bg-charcoal transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg"
           >
             View All News & Insights
           </Link>

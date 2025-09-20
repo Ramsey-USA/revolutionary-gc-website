@@ -11,7 +11,7 @@ const AIToolsSection = () => {
       description: "Get accurate cost estimates and comprehensive project timelines in minutes. Our AI analyzes your project requirements and provides detailed phase-by-phase breakdowns with 15% accuracy.",
       ctaText: "Start Your Estimate",
       ctaLink: "/estimate",
-      gradient: "from-mh-hunter-green to-army-green"
+      gradient: "from-mh-hunter-green to-mh-leather-tan"
     },
     {
       icon: Wrench,
@@ -19,7 +19,7 @@ const AIToolsSection = () => {
       description: "Build your project virtually before construction begins. Drag and drop walls, doors, windows, and finishes while watching costs update in real-time.",
       ctaText: "Build Virtually",
       ctaLink: "/sandbox",
-      gradient: "from-mh-leather-tan to-field-tan"
+      gradient: "from-mh-leather-tan to-medium-gray"
     },
     {
       icon: Eye,
@@ -27,7 +27,7 @@ const AIToolsSection = () => {
       description: "Tour our completed projects in immersive 3D detail. Click on any element to discover the builder's insights and learn why we made each construction decision.",
       ctaText: "Explore Projects",
       ctaLink: "/3d-explorer",
-      gradient: "from-mh-hunter-green to-army-black"
+      gradient: "from-charcoal to-mh-hunter-green"
     }
   ]
 
@@ -36,10 +36,10 @@ const AIToolsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-army-black dark:text-dark-text mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-dark-text mb-4">
             Revolutionary AI-Powered Tools
           </h2>
-          <p className="text-xl text-field-gray dark:text-dark-text-secondary max-w-3xl mx-auto">
+          <p className="text-xl text-medium-gray dark:text-dark-text-secondary max-w-3xl mx-auto">
             Experience construction planning like never before
           </p>
         </div>
@@ -64,13 +64,13 @@ const AIToolsSection = () => {
 
                 {/* Card Content */}
                 <div className="p-6 flex flex-col flex-grow">
-                  <p className="text-field-gray dark:text-dark-text-secondary mb-6 leading-relaxed flex-grow">
+                  <p className="text-medium-gray dark:text-dark-text-secondary mb-6 leading-relaxed flex-grow">
                     {tool.description}
                   </p>
                   
                   <Link
                     href={tool.ctaLink}
-                    className="block w-full bg-army-black dark:bg-dark-surface-3 text-white dark:text-dark-text text-center py-4 rounded-lg font-semibold hover:bg-gray-800 dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 mt-auto"
+                    className="block w-full bg-charcoal dark:bg-dark-surface-3 text-white dark:text-dark-text text-center py-4 rounded-lg font-semibold hover:bg-dark-gray dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 mt-auto"
                   >
                     {tool.ctaText}
                   </Link>
@@ -82,12 +82,12 @@ const AIToolsSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <p className="text-lg text-field-gray dark:text-dark-text-secondary mb-6">
+          <p className="text-lg text-medium-gray dark:text-dark-text-secondary mb-6">
             Ready to revolutionize your construction project?
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-army-green dark:hover:bg-army-green transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg"
+            className="inline-block bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-mh-leather-tan dark:hover:bg-mh-leather-tan transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg"
           >
             Schedule a Demo
           </Link>

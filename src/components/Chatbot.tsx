@@ -121,7 +121,7 @@ const Chatbot: React.FC = () => {
         {!isOpen && (
           <button
             onClick={() => setIsOpen(true)}
-            className="bg-gradient-to-r from-mh-hunter-green to-army-gold hover:from-army-gold hover:to-mh-hunter-green text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 animate-pulse"
+            className="bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan hover:from-mh-leather-tan hover:to-mh-hunter-green text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 animate-pulse"
             aria-label="Open chat"
           >
             <MessageCircle size={24} />
@@ -133,7 +133,7 @@ const Chatbot: React.FC = () => {
       {isOpen && (
         <div className="fixed bottom-6 right-6 w-[calc(100vw-3rem)] sm:w-96 max-w-[calc(100vw-3rem)] h-[500px] max-h-[calc(100vh-8rem)] bg-white dark:bg-dark-surface border border-gray-200 dark:border-dark-border rounded-lg shadow-2xl z-50 flex flex-col overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-mh-hunter-green to-army-gold text-white p-4 flex items-center justify-between">
+          <div className="bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white p-4 flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Bot size={20} />
               <div>
@@ -160,8 +160,8 @@ const Chatbot: React.FC = () => {
                 <div
                   className={`max-w-[80%] p-3 rounded-lg ${
                     message.isBot
-                      ? 'bg-white dark:bg-dark-surface text-army-black dark:text-dark-text shadow-sm'
-                      : 'bg-gradient-to-r from-mh-hunter-green to-army-gold text-white'
+                      ? 'bg-white dark:bg-dark-surface text-black dark:text-dark-text shadow-sm'
+                      : 'bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white'
                   }`}
                 >
                   <div className="flex items-start space-x-2">
@@ -208,7 +208,7 @@ const Chatbot: React.FC = () => {
               <button
                 onClick={handleSendMessage}
                 disabled={!inputValue.trim() || isTyping}
-                className="bg-gradient-to-r from-mh-hunter-green to-army-gold hover:from-army-gold hover:to-mh-hunter-green text-white p-2 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan hover:from-mh-leather-tan hover:to-mh-hunter-green text-white p-2 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 aria-label="Send message"
               >
                 <Send size={18} />
