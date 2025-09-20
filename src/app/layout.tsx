@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
-      <body className="font-saira m-0 p-0 bg-white dark:bg-dark-surface text-army-black dark:text-dark-text transition-colors duration-300" style={{ fontFamily: 'Saira, sans-serif' }}>
+      <body className="font-saira m-0 p-0 bg-white dark:bg-dark-surface text-black dark:text-dark-text transition-colors duration-300" style={{ fontFamily: 'Saira, sans-serif' }}>
         <ThemeProvider>
           {children}
           <Chatbot />

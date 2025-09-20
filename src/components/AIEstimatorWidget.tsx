@@ -212,10 +212,10 @@ const AIEstimatorWidget: React.FC = () => {
 
   if (isProcessing) {
     return (
-      <div className="bg-gradient-to-br from-mh-hunter-green to-army-black text-white p-8 rounded-2xl shadow-2xl">
+      <div className="bg-gradient-to-br from-mh-hunter-green to-mh-hunter-green text-white p-8 rounded-2xl shadow-2xl">
         <div className="text-center">
-          <div className="w-20 h-20 bg-army-gold rounded-full flex items-center justify-center mx-auto mb-8 animate-pulse">
-            <Calculator size={32} className="text-army-black" />
+          <div className="w-20 h-20 bg-mh-leather-tan rounded-full flex items-center justify-center mx-auto mb-8 animate-pulse">
+            <Calculator size={32} className="text-mh-hunter-green" />
           </div>
           <h3 className="text-3xl font-bold mb-4">AI Processing Your Estimate</h3>
           <p className="text-gray-200 mb-8">Analyzing project requirements and calculating costs...</p>
@@ -223,11 +223,11 @@ const AIEstimatorWidget: React.FC = () => {
           <div className="space-y-4 max-w-md mx-auto">
             <div className="flex items-center justify-between p-3 bg-white/10 rounded-lg">
               <span>Analyzing project type</span>
-              <CheckCircle className="text-green-400" size={20} />
+              <CheckCircle className="text-mh-hunter-green" size={20} />
             </div>
             <div className="flex items-center justify-between p-3 bg-white/10 rounded-lg">
               <span>Calculating material costs</span>
-              <div className="w-5 h-5 border-2 border-army-gold border-t-transparent rounded-full animate-spin"></div>
+              <div className="w-5 h-5 border-2 border-mh-leather-tan border-t-transparent rounded-full animate-spin"></div>
             </div>
             <div className="flex items-center justify-between p-3 bg-white/10 rounded-lg opacity-50">
               <span>Generating timeline</span>
@@ -247,13 +247,13 @@ const AIEstimatorWidget: React.FC = () => {
     return (
       <div className="space-y-6">
         {/* Results Header */}
-        <div className="bg-gradient-to-br from-mh-hunter-green to-army-black text-white p-8 rounded-2xl shadow-2xl">
+        <div className="bg-gradient-to-br from-mh-hunter-green to-mh-hunter-green text-white p-8 rounded-2xl shadow-2xl">
           <div className="text-center">
-            <div className="w-20 h-20 bg-army-gold rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle size={32} className="text-army-black" />
+            <div className="w-20 h-20 bg-mh-leather-tan rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle size={32} className="text-mh-hunter-green" />
             </div>
             <h3 className="text-3xl font-bold mb-4">Your AI Estimate is Ready!</h3>
-            <div className="text-5xl font-bold text-army-gold mb-2">
+            <div className="text-5xl font-bold text-mh-leather-tan mb-2">
               ${estimateResult.totalCost.toLocaleString()}
             </div>
             <p className="text-gray-200">Estimated Project Cost ({estimateResult.accuracy} accuracy)</p>
@@ -262,7 +262,7 @@ const AIEstimatorWidget: React.FC = () => {
 
         {/* Cost Breakdown */}
         <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg">
-          <h3 className="text-2xl font-bold text-army-black dark:text-dark-text mb-6">Detailed Cost Breakdown</h3>
+          <h3 className="text-2xl font-bold text-mh-hunter-green dark:text-dark-text mb-6">Detailed Cost Breakdown</h3>
           <div className="space-y-3">
             {estimateResult.costBreakdown.map((item, index) => (
               <div key={index} className="flex justify-between items-center p-4 bg-gray-50 dark:bg-dark-surface-3 rounded-lg">
@@ -281,11 +281,11 @@ const AIEstimatorWidget: React.FC = () => {
 
         {/* Timeline */}
         <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg">
-          <h3 className="text-2xl font-bold text-army-black dark:text-dark-text mb-6">Project Timeline</h3>
+          <h3 className="text-2xl font-bold text-mh-hunter-green dark:text-dark-text mb-6">Project Timeline</h3>
           <div className="space-y-4">
             {estimateResult.timeline.map((phase, index) => (
               <div key={index} className="flex items-center space-x-4">
-                <div className="w-8 h-8 bg-army-gold rounded-full flex items-center justify-center text-army-black font-bold text-sm">
+                <div className="w-8 h-8 bg-mh-leather-tan rounded-full flex items-center justify-center text-mh-hunter-green font-bold text-sm">
                   {index + 1}
                 </div>
                 <div className="flex-1">
@@ -298,7 +298,7 @@ const AIEstimatorWidget: React.FC = () => {
           <div className="mt-6 p-4 bg-mh-hunter-green rounded-lg text-white">
             <div className="text-center">
               <span className="text-lg font-bold">Total Project Duration: </span>
-              <span className="text-xl font-bold text-army-gold">
+              <span className="text-xl font-bold text-mh-leather-tan">
                 {estimateResult.timeline.reduce((sum, phase) => sum + phase.weeks, 0)} weeks
               </span>
             </div>
@@ -327,12 +327,12 @@ const AIEstimatorWidget: React.FC = () => {
   }
 
   return (
-    <div className="bg-gradient-to-br from-mh-hunter-green to-army-black text-white p-8 rounded-2xl shadow-2xl">
+    <div className="bg-gradient-to-br from-mh-hunter-green to-mh-hunter-green text-white p-8 rounded-2xl shadow-2xl">
       {/* Header */}
       <div className="flex items-center justify-between mb-8">
         <div className="flex items-center">
-          <div className="w-12 h-12 bg-army-gold rounded-full flex items-center justify-center mr-4">
-            <Calculator size={24} className="text-army-black" />
+          <div className="w-12 h-12 bg-mh-leather-tan rounded-full flex items-center justify-center mr-4">
+            <Calculator size={24} className="text-mh-hunter-green" />
           </div>
           <div>
             <h3 className="text-2xl font-bold">AI Project Estimator</h3>
@@ -343,7 +343,7 @@ const AIEstimatorWidget: React.FC = () => {
           <div className="text-sm text-gray-200">Progress</div>
           <div className="w-32 h-2 bg-white/20 rounded-full mt-1">
             <div 
-              className="h-full bg-army-gold rounded-full transition-all duration-300"
+              className="h-full bg-mh-leather-tan rounded-full transition-all duration-300"
               style={{ width: `${(currentStep / totalSteps) * 100}%` }}
             ></div>
           </div>
@@ -362,13 +362,13 @@ const AIEstimatorWidget: React.FC = () => {
                   onClick={() => setProjectData(prev => ({ ...prev, projectType: type.value }))}
                   className={`p-4 rounded-lg border-2 transition-all duration-300 text-left ${
                     projectData.projectType === type.value
-                      ? 'border-army-gold bg-army-gold/20'
-                      : 'border-white/20 bg-white/10 hover:border-army-gold/50'
+                      ? 'border-mh-leather-tan bg-mh-leather-tan/20'
+                      : 'border-white/20 bg-white/10 hover:border-mh-leather-tan/50'
                   }`}
                 >
                   <h5 className="font-bold mb-1">{type.label}</h5>
                   <p className="text-sm text-gray-300">{type.description}</p>
-                  <p className="text-xs text-army-gold mt-2">~${type.baseCost}/sq ft base</p>
+                  <p className="text-xs text-mh-leather-tan mt-2">~${type.baseCost}/sq ft base</p>
                 </button>
               ))}
             </div>
@@ -386,7 +386,7 @@ const AIEstimatorWidget: React.FC = () => {
                   placeholder="Enter square footage (e.g., 10000)"
                   value={projectData.squareFootage || ''}
                   onChange={(e) => setProjectData(prev => ({ ...prev, squareFootage: parseInt(e.target.value) || 0 }))}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-army-gold focus:border-army-gold transition-all duration-300"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-mh-leather-tan focus:border-mh-leather-tan transition-all duration-300"
                 />
               </div>
               <div>
@@ -398,8 +398,8 @@ const AIEstimatorWidget: React.FC = () => {
                       onClick={() => setProjectData(prev => ({ ...prev, stories }))}
                       className={`p-3 rounded-lg border-2 transition-all duration-300 ${
                         projectData.stories === stories
-                          ? 'border-army-gold bg-army-gold/20'
-                          : 'border-white/20 bg-white/10 hover:border-army-gold/50'
+                          ? 'border-mh-leather-tan bg-mh-leather-tan/20'
+                          : 'border-white/20 bg-white/10 hover:border-mh-leather-tan/50'
                       }`}
                     >
                       {stories === 3 ? '3+ Stories' : `${stories} Story`}
@@ -421,8 +421,8 @@ const AIEstimatorWidget: React.FC = () => {
                   onClick={() => setProjectData(prev => ({ ...prev, quality: key }))}
                   className={`w-full p-4 rounded-lg border-2 transition-all duration-300 text-left ${
                     projectData.quality === key
-                      ? 'border-army-gold bg-army-gold/20'
-                      : 'border-white/20 bg-white/10 hover:border-army-gold/50'
+                      ? 'border-mh-leather-tan bg-mh-leather-tan/20'
+                      : 'border-white/20 bg-white/10 hover:border-mh-leather-tan/50'
                   }`}
                 >
                   <div className="flex justify-between items-center">
@@ -430,7 +430,7 @@ const AIEstimatorWidget: React.FC = () => {
                       <h5 className="font-bold mb-1">{quality.label}</h5>
                       <p className="text-sm text-gray-300">{quality.description}</p>
                     </div>
-                    <div className="text-army-gold font-bold">
+                    <div className="text-mh-leather-tan font-bold">
                       {quality.multiplier === 1.0 ? 'Base' : `+${Math.round((quality.multiplier - 1) * 100)}%`}
                     </div>
                   </div>
@@ -451,7 +451,7 @@ const AIEstimatorWidget: React.FC = () => {
                   placeholder="Enter project location (e.g., Pasco, WA)"
                   value={projectData.location}
                   onChange={(e) => setProjectData(prev => ({ ...prev, location: e.target.value }))}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-army-gold focus:border-army-gold transition-all duration-300"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-mh-leather-tan focus:border-mh-leather-tan transition-all duration-300"
                 />
               </div>
               <p className="text-sm text-gray-300">
@@ -472,17 +472,17 @@ const AIEstimatorWidget: React.FC = () => {
                   onClick={() => handleFeatureToggle(feature.value)}
                   className={`p-4 rounded-lg border-2 transition-all duration-300 text-left ${
                     projectData.features.includes(feature.value)
-                      ? 'border-army-gold bg-army-gold/20'
-                      : 'border-white/20 bg-white/10 hover:border-army-gold/50'
+                      ? 'border-mh-leather-tan bg-mh-leather-tan/20'
+                      : 'border-white/20 bg-white/10 hover:border-mh-leather-tan/50'
                   }`}
                 >
                   <div className="flex justify-between items-center">
                     <div>
                       <h5 className="font-bold mb-1">{feature.label}</h5>
-                      <p className="text-sm text-army-gold">+${feature.cost}/sq ft</p>
+                      <p className="text-sm text-mh-leather-tan">+${feature.cost}/sq ft</p>
                     </div>
                     {projectData.features.includes(feature.value) && (
-                      <CheckCircle className="text-army-gold" size={20} />
+                      <CheckCircle className="text-mh-leather-tan" size={20} />
                     )}
                   </div>
                 </button>
@@ -505,7 +505,7 @@ const AIEstimatorWidget: React.FC = () => {
         <button
           onClick={handleNext}
           disabled={!canProceed()}
-          className="flex items-center px-6 py-3 bg-army-gold hover:bg-yellow-500 text-army-black rounded-lg font-bold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex items-center px-6 py-3 bg-mh-leather-tan hover:bg-mh-leather-tan/90 text-mh-hunter-green rounded-lg font-bold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {currentStep === totalSteps ? 'Generate Estimate' : 'Next'}
           {currentStep !== totalSteps && <ChevronRight size={20} className="ml-2" />}

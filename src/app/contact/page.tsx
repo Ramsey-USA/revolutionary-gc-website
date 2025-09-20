@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import WhyChooseSection from '../../components/WhyChooseSection'
-import StarDecorations from '../../components/StarDecorations'
+import UniversalHeroSection from '../../components/UniversalHeroSection'
 import VisualCalendar from '../../components/VisualCalendar'
 import ScheduleButton from '../../components/ScheduleButton'
 
@@ -56,30 +56,22 @@ export default function ContactPage() {
     <main className="min-h-screen flex flex-col pt-20 bg-white dark:bg-dark-surface transition-colors duration-300">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-mh-hunter-green via-mh-hunter-green to-mh-leather-tan dark:from-dark-surface-2 dark:via-dark-surface-3 dark:to-dark-surface-2 text-white dark:text-dark-text overflow-hidden">
-        <div className="absolute inset-0 bg-black/20 dark:bg-black/40"></div>
-        
-        {/* Star decorations */}
-        <StarDecorations />
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-mh-leather-tan dark:bg-mh-leather-tan rounded-full mb-6 mx-auto transition-all duration-300 hover:scale-110 hover:rotate-12">
-            <svg className="w-10 h-10 text-white dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white dark:text-dark-text">
-            Get Your Project Started
-          </h1>
-          <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed opacity-90 text-white dark:text-dark-text-secondary">
-            Ready to build something exceptional? Let's discuss your project and create a customized solution that meets your needs with military precision and excellence.
-          </p>
-        </div>
-      </section>
+      <UniversalHeroSection
+        title="Get Your Project"
+        titleHighlight="Started"
+        subtitle="Ready to build something exceptional? Let's discuss your project and create a customized solution that meets your needs with military precision and excellence."
+        primaryButton={{
+          text: "Schedule Consultation",
+          href: "#contact-form"
+        }}
+        secondaryButton={{
+          text: "View Our Services",
+          href: "/services"
+        }}
+      />
 
       {/* Contact Section */}
-      <section className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
+      <section id="contact-form" className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             

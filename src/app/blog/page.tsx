@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import WhyChooseSection from '../../components/WhyChooseSection'
-import StarDecorations from '../../components/StarDecorations'
+import UniversalHeroSection from '../../components/UniversalHeroSection'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Calendar, Clock, ArrowRight, Tag, TrendingUp, Users, BookOpen, Award, MessageSquare } from 'lucide-react'
@@ -89,68 +89,61 @@ export default function BlogPage() {
     <main className="min-h-screen pt-20 bg-white dark:bg-dark-surface transition-colors duration-300">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}></div>
-        </div>
-        
-        {/* Star decorations */}
-        <StarDecorations />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white dark:text-dark-text">
-              Construction Insights & News
-            </h1>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed text-white dark:text-dark-text-secondary">
-              Stay updated with the latest construction innovations, project highlights, 
-              and industry insights from our 150+ years of combined team expertise.
-            </p>
-          </div>
+      <UniversalHeroSection
+        title="Construction Insights"
+        titleHighlight="& News"
+        subtitle="Stay updated with the latest construction innovations, project highlights, and industry insights from our 150+ years of combined team expertise."
+        primaryButton={{
+          text: "Read Featured Articles",
+          href: "#featured-articles"
+        }}
+        secondaryButton={{
+          text: "Subscribe to Newsletter",
+          href: "/contact"
+        }}
+      />
 
-          {/* Blog Statistics */}
+      {/* Blog Statistics */}
+      <section className="py-16 bg-white dark:bg-dark-surface-2 transition-colors duration-300">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center group">
-              <div className="bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-mh-leather-tan group-hover:bg-opacity-30 dark:group-hover:bg-mh-leather-tan dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12">
-                <BookOpen size={28} className="group-hover:text-white transition-colors duration-300" />
+              <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
+                <BookOpen size={28} className="text-mh-hunter-green dark:text-mh-hunter-green group-hover:text-white dark:group-hover:text-white transition-colors duration-300" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan mb-1 transition-all duration-300 group-hover:scale-110">50+</div>
-              <div className="text-sm md:text-base text-gray-200">Articles Published</div>
+              <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-1">50+</div>
+              <div className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary">Articles Published</div>
             </div>
             
             <div className="text-center group">
-              <div className="bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-mh-leather-tan group-hover:bg-opacity-30 dark:group-hover:bg-mh-leather-tan dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12">
-                <Users size={28} className="group-hover:text-white transition-colors duration-300" />
+              <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
+                <Users size={28} className="text-mh-hunter-green dark:text-mh-hunter-green group-hover:text-white dark:group-hover:text-white transition-colors duration-300" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan mb-1 transition-all duration-300 group-hover:scale-110">10K+</div>
-              <div className="text-sm md:text-base text-gray-200">Monthly Readers</div>
+              <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-1">10K+</div>
+              <div className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary">Monthly Readers</div>
             </div>
             
             <div className="text-center group">
-              <div className="bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-mh-leather-tan group-hover:bg-opacity-30 dark:group-hover:bg-mh-leather-tan dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12">
-                <TrendingUp size={28} className="group-hover:text-white transition-colors duration-300" />
+              <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
+                <TrendingUp size={28} className="text-mh-hunter-green dark:text-mh-hunter-green group-hover:text-white dark:group-hover:text-white transition-colors duration-300" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan mb-1 transition-all duration-300 group-hover:scale-110">95%</div>
-              <div className="text-sm md:text-base text-gray-200">Industry Accuracy</div>
+              <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-1">95%</div>
+              <div className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary">Industry Accuracy</div>
             </div>
             
             <div className="text-center group">
-              <div className="bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-30 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12">
-                <Award size={28} className="group-hover:text-white transition-colors duration-300" />
+              <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
+                <Award size={28} className="text-mh-hunter-green dark:text-mh-hunter-green group-hover:text-white dark:group-hover:text-white transition-colors duration-300" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan mb-1 transition-all duration-300 group-hover:scale-110">5+</div>
-              <div className="text-sm md:text-base text-gray-200">Years Publishing</div>
+              <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-1">5+</div>
+              <div className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary">Years Publishing</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Featured Articles */}
-      <section className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
+      <section id="featured-articles" className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text text-center mb-12">
             Featured Articles

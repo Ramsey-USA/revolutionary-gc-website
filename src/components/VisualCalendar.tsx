@@ -290,12 +290,12 @@ const VisualCalendar = ({ onScheduleComplete }: VisualCalendarProps) => {
 
       {/* Success Message */}
       {submitSuccess && (
-        <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 p-4 rounded-lg mb-6">
+        <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 border border-mh-hunter-green/30 dark:border-mh-hunter-green/40 p-4 rounded-lg mb-6">
           <div className="flex items-center space-x-3">
-            <CheckCircle className="w-6 h-6 text-green-500" />
+            <CheckCircle className="w-6 h-6 text-mh-hunter-green" />
             <div>
-              <h4 className="font-semibold text-green-800 dark:text-green-200">Consultation Scheduled!</h4>
-              <p className="text-green-700 dark:text-green-300 text-sm">We'll contact you within 24 hours to confirm your appointment.</p>
+              <h4 className="font-semibold text-mh-hunter-green dark:text-mh-hunter-green">Consultation Scheduled!</h4>
+              <p className="text-mh-hunter-green dark:text-mh-hunter-green text-sm">We'll contact you within 24 hours to confirm your appointment.</p>
             </div>
           </div>
         </div>

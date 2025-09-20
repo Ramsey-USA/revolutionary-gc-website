@@ -12,12 +12,12 @@ export default function EstimatePage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-mh-hunter-green via-army-black to-mh-hunter-green text-white overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-mh-hunter-green via-black to-mh-hunter-green text-white overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-army-gold/20 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-blue-500/20 to-transparent rounded-full blur-2xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full blur-xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-mh-leather-tan/20 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-mh-hunter-green/20 to-transparent rounded-full blur-2xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gradient-to-r from-mh-hunter-green/10 to-mh-leather-tan/10 rounded-full blur-xl"></div>
         </div>
         
         {/* Star decorations */}
@@ -25,50 +25,50 @@ export default function EstimatePage() {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="group flex items-center justify-center w-24 h-24 bg-gradient-to-r from-army-gold to-yellow-400 rounded-full mx-auto mb-8 hover:scale-110 hover:rotate-12 transition-all duration-500 shadow-2xl">
-              <Calculator size={48} className="text-army-black group-hover:scale-110 transition-transform duration-300" />
+            <div className="group flex items-center justify-center w-24 h-24 bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 rounded-full mx-auto mb-8 hover:scale-110 hover:rotate-12 transition-all duration-500 shadow-2xl">
+              <Calculator size={48} className="text-black group-hover:scale-110 transition-transform duration-300" />
             </div>
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
-              <span className="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></span>
+              <span className="w-3 h-3 bg-mh-hunter-green rounded-full mr-3 animate-pulse"></span>
               <span className="text-sm font-semibold">AI-Powered • Available 24/7 • Instant Results</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               AI Project 
-              <span className="bg-gradient-to-r from-army-gold to-yellow-400 bg-clip-text text-transparent"> Estimator</span>
+              <span className="bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 bg-clip-text text-transparent"> Estimator</span>
             </h1>
             <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed mb-12 text-gray-200">
               Get precise cost estimates and detailed project timelines instantly with our revolutionary AI technology. 
-              <span className="text-army-gold font-semibold">No waiting, no appointments needed.</span>
+              <span className="text-mh-leather-tan font-semibold">No waiting, no appointments needed.</span>
             </p>
             
             {/* AI Statistics Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-6xl mx-auto">
               <div className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full mx-auto mb-3 group-hover:rotate-12 transition-transform duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-mh-hunter-green to-mh-hunter-green/80 rounded-full mx-auto mb-3 group-hover:rotate-12 transition-transform duration-300">
                   <TrendingUp size={24} className="text-white" />
                 </div>
-                <div className="text-2xl font-bold text-army-gold mb-1">±5%</div>
+                <div className="text-2xl font-bold text-mh-leather-tan mb-1">±5%</div>
                 <div className="text-sm text-gray-300">AI Accuracy</div>
               </div>
               <div className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-400 rounded-full mx-auto mb-3 group-hover:rotate-12 transition-transform duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 rounded-full mx-auto mb-3 group-hover:rotate-12 transition-transform duration-300">
                   <Clock size={24} className="text-white" />
                 </div>
-                <div className="text-2xl font-bold text-army-gold mb-1">3 Min</div>
+                <div className="text-2xl font-bold text-mh-leather-tan mb-1">3 Min</div>
                 <div className="text-sm text-gray-300">Average Time</div>
               </div>
               <div className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-400 rounded-full mx-auto mb-3 group-hover:rotate-12 transition-transform duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full mx-auto mb-3 group-hover:rotate-12 transition-transform duration-300">
                   <DollarSign size={24} className="text-white" />
                 </div>
-                <div className="text-2xl font-bold text-army-gold mb-1">$0</div>
+                <div className="text-2xl font-bold text-mh-leather-tan mb-1">$0</div>
                 <div className="text-sm text-gray-300">Cost to Use</div>
               </div>
               <div className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-orange-500 to-red-400 rounded-full mx-auto mb-3 group-hover:rotate-12 transition-transform duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full mx-auto mb-3 group-hover:rotate-12 transition-transform duration-300">
                   <span className="text-white font-bold">24/7</span>
                 </div>
-                <div className="text-2xl font-bold text-army-gold mb-1">Always</div>
+                <div className="text-2xl font-bold text-mh-leather-tan mb-1">Always</div>
                 <div className="text-sm text-gray-300">Available</div>
               </div>
             </div>
@@ -77,14 +77,14 @@ export default function EstimatePage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a
                 href="#ai-estimator"
-                className="group bg-army-gold hover:bg-yellow-500 text-army-black px-10 py-4 rounded-xl font-bold text-lg transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 hover:rotate-1 shadow-2xl hover:shadow-3xl"
+                className="group bg-mh-leather-tan hover:bg-mh-leather-tan/80 text-black px-10 py-4 rounded-xl font-bold text-lg transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 hover:rotate-1 shadow-2xl hover:shadow-3xl"
               >
                 Try AI Estimator Now
                 <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300">🤖</span>
               </a>
               <a
                 href="/contact"
-                className="group border-2 border-white hover:border-army-gold text-white hover:text-army-gold px-10 py-4 rounded-xl font-bold text-lg transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 hover:-rotate-1 hover:bg-white/10"
+                className="group border-2 border-white hover:border-mh-leather-tan text-white hover:text-mh-leather-tan px-10 py-4 rounded-xl font-bold text-lg transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 hover:-rotate-1 hover:bg-white/10"
               >
                 Need Personal Consultation?
                 <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300">👥</span>
@@ -98,9 +98,9 @@ export default function EstimatePage() {
       <section className="py-20 bg-gray-50 dark:bg-dark-surface-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-army-black dark:text-dark-text mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-dark-text mb-6">
               Choose Your 
-              <span className="bg-gradient-to-r from-mh-hunter-green to-army-gold bg-clip-text text-transparent"> Estimation Method</span>
+              <span className="bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan bg-clip-text text-transparent"> Estimation Method</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
               We offer two powerful ways to estimate your project. Choose the option that best fits your needs and timeline.
@@ -109,9 +109,9 @@ export default function EstimatePage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* AI Estimator Card */}
-            <div className="group bg-gradient-to-br from-mh-hunter-green to-army-black rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-500 hover:-translate-y-3 hover:rotate-1 shadow-2xl hover:shadow-3xl">
+            <div className="group bg-gradient-to-br from-mh-hunter-green to-black rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-500 hover:-translate-y-3 hover:rotate-1 shadow-2xl hover:shadow-3xl">
               <div className="text-center mb-8">
-                <div className="w-20 h-20 bg-gradient-to-r from-army-gold to-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform duration-300">
                   <span className="text-3xl">🤖</span>
                 </div>
                 <h3 className="text-3xl font-bold mb-4">AI Estimator</h3>
@@ -120,37 +120,37 @@ export default function EstimatePage() {
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                  <div className="w-6 h-6 bg-mh-hunter-green rounded-full flex items-center justify-center mt-1 flex-shrink-0">
                     <span className="text-white text-xs">✓</span>
                   </div>
                   <span>Instant results in 3-5 minutes</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                  <div className="w-6 h-6 bg-mh-hunter-green rounded-full flex items-center justify-center mt-1 flex-shrink-0">
                     <span className="text-white text-xs">✓</span>
                   </div>
                   <span>Available 24/7, no appointments needed</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                  <div className="w-6 h-6 bg-mh-hunter-green rounded-full flex items-center justify-center mt-1 flex-shrink-0">
                     <span className="text-white text-xs">✓</span>
                   </div>
                   <span>±5% accuracy based on 1,000+ projects</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                  <div className="w-6 h-6 bg-mh-hunter-green rounded-full flex items-center justify-center mt-1 flex-shrink-0">
                     <span className="text-white text-xs">✓</span>
                   </div>
                   <span>Detailed cost breakdown by category</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                  <div className="w-6 h-6 bg-mh-hunter-green rounded-full flex items-center justify-center mt-1 flex-shrink-0">
                     <span className="text-white text-xs">✓</span>
                   </div>
                   <span>Timeline projections and milestones</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                  <div className="w-6 h-6 bg-mh-hunter-green rounded-full flex items-center justify-center mt-1 flex-shrink-0">
                     <span className="text-white text-xs">✓</span>
                   </div>
                   <span>Free to use, no commitment</span>
@@ -158,7 +158,7 @@ export default function EstimatePage() {
               </div>
 
               <div className="border-t border-white/20 pt-6">
-                <p className="text-army-gold font-semibold mb-4">Best for:</p>
+                <p className="text-mh-leather-tan font-semibold mb-4">Best for:</p>
                 <ul className="text-sm text-gray-300 space-y-2">
                   <li>• Quick budget planning and feasibility</li>
                   <li>• Standard construction projects</li>
@@ -169,56 +169,56 @@ export default function EstimatePage() {
 
               <a
                 href="#ai-estimator"
-                className="w-full bg-army-gold hover:bg-yellow-500 text-army-black px-8 py-4 rounded-xl font-bold text-lg mt-8 transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl text-center block"
+                className="w-full bg-mh-leather-tan hover:bg-mh-leather-tan/80 text-black px-8 py-4 rounded-xl font-bold text-lg mt-8 transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl text-center block"
               >
                 Try AI Estimator Now
               </a>
             </div>
 
             {/* In-Person Consultation Card */}
-            <div className="group bg-white dark:bg-dark-surface-3 rounded-2xl p-8 border-2 border-army-gold transform hover:scale-105 transition-all duration-500 hover:-translate-y-3 hover:-rotate-1 shadow-2xl hover:shadow-3xl">
+            <div className="group bg-white dark:bg-dark-surface-3 rounded-2xl p-8 border-2 border-mh-leather-tan transform hover:scale-105 transition-all duration-500 hover:-translate-y-3 hover:-rotate-1 shadow-2xl hover:shadow-3xl">
               <div className="text-center mb-8">
-                <div className="w-20 h-20 bg-gradient-to-r from-army-gold to-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform duration-300">
                   <span className="text-3xl">👥</span>
                 </div>
-                <h3 className="text-3xl font-bold mb-4 text-army-black dark:text-dark-text">Personal Consultation</h3>
+                <h3 className="text-3xl font-bold mb-4 text-black dark:text-dark-text">Personal Consultation</h3>
                 <p className="text-gray-600 dark:text-dark-text-secondary">Detailed, customized estimates with expert guidance</p>
               </div>
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-army-gold rounded-full flex items-center justify-center mt-1 flex-shrink-0">
-                    <span className="text-army-black text-xs">✓</span>
+                  <div className="w-6 h-6 bg-mh-leather-tan rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                    <span className="text-black text-xs">✓</span>
                   </div>
                   <span className="text-gray-700 dark:text-dark-text-secondary">Site visit and detailed assessment</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-army-gold rounded-full flex items-center justify-center mt-1 flex-shrink-0">
-                    <span className="text-army-black text-xs">✓</span>
+                  <div className="w-6 h-6 bg-mh-leather-tan rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                    <span className="text-black text-xs">✓</span>
                   </div>
                   <span className="text-gray-700 dark:text-dark-text-secondary">Custom solutions for unique challenges</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-army-gold rounded-full flex items-center justify-center mt-1 flex-shrink-0">
-                    <span className="text-army-black text-xs">✓</span>
+                  <div className="w-6 h-6 bg-mh-leather-tan rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                    <span className="text-black text-xs">✓</span>
                   </div>
                   <span className="text-gray-700 dark:text-dark-text-secondary">Expert recommendations and alternatives</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-army-gold rounded-full flex items-center justify-center mt-1 flex-shrink-0">
-                    <span className="text-army-black text-xs">✓</span>
+                  <div className="w-6 h-6 bg-mh-leather-tan rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                    <span className="text-black text-xs">✓</span>
                   </div>
                   <span className="text-gray-700 dark:text-dark-text-secondary">Regulatory and permit guidance</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-army-gold rounded-full flex items-center justify-center mt-1 flex-shrink-0">
-                    <span className="text-army-black text-xs">✓</span>
+                  <div className="w-6 h-6 bg-mh-leather-tan rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                    <span className="text-black text-xs">✓</span>
                   </div>
                   <span className="text-gray-700 dark:text-dark-text-secondary">Value engineering opportunities</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-army-gold rounded-full flex items-center justify-center mt-1 flex-shrink-0">
-                    <span className="text-army-black text-xs">✓</span>
+                  <div className="w-6 h-6 bg-mh-leather-tan rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                    <span className="text-black text-xs">✓</span>
                   </div>
                   <span className="text-gray-700 dark:text-dark-text-secondary">Detailed proposal and contract</span>
                 </div>
@@ -242,7 +242,7 @@ export default function EstimatePage() {
 
           {/* Process Comparison */}
           <div className="mt-20">
-            <h3 className="text-3xl font-bold text-center text-army-black dark:text-dark-text mb-12">
+            <h3 className="text-3xl font-bold text-center text-black dark:text-dark-text mb-12">
               Process Comparison
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -271,25 +271,25 @@ export default function EstimatePage() {
                 </ol>
               </div>
               <div className="bg-white dark:bg-dark-surface-3 rounded-xl p-6 shadow-lg">
-                <h4 className="text-xl font-bold text-army-gold mb-4 flex items-center">
-                  <span className="w-8 h-8 bg-army-gold rounded-full flex items-center justify-center text-army-black text-sm mr-3">👥</span>
+                <h4 className="text-xl font-bold text-mh-leather-tan mb-4 flex items-center">
+                  <span className="w-8 h-8 bg-mh-leather-tan rounded-full flex items-center justify-center text-black text-sm mr-3">👥</span>
                   Consultation Process
                 </h4>
                 <ol className="space-y-3 text-gray-600 dark:text-dark-text-secondary">
                   <li className="flex items-start">
-                    <span className="w-6 h-6 bg-army-gold text-army-black rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">1</span>
+                    <span className="w-6 h-6 bg-mh-leather-tan text-black rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">1</span>
                     Submit project inquiry through contact form
                   </li>
                   <li className="flex items-start">
-                    <span className="w-6 h-6 bg-army-gold text-army-black rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">2</span>
+                    <span className="w-6 h-6 bg-mh-leather-tan text-black rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">2</span>
                     Schedule site visit and requirements meeting
                   </li>
                   <li className="flex items-start">
-                    <span className="w-6 h-6 bg-army-gold text-army-black rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">3</span>
+                    <span className="w-6 h-6 bg-mh-leather-tan text-black rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">3</span>
                     Receive custom proposal within 5-7 days
                   </li>
                   <li className="flex items-start">
-                    <span className="w-6 h-6 bg-army-gold text-army-black rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">4</span>
+                    <span className="w-6 h-6 bg-mh-leather-tan text-black rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">4</span>
                     Review, refine, and finalize project agreement
                   </li>
                 </ol>
@@ -303,9 +303,9 @@ export default function EstimatePage() {
       <section id="ai-estimator" className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-army-black dark:text-dark-text mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-dark-text mb-6">
               Try Our 
-              <span className="bg-gradient-to-r from-mh-hunter-green to-army-gold bg-clip-text text-transparent">AI Estimator</span>
+              <span className="bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan bg-clip-text text-transparent">AI Estimator</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
               Experience the future of construction estimation. Get detailed cost breakdowns and timelines in minutes.
@@ -320,8 +320,8 @@ export default function EstimatePage() {
             <div className="space-y-6">
               <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-dark-border">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-bold text-army-black dark:text-dark-text">Cost Breakdown Preview</h3>
-                  <div className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-semibold">
+                  <h3 className="text-2xl font-bold text-black dark:text-dark-text">Cost Breakdown Preview</h3>
+                  <div className="px-3 py-1 bg-mh-hunter-green/20 dark:bg-mh-hunter-green/30 text-mh-hunter-green dark:text-mh-hunter-green rounded-full text-sm font-semibold">
                     ±5% Accuracy
                   </div>
                 </div>
@@ -358,31 +358,31 @@ export default function EstimatePage() {
               </div>
 
               <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-dark-border">
-                <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-6">Timeline Projection</h3>
+                <h3 className="text-xl font-bold text-black dark:text-dark-text mb-6">Timeline Projection</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
-                    <div className="w-4 h-4 bg-army-gold rounded-full"></div>
+                    <div className="w-4 h-4 bg-mh-leather-tan rounded-full"></div>
                     <span className="flex-1 text-gray-700 dark:text-dark-text-secondary">Design & Permits</span>
                     <span className="font-semibold text-mh-hunter-green">8-12 weeks</span>
                   </div>
                   <div className="flex items-center space-x-4">
-                    <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
+                    <div className="w-4 h-4 bg-mh-hunter-green rounded-full"></div>
                     <span className="flex-1 text-gray-700 dark:text-dark-text-secondary">Site Preparation</span>
                     <span className="font-semibold text-mh-hunter-green">4-6 weeks</span>
                   </div>
                   <div className="flex items-center space-x-4">
-                    <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                    <div className="w-4 h-4 bg-mh-leather-tan rounded-full"></div>
                     <span className="flex-1 text-gray-700 dark:text-dark-text-secondary">Construction</span>
                     <span className="font-semibold text-mh-hunter-green">24-28 weeks</span>
                   </div>
                   <div className="flex items-center space-x-4">
-                    <div className="w-4 h-4 bg-purple-500 rounded-full"></div>
+                    <div className="w-4 h-4 bg-mh-hunter-green rounded-full"></div>
                     <span className="flex-1 text-gray-700 dark:text-dark-text-secondary">Final Inspections</span>
                     <span className="font-semibold text-mh-hunter-green">2-3 weeks</span>
                   </div>
                   <div className="border-t border-gray-200 dark:border-dark-border pt-4 mt-4">
                     <div className="flex justify-between items-center">
-                      <span className="text-lg font-bold text-army-black dark:text-dark-text">Total Timeline</span>
+                      <span className="text-lg font-bold text-black dark:text-dark-text">Total Timeline</span>
                       <span className="text-xl font-bold text-mh-hunter-green">38-49 weeks</span>
                     </div>
                   </div>
@@ -396,7 +396,7 @@ export default function EstimatePage() {
                 <div className="space-y-3">
                   <a 
                     href="/contact" 
-                    className="inline-block bg-mh-hunter-green hover:bg-army-green text-white px-8 py-3 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 mr-4"
+                    className="inline-block bg-mh-hunter-green hover:bg-mh-hunter-green/90 text-white px-8 py-3 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 mr-4"
                   >
                     Get Detailed Quote Now
                   </a>
@@ -416,9 +416,9 @@ export default function EstimatePage() {
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white dark:from-dark-surface-2 dark:to-dark-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-army-black dark:text-dark-text mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-dark-text mb-6">
               AI-Powered 
-              <span className="bg-gradient-to-r from-mh-hunter-green to-army-gold bg-clip-text text-transparent"> Precision</span>
+              <span className="bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan bg-clip-text text-transparent"> Precision</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
               Our AI estimator leverages machine learning and military-grade precision to deliver unmatched accuracy and speed.
@@ -428,24 +428,24 @@ export default function EstimatePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Instant Results */}
             <div className="group bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-dark-border hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-hunter-green/80 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                 <Clock size={32} className="text-white" />
               </div>
-              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green transition-colors duration-300">Lightning Fast Results</h3>
+              <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green transition-colors duration-300">Lightning Fast Results</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-6">
                 Get comprehensive estimates in under 3 minutes. Our AI processes thousands of data points instantly to deliver accurate cost breakdowns.
               </p>
               <div className="space-y-2 text-sm">
-                <div className="flex items-center text-green-600 dark:text-green-400">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                <div className="flex items-center text-mh-hunter-green dark:text-mh-hunter-green">
+                  <span className="w-2 h-2 bg-mh-hunter-green rounded-full mr-2"></span>
                   Average response: 2.8 minutes
                 </div>
-                <div className="flex items-center text-green-600 dark:text-green-400">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                <div className="flex items-center text-mh-hunter-green dark:text-mh-hunter-green">
+                  <span className="w-2 h-2 bg-mh-hunter-green rounded-full mr-2"></span>
                   24/7 availability
                 </div>
-                <div className="flex items-center text-green-600 dark:text-green-400">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                <div className="flex items-center text-mh-hunter-green dark:text-mh-hunter-green">
+                  <span className="w-2 h-2 bg-mh-hunter-green rounded-full mr-2"></span>
                   No waiting for callbacks
                 </div>
               </div>
@@ -453,24 +453,24 @@ export default function EstimatePage() {
 
             {/* Precision Accuracy */}
             <div className="group bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-dark-border hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                 <TrendingUp size={32} className="text-white" />
               </div>
-              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green transition-colors duration-300">Military-Grade Accuracy</h3>
+              <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green transition-colors duration-300">Military-Grade Accuracy</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-6">
                 Trained on 1,000+ completed projects with ±5% accuracy. Our AI learns from every project to continuously improve precision.
               </p>
               <div className="space-y-2 text-sm">
-                <div className="flex items-center text-blue-600 dark:text-blue-400">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                <div className="flex items-center text-mh-leather-tan dark:text-mh-leather-tan">
+                  <span className="w-2 h-2 bg-mh-leather-tan rounded-full mr-2"></span>
                   ±5% cost accuracy
                 </div>
-                <div className="flex items-center text-blue-600 dark:text-blue-400">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                <div className="flex items-center text-mh-leather-tan dark:text-mh-leather-tan">
+                  <span className="w-2 h-2 bg-mh-leather-tan rounded-full mr-2"></span>
                   Validated against real projects
                 </div>
-                <div className="flex items-center text-blue-600 dark:text-blue-400">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                <div className="flex items-center text-mh-leather-tan dark:text-mh-leather-tan">
+                  <span className="w-2 h-2 bg-mh-leather-tan rounded-full mr-2"></span>
                   Continuous learning algorithm
                 </div>
               </div>
@@ -478,24 +478,24 @@ export default function EstimatePage() {
 
             {/* Comprehensive Analysis */}
             <div className="group bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-dark-border hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-hunter-green/80 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                 <DollarSign size={32} className="text-white" />
               </div>
-              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green transition-colors duration-300">Detailed Breakdown</h3>
+              <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green transition-colors duration-300">Detailed Breakdown</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-6">
                 Complete cost analysis by category, timeline projections, and risk assessments. Everything you need for informed decision-making.
               </p>
               <div className="space-y-2 text-sm">
-                <div className="flex items-center text-purple-600 dark:text-purple-400">
-                  <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                <div className="flex items-center text-mh-hunter-green dark:text-mh-hunter-green">
+                  <span className="w-2 h-2 bg-mh-hunter-green rounded-full mr-2"></span>
                   15+ cost categories
                 </div>
-                <div className="flex items-center text-purple-600 dark:text-purple-400">
-                  <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                <div className="flex items-center text-mh-hunter-green dark:text-mh-hunter-green">
+                  <span className="w-2 h-2 bg-mh-hunter-green rounded-full mr-2"></span>
                   Timeline with milestones
                 </div>
-                <div className="flex items-center text-purple-600 dark:text-purple-400">
-                  <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                <div className="flex items-center text-mh-hunter-green dark:text-mh-hunter-green">
+                  <span className="w-2 h-2 bg-mh-hunter-green rounded-full mr-2"></span>
                   Risk factor analysis
                 </div>
               </div>
@@ -503,24 +503,24 @@ export default function EstimatePage() {
 
             {/* Data-Driven Insights */}
             <div className="group bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-dark-border hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1">
-              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                 <span className="text-white text-xl font-bold">📊</span>
               </div>
-              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green transition-colors duration-300">Market Intelligence</h3>
+              <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green transition-colors duration-300">Market Intelligence</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-6">
                 Real-time market data integration for material costs, labor rates, and regional variations. Always current, always accurate.
               </p>
               <div className="space-y-2 text-sm">
-                <div className="flex items-center text-orange-600 dark:text-orange-400">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+                <div className="flex items-center text-mh-leather-tan dark:text-mh-leather-tan">
+                  <span className="w-2 h-2 bg-mh-leather-tan rounded-full mr-2"></span>
                   Live material pricing
                 </div>
-                <div className="flex items-center text-orange-600 dark:text-orange-400">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+                <div className="flex items-center text-mh-leather-tan dark:text-mh-leather-tan">
+                  <span className="w-2 h-2 bg-mh-leather-tan rounded-full mr-2"></span>
                   Regional cost adjustments
                 </div>
-                <div className="flex items-center text-orange-600 dark:text-orange-400">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+                <div className="flex items-center text-mh-leather-tan dark:text-mh-leather-tan">
+                  <span className="w-2 h-2 bg-mh-leather-tan rounded-full mr-2"></span>
                   Economic trend analysis
                 </div>
               </div>
@@ -528,24 +528,24 @@ export default function EstimatePage() {
 
             {/* Smart Recommendations */}
             <div className="group bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-dark-border hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1">
-              <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-blue-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                 <span className="text-white text-xl font-bold">🎯</span>
               </div>
-              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green transition-colors duration-300">Smart Recommendations</h3>
+              <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green transition-colors duration-300">Smart Recommendations</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-6">
                 AI-powered suggestions for cost optimization, alternative materials, and value engineering opportunities.
               </p>
               <div className="space-y-2 text-sm">
-                <div className="flex items-center text-teal-600 dark:text-teal-400">
-                  <span className="w-2 h-2 bg-teal-500 rounded-full mr-2"></span>
+                <div className="flex items-center text-mh-hunter-green dark:text-mh-hunter-green">
+                  <span className="w-2 h-2 bg-mh-hunter-green rounded-full mr-2"></span>
                   Cost optimization tips
                 </div>
-                <div className="flex items-center text-teal-600 dark:text-teal-400">
-                  <span className="w-2 h-2 bg-teal-500 rounded-full mr-2"></span>
+                <div className="flex items-center text-mh-hunter-green dark:text-mh-hunter-green">
+                  <span className="w-2 h-2 bg-mh-hunter-green rounded-full mr-2"></span>
                   Alternative material options
                 </div>
-                <div className="flex items-center text-teal-600 dark:text-teal-400">
-                  <span className="w-2 h-2 bg-teal-500 rounded-full mr-2"></span>
+                <div className="flex items-center text-mh-hunter-green dark:text-mh-hunter-green">
+                  <span className="w-2 h-2 bg-mh-hunter-green rounded-full mr-2"></span>
                   Value engineering insights
                 </div>
               </div>
@@ -553,10 +553,10 @@ export default function EstimatePage() {
 
             {/* Seamless Integration */}
             <div className="group bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-dark-border hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1">
-              <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-army-gold rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                 <span className="text-white text-xl font-bold">🔗</span>
               </div>
-              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green transition-colors duration-300">Seamless Transition</h3>
+              <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green transition-colors duration-300">Seamless Transition</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-6">
                 Easily transition from AI estimate to personal consultation. Your data carries forward for detailed project planning.
               </p>
@@ -580,13 +580,13 @@ export default function EstimatePage() {
       </section>
 
       {/* Technology Explanation Section */}
-      <section className="py-20 bg-army-black text-white">
+      <section className="py-20 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 The Science Behind 
-                <span className="bg-gradient-to-r from-army-gold to-yellow-400 bg-clip-text text-transparent"> Our AI</span>
+                <span className="bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 bg-clip-text text-transparent"> Our AI</span>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Our AI estimator combines military precision with cutting-edge machine learning to deliver unprecedented accuracy in construction cost estimation.
@@ -594,8 +594,8 @@ export default function EstimatePage() {
 
               <div className="space-y-6">
                 <div className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                  <h3 className="text-xl font-bold text-army-gold mb-3 flex items-center">
-                    <span className="w-8 h-8 bg-army-gold rounded-full flex items-center justify-center text-army-black text-sm mr-3 group-hover:rotate-12 transition-transform duration-300">🧠</span>
+                  <h3 className="text-xl font-bold text-mh-leather-tan mb-3 flex items-center">
+                    <span className="w-8 h-8 bg-mh-leather-tan rounded-full flex items-center justify-center text-black text-sm mr-3 group-hover:rotate-12 transition-transform duration-300">🧠</span>
                     Machine Learning Algorithms
                   </h3>
                   <p className="text-gray-300">
@@ -604,8 +604,8 @@ export default function EstimatePage() {
                 </div>
 
                 <div className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                  <h3 className="text-xl font-bold text-army-gold mb-3 flex items-center">
-                    <span className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm mr-3 group-hover:rotate-12 transition-transform duration-300">📊</span>
+                  <h3 className="text-xl font-bold text-mh-leather-tan mb-3 flex items-center">
+                    <span className="w-8 h-8 bg-mh-hunter-green rounded-full flex items-center justify-center text-white text-sm mr-3 group-hover:rotate-12 transition-transform duration-300">📊</span>
                     Real-Time Data Integration
                   </h3>
                   <p className="text-gray-300">
@@ -614,8 +614,8 @@ export default function EstimatePage() {
                 </div>
 
                 <div className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                  <h3 className="text-xl font-bold text-army-gold mb-3 flex items-center">
-                    <span className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm mr-3 group-hover:rotate-12 transition-transform duration-300">🔒</span>
+                  <h3 className="text-xl font-bold text-mh-leather-tan mb-3 flex items-center">
+                    <span className="w-8 h-8 bg-mh-leather-tan rounded-full flex items-center justify-center text-white text-sm mr-3 group-hover:rotate-12 transition-transform duration-300">🔒</span>
                     Military-Grade Security
                   </h3>
                   <p className="text-gray-300">
@@ -626,12 +626,12 @@ export default function EstimatePage() {
             </div>
 
             <div className="relative">
-              <div className="bg-gradient-to-br from-mh-hunter-green to-army-green rounded-2xl p-8 shadow-2xl">
+              <div className="bg-gradient-to-br from-mh-hunter-green to-mh-hunter-green rounded-2xl p-8 shadow-2xl">
                 <h3 className="text-2xl font-bold mb-6 text-center">AI Processing Pipeline</h3>
                 
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
-                    <div className="w-10 h-10 bg-army-gold rounded-full flex items-center justify-center text-army-black font-bold">1</div>
+                    <div className="w-10 h-10 bg-mh-leather-tan rounded-full flex items-center justify-center text-black font-bold">1</div>
                     <div>
                       <h4 className="font-semibold">Data Input</h4>
                       <p className="text-sm text-gray-300">Project specifications parsed and validated</p>
@@ -639,7 +639,7 @@ export default function EstimatePage() {
                   </div>
                   
                   <div className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
-                    <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">2</div>
+                    <div className="w-10 h-10 bg-mh-hunter-green rounded-full flex items-center justify-center text-white font-bold">2</div>
                     <div>
                       <h4 className="font-semibold">Pattern Matching</h4>
                       <p className="text-sm text-gray-300">AI finds similar projects in database</p>
@@ -647,7 +647,7 @@ export default function EstimatePage() {
                   </div>
                   
                   <div className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
-                    <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">3</div>
+                    <div className="w-10 h-10 bg-mh-leather-tan rounded-full flex items-center justify-center text-white font-bold">3</div>
                     <div>
                       <h4 className="font-semibold">Cost Calculation</h4>
                       <p className="text-sm text-gray-300">Real-time pricing and labor analysis</p>
@@ -655,7 +655,7 @@ export default function EstimatePage() {
                   </div>
                   
                   <div className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
-                    <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">4</div>
+                    <div className="w-10 h-10 bg-mh-hunter-green/80 rounded-full flex items-center justify-center text-white font-bold">4</div>
                     <div>
                       <h4 className="font-semibold">Validation</h4>
                       <p className="text-sm text-gray-300">Cross-reference with expert knowledge</p>
@@ -663,7 +663,7 @@ export default function EstimatePage() {
                   </div>
                   
                   <div className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
-                    <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold">5</div>
+                    <div className="w-10 h-10 bg-mh-leather-tan/80 rounded-full flex items-center justify-center text-white font-bold">5</div>
                     <div>
                       <h4 className="font-semibold">Result Generation</h4>
                       <p className="text-sm text-gray-300">Detailed breakdown and timeline</p>
@@ -672,8 +672,8 @@ export default function EstimatePage() {
                 </div>
 
                 <div className="mt-8 text-center">
-                  <div className="inline-flex items-center bg-green-500/20 rounded-full px-4 py-2">
-                    <span className="w-3 h-3 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                  <div className="inline-flex items-center bg-mh-hunter-green/20 rounded-full px-4 py-2">
+                    <span className="w-3 h-3 bg-mh-hunter-green rounded-full mr-2 animate-pulse"></span>
                     <span className="text-sm font-semibold">Average Processing Time: 2.8 seconds</span>
                   </div>
                 </div>
@@ -687,9 +687,9 @@ export default function EstimatePage() {
       <section className="py-20 bg-gray-50 dark:bg-dark-surface-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-army-black dark:text-dark-text mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-dark-text mb-6">
               Proven 
-              <span className="bg-gradient-to-r from-mh-hunter-green to-army-gold bg-clip-text text-transparent"> Results</span>
+              <span className="bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan bg-clip-text text-transparent"> Results</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
               Our AI estimator has been tested against real project outcomes with remarkable accuracy.
@@ -698,34 +698,34 @@ export default function EstimatePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 bg-gradient-to-r from-mh-hunter-green to-mh-hunter-green/80 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white text-2xl font-bold">95%</span>
               </div>
-              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2">Accuracy Rate</h3>
+              <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2">Accuracy Rate</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary">Within ±5% of final costs</p>
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white text-2xl font-bold">3m</span>
               </div>
-              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2">Average Time</h3>
+              <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2">Average Time</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary">From input to estimate</p>
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 bg-gradient-to-r from-mh-hunter-green/80 to-mh-leather-tan/60 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white text-2xl font-bold">1K+</span>
               </div>
-              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2">Training Projects</h3>
+              <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2">Training Projects</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary">Completed builds analyzed</p>
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 bg-gradient-to-r from-mh-leather-tan/80 to-mh-hunter-green/60 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white text-2xl font-bold">24/7</span>
               </div>
-              <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2">Availability</h3>
+              <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2">Availability</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary">Always ready to estimate</p>
             </div>
           </div>
@@ -738,32 +738,32 @@ export default function EstimatePage() {
                   <span className="text-white font-bold">JD</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-army-black dark:text-dark-text">John Davidson</h4>
+                  <h4 className="font-bold text-black dark:text-dark-text">John Davidson</h4>
                   <p className="text-gray-600 dark:text-dark-text-secondary">City Planning Director</p>
                 </div>
               </div>
               <p className="text-gray-700 dark:text-dark-text-secondary italic mb-4">
                 "The AI estimator was within 3% of our final construction costs for the new fire station. Incredible accuracy for such a quick turnaround."
               </p>
-              <div className="flex text-army-gold">
+              <div className="flex text-mh-leather-tan">
                 <span>★★★★★</span>
               </div>
             </div>
 
             <div className="bg-white dark:bg-dark-surface-3 rounded-2xl p-8 shadow-lg">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-army-gold rounded-full flex items-center justify-center mr-4">
-                  <span className="text-army-black font-bold">SM</span>
+                <div className="w-12 h-12 bg-mh-leather-tan rounded-full flex items-center justify-center mr-4">
+                  <span className="text-black font-bold">SM</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-army-black dark:text-dark-text">Sarah Martinez</h4>
+                  <h4 className="font-bold text-black dark:text-dark-text">Sarah Martinez</h4>
                   <p className="text-gray-600 dark:text-dark-text-secondary">Healthcare Administrator</p>
                 </div>
               </div>
               <p className="text-gray-700 dark:text-dark-text-secondary italic mb-4">
                 "We used the AI estimator for budget planning on our medical facility expansion. The detailed breakdown helped us secure funding immediately."
               </p>
-              <div className="flex text-army-gold">
+              <div className="flex text-mh-leather-tan">
                 <span>★★★★★</span>
               </div>
             </div>
@@ -772,17 +772,17 @@ export default function EstimatePage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="relative bg-gradient-to-br from-mh-hunter-green to-army-black text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-mh-hunter-green to-black text-white py-20 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-army-gold/20 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-blue-500/20 to-transparent rounded-full blur-2xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-mh-leather-tan/20 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-mh-hunter-green/20 to-transparent rounded-full blur-2xl"></div>
         </div>
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Ready to Experience 
-            <span className="bg-gradient-to-r from-army-gold to-yellow-400 bg-clip-text text-transparent"> AI Precision</span>?
+            <span className="bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 bg-clip-text text-transparent"> AI Precision</span>?
           </h2>
           <p className="text-xl text-gray-200 mb-10 max-w-3xl mx-auto">
             Choose your path to accurate project estimates. Start with our AI for instant results, or schedule a consultation for complex projects.
@@ -790,7 +790,7 @@ export default function EstimatePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-              <div className="w-16 h-16 bg-army-gold rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform duration-300">
+              <div className="w-16 h-16 bg-mh-leather-tan rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform duration-300">
                 <span className="text-2xl">🤖</span>
               </div>
               <h3 className="text-2xl font-bold mb-4">AI Estimator</h3>
@@ -801,7 +801,7 @@ export default function EstimatePage() {
                 <li>• Free to use, no commitment</li>
                 <li>• Available 24/7</li>
               </ul>
-              <button className="w-full bg-army-gold hover:bg-yellow-500 text-army-black px-8 py-4 rounded-xl font-bold text-lg transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl">
+              <button className="w-full bg-mh-leather-tan hover:bg-mh-leather-tan/90 text-black px-8 py-4 rounded-xl font-bold text-lg transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl">
                 Try AI Estimator
               </button>
             </div>

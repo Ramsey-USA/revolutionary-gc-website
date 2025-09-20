@@ -192,16 +192,16 @@ const Footer = () => {
               
               {/* Success Message */}
               {subscribeSuccess && (
-                <div className="bg-green-600/20 border border-green-500/30 rounded-lg p-3 mb-4 flex items-center space-x-2">
-                  <CheckCircle size={16} className="text-green-400 flex-shrink-0" />
-                  <span className="text-green-300 text-sm">Successfully subscribed! Thank you for joining our newsletter.</span>
+                <div className="bg-mh-hunter-green/20 border border-mh-hunter-green/30 rounded-lg p-3 mb-4 flex items-center space-x-2">
+                  <CheckCircle size={16} className="text-mh-hunter-green flex-shrink-0" />
+                  <span className="text-mh-hunter-green text-sm">Successfully subscribed! Thank you for joining our newsletter.</span>
                 </div>
               )}
 
               {/* Error Message */}
               {subscribeError && (
-                <div className="bg-red-600/20 border border-red-500/30 rounded-lg p-3 mb-4">
-                  <span className="text-red-300 text-sm">{subscribeError}</span>
+                <div className="bg-mh-leather-tan/20 border border-mh-leather-tan/30 rounded-lg p-3 mb-4">
+                  <span className="text-mh-leather-tan text-sm">{subscribeError}</span>
                 </div>
               )}
 

@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import WhyChooseSection from '../../components/WhyChooseSection'
-import StarDecorations from '../../components/StarDecorations'
+import UniversalHeroSection from '../../components/UniversalHeroSection'
 
 export default function FAQsPage() {
   const [activeCategory, setActiveCategory] = useState('general')
@@ -135,52 +135,66 @@ export default function FAQsPage() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-mh-hunter-green to-army-black dark:from-dark-surface-2 dark:to-dark-surface-3 py-32 overflow-hidden">
-          <StarDecorations />
-          
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-7xl font-bold text-white dark:text-dark-text mb-6 animate-fade-in-up">
-                Frequently Asked <span className="text-army-gold dark:text-army-gold">Questions</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 dark:text-dark-text-secondary max-w-3xl mx-auto leading-relaxed animate-fade-in-up">
-                Find comprehensive answers to questions about our construction services, 
-                government contracting expertise, and partnership opportunities. Get the information you need to make informed decisions.
-              </p>
-            </div>
+        <UniversalHeroSection
+          title="Frequently Asked"
+          titleHighlight="Questions"
+          subtitle="Find comprehensive answers to questions about our construction services, government contracting expertise, and partnership opportunities. Get the information you need to make informed decisions."
+          primaryButton={{
+            text: "Browse FAQ Categories",
+            href: "#faq-content"
+          }}
+          secondaryButton={{
+            text: "Contact Our Team",
+            href: "/contact"
+          }}
+        />
 
-            {/* FAQ Statistics */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              <div className="text-center p-6 bg-white/10 dark:bg-dark-surface/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-dark-border/30 hover:bg-white/20 dark:hover:bg-dark-surface/40 transition-all duration-500 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl group">
-                <div className="text-3xl md:text-4xl font-bold text-army-gold dark:text-army-gold mb-2 animate-fade-in-up group-hover:scale-110 transition-transform duration-300">16+</div>
-                <div className="text-white/90 dark:text-dark-text/90 font-medium">Comprehensive FAQs</div>
+        {/* FAQ Statistics */}
+        <section className="py-16 bg-white dark:bg-dark-surface-2 transition-colors duration-300">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="text-center group">
+                <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
+                  <span className="text-2xl">❓</span>
+                </div>
+                <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-1">16+</div>
+                <div className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary">Comprehensive FAQs</div>
               </div>
               
-              <div className="text-center p-6 bg-white/10 dark:bg-dark-surface/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-dark-border/30 hover:bg-white/20 dark:hover:bg-dark-surface/40 transition-all duration-500 transform hover:scale-105 hover:-rotate-1 hover:shadow-2xl group">
-                <div className="text-3xl md:text-4xl font-bold text-army-gold dark:text-army-gold mb-2 animate-fade-in-up group-hover:scale-110 transition-transform duration-300">4</div>
-                <div className="text-white/90 dark:text-dark-text/90 font-medium">Topic Categories</div>
+              <div className="text-center group">
+                <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
+                  <span className="text-2xl">📁</span>
+                </div>
+                <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-1">4</div>
+                <div className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary">Topic Categories</div>
               </div>
               
-              <div className="text-center p-6 bg-white/10 dark:bg-dark-surface/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-dark-border/30 hover:bg-white/20 dark:hover:bg-dark-surface/40 transition-all duration-500 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl group">
-                <div className="text-3xl md:text-4xl font-bold text-army-gold dark:text-army-gold mb-2 animate-fade-in-up group-hover:scale-110 transition-transform duration-300">&lt;2hrs</div>
-                <div className="text-white/90 dark:text-dark-text/90 font-medium">Response Time</div>
+              <div className="text-center group">
+                <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-1">&lt;2hrs</div>
+                <div className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary">Response Time</div>
               </div>
               
-              <div className="text-center p-6 bg-white/10 dark:bg-dark-surface/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-dark-border/30 hover:bg-white/20 dark:hover:bg-dark-surface/40 transition-all duration-500 transform hover:scale-105 hover:-rotate-1 hover:shadow-2xl group">
-                <div className="text-3xl md:text-4xl font-bold text-army-gold dark:text-army-gold mb-2 animate-fade-in-up group-hover:scale-110 transition-transform duration-300">97%</div>
-                <div className="text-white/90 dark:text-dark-text/90 font-medium">Client Satisfaction</div>
+              <div className="text-center group">
+                <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
+                  <span className="text-2xl">✅</span>
+                </div>
+                <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-1">97%</div>
+                <div className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary">Satisfaction Rate</div>
               </div>
             </div>
           </div>
         </section>
 
         {/* FAQ Content */}
-        <section className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
+        <section id="faq-content" className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             
             {/* Section Header */}
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-mh-hunter-green dark:text-dark-text mb-4">
                 Browse by Category
               </h2>
               <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
@@ -199,8 +213,8 @@ export default function FAQsPage() {
                   }}
                   className={`group px-8 py-4 rounded-xl font-semibold transition-all duration-500 flex items-center space-x-3 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-2xl ${
                     activeCategory === category.id
-                      ? 'bg-gradient-to-r from-mh-hunter-green to-army-gold text-white shadow-2xl scale-105'
-                      : 'bg-white dark:bg-dark-surface-2 text-gray-700 dark:text-dark-text hover:bg-gradient-to-r hover:from-mh-hunter-green/10 hover:to-army-gold/10 border border-gray-200 dark:border-dark-border hover:border-mh-hunter-green/30'
+                      ? 'bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white shadow-2xl scale-105'
+                      : 'bg-white dark:bg-dark-surface-2 text-gray-700 dark:text-dark-text hover:bg-gradient-to-r hover:from-mh-hunter-green/10 hover:to-mh-leather-tan/10 border border-gray-200 dark:border-dark-border hover:border-mh-hunter-green/30'
                   }`}
                 >
                   <span className={`text-xl transition-transform duration-300 ${
@@ -227,7 +241,7 @@ export default function FAQsPage() {
             <div className="max-w-2xl mx-auto mb-12">
               <div className="relative group">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <svg className="h-6 w-6 text-mh-hunter-green group-focus-within:text-army-gold transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-6 w-6 text-mh-hunter-green group-focus-within:text-mh-leather-tan transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </div>
@@ -277,19 +291,19 @@ export default function FAQsPage() {
                   >
                     <button
                       onClick={() => toggleFAQ(faq.id)}
-                      className="w-full px-8 py-6 text-left hover:bg-gradient-to-r hover:from-mh-hunter-green/5 hover:to-army-gold/5 dark:hover:from-mh-hunter-green/10 dark:hover:to-army-gold/10 transition-all duration-300 flex items-center justify-between group-hover:px-10"
+                      className="w-full px-8 py-6 text-left hover:bg-gradient-to-r hover:from-mh-hunter-green/5 hover:to-mh-leather-tan/5 dark:hover:from-mh-hunter-green/10 dark:hover:to-mh-leather-tan/10 transition-all duration-300 flex items-center justify-between group-hover:px-10"
                     >
                       <div className="flex items-center space-x-4 flex-1">
                         <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
                           openFAQ === faq.id 
-                            ? 'bg-gradient-to-r from-mh-hunter-green to-army-gold text-white shadow-lg scale-110' 
+                            ? 'bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white shadow-lg scale-110' 
                             : 'bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 text-mh-hunter-green group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 group-hover:scale-110'
                         }`}>
                           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                         </div>
-                        <h3 className="text-lg font-semibold text-army-black dark:text-dark-text pr-4 group-hover:text-mh-hunter-green transition-colors duration-300">
+                        <h3 className="text-lg font-semibold text-black dark:text-dark-text pr-4 group-hover:text-mh-hunter-green transition-colors duration-300">
                           {faq.question}
                         </h3>
                       </div>
@@ -314,8 +328,8 @@ export default function FAQsPage() {
                     
                     {openFAQ === faq.id && (
                       <div className="px-8 pb-8 animate-fade-in-up">
-                        <div className="pt-6 border-t border-gradient-to-r from-mh-hunter-green/20 to-army-gold/20">
-                          <div className="bg-gradient-to-r from-mh-hunter-green/5 to-army-gold/5 dark:from-mh-hunter-green/10 dark:to-army-gold/10 rounded-lg p-6 border-l-4 border-mh-hunter-green">
+                        <div className="pt-6 border-t border-gradient-to-r from-mh-hunter-green/20 to-mh-leather-tan/20">
+                          <div className="bg-gradient-to-r from-mh-hunter-green/5 to-mh-leather-tan/5 dark:from-mh-hunter-green/10 dark:to-mh-leather-tan/10 rounded-lg p-6 border-l-4 border-mh-hunter-green">
                             <p className="text-gray-700 dark:text-dark-text-secondary leading-relaxed text-base">
                               {faq.answer}
                             </p>
@@ -328,13 +342,13 @@ export default function FAQsPage() {
                               <span>Helpful?</span>
                             </div>
                             <div className="flex items-center space-x-3">
-                              <button className="flex items-center space-x-1 text-mh-hunter-green hover:text-army-gold transition-colors duration-300">
+                              <button className="flex items-center space-x-1 text-mh-hunter-green hover:text-mh-leather-tan transition-colors duration-300">
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
                                 </svg>
                                 <span>Yes</span>
                               </button>
-                              <button className="flex items-center space-x-1 text-gray-400 hover:text-red-500 transition-colors duration-300">
+                              <button className="flex items-center space-x-1 text-gray-400 hover:text-mh-leather-tan transition-colors duration-300">
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018c.163 0 .326.02.485.06L17 4m-7 10v2a2 2 0 002 2h.095c.5 0 .905-.405.905-.905 0-.714.211-1.412.608-2.006L17 13V4m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2.5" />
                                 </svg>
@@ -353,7 +367,7 @@ export default function FAQsPage() {
             {/* Helpful Resources Section */}
             <div className="mt-20 mb-16">
               <div className="text-center mb-12">
-                <h3 className="text-2xl md:text-3xl font-bold text-army-black dark:text-dark-text mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-black dark:text-dark-text mb-4">
                   Additional Resources
                 </h3>
                 <p className="text-gray-600 dark:text-dark-text-secondary max-w-2xl mx-auto">
@@ -364,14 +378,14 @@ export default function FAQsPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Project Guide */}
                 <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border">
-                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-army-gold rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </div>
-                  <h4 className="text-xl font-bold text-army-black dark:text-dark-text mb-3 group-hover:text-mh-hunter-green transition-colors duration-300">Project Planning Guide</h4>
+                  <h4 className="text-xl font-bold text-black dark:text-dark-text mb-3 group-hover:text-mh-hunter-green transition-colors duration-300">Project Planning Guide</h4>
                   <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Comprehensive guide to planning your construction project from start to finish.</p>
-                  <a href="/guides/project-planning" className="inline-flex items-center text-mh-hunter-green hover:text-army-gold font-semibold transition-colors duration-300">
+                  <a href="/guides/project-planning" className="inline-flex items-center text-mh-hunter-green hover:text-mh-leather-tan font-semibold transition-colors duration-300">
                     Download Guide
                     <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -381,14 +395,14 @@ export default function FAQsPage() {
 
                 {/* Government Contracting */}
                 <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:-rotate-1 border border-gray-100 dark:border-dark-border">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-mh-hunter-green rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
                   </div>
-                  <h4 className="text-xl font-bold text-army-black dark:text-dark-text mb-3 group-hover:text-blue-600 transition-colors duration-300">Government Contracting Info</h4>
+                  <h4 className="text-xl font-bold text-black dark:text-dark-text mb-3 group-hover:text-mh-hunter-green transition-colors duration-300">Government Contracting Info</h4>
                   <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Learn about our government contracting capabilities and experience.</p>
-                  <a href="/services" className="inline-flex items-center text-blue-600 hover:text-mh-hunter-green font-semibold transition-colors duration-300">
+                  <a href="/services" className="inline-flex items-center text-mh-hunter-green hover:text-mh-leather-tan font-semibold transition-colors duration-300">
                     Learn More
                     <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -398,14 +412,14 @@ export default function FAQsPage() {
 
                 {/* Contact Support */}
                 <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-army-gold rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg>
                   </div>
-                  <h4 className="text-xl font-bold text-army-black dark:text-dark-text mb-3 group-hover:text-green-600 transition-colors duration-300">24/7 Support</h4>
+                  <h4 className="text-xl font-bold text-black dark:text-dark-text mb-3 group-hover:text-mh-hunter-green transition-colors duration-300">24/7 Support</h4>
                   <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Get immediate assistance from our dedicated support team.</p>
-                  <a href="/contact" className="inline-flex items-center text-green-600 hover:text-army-gold font-semibold transition-colors duration-300">
+                  <a href="/contact" className="inline-flex items-center text-mh-hunter-green hover:text-mh-leather-tan font-semibold transition-colors duration-300">
                     Get Support
                     <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -417,9 +431,9 @@ export default function FAQsPage() {
 
             {/* Contact CTA */}
             <div className="mt-16 text-center">
-              <div className="bg-gradient-to-r from-mh-hunter-green/5 to-army-gold/5 border border-mh-hunter-green/20 rounded-2xl p-8 md:p-12 shadow-xl max-w-4xl mx-auto">
+              <div className="bg-gradient-to-r from-mh-hunter-green/5 to-mh-leather-tan/5 border border-mh-hunter-green/20 rounded-2xl p-8 md:p-12 shadow-xl max-w-4xl mx-auto">
                 <div className="mb-8">
-                  <h3 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">
+                  <h3 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
                     Still Have Questions?
                   </h3>
                   <p className="text-xl text-gray-600 dark:text-dark-text-secondary mb-6 max-w-2xl mx-auto">
@@ -435,41 +449,41 @@ export default function FAQsPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </div>
-                    <h4 className="font-bold text-army-black dark:text-dark-text mb-2">Call Us</h4>
+                    <h4 className="font-bold text-black dark:text-dark-text mb-2">Call Us</h4>
                     <p className="text-gray-600 dark:text-dark-text-secondary text-sm mb-2">Speak directly with our team</p>
                     <p className="text-mh-hunter-green font-semibold">(509) 555-0123</p>
                   </div>
 
                   {/* Email */}
                   <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-100 dark:border-dark-border">
-                    <div className="w-12 h-12 bg-army-gold/10 dark:bg-army-gold/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-army-gold/20 dark:group-hover:bg-army-gold/30 group-hover:scale-110 transition-all duration-300">
-                      <svg className="w-6 h-6 text-army-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-12 h-12 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30 group-hover:scale-110 transition-all duration-300">
+                      <svg className="w-6 h-6 text-mh-leather-tan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
-                    <h4 className="font-bold text-army-black dark:text-dark-text mb-2">Email Us</h4>
+                    <h4 className="font-bold text-black dark:text-dark-text mb-2">Email Us</h4>
                     <p className="text-gray-600 dark:text-dark-text-secondary text-sm mb-2">Get detailed responses</p>
-                    <p className="text-army-gold font-semibold">info@mhconstruction.com</p>
+                    <p className="text-mh-leather-tan font-semibold">info@mhconstruction.com</p>
                   </div>
 
                   {/* Office */}
                   <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-100 dark:border-dark-border">
-                    <div className="w-12 h-12 bg-blue-600/10 dark:bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600/20 dark:group-hover:bg-blue-600/30 group-hover:scale-110 transition-all duration-300">
-                      <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-12 h-12 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 group-hover:scale-110 transition-all duration-300">
+                      <svg className="w-6 h-6 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
                     </div>
-                    <h4 className="font-bold text-army-black dark:text-dark-text mb-2">Visit Us</h4>
+                    <h4 className="font-bold text-black dark:text-dark-text mb-2">Visit Us</h4>
                     <p className="text-gray-600 dark:text-dark-text-secondary text-sm mb-2">Schedule a consultation</p>
-                    <p className="text-blue-600 font-semibold text-sm">3111 N. Capital Ave.<br />Pasco, WA 99301</p>
+                    <p className="text-mh-hunter-green font-semibold text-sm">3111 N. Capital Ave.<br />Pasco, WA 99301</p>
                   </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="/contact"
-                    className="inline-flex items-center bg-gradient-to-r from-mh-hunter-green to-army-gold text-white font-bold py-4 px-8 rounded-xl hover:from-mh-hunter-green/90 hover:to-army-gold/90 hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 group"
+                    className="inline-flex items-center bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white font-bold py-4 px-8 rounded-xl hover:from-mh-hunter-green/90 hover:to-mh-leather-tan/90 hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 group"
                   >
                     Contact Our Team
                     <svg className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -61,7 +61,7 @@ const HeroSection = () => {
           <span className="text-mh-leather-tan dark:text-mh-leather-tan">Today's Technology</span>
         </h1>
         
-        <p className="text-lg md:text-xl lg:text-2xl text-white/90 dark:text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl lg:text-2xl text-gray-200 dark:text-gray-100 mb-8 max-w-3xl mx-auto leading-relaxed">
           Veteran-owned construction excellence powered by cutting-edge AI technology. 
           Experience the future of construction with transparent pricing, immersive project 
           visualization, and military-grade precision.

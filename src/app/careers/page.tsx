@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import WhyChooseSection from '../../components/WhyChooseSection'
 import StarDecorations from '../../components/StarDecorations'
+import UniversalHeroSection from '../../components/UniversalHeroSection'
 import { useState } from 'react'
 
 interface Position {
@@ -198,53 +199,58 @@ export default function CareersPage() {
   return (
     <main className="min-h-screen">
       <Header />
-      {/* Hero Section with Statistics */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-r from-army-green to-mh-hunter-green dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text overflow-hidden">
-        <div className="absolute inset-0 bg-black/20 dark:bg-black/40"></div>
-        
-        {/* Star decorations */}
-        <StarDecorations />
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
-              Build Your Career With Us
-            </h1>
-            <p className="text-xl mb-8 leading-relaxed max-w-3xl mx-auto opacity-90">
-              Join our veteran-owned team and help build the future of construction. We are always looking for skilled professionals who share our commitment to excellence, innovation, and military-grade precision.
-            </p>
-          </div>
+      <UniversalHeroSection
+        title="Build Your Career"
+        titleHighlight="With Us"
+        subtitle="Join our veteran-owned team and help build the future of construction. We are always looking for skilled professionals who share our commitment to excellence, innovation, and military-grade precision."
+        primaryButton={{
+          text: "View Open Positions",
+          onClick: () => {
+            const element = document.getElementById('open-positions');
+            element?.scrollIntoView({ behavior: 'smooth' });
+          }
+        }}
+        secondaryButton={{
+          text: "Learn About Benefits",
+          onClick: () => {
+            const element = document.getElementById('benefits');
+            element?.scrollIntoView({ behavior: 'smooth' });
+          }
+        }}
+      />
 
-          {/* Career Statistics */}
+      {/* Career Statistics */}
+      <section className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center p-6 bg-white/10 dark:bg-dark-surface/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-dark-border/30 hover:bg-white/20 dark:hover:bg-dark-surface/40 transition-all duration-500 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl group">
-              <div className="text-3xl md:text-4xl font-bold text-army-gold dark:text-army-gold mb-2 animate-fade-in-up group-hover:scale-110 transition-transform duration-300">12+</div>
-              <div className="text-white/90 dark:text-dark-text/90 font-medium">Open Positions</div>
+            <div className="text-center p-6 bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 group border border-mh-leather-tan/20">
+              <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan mb-2 group-hover:scale-110 transition-transform duration-300">12+</div>
+              <div className="text-gray-600 dark:text-dark-text-secondary font-medium">Open Positions</div>
             </div>
             
-            <div className="text-center p-6 bg-white/10 dark:bg-dark-surface/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-dark-border/30 hover:bg-white/20 dark:hover:bg-dark-surface/40 transition-all duration-500 transform hover:scale-105 hover:-rotate-1 hover:shadow-2xl group">
-              <div className="text-3xl md:text-4xl font-bold text-army-gold dark:text-army-gold mb-2 animate-fade-in-up group-hover:scale-110 transition-transform duration-300">85%</div>
-              <div className="text-white/90 dark:text-dark-text/90 font-medium">Veteran Team</div>
+            <div className="text-center p-6 bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 group border border-mh-hunter-green/20">
+              <div className="text-3xl md:text-4xl font-bold text-mh-hunter-green mb-2 group-hover:scale-110 transition-transform duration-300">85%</div>
+              <div className="text-gray-600 dark:text-dark-text-secondary font-medium">Veteran Team</div>
             </div>
             
-            <div className="text-center p-6 bg-white/10 dark:bg-dark-surface/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-dark-border/30 hover:bg-white/20 dark:hover:bg-dark-surface/40 transition-all duration-500 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl group">
-              <div className="text-3xl md:text-4xl font-bold text-army-gold dark:text-army-gold mb-2 animate-fade-in-up group-hover:scale-110 transition-transform duration-300">150+</div>
-              <div className="text-white/90 dark:text-dark-text/90 font-medium">Years Combined Experience</div>
+            <div className="text-center p-6 bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 group border border-mh-leather-tan/20">
+              <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan mb-2 group-hover:scale-110 transition-transform duration-300">150+</div>
+              <div className="text-gray-600 dark:text-dark-text-secondary font-medium">Years Combined Experience</div>
             </div>
             
-            <div className="text-center p-6 bg-white/10 dark:bg-dark-surface/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-dark-border/30 hover:bg-white/20 dark:hover:bg-dark-surface/40 transition-all duration-500 transform hover:scale-105 hover:-rotate-1 hover:shadow-2xl group">
-              <div className="text-3xl md:text-4xl font-bold text-army-gold mb-2 animate-fade-in-up group-hover:scale-110 transition-transform duration-300">95%</div>
-              <div className="text-white/90 font-medium">Employee Satisfaction</div>
+            <div className="text-center p-6 bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 group border border-mh-hunter-green/20">
+              <div className="text-3xl md:text-4xl font-bold text-mh-hunter-green mb-2 group-hover:scale-110 transition-transform duration-300">95%</div>
+              <div className="text-gray-600 dark:text-dark-text-secondary font-medium">Employee Satisfaction</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Benefits & Culture Section */}
-      <section className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
+      <section id="benefits" className="py-20 bg-white dark:bg-dark-surface-2 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
               Why Join MH Construction?
             </h2>
             <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
@@ -254,13 +260,13 @@ export default function CareersPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Competitive Compensation */}
-            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-army-gold hover:border-l-8">
-              <div className="w-16 h-16 bg-army-gold/10 dark:bg-army-gold/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-army-gold/20 dark:group-hover:bg-army-gold/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12">
-                <svg className="w-8 h-8 text-army-gold group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-mh-leather-tan hover:border-l-8">
+              <div className="w-16 h-16 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12">
+                <svg className="w-8 h-8 text-mh-leather-tan group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4 group-hover:text-army-gold dark:group-hover:text-army-gold transition-colors duration-300">Competitive Compensation</h3>
+              <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Competitive Compensation</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Industry-leading salaries with performance bonuses and profit sharing opportunities.</p>
               <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
                 <li>• Annual performance reviews</li>
@@ -276,7 +282,7 @@ export default function CareersPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Health & Wellness</h3>
+              <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text mb-4 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Health & Wellness</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Comprehensive health coverage and wellness programs for you and your family.</p>
               <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
                 <li>• Medical, dental, vision</li>
@@ -286,13 +292,13 @@ export default function CareersPage() {
             </div>
 
             {/* Veteran Support */}
-            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-army-green hover:border-l-8">
-              <div className="w-16 h-16 bg-army-green/10 dark:bg-army-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-army-green/20 dark:group-hover:bg-army-green/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12">
-                <svg className="w-8 h-8 text-army-green group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8">
+              <div className="w-16 h-16 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12">
+                <svg className="w-8 h-8 text-mh-hunter-green group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4 group-hover:text-army-green dark:group-hover:text-army-green transition-colors duration-300">Veteran Support</h3>
+              <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Veteran Support</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Dedicated support for our veteran team members with specialized programs.</p>
               <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
                 <li>• Veteran mentorship program</li>
@@ -302,13 +308,13 @@ export default function CareersPage() {
             </div>
 
             {/* Professional Development */}
-            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-blue-600 hover:border-l-8">
-              <div className="w-16 h-16 bg-blue-600/10 dark:bg-blue-600/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-600/20 dark:group-hover:bg-blue-600/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
-                <svg className="w-8 h-8 text-blue-600 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8">
+              <div className="w-16 h-16 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
+                <svg className="w-8 h-8 text-mh-hunter-green group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-600 transition-colors duration-300">Professional Development</h3>
+              <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Professional Development</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Continuous learning opportunities and career advancement programs.</p>
               <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
                 <li>• Training & certifications</li>
@@ -318,13 +324,13 @@ export default function CareersPage() {
             </div>
 
             {/* Work-Life Balance */}
-            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-amber-700 hover:border-l-8">
-              <div className="w-16 h-16 bg-amber-700/10 dark:bg-amber-700/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-amber-700/20 dark:group-hover:bg-amber-700/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12">
-                <svg className="w-8 h-8 text-amber-700 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-mh-leather-tan hover:border-l-8">
+              <div className="w-16 h-16 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12">
+                <svg className="w-8 h-8 text-mh-leather-tan group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4 group-hover:text-amber-700 dark:group-hover:text-amber-700 transition-colors duration-300">Work-Life Balance</h3>
+              <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Work-Life Balance</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Flexible schedules and time off policies that respect your personal time.</p>
               <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
                 <li>• Flexible work arrangements</li>
@@ -334,13 +340,13 @@ export default function CareersPage() {
             </div>
 
             {/* Team Culture */}
-            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-amber-600 hover:border-l-8">
-              <div className="w-16 h-16 bg-amber-600/10 dark:bg-amber-600/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-amber-600/20 dark:group-hover:bg-amber-600/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
-                <svg className="w-8 h-8 text-amber-600 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-mh-leather-tan hover:border-l-8">
+              <div className="w-16 h-16 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
+                <svg className="w-8 h-8 text-mh-leather-tan group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-4 group-hover:text-amber-600 dark:group-hover:text-amber-600 transition-colors duration-300">Team Culture</h3>
+              <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Team Culture</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary mb-4">Join a tight-knit team that values collaboration, respect, and shared success.</p>
               <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
                 <li>• Team building events</li>
@@ -353,10 +359,10 @@ export default function CareersPage() {
       </section>
 
       {/* Open Positions Section */}
-      <section className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
+      <section id="open-positions" className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
               Current Opportunities
             </h2>
             <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
@@ -391,15 +397,15 @@ export default function CareersPage() {
                 <div className="p-8">
                   <div className="flex justify-between items-start mb-4">
                     <div>
-                      <h3 className="text-xl font-bold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">{position.title}</h3>
+                      <h3 className="text-xl font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">{position.title}</h3>
                       <div className="flex flex-wrap gap-2 mb-4">
                         <span className="px-3 py-1 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 text-mh-hunter-green dark:text-mh-hunter-green rounded-full text-sm font-medium transition-all duration-300 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30">
                           {position.department}
                         </span>
-                        <span className="px-3 py-1 bg-blue-600/10 dark:bg-blue-600/20 text-blue-600 dark:text-blue-600 rounded-full text-sm font-medium transition-all duration-300 group-hover:bg-blue-600/20 dark:group-hover:bg-blue-600/30">
+                        <span className="px-3 py-1 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 text-mh-hunter-green dark:text-mh-hunter-green rounded-full text-sm font-medium transition-all duration-300 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30">
                           {position.type}
                         </span>
-                        <span className="px-3 py-1 bg-amber-700/10 dark:bg-amber-700/20 text-amber-700 dark:text-amber-700 rounded-full text-sm font-medium transition-all duration-300 group-hover:bg-amber-700/20 dark:group-hover:bg-amber-700/30">
+                        <span className="px-3 py-1 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 text-mh-leather-tan dark:text-mh-leather-tan rounded-full text-sm font-medium transition-all duration-300 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30">
                           {position.experience}
                         </span>
                       </div>
@@ -420,7 +426,7 @@ export default function CareersPage() {
                   {expandedPosition === position.id && (
                     <div className="space-y-6 mb-6 border-t dark:border-dark-border pt-6">
                       <div>
-                        <h4 className="font-semibold text-army-black dark:text-dark-text mb-3">Requirements:</h4>
+                        <h4 className="font-semibold text-black dark:text-dark-text mb-3">Requirements:</h4>
                         <ul className="space-y-2">
                           {position.requirements.map((req, index) => (
                             <li key={index} className="flex items-start">
@@ -432,11 +438,11 @@ export default function CareersPage() {
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-army-black dark:text-dark-text mb-3">Benefits:</h4>
+                        <h4 className="font-semibold text-black dark:text-dark-text mb-3">Benefits:</h4>
                         <ul className="space-y-2">
                           {position.benefits.map((benefit, index) => (
                             <li key={index} className="flex items-start">
-                              <span className="w-2 h-2 bg-army-gold dark:bg-army-gold rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                              <span className="w-2 h-2 bg-mh-leather-tan dark:bg-mh-leather-tan rounded-full mt-2 mr-3 flex-shrink-0"></span>
                               <span className="text-gray-600 dark:text-dark-text-secondary">{benefit}</span>
                             </li>
                           ))}
@@ -459,7 +465,7 @@ export default function CareersPage() {
                         setFormData(prev => ({ ...prev, position: position.title }))
                         document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })
                       }}
-                      className="flex-1 px-6 py-3 bg-army-gold text-army-black rounded-lg font-medium hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                      className="flex-1 px-6 py-3 bg-mh-leather-tan dark:bg-mh-leather-tan text-white dark:text-white rounded-lg font-medium hover:bg-mh-hunter-green dark:hover:bg-mh-hunter-green transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
                     >
                       Apply Now
                     </button>
@@ -481,7 +487,7 @@ export default function CareersPage() {
       <section className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
               Your Career Journey
             </h2>
             <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
@@ -497,12 +503,12 @@ export default function CareersPage() {
               {/* Entry Level */}
               <div className="relative flex flex-col lg:flex-row items-center group">
                 <div className="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0">
-                  <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-blue-500 hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 group-hover:rotate-1">
+                  <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-mh-hunter-green hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 group-hover:rotate-1">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-blue-500 dark:bg-blue-400 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                      <div className="w-12 h-12 bg-mh-hunter-green dark:bg-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                         <span className="text-white dark:text-white font-bold">1</span>
                       </div>
-                      <h3 className="text-xl font-bold text-army-black dark:text-dark-text group-hover:text-blue-500 transition-colors duration-300">Entry Level</h3>
+                      <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text group-hover:text-mh-leather-tan transition-colors duration-300">Entry Level</h3>
                     </div>
                     <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
                       Start your career with hands-on experience and comprehensive training programs.
@@ -515,10 +521,10 @@ export default function CareersPage() {
                     </ul>
                   </div>
                 </div>
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 dark:bg-blue-400 rounded-full border-4 border-white dark:border-dark-surface shadow-lg group-hover:scale-125 group-hover:shadow-xl transition-all duration-300"></div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-mh-hunter-green dark:bg-mh-hunter-green rounded-full border-4 border-white dark:border-dark-surface shadow-lg group-hover:scale-125 group-hover:shadow-xl transition-all duration-300"></div>
                 <div className="lg:w-1/2 lg:pl-12">
                   <div className="text-center lg:text-left">
-                    <div className="text-4xl font-bold text-blue-500 dark:text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">0-2 Years</div>
+                    <div className="text-4xl font-bold text-mh-hunter-green dark:text-mh-hunter-green mb-2 group-hover:scale-110 transition-transform duration-300">0-2 Years</div>
                     <div className="text-gray-600 dark:text-dark-text-secondary">Experience Range</div>
                   </div>
                 </div>
@@ -527,12 +533,12 @@ export default function CareersPage() {
               {/* Mid Level */}
               <div className="relative flex flex-col lg:flex-row-reverse items-center group">
                 <div className="lg:w-1/2 lg:pl-12 mb-8 lg:mb-0">
-                  <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-green-500 hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 group-hover:-rotate-1">
+                  <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-mh-leather-tan hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 group-hover:-rotate-1">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-green-500 dark:bg-green-400 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                      <div className="w-12 h-12 bg-mh-leather-tan dark:bg-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
                         <span className="text-white dark:text-white font-bold">2</span>
                       </div>
-                      <h3 className="text-xl font-bold text-army-black dark:text-dark-text group-hover:text-green-500 transition-colors duration-300">Mid Level</h3>
+                      <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text group-hover:text-mh-leather-tan transition-colors duration-300">Mid Level</h3>
                     </div>
                     <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
                       Take on more responsibility and lead smaller projects while developing specialized skills.
@@ -545,10 +551,10 @@ export default function CareersPage() {
                     </ul>
                   </div>
                 </div>
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-green-500 dark:bg-green-400 rounded-full border-4 border-white dark:border-dark-surface shadow-lg group-hover:scale-125 group-hover:shadow-xl transition-all duration-300"></div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-mh-leather-tan dark:bg-mh-leather-tan rounded-full border-4 border-white dark:border-dark-surface shadow-lg group-hover:scale-125 group-hover:shadow-xl transition-all duration-300"></div>
                 <div className="lg:w-1/2 lg:pr-12">
                   <div className="text-center lg:text-right">
-                    <div className="text-4xl font-bold text-green-500 dark:text-green-400 mb-2 group-hover:scale-110 transition-transform duration-300">3-7 Years</div>
+                    <div className="text-4xl font-bold text-mh-hunter-green dark:text-mh-leather-tan mb-2 group-hover:scale-110 transition-transform duration-300">3-7 Years</div>
                     <div className="text-gray-600 dark:text-dark-text-secondary">Experience Range</div>
                   </div>
                 </div>
@@ -562,7 +568,7 @@ export default function CareersPage() {
                       <div className="w-12 h-12 bg-mh-hunter-green dark:bg-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                         <span className="text-white dark:text-white font-bold">3</span>
                       </div>
-                      <h3 className="text-xl font-bold text-army-black dark:text-dark-text group-hover:text-mh-hunter-green transition-colors duration-300">Senior Level</h3>
+                      <h3 className="text-xl font-bold text-black dark:text-dark-text group-hover:text-mh-hunter-green transition-colors duration-300">Senior Level</h3>
                     </div>
                     <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
                       Lead major projects and mentor junior team members while expanding your expertise.
@@ -587,12 +593,12 @@ export default function CareersPage() {
               {/* Leadership */}
               <div className="relative flex flex-col lg:flex-row-reverse items-center group">
                 <div className="lg:w-1/2 lg:pl-12 mb-8 lg:mb-0">
-                  <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-army-gold hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 group-hover:-rotate-1">
+                  <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-mh-leather-tan hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 group-hover:-rotate-1">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-army-gold dark:bg-army-gold rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
-                        <span className="text-army-black dark:text-army-black font-bold">4</span>
+                      <div className="w-12 h-12 bg-mh-leather-tan dark:bg-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                        <span className="text-white dark:text-white font-bold">4</span>
                       </div>
-                      <h3 className="text-xl font-bold text-army-black dark:text-dark-text group-hover:text-army-gold transition-colors duration-300">Leadership</h3>
+                      <h3 className="text-xl font-bold text-black dark:text-dark-text group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Leadership</h3>
                     </div>
                     <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
                       Shape the future of the company as a leader, setting strategy and mentoring the next generation.
@@ -605,10 +611,10 @@ export default function CareersPage() {
                     </ul>
                   </div>
                 </div>
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-army-gold dark:bg-army-gold rounded-full border-4 border-white dark:border-dark-surface shadow-lg group-hover:scale-125 group-hover:shadow-xl transition-all duration-300"></div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-mh-leather-tan dark:bg-mh-leather-tan rounded-full border-4 border-white dark:border-dark-surface shadow-lg group-hover:scale-125 group-hover:shadow-xl transition-all duration-300"></div>
                 <div className="lg:w-1/2 lg:pr-12">
                   <div className="text-center lg:text-right">
-                    <div className="text-4xl font-bold text-army-gold dark:text-army-gold mb-2 group-hover:scale-110 transition-transform duration-300">15+ Years</div>
+                    <div className="text-4xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-2 group-hover:scale-110 transition-transform duration-300">15+ Years</div>
                     <div className="text-gray-600 dark:text-dark-text-secondary">Experience Range</div>
                   </div>
                 </div>
@@ -621,7 +627,7 @@ export default function CareersPage() {
       <section id="application-form" className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">Apply Today</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">Apply Today</h2>
             <p className="text-xl text-gray-600 dark:text-dark-text-secondary">
               Ready to start your career with MH Construction? Submit your application below.
             </p>
@@ -630,13 +636,13 @@ export default function CareersPage() {
           <form className="space-y-8 bg-gray-50 dark:bg-dark-surface-2 p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100 dark:border-dark-border transition-colors duration-300" onSubmit={handleSubmit}>
             {/* Form Header */}
             <div className="text-center pb-6 border-b border-gray-200 dark:border-dark-border">
-              <h3 className="text-2xl font-bold text-army-black dark:text-dark-text mb-2">Job Application</h3>
+              <h3 className="text-2xl font-bold text-black dark:text-dark-text mb-2">Job Application</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary">All fields marked with * are required</p>
             </div>
 
             {/* Personal Information Section */}
             <div className="space-y-6">
-              <h4 className="text-lg font-semibold text-army-black dark:text-dark-text flex items-center">
+              <h4 className="text-lg font-semibold text-black dark:text-dark-text flex items-center">
                 <svg className="w-5 h-5 mr-2 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
@@ -645,7 +651,7 @@ export default function CareersPage() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="block text-sm font-medium text-army-black dark:text-dark-text">Full Name *</label>
+                  <label htmlFor="name" className="block text-sm font-medium text-black dark:text-dark-text">Full Name *</label>
                   <input 
                     type="text" 
                     id="name" 
@@ -659,7 +665,7 @@ export default function CareersPage() {
                 </div>
                 
                 <div className="space-y-2">
-                  <label htmlFor="email" className="block text-sm font-medium text-army-black dark:text-dark-text">Email Address *</label>
+                  <label htmlFor="email" className="block text-sm font-medium text-black dark:text-dark-text">Email Address *</label>
                   <input 
                     type="email" 
                     id="email" 
@@ -674,7 +680,7 @@ export default function CareersPage() {
               </div>
               
               <div className="space-y-2">
-                <label htmlFor="phone" className="block text-sm font-medium text-army-black dark:text-dark-text">Phone Number *</label>
+                <label htmlFor="phone" className="block text-sm font-medium text-black dark:text-dark-text">Phone Number *</label>
                 <input 
                   type="tel" 
                   id="phone" 
@@ -690,7 +696,7 @@ export default function CareersPage() {
 
             {/* Position Information Section */}
             <div className="space-y-6">
-              <h4 className="text-lg font-semibold text-army-black dark:text-dark-text flex items-center">
+              <h4 className="text-lg font-semibold text-black dark:text-dark-text flex items-center">
                 <svg className="w-5 h-5 mr-2 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 002 2h2a1 1 0 001-1v-1a2 2 0 00-2-2H8a2 2 0 00-2 2v1a1 1 0 001 1h2a2 2 0 002-2z" />
                 </svg>
@@ -699,7 +705,7 @@ export default function CareersPage() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="position" className="block text-sm font-medium text-army-black dark:text-dark-text">Position Interested In *</label>
+                  <label htmlFor="position" className="block text-sm font-medium text-black dark:text-dark-text">Position Interested In *</label>
                   <input 
                     type="text" 
                     id="position" 
@@ -713,7 +719,7 @@ export default function CareersPage() {
                 </div>
                 
                 <div className="space-y-2">
-                  <label htmlFor="experienceLevel" className="block text-sm font-medium text-army-black dark:text-dark-text">Experience Level *</label>
+                  <label htmlFor="experienceLevel" className="block text-sm font-medium text-black dark:text-dark-text">Experience Level *</label>
                   <select 
                     id="experienceLevel" 
                     name="experienceLevel" 
@@ -733,7 +739,7 @@ export default function CareersPage() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="workPreference" className="block text-sm font-medium text-army-black dark:text-dark-text">Work Preference *</label>
+                  <label htmlFor="workPreference" className="block text-sm font-medium text-black dark:text-dark-text">Work Preference *</label>
                   <select 
                     id="workPreference" 
                     name="workPreference" 
@@ -750,7 +756,7 @@ export default function CareersPage() {
                 </div>
                 
                 <div className="space-y-2">
-                  <label htmlFor="desiredDepartment" className="block text-sm font-medium text-army-black dark:text-dark-text">Desired Department *</label>
+                  <label htmlFor="desiredDepartment" className="block text-sm font-medium text-black dark:text-dark-text">Desired Department *</label>
                   <select 
                     id="desiredDepartment" 
                     name="desiredDepartment" 
@@ -772,7 +778,7 @@ export default function CareersPage() {
 
             {/* Additional Information Section */}
             <div className="space-y-6">
-              <h4 className="text-lg font-semibold text-army-black dark:text-dark-text flex items-center">
+              <h4 className="text-lg font-semibold text-black dark:text-dark-text flex items-center">
                 <svg className="w-5 h-5 mr-2 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
@@ -780,7 +786,7 @@ export default function CareersPage() {
               </h4>
               
               <div className="space-y-2">
-                <label htmlFor="howHeard" className="block text-sm font-medium text-army-black dark:text-dark-text">How Did You Hear About Us? *</label>
+                <label htmlFor="howHeard" className="block text-sm font-medium text-black dark:text-dark-text">How Did You Hear About Us? *</label>
                 <select 
                   id="howHeard" 
                   name="howHeard" 
@@ -799,7 +805,7 @@ export default function CareersPage() {
               </div>
               
               <div className="space-y-2">
-                <label htmlFor="message" className="block text-sm font-medium text-army-black dark:text-dark-text">Tell Us About Yourself *</label>
+                <label htmlFor="message" className="block text-sm font-medium text-black dark:text-dark-text">Tell Us About Yourself *</label>
                 <textarea 
                   id="message" 
                   name="message" 
@@ -818,11 +824,11 @@ export default function CareersPage() {
               <button 
                 type="submit" 
                 disabled={isSubmitting} 
-                className="w-full bg-army-gold text-army-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-2xl hover:-translate-y-1 group"
+                className="w-full bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan dark:from-mh-hunter-green dark:to-mh-leather-tan text-white dark:text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-mh-leather-tan hover:to-mh-hunter-green dark:hover:from-mh-leather-tan dark:hover:to-mh-hunter-green transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-2xl hover:-translate-y-1 group"
               >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center">
-                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-army-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
@@ -850,7 +856,7 @@ export default function CareersPage() {
       <section className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
               What Our Team Says
             </h2>
             <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
@@ -866,14 +872,14 @@ export default function CareersPage() {
                   <span className="text-white font-bold text-xl">SG</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-army-black dark:text-dark-text group-hover:text-mh-hunter-green transition-colors duration-300">Sarah G.</h4>
+                  <h4 className="font-bold text-black dark:text-dark-text group-hover:text-mh-hunter-green transition-colors duration-300">Sarah G.</h4>
                   <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Senior Project Manager</p>
                   <p className="text-gray-500 dark:text-dark-text-secondary text-xs">8 years with MH Construction</p>
                 </div>
               </div>
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-army-gold group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" style={{transitionDelay: `${i * 50}ms`}}>
+                  <svg key={i} className="w-5 h-5 text-mh-leather-tan group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" style={{transitionDelay: `${i * 50}ms`}}>
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
@@ -890,14 +896,14 @@ export default function CareersPage() {
                   <span className="text-white font-bold text-xl">MT</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-army-black dark:text-army-gold group-hover:text-mh-hunter-green transition-colors duration-300">Mike T.</h4>
+                  <h4 className="font-bold text-black dark:text-black group-hover:text-mh-hunter-green transition-colors duration-300">Mike T.</h4>
                   <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Construction Superintendent</p>
                   <p className="text-gray-500 dark:text-dark-text-secondary text-xs">12 years with MH Construction</p>
                 </div>
               </div>
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-army-gold group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" style={{transitionDelay: `${i * 50}ms`}}>
+                  <svg key={i} className="w-5 h-5 text-mh-leather-tan group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" style={{transitionDelay: `${i * 50}ms`}}>
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
@@ -910,18 +916,18 @@ export default function CareersPage() {
             {/* Testimonial 3 */}
             <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border border-gray-100 dark:border-dark-border group">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-army-gold rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                  <span className="text-army-black font-bold text-xl">JR</span>
+                <div className="w-16 h-16 bg-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                  <span className="text-white font-bold text-xl">JR</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-army-black dark:text-army-gold group-hover:text-army-gold transition-colors duration-300">Jessica R.</h4>
+                  <h4 className="font-bold text-black dark:text-black group-hover:text-mh-leather-tan transition-colors duration-300">Jessica R.</h4>
                   <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Senior Estimator</p>
                   <p className="text-gray-500 dark:text-dark-text-secondary text-xs">6 years with MH Construction</p>
                 </div>
               </div>
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-army-gold group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" style={{transitionDelay: `${i * 50}ms`}}>
+                  <svg key={i} className="w-5 h-5 text-mh-leather-tan group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" style={{transitionDelay: `${i * 50}ms`}}>
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
@@ -934,18 +940,18 @@ export default function CareersPage() {
             {/* Testimonial 4 */}
             <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border border-gray-100 dark:border-dark-border group">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                <div className="w-16 h-16 bg-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
                   <span className="text-white font-bold text-xl">DL</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-army-black dark:text-army-gold group-hover:text-blue-600 transition-colors duration-300">David L.</h4>
+                  <h4 className="font-bold text-black dark:text-black group-hover:text-mh-hunter-green transition-colors duration-300">David L.</h4>
                   <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Safety Coordinator</p>
                   <p className="text-gray-500 dark:text-dark-text-secondary text-xs">4 years with MH Construction</p>
                 </div>
               </div>
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-army-gold group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" style={{transitionDelay: `${i * 50}ms`}}>
+                  <svg key={i} className="w-5 h-5 text-mh-leather-tan group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" style={{transitionDelay: `${i * 50}ms`}}>
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
@@ -958,18 +964,18 @@ export default function CareersPage() {
             {/* Testimonial 5 */}
             <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border border-gray-100 dark:border-dark-border group">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-amber-700 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                <div className="w-16 h-16 bg-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                   <span className="text-white font-bold text-xl">AK</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-army-black dark:text-army-gold group-hover:text-amber-700 transition-colors duration-300">Amanda K.</h4>
+                  <h4 className="font-bold text-black dark:text-black group-hover:text-mh-leather-tan transition-colors duration-300">Amanda K.</h4>
                   <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Project Coordinator</p>
                   <p className="text-gray-500 dark:text-dark-text-secondary text-xs">3 years with MH Construction</p>
                 </div>
               </div>
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-army-gold group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" style={{transitionDelay: `${i * 50}ms`}}>
+                  <svg key={i} className="w-5 h-5 text-mh-leather-tan group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" style={{transitionDelay: `${i * 50}ms`}}>
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
@@ -982,18 +988,18 @@ export default function CareersPage() {
             {/* Testimonial 6 */}
             <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border border-gray-100 dark:border-dark-border group">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                <div className="w-16 h-16 bg-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
                   <span className="text-white font-bold text-xl">RC</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-army-black dark:text-army-gold group-hover:text-amber-600 transition-colors duration-300">Robert C.</h4>
+                  <h4 className="font-bold text-black dark:text-black group-hover:text-mh-hunter-green transition-colors duration-300">Robert C.</h4>
                   <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Field Technician</p>
                   <p className="text-gray-500 dark:text-dark-text-secondary text-xs">2 years with MH Construction</p>
                 </div>
               </div>
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-army-gold group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" style={{transitionDelay: `${i * 50}ms`}}>
+                  <svg key={i} className="w-5 h-5 text-mh-leather-tan group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" style={{transitionDelay: `${i * 50}ms`}}>
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
@@ -1006,14 +1012,14 @@ export default function CareersPage() {
 
           {/* Call to Action */}
           <div className="text-center mt-16">
-            <div className="bg-mh-hunter-green/5 border border-mh-hunter-green/20 rounded-xl p-8 max-w-3xl mx-auto hover:bg-mh-hunter-green/10 transition-all duration-500 transform hover:scale-105 hover:shadow-xl">
-              <h3 className="text-2xl font-bold text-army-black mb-4">Ready to Join Our Team?</h3>
-              <p className="text-gray-600 mb-6">
+            <div className="bg-mh-hunter-green/5 dark:bg-mh-hunter-green/10 border border-mh-hunter-green/20 dark:border-mh-hunter-green/30 rounded-xl p-8 max-w-3xl mx-auto hover:bg-mh-hunter-green/10 dark:hover:bg-mh-hunter-green/15 transition-all duration-500 transform hover:scale-105 hover:shadow-xl">
+              <h3 className="text-2xl font-bold text-black dark:text-dark-text mb-4">Ready to Join Our Team?</h3>
+              <p className="text-gray-600 dark:text-dark-text-secondary mb-6">
                 Join the MH Construction family and experience the difference of working with a veteran-owned company that truly values its employees.
               </p>
               <button
                 onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="inline-flex items-center px-8 py-3 bg-army-gold text-army-black rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg group"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan dark:from-mh-hunter-green dark:to-mh-leather-tan text-white dark:text-white rounded-lg font-semibold hover:from-mh-leather-tan hover:to-mh-hunter-green dark:hover:from-mh-leather-tan dark:hover:to-mh-hunter-green transition-all duration-300 transform hover:scale-105 hover:shadow-lg group"
               >
                 Apply Today
                 <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">

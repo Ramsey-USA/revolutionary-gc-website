@@ -131,7 +131,7 @@ export default function ContactPage() {
       <Header />
       
       {/* Hero Section with Statistics */}
-      <section className="relative py-20 bg-gradient-to-r from-mh-forest-green to-army-green text-white overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-r from-mh-hunter-green to-mh-hunter-green/80 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -147,22 +147,22 @@ export default function ContactPage() {
           {/* Contact Statistics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
-              <div className="text-3xl md:text-4xl font-bold text-army-gold mb-2 animate-fade-in-up">&lt;24h</div>
+              <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan mb-2 animate-fade-in-up">&lt;24h</div>
               <div className="text-white/90 font-medium">Response Time</div>
             </div>
             
             <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
-              <div className="text-3xl md:text-4xl font-bold text-army-gold mb-2 animate-fade-in-up">100+</div>
+              <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan mb-2 animate-fade-in-up">100+</div>
               <div className="text-white/90 font-medium">Miles Service Area</div>
             </div>
             
             <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
-              <div className="text-3xl md:text-4xl font-bold text-army-gold mb-2 animate-fade-in-up">500+</div>
+              <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan mb-2 animate-fade-in-up">500+</div>
               <div className="text-white/90 font-medium">Projects Completed</div>
             </div>
             
             <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
-              <div className="text-3xl md:text-4xl font-bold text-army-gold mb-2 animate-fade-in-up">98%</div>
+              <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan mb-2 animate-fade-in-up">98%</div>
               <div className="text-white/90 font-medium">Client Satisfaction</div>
             </div>
           </div>
@@ -173,7 +173,7 @@ export default function ContactPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
               How to Reach Us
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -183,11 +183,11 @@ export default function ContactPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Phone Contact */}
-            <div className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-mh-forest-green">
-              <div className="w-16 h-16 bg-mh-forest-green/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-forest-green/20 transition-colors">
-                <Phone className="w-8 h-8 text-mh-forest-green" />
+            <div className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-mh-hunter-green">
+              <div className="w-16 h-16 bg-mh-hunter-green/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 transition-colors">
+                <Phone className="w-8 h-8 text-mh-hunter-green" />
               </div>
-              <h3 className="text-xl font-bold text-army-black mb-4">Call Us</h3>
+              <h3 className="text-xl font-bold text-black mb-4">Call Us</h3>
               <div className="space-y-2 mb-4">
                 <p className="text-gray-600 font-semibold">(509) 308-6489</p>
                 <p className="text-gray-500 text-sm">Available 7 days a week</p>
@@ -196,7 +196,7 @@ export default function ContactPage() {
               </div>
               <a 
                 href="tel:+15093086489" 
-                className="inline-flex items-center px-4 py-2 bg-mh-forest-green text-white rounded-lg font-medium hover:bg-army-green transition-colors"
+                className="inline-flex items-center px-4 py-2 bg-mh-hunter-green text-white rounded-lg font-medium hover:bg-mh-hunter-green/80 transition-colors"
               >
                 Call Now
                 <Phone className="w-4 h-4 ml-2" />
@@ -204,11 +204,11 @@ export default function ContactPage() {
             </div>
 
             {/* Email Contact */}
-            <div className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-army-gold">
-              <div className="w-16 h-16 bg-army-gold/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-army-gold/20 transition-colors">
-                <Mail className="w-8 h-8 text-army-gold" />
+            <div className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-mh-leather-tan">
+              <div className="w-16 h-16 bg-mh-leather-tan/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-leather-tan/20 transition-colors">
+                <Mail className="w-8 h-8 text-mh-leather-tan" />
               </div>
-              <h3 className="text-xl font-bold text-army-black mb-4">Email Us</h3>
+              <h3 className="text-xl font-bold text-black mb-4">Email Us</h3>
               <div className="space-y-2 mb-4">
                 <p className="text-gray-600 font-semibold">info@mhc-gc.com</p>
                 <p className="text-gray-500 text-sm">General inquiries</p>
@@ -217,7 +217,7 @@ export default function ContactPage() {
               </div>
               <a 
                 href="mailto:info@mhc-gc.com" 
-                className="inline-flex items-center px-4 py-2 bg-army-gold text-army-black rounded-lg font-medium hover:bg-yellow-500 transition-colors"
+                className="inline-flex items-center px-4 py-2 bg-mh-leather-tan text-black rounded-lg font-medium hover:bg-mh-leather-tan/80 transition-colors"
               >
                 Send Email
                 <Mail className="w-4 h-4 ml-2" />
@@ -225,11 +225,11 @@ export default function ContactPage() {
             </div>
 
             {/* Location */}
-            <div className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-blue-600">
-              <div className="w-16 h-16 bg-blue-600/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
-                <MapPin className="w-8 h-8 text-blue-600" />
+            <div className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-mh-hunter-green">
+              <div className="w-16 h-16 bg-mh-hunter-green/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 transition-colors">
+                <MapPin className="w-8 h-8 text-mh-hunter-green" />
               </div>
-              <h3 className="text-xl font-bold text-army-black mb-4">Visit Us</h3>
+              <h3 className="text-xl font-bold text-black mb-4">Visit Us</h3>
               <div className="space-y-2 mb-4">
                 <p className="text-gray-600 font-semibold">3111 N. Capital Ave</p>
                 <p className="text-gray-600">Pasco, WA 99301</p>
@@ -238,7 +238,7 @@ export default function ContactPage() {
               </div>
               <button 
                 onClick={() => document.getElementById('service-map')?.scrollIntoView({ behavior: 'smooth' })}
-                className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center px-4 py-2 bg-mh-hunter-green text-white rounded-lg font-medium hover:bg-mh-hunter-green/80 transition-colors"
               >
                 View Map
                 <MapPin className="w-4 h-4 ml-2" />
@@ -246,13 +246,13 @@ export default function ContactPage() {
             </div>
 
             {/* Emergency Contact */}
-            <div className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-red-600">
-              <div className="w-16 h-16 bg-red-600/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-red-600/20 transition-colors">
-                <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-mh-leather-tan">
+              <div className="w-16 h-16 bg-mh-leather-tan/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-leather-tan/20 transition-colors">
+                <svg className="w-8 h-8 text-mh-leather-tan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-army-black mb-4">Emergency</h3>
+              <h3 className="text-xl font-bold text-black mb-4">Emergency</h3>
               <div className="space-y-2 mb-4">
                 <p className="text-gray-600 font-semibold">(509) 555-HELP</p>
                 <p className="text-gray-500 text-sm">24/7 Emergency Line</p>
@@ -261,7 +261,7 @@ export default function ContactPage() {
               </div>
               <a 
                 href="tel:+15095554357" 
-                className="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors"
+                className="inline-flex items-center px-4 py-2 bg-mh-leather-tan text-black rounded-lg font-medium hover:bg-mh-leather-tan/80 transition-colors"
               >
                 Emergency Call
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -282,7 +282,7 @@ export default function ContactPage() {
             <div className="lg:col-span-2">
               <div className="bg-gray-50 rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100">
                 <div className="text-center mb-8 pb-6 border-b border-gray-200">
-                  <h2 className="text-3xl md:text-4xl font-bold text-army-black mb-4">
+                  <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
                     Send Us a Message
                   </h2>
                   <p className="text-gray-600">
@@ -293,7 +293,7 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-8">
                   {/* Personal Information Section */}
                   <div className="space-y-6">
-                    <h3 className="text-lg font-semibold text-army-black flex items-center">
+                    <h3 className="text-lg font-semibold text-black flex items-center">
                       <svg className="w-5 h-5 mr-2 text-mh-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                       </svg>
@@ -302,7 +302,7 @@ export default function ContactPage() {
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label htmlFor="name" className="block text-sm font-medium text-army-black">
+                        <label htmlFor="name" className="block text-sm font-medium text-black">
                           Full Name *
                         </label>
                         <input
@@ -318,7 +318,7 @@ export default function ContactPage() {
                       </div>
                       
                       <div className="space-y-2">
-                        <label htmlFor="email" className="block text-sm font-medium text-army-black">
+                        <label htmlFor="email" className="block text-sm font-medium text-black">
                           Email Address *
                         </label>
                         <input
@@ -336,7 +336,7 @@ export default function ContactPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label htmlFor="phone" className="block text-sm font-medium text-army-black">
+                        <label htmlFor="phone" className="block text-sm font-medium text-black">
                           Phone Number *
                         </label>
                         <input
@@ -351,7 +351,7 @@ export default function ContactPage() {
                         />
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="company" className="block text-sm font-medium text-army-black">
+                        <label htmlFor="company" className="block text-sm font-medium text-black">
                           Company/Organization
                         </label>
                         <input
@@ -369,7 +369,7 @@ export default function ContactPage() {
 
                   {/* Project Information Section */}
                   <div className="space-y-6">
-                    <h3 className="text-lg font-semibold text-army-black flex items-center">
+                    <h3 className="text-lg font-semibold text-black flex items-center">
                       <svg className="w-5 h-5 mr-2 text-mh-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                       </svg>
@@ -378,7 +378,7 @@ export default function ContactPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label htmlFor="jobRole" className="block text-sm font-medium text-army-black">
+                        <label htmlFor="jobRole" className="block text-sm font-medium text-black">
                           Your Role *
                         </label>
                         <select
@@ -398,7 +398,7 @@ export default function ContactPage() {
                         </select>
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="projectStage" className="block text-sm font-medium text-army-black">
+                        <label htmlFor="projectStage" className="block text-sm font-medium text-black">
                           Project Stage *
                         </label>
                         <select
@@ -421,7 +421,7 @@ export default function ContactPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label htmlFor="projectType" className="block text-sm font-medium text-army-black">
+                        <label htmlFor="projectType" className="block text-sm font-medium text-black">
                           Project Type *
                         </label>
                         <select
@@ -443,7 +443,7 @@ export default function ContactPage() {
                         </select>
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="budgetRange" className="block text-sm font-medium text-army-black">
+                        <label htmlFor="budgetRange" className="block text-sm font-medium text-black">
                           Budget Range *
                         </label>
                         <select
@@ -465,7 +465,7 @@ export default function ContactPage() {
                     </div>
 
                     <div className="space-y-2">
-                      <label htmlFor="howHeard" className="block text-sm font-medium text-army-black">
+                      <label htmlFor="howHeard" className="block text-sm font-medium text-black">
                         How Did You Hear About Us? *
                       </label>
                       <select
@@ -488,7 +488,7 @@ export default function ContactPage() {
 
                   {/* Project Details Section */}
                   <div className="space-y-6">
-                    <h3 className="text-lg font-semibold text-army-black flex items-center">
+                    <h3 className="text-lg font-semibold text-black flex items-center">
                       <svg className="w-5 h-5 mr-2 text-mh-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                       </svg>
@@ -496,7 +496,7 @@ export default function ContactPage() {
                     </h3>
 
                     <div className="space-y-2">
-                      <label htmlFor="message" className="block text-sm font-medium text-army-black">
+                      <label htmlFor="message" className="block text-sm font-medium text-black">
                         Project Description
                       </label>
                       <textarea
@@ -516,11 +516,11 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-army-gold text-army-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-xl flex items-center justify-center"
+                      className="w-full bg-mh-leather-tan text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-mh-leather-tan/90 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-xl flex items-center justify-center"
                     >
                       {isSubmitting ? (
                         <span className="flex items-center">
-                          <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-army-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                           </svg>
@@ -544,7 +544,7 @@ export default function ContactPage() {
 
             {/* Contact Information Sidebar - Takes 1/3 width */}
             <div className="space-y-8">
-              <h2 className="text-2xl font-bold text-army-black mb-6">
+              <h2 className="text-2xl font-bold text-black mb-6">
                 Quick Contact Info
               </h2>
               
@@ -557,7 +557,7 @@ export default function ContactPage() {
                         <IconComponent size={20} />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-army-black mb-2">
+                        <h3 className="text-lg font-bold text-black mb-2">
                           {info.title}
                         </h3>
                         {info.details.map((detail, detailIndex) => (
@@ -573,13 +573,13 @@ export default function ContactPage() {
 
               {/* Quick Actions */}
               <div className="space-y-4 pt-6 border-t border-gray-200">
-                <h3 className="text-lg font-bold text-army-black mb-4">
+                <h3 className="text-lg font-bold text-black mb-4">
                   Quick Actions
                 </h3>
                 <div className="space-y-3">
                   <a
                     href="/estimate"
-                    className="block bg-mh-forest-green text-white px-6 py-3 rounded-lg font-semibold hover:bg-army-green transition-colors text-center"
+                    className="block bg-mh-forest-green text-white px-6 py-3 rounded-lg font-semibold hover:bg-mh-hunter-green transition-colors text-center"
                   >
                     Get AI Estimate
                   </a>
@@ -599,19 +599,19 @@ export default function ContactPage() {
               </div>
 
               {/* Emergency Contact Card */}
-              <div className="p-6 bg-red-50 border border-red-200 rounded-lg">
-                <h3 className="text-xl font-bold text-red-800 mb-2 flex items-center">
+              <div className="p-6 bg-red-50 border border-red-300 rounded-lg">
+                <h3 className="text-xl font-bold text-red-900 mb-2 flex items-center">
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
                   </svg>
                   Emergency Contact
                 </h3>
-                <p className="text-red-700 mb-3 text-sm">
+                <p className="text-red-800 mb-3 text-sm">
                   For construction emergencies or urgent project issues, call our 24/7 emergency line:
                 </p>
                 <a 
                   href="tel:+15095554357"
-                  className="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors"
+                  className="inline-flex items-center px-4 py-2 bg-red-700 text-white rounded-lg font-medium hover:bg-red-800 transition-colors"
                 >
                   <span className="text-lg font-bold">(509) 555-HELP</span>
                 </a>
@@ -625,7 +625,7 @@ export default function ContactPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-gray-600">
@@ -636,7 +636,7 @@ export default function ContactPage() {
           <div className="space-y-6">
             {/* FAQ 1 */}
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-              <h3 className="text-lg font-bold text-army-black mb-3">
+              <h3 className="text-lg font-bold text-black mb-3">
                 How quickly will you respond to my inquiry?
               </h3>
               <p className="text-gray-600">
@@ -646,7 +646,7 @@ export default function ContactPage() {
 
             {/* FAQ 2 */}
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-              <h3 className="text-lg font-bold text-army-black mb-3">
+              <h3 className="text-lg font-bold text-black mb-3">
                 What information should I include in my project inquiry?
               </h3>
               <p className="text-gray-600">
@@ -656,7 +656,7 @@ export default function ContactPage() {
 
             {/* FAQ 3 */}
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-              <h3 className="text-lg font-bold text-army-black mb-3">
+              <h3 className="text-lg font-bold text-black mb-3">
                 Do you provide free estimates?
               </h3>
               <p className="text-gray-600">
@@ -666,7 +666,7 @@ export default function ContactPage() {
 
             {/* FAQ 4 */}
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-              <h3 className="text-lg font-bold text-army-black mb-3">
+              <h3 className="text-lg font-bold text-black mb-3">
                 What is your service area?
               </h3>
               <p className="text-gray-600">
@@ -676,7 +676,7 @@ export default function ContactPage() {
 
             {/* FAQ 5 */}
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-              <h3 className="text-lg font-bold text-army-black mb-3">
+              <h3 className="text-lg font-bold text-black mb-3">
                 What types of projects do you handle?
               </h3>
               <p className="text-gray-600">
@@ -686,7 +686,7 @@ export default function ContactPage() {
 
             {/* FAQ 6 */}
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-              <h3 className="text-lg font-bold text-army-black mb-3">
+              <h3 className="text-lg font-bold text-black mb-3">
                 Can I schedule an on-site consultation?
               </h3>
               <p className="text-gray-600">
@@ -701,7 +701,7 @@ export default function ContactPage() {
       <section id="service-map" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
               Our Service Area
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -715,27 +715,27 @@ export default function ContactPage() {
               <div className="w-16 h-16 bg-mh-forest-green rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-army-black mb-2">Headquarters</h3>
+              <h3 className="text-xl font-bold text-black mb-2">Headquarters</h3>
               <p className="text-gray-600">3111 N. Capital Ave<br />Pasco, WA 99301</p>
             </div>
             
             <div className="text-center p-6 bg-gray-50 rounded-xl">
-              <div className="w-16 h-16 bg-army-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-army-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 bg-mh-leather-tan rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-army-black mb-2">Service Radius</h3>
+              <h3 className="text-xl font-bold text-black mb-2">Service Radius</h3>
               <p className="text-gray-600">100-Mile Coverage<br />Pacific Northwest</p>
             </div>
             
             <div className="text-center p-6 bg-gray-50 rounded-xl">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-mh-hunter-green rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-army-black mb-2">Special Projects</h3>
+              <h3 className="text-xl font-bold text-black mb-2">Special Projects</h3>
               <p className="text-gray-600">Nationwide<br />Custom Solutions</p>
             </div>
           </div>
@@ -757,14 +757,14 @@ export default function ContactPage() {
           {/* Service Area Description */}
           <div className="mt-12 text-center">
             <div className="bg-mh-forest-green/5 border border-mh-forest-green/20 rounded-xl p-8 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-army-black mb-4">Ready to Start Your Project?</h3>
+              <h3 className="text-2xl font-bold text-black mb-4">Ready to Start Your Project?</h3>
               <p className="text-gray-600 mb-6">
                 Whether you're in our local service area or need a custom solution anywhere in the country, our veteran-owned team is ready to bring military-grade precision to your construction project.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="inline-flex items-center px-8 py-3 bg-army-gold text-army-black rounded-lg font-semibold hover:bg-yellow-500 transition-colors"
+                  className="inline-flex items-center px-8 py-3 bg-mh-leather-tan text-black rounded-lg font-semibold hover:bg-mh-leather-tan/90 transition-colors"
                 >
                   Get Started Today
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

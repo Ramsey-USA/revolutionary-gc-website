@@ -111,17 +111,17 @@ const TeamDashboard = () => {
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/20'
-      case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20'
-      case 'low': return 'text-green-600 bg-green-100 dark:bg-green-900/20'
+      case 'medium': return 'text-mh-leather-tan bg-mh-leather-tan/20 dark:bg-mh-leather-tan/20'
+      case 'low': return 'text-mh-hunter-green bg-mh-hunter-green/20 dark:bg-mh-hunter-green/20'
       default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'
     }
   }
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'pending': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20'
-      case 'confirmed': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/20'
-      case 'completed': return 'text-green-600 bg-green-100 dark:bg-green-900/20'
+      case 'pending': return 'text-mh-leather-tan bg-mh-leather-tan/20 dark:bg-mh-leather-tan/20'
+      case 'confirmed': return 'text-mh-hunter-green bg-mh-hunter-green/20 dark:bg-mh-hunter-green/20'
+      case 'completed': return 'text-mh-hunter-green bg-mh-hunter-green/20 dark:bg-mh-hunter-green/20'
       case 'cancelled': return 'text-red-600 bg-red-100 dark:bg-red-900/20'
       default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'
     }
@@ -147,7 +147,7 @@ const TeamDashboard = () => {
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-dark-surface p-6 flex items-center justify-center">
         <div className="bg-white dark:bg-dark-surface-2 rounded-lg p-8 text-center max-w-md">
-          <AlertTriangle className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
+          <AlertTriangle className="w-12 h-12 text-mh-leather-tan mx-auto mb-4" />
           <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text mb-2">Firebase Not Connected</h2>
           <p className="text-gray-600 dark:text-dark-text-secondary">
             The team dashboard requires Firebase configuration to display consultation requests and notifications.
@@ -372,7 +372,7 @@ const TeamDashboard = () => {
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(consultation.status)}`}>
                         {consultation.status.toUpperCase()}
                       </span>
-                      <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900/20 text-blue-600">
+                      <span className="px-3 py-1 rounded-full text-xs font-medium bg-mh-hunter-green/20 dark:bg-mh-hunter-green/20 text-mh-hunter-green">
                         {consultation.type === 'personal-consultation' ? 'PERSONAL' : 'STANDARD'}
                       </span>
                     </div>

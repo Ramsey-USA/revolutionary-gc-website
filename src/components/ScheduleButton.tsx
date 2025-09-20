@@ -27,15 +27,15 @@ const ScheduleButton: React.FC<ScheduleButtonProps> = ({
   const getVariantClasses = () => {
     switch (variant) {
       case 'primary':
-        return 'bg-gradient-to-r from-mh-hunter-green to-army-green hover:from-army-green hover:to-mh-hunter-green text-white'
+        return 'bg-gradient-to-r from-mh-hunter-green to-mh-hunter-green/80 hover:from-mh-hunter-green/80 hover:to-mh-hunter-green text-white'
       case 'secondary':
-        return 'bg-army-gold hover:bg-yellow-500 text-army-black'
+        return 'bg-mh-leather-tan hover:bg-mh-leather-tan/80 text-mh-hunter-green'
       case 'outline':
         return 'border-2 border-mh-hunter-green text-mh-hunter-green hover:bg-mh-hunter-green hover:text-white'
       case 'ghost':
         return 'text-mh-hunter-green hover:bg-mh-hunter-green/10'
       default:
-        return 'bg-gradient-to-r from-mh-hunter-green to-army-green hover:from-army-green hover:to-mh-hunter-green text-white'
+        return 'bg-gradient-to-r from-mh-hunter-green to-mh-hunter-green/80 hover:from-mh-hunter-green/80 hover:to-mh-hunter-green text-white'
     }
   }
 

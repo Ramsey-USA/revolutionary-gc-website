@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import CalendarScheduler from '../../components/CalendarScheduler'
-import StarDecorations from '../../components/StarDecorations'
+import UniversalHeroSection from '../../components/UniversalHeroSection'
 import { Download, FileText, Shield, Clock, Phone, Mail, MapPin, Calendar, ChevronDown, ExternalLink } from 'lucide-react'
 
 const GovernmentContractingClient = () => {
@@ -209,46 +209,25 @@ const GovernmentContractingClient = () => {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-army-black via-mh-hunter-green to-army-green dark:from-dark-surface dark:via-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text overflow-hidden">
-        {/* Star decorations */}
-        <StarDecorations />
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white dark:text-dark-text">
-              Government Contracting
-            </h1>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed text-white dark:text-dark-text-secondary">
-              Serving federal, state, and local governments with veteran-led expertise, 
-              security clearances, and proven compliance across critical infrastructure projects.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <button 
-                onClick={() => setIsSchedulerOpen(true)}
-                className="group bg-army-gold hover:bg-army-gold/90 text-army-black px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-center flex items-center justify-center"
-              >
-                <Calendar size={20} className="mr-2" />
-                Schedule Government Consultation
-                <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
-              </button>
-              <a 
-                href="#capabilities" 
-                className="group border border-white text-white hover:bg-white hover:text-mh-hunter-green px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-center"
-              >
-                Our Capabilities
-                <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <UniversalHeroSection
+        title="Government"
+        titleHighlight="Contracting"
+        subtitle="Serving federal, state, and local governments with veteran-led expertise, security clearances, and proven compliance across critical infrastructure projects."
+        primaryButton={{
+          text: "Schedule Government Consultation",
+          onClick: () => setIsSchedulerOpen(true)
+        }}
+        secondaryButton={{
+          text: "Our Capabilities",
+          href: "#capabilities"
+        }}
+      />
 
       {/* Enhanced Government Capabilities Section */}
       <section id="capabilities" className="py-20 bg-gray-50 dark:bg-dark-surface-2 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
               Government Contracting Capabilities
             </h2>
             <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
@@ -265,7 +244,7 @@ const GovernmentContractingClient = () => {
                     <div className="text-4xl">{capability.icon}</div>
                     <button
                       onClick={() => toggleCapability(capability.id)}
-                      className="text-white hover:text-army-gold transition-colors duration-300"
+                      className="text-white hover:text-mh-leather-tan transition-colors duration-300"
                     >
                       <ChevronDown 
                         size={24} 
@@ -287,18 +266,18 @@ const GovernmentContractingClient = () => {
                   <div className="p-6 bg-white dark:bg-dark-surface border-t border-gray-100 dark:border-dark-border">
                     <div className="space-y-4">
                       <div>
-                        <h4 className="font-semibold text-army-black dark:text-dark-text mb-2">Overview</h4>
+                        <h4 className="font-semibold text-black dark:text-dark-text mb-2">Overview</h4>
                         <p className="text-gray-600 dark:text-dark-text-secondary text-sm">
                           {capability.details.description}
                         </p>
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-army-black dark:text-dark-text mb-2">Services</h4>
+                        <h4 className="font-semibold text-black dark:text-dark-text mb-2">Services</h4>
                         <ul className="text-sm text-gray-600 dark:text-dark-text-secondary space-y-1">
                           {capability.details.services.map((service, idx) => (
                             <li key={idx} className="flex items-start">
-                              <span className="text-army-green mr-2 mt-1">•</span>
+                              <span className="text-mh-hunter-green mr-2 mt-1">•</span>
                               {service}
                             </li>
                           ))}
@@ -306,7 +285,7 @@ const GovernmentContractingClient = () => {
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-army-black dark:text-dark-text mb-2">Qualifications</h4>
+                        <h4 className="font-semibold text-black dark:text-dark-text mb-2">Qualifications</h4>
                         <div className="flex flex-wrap gap-2">
                           {capability.details.qualifications.map((qual, idx) => (
                             <span 
@@ -331,7 +310,7 @@ const GovernmentContractingClient = () => {
       <section className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
               Government Contracting Resources
             </h2>
             <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
@@ -344,11 +323,11 @@ const GovernmentContractingClient = () => {
             {governmentResources.map((resource, index) => (
               <div key={index} className="group bg-gray-50 dark:bg-dark-surface-2 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-dark-border">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-mh-hunter-green to-army-gold rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <resource.icon size={24} className="text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-army-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">
+                    <h3 className="text-lg font-semibold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">
                       {resource.title}
                     </h3>
                     <p className="text-gray-600 dark:text-dark-text-secondary text-sm mb-4">
@@ -359,7 +338,7 @@ const GovernmentContractingClient = () => {
                         <span className="px-2 py-1 bg-gray-200 dark:bg-dark-surface-3 rounded">{resource.type}</span>
                         <span>{resource.size}</span>
                       </div>
-                      <button className="group flex items-center space-x-2 text-mh-hunter-green hover:text-army-gold transition-colors duration-300">
+                      <button className="group flex items-center space-x-2 text-mh-hunter-green hover:text-mh-leather-tan transition-colors duration-300">
                         <Download size={16} />
                         <span className="text-sm font-medium">Download</span>
                         <ExternalLink size={12} className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -377,7 +356,7 @@ const GovernmentContractingClient = () => {
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white dark:from-dark-surface-2 dark:to-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
               Government Contracting Contact
             </h2>
             <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
@@ -390,7 +369,7 @@ const GovernmentContractingClient = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               <div className="bg-white dark:bg-dark-surface rounded-xl p-8 shadow-lg border border-gray-100 dark:border-dark-border">
-                <h3 className="text-2xl font-bold text-army-black dark:text-dark-text mb-6">
+                <h3 className="text-2xl font-bold text-black dark:text-dark-text mb-6">
                   Government Contracting Office
                 </h3>
                 
@@ -400,7 +379,7 @@ const GovernmentContractingClient = () => {
                       <Phone size={20} className="text-mh-hunter-green" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-army-black dark:text-dark-text">Direct Line</h4>
+                      <h4 className="font-semibold text-black dark:text-dark-text">Direct Line</h4>
                       <p className="text-gray-600 dark:text-dark-text-secondary">(509) 308-6489</p>
                       <p className="text-sm text-gray-500 dark:text-dark-text-secondary">For urgent government contracting matters</p>
                     </div>
@@ -411,7 +390,7 @@ const GovernmentContractingClient = () => {
                       <Mail size={20} className="text-mh-leather-tan" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-army-black dark:text-dark-text">Government Contracts</h4>
+                      <h4 className="font-semibold text-black dark:text-dark-text">Government Contracts</h4>
                       <p className="text-gray-600 dark:text-dark-text-secondary">government@mhconstruction.com</p>
                       <p className="text-sm text-gray-500 dark:text-dark-text-secondary">Secure email for classified communications available</p>
                     </div>
@@ -422,7 +401,7 @@ const GovernmentContractingClient = () => {
                       <MapPin size={20} className="text-mh-hunter-green" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-army-black dark:text-dark-text">Headquarters</h4>
+                      <h4 className="font-semibold text-black dark:text-dark-text">Headquarters</h4>
                       <p className="text-gray-600 dark:text-dark-text-secondary">Spokane, Washington</p>
                       <p className="text-sm text-gray-500 dark:text-dark-text-secondary">Serving Pacific Northwest & nationwide</p>
                     </div>
@@ -433,7 +412,7 @@ const GovernmentContractingClient = () => {
                       <Clock size={20} className="text-mh-leather-tan" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-army-black dark:text-dark-text">Emergency Response</h4>
+                      <h4 className="font-semibold text-black dark:text-dark-text">Emergency Response</h4>
                       <p className="text-gray-600 dark:text-dark-text-secondary">24/7 Available</p>
                       <p className="text-sm text-gray-500 dark:text-dark-text-secondary">For critical infrastructure emergencies</p>
                     </div>
@@ -445,19 +424,19 @@ const GovernmentContractingClient = () => {
                 <h3 className="text-xl font-bold mb-4">Security Protocols</h3>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center">
-                    <span className="w-2 h-2 bg-army-gold rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-mh-leather-tan rounded-full mr-3"></span>
                     Secure communication channels available for classified projects
                   </li>
                   <li className="flex items-center">
-                    <span className="w-2 h-2 bg-army-gold rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-mh-leather-tan rounded-full mr-3"></span>
                     Personnel with active security clearances ready for deployment
                   </li>
                   <li className="flex items-center">
-                    <span className="w-2 h-2 bg-army-gold rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-mh-leather-tan rounded-full mr-3"></span>
                     ITAR and NISPOM compliant project management
                   </li>
                   <li className="flex items-center">
-                    <span className="w-2 h-2 bg-army-gold rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-mh-leather-tan rounded-full mr-3"></span>
                     Facility security clearance for sensitive material handling
                   </li>
                 </ul>
@@ -467,14 +446,14 @@ const GovernmentContractingClient = () => {
             {/* Quick Actions */}
             <div className="space-y-6">
               <div className="bg-white dark:bg-dark-surface rounded-xl p-8 shadow-lg border border-gray-100 dark:border-dark-border">
-                <h3 className="text-2xl font-bold text-army-black dark:text-dark-text mb-6">
+                <h3 className="text-2xl font-bold text-black dark:text-dark-text mb-6">
                   Quick Actions
                 </h3>
                 
                 <div className="space-y-4">
                   <button 
                     onClick={() => setIsSchedulerOpen(true)}
-                    className="w-full bg-gradient-to-r from-mh-hunter-green to-army-green text-white p-4 rounded-lg font-semibold hover:from-army-green hover:to-mh-hunter-green transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                    className="w-full bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white p-4 rounded-lg font-semibold hover:from-mh-leather-tan hover:to-mh-hunter-green transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                   >
                     <Calendar size={20} className="mr-2" />
                     Schedule Government Consultation
@@ -485,7 +464,7 @@ const GovernmentContractingClient = () => {
                     Request Capabilities Statement
                   </button>
                   
-                  <button className="w-full border-2 border-army-gold text-army-gold hover:bg-army-gold hover:text-army-black p-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                  <button className="w-full border-2 border-mh-leather-tan text-mh-leather-tan hover:bg-mh-leather-tan hover:text-black p-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
                     <Shield size={20} className="mr-2" />
                     Submit Security Clearance Inquiry
                   </button>
@@ -513,7 +492,7 @@ const GovernmentContractingClient = () => {
       <section id="portfolio" className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-army-black dark:text-dark-text mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
               Featured Government Projects
             </h2>
             <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
@@ -530,7 +509,7 @@ const GovernmentContractingClient = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2">
+                <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2">
                   DHS Security Facility
                 </h3>
                 <p className="text-gray-600 dark:text-dark-text-secondary text-sm">
@@ -547,7 +526,7 @@ const GovernmentContractingClient = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2">
+                <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2">
                   Air Force Medical Center
                 </h3>
                 <p className="text-gray-600 dark:text-dark-text-secondary text-sm">
@@ -564,7 +543,7 @@ const GovernmentContractingClient = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-army-black dark:text-dark-text mb-2">
+                <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2">
                   County Emergency Center
                 </h3>
                 <p className="text-gray-600 dark:text-dark-text-secondary text-sm">
@@ -589,7 +568,7 @@ const GovernmentContractingClient = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => setIsSchedulerOpen(true)}
-              className="group bg-army-gold hover:bg-army-gold/90 text-army-black px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+              className="group bg-mh-leather-tan hover:bg-mh-leather-tan/90 text-black px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
             >
               <Calendar size={20} className="mr-2" />
               Schedule Consultation

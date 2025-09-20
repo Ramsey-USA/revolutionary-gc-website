@@ -1,7 +1,7 @@
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import WhyChooseSection from '../../components/WhyChooseSection'
-import StarDecorations from '../../components/StarDecorations'
+import UniversalHeroSection from '../../components/UniversalHeroSection'
 import { Mail, Linkedin } from 'lucide-react'
 
 export default function TeamPage() {
@@ -227,24 +227,19 @@ export default function TeamPage() {
     <main className="min-h-screen pt-20">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-black via-mh-hunter-green to-charcoal dark:from-dark-surface dark:via-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text overflow-hidden">
-        {/* Star decorations */}
-        <StarDecorations />
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white dark:text-dark-text">
-              Meet Our Expert Team
-            </h1>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed text-white dark:text-dark-text-secondary">
-              Decades of combined construction expertise powered by military precision 
-              and innovative technology. Our veteran-owned team brings unmatched dedication 
-              to every project.
-            </p>
-          </div>
-        </div>
-      </section>
+      <UniversalHeroSection
+        title="Meet Our Expert"
+        titleHighlight="Team"
+        subtitle="Decades of combined construction expertise powered by military precision and innovative technology. Our veteran-owned team brings unmatched dedication to every project."
+        primaryButton={{
+          text: "View Leadership Team",
+          href: "#leadership"
+        }}
+        secondaryButton={{
+          text: "Join Our Team",
+          href: "/careers"
+        }}
+      />
 
       {/* Leadership Team */}
 

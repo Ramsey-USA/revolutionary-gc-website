@@ -151,7 +151,7 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] flex items-center justify-center p-2 sm:p-4">
       <div className="bg-white dark:bg-dark-surface-2 rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] relative mx-2 sm:mx-0 flex flex-col">
         {/* Header */}
-        <div className="bg-gradient-to-r from-mh-hunter-green to-army-gold p-4 sm:p-6 rounded-t-2xl flex-shrink-0">
+        <div className="bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan p-4 sm:p-6 rounded-t-2xl flex-shrink-0">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2 sm:space-x-3">
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center">
@@ -174,14 +174,14 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
 
         {/* Success Message */}
         {submitSuccess && (
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 p-3 sm:p-4 m-3 sm:m-6 rounded-lg flex-shrink-0">
+          <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 border border-mh-hunter-green/30 dark:border-mh-hunter-green/50 p-3 sm:p-4 m-3 sm:m-6 rounded-lg flex-shrink-0">
             <div className="flex items-center space-x-3">
-              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-full flex items-center justify-center">
+              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-mh-hunter-green rounded-full flex items-center justify-center">
                 <span className="text-white text-xs sm:text-sm">✓</span>
               </div>
               <div>
-                <h3 className="font-semibold text-green-800 dark:text-green-200 text-sm sm:text-base">Consultation Scheduled!</h3>
-                <p className="text-green-700 dark:text-green-300 text-xs sm:text-sm">We'll contact you within 24 hours to confirm your appointment.</p>
+                <h3 className="font-semibold text-mh-hunter-green dark:text-mh-hunter-green text-sm sm:text-base">Consultation Scheduled!</h3>
+                <p className="text-mh-hunter-green/80 dark:text-mh-hunter-green/90 text-xs sm:text-sm">We'll contact you within 24 hours to confirm your appointment.</p>
               </div>
             </div>
           </div>
@@ -192,7 +192,7 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
           <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-4 sm:space-y-6">
             {/* Personal Information */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-army-black dark:text-dark-text flex items-center">
+              <h3 className="text-lg font-semibold text-black dark:text-dark-text flex items-center">
                 <User size={20} className="mr-2 text-mh-hunter-green" />
                 Personal Information
               </h3>
@@ -265,7 +265,7 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
 
           {/* Project Information */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-army-black dark:text-dark-text flex items-center">
+            <h3 className="text-lg font-semibold text-black dark:text-dark-text flex items-center">
               <Building size={20} className="mr-2 text-mh-hunter-green" />
               Project Information
             </h3>
@@ -316,7 +316,7 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
 
           {/* Scheduling */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-army-black dark:text-dark-text flex items-center">
+            <h3 className="text-lg font-semibold text-black dark:text-dark-text flex items-center">
               <Clock size={20} className="mr-2 text-mh-hunter-green" />
               Preferred Schedule
             </h3>
@@ -384,7 +384,7 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="flex-1 bg-gradient-to-r from-mh-hunter-green to-army-green text-white px-4 sm:px-6 py-3 sm:py-3 rounded-lg font-semibold hover:from-army-green hover:to-mh-hunter-green transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-xl flex items-center justify-center touch-manipulation min-h-[48px]"
+              className="flex-1 bg-gradient-to-r from-mh-hunter-green to-mh-hunter-green/80 text-white px-4 sm:px-6 py-3 sm:py-3 rounded-lg font-semibold hover:from-mh-hunter-green/80 hover:to-mh-hunter-green transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-xl flex items-center justify-center touch-manipulation min-h-[48px]"
             >
               {isSubmitting ? (
                 <span className="flex items-center">

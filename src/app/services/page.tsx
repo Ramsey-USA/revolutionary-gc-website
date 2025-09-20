@@ -4,6 +4,7 @@ import CoreValuesSection from '../../components/CoreValuesSection'
 import WhyChooseSection from '../../components/WhyChooseSection'
 import StarDecorations from '../../components/StarDecorations'
 import ScheduleButton from '../../components/ScheduleButton'
+import UniversalHeroSection from '../../components/UniversalHeroSection'
 import { Building, Hammer, HeartPulse, Shield, Factory, Grape } from 'lucide-react'
 
 export default function ServicesPage() {
@@ -49,24 +50,19 @@ export default function ServicesPage() {
   return (
     <main className="min-h-screen pt-20 bg-white dark:bg-dark-surface transition-colors duration-300">
       <Header />
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-r from-mh-hunter-green to-charcoal dark:from-dark-surface-2 dark:to-dark-surface-3 text-white dark:text-dark-text overflow-hidden">
-        {/* Star decorations */}
-        <StarDecorations />
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white dark:text-dark-text">
-              Our Construction Services
-            </h1>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed text-white dark:text-dark-text-secondary">
-              Veteran-owned excellence delivering innovative construction solutions 
-              across the Pacific Northwest with 150+ years of combined team expertise, 
-              military precision and cutting-edge technology.
-            </p>
-          </div>
-        </div>
-      </section>
+      <UniversalHeroSection
+        title="Our Construction"
+        titleHighlight="Services"
+        subtitle="Veteran-owned excellence delivering innovative construction solutions across the Pacific Northwest with 150+ years of combined team expertise, military precision and cutting-edge technology."
+        primaryButton={{
+          text: "Start Your Project",
+          href: "/estimate"
+        }}
+        secondaryButton={{
+          text: "View Our Portfolio",
+          href: "/projects"
+        }}
+      />
 
       {/* Services Grid */}
       <section className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
@@ -130,7 +126,7 @@ export default function ServicesPage() {
                   {/* Service Header */}
                   <div className="bg-gradient-to-r from-mh-hunter-green to-charcoal p-6 text-white relative overflow-hidden">
                     {/* Animated background overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-mh-leather-tan to-yellow-500 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                     
                     <div className="relative z-10">
                       <div className="flex items-center justify-center w-16 h-16 bg-white dark:bg-dark-surface bg-opacity-20 dark:bg-opacity-80 rounded-full mx-auto mb-4 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-30 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
@@ -158,7 +154,7 @@ export default function ServicesPage() {
 
                     {/* Action Button */}
                     <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <button className="w-full bg-mh-leather-tan dark:bg-mh-leather-tan text-black dark:text-black py-2 px-4 rounded-lg font-semibold hover:bg-yellow-500 dark:hover:bg-yellow-500 transition-colors duration-300 transform hover:scale-105">
+                      <button className="w-full bg-mh-leather-tan dark:bg-mh-leather-tan text-black dark:text-black py-2 px-4 rounded-lg font-semibold hover:bg-mh-leather-tan/80 dark:hover:bg-mh-leather-tan/80 transition-colors duration-300 transform hover:scale-105">
                         Learn More
                       </button>
                     </div>
@@ -255,7 +251,7 @@ export default function ServicesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/estimate"
-                className="bg-mh-leather-tan dark:bg-mh-leather-tan text-black dark:text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-500 dark:hover:bg-yellow-500 transition-colors transform hover:scale-105"
+                className="bg-mh-leather-tan dark:bg-mh-leather-tan text-black dark:text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-mh-leather-tan/80 dark:hover:bg-mh-leather-tan/80 transition-colors transform hover:scale-105"
               >
                 Get AI Estimate
               </a>
@@ -345,11 +341,11 @@ export default function ServicesPage() {
             {/* Client Testimonial 3 */}
             <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border border-gray-100 dark:border-dark-border">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-hunter-green/80 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                   <span className="text-white font-bold text-xl">TC</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-black dark:text-dark-text group-hover:text-blue-600 transition-colors duration-300">TechCorp Industries</h4>
+                  <h4 className="font-bold text-black dark:text-dark-text group-hover:text-mh-hunter-green transition-colors duration-300">TechCorp Industries</h4>
                   <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Commercial Client</p>
                   <div className="flex text-mh-leather-tan mt-1">
                     {[...Array(5)].map((_, i) => (
@@ -364,7 +360,7 @@ export default function ServicesPage() {
                 "Our new headquarters showcases MH Construction's expertise in commercial construction. The integration of smart building technology and sustainable design exceeded our vision."
               </p>
               <div className="flex items-center text-sm text-gray-500 dark:text-dark-text-secondary">
-                <svg className="w-4 h-4 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 mr-2 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
                 Corporate Headquarters • $6.5M Project
@@ -374,11 +370,11 @@ export default function ServicesPage() {
             {/* Client Testimonial 4 */}
             <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border border-gray-100 dark:border-dark-border">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
                   <span className="text-white font-bold text-xl">ESD</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-black dark:text-dark-text group-hover:text-green-600 transition-colors duration-300">Eastside School District</h4>
+                  <h4 className="font-bold text-black dark:text-dark-text group-hover:text-mh-hunter-green transition-colors duration-300">Eastside School District</h4>
                   <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Educational Client</p>
                   <div className="flex text-mh-leather-tan mt-1">
                     {[...Array(5)].map((_, i) => (
@@ -393,7 +389,7 @@ export default function ServicesPage() {
                 "MH Construction transformed our aging school facilities with modern, safe, and inspiring learning environments. Their dedication to quality and student safety was evident throughout the project."
               </p>
               <div className="flex items-center text-sm text-gray-500 dark:text-dark-text-secondary">
-                <svg className="w-4 h-4 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 mr-2 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
                 Educational Facilities • $8.1M Project
@@ -403,11 +399,11 @@ export default function ServicesPage() {
             {/* Client Testimonial 5 */}
             <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border border-gray-100 dark:border-dark-border">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                   <span className="text-white font-bold text-xl">VW</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-black dark:text-dark-text group-hover:text-purple-600 transition-colors duration-300">Valley Winery</h4>
+                  <h4 className="font-bold text-black dark:text-dark-text group-hover:text-mh-leather-tan transition-colors duration-300">Valley Winery</h4>
                   <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Specialty Client</p>
                   <div className="flex text-mh-leather-tan mt-1">
                     {[...Array(5)].map((_, i) => (
@@ -422,7 +418,7 @@ export default function ServicesPage() {
                 "Our new winery facility combines traditional craftsmanship with modern technology. MH Construction understood our unique requirements and delivered a space that honors our heritage while embracing innovation."
               </p>
               <div className="flex items-center text-sm text-gray-500 dark:text-dark-text-secondary">
-                <svg className="w-4 h-4 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 mr-2 text-mh-leather-tan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                 </svg>
                 Winery & Tasting Room • $3.7M Project
@@ -432,11 +428,11 @@ export default function ServicesPage() {
             {/* Client Testimonial 6 */}
             <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border border-gray-100 dark:border-dark-border">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
                   <span className="text-white font-bold text-xl">FM</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-black dark:text-dark-text group-hover:text-red-600 transition-colors duration-300">Federal Agency</h4>
+                  <h4 className="font-bold text-black dark:text-dark-text group-hover:text-mh-hunter-green transition-colors duration-300">Federal Agency</h4>
                   <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Government Client</p>
                   <div className="flex text-mh-leather-tan mt-1">
                     {[...Array(5)].map((_, i) => (
@@ -451,7 +447,7 @@ export default function ServicesPage() {
                 "MH Construction's veteran leadership and security clearance capabilities made them the perfect choice for our sensitive facility. Their understanding of federal requirements and attention to detail was exceptional."
               </p>
               <div className="flex items-center text-sm text-gray-500 dark:text-dark-text-secondary">
-                <svg className="w-4 h-4 mr-2 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 mr-2 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
                 Secure Federal Facility • $12.3M Project
