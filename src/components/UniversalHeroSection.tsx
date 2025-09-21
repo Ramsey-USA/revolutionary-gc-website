@@ -73,7 +73,7 @@ const UniversalHeroSection: React.FC<UniversalHeroSectionProps> = ({
               {primaryButton && (
                 <button 
                   onClick={() => handleButtonClick(primaryButton)}
-                  className="bg-mh-leather-tan text-white px-10 py-4 rounded-lg text-lg font-bold hover:bg-mh-hunter-green transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-lg hover:shadow-xl"
+                  className="btn btn-primary"
                 >
                   {primaryButton.text}
                 </button>
@@ -81,7 +81,7 @@ const UniversalHeroSection: React.FC<UniversalHeroSectionProps> = ({
               {secondaryButton && (
                 <button 
                   onClick={() => handleButtonClick(secondaryButton)}
-                  className="border-2 border-mh-leather-tan text-mh-leather-tan px-10 py-4 rounded-lg text-lg font-bold hover:bg-mh-leather-tan hover:text-white transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-lg"
+                  className="btn btn-outline"
                 >
                   {secondaryButton.text}
                 </button>

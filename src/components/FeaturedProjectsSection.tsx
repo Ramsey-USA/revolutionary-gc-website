@@ -118,13 +118,13 @@ const FeaturedProjectsSection = () => {
                   <div className="space-y-3">
                     <Link
                       href={`/projects/${project.slug}`}
-                      className="block w-full bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white text-center py-3 rounded-lg font-semibold hover:from-mh-leather-tan hover:to-mh-hunter-green transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                      className="btn btn-primary block w-full text-center"
                     >
                       View Project Details
                     </Link>
                     <Link
                       href="/estimate"
-                      className="block w-full bg-transparent border-2 border-mh-hunter-green dark:border-mh-leather-tan text-mh-hunter-green dark:text-mh-leather-tan text-center py-2 rounded-lg font-semibold hover:bg-mh-hunter-green dark:hover:bg-mh-leather-tan hover:text-white dark:hover:text-white transition-all duration-300 transform hover:scale-105"
+                      className="btn btn-outline block w-full text-center"
                     >
                       Get Similar Estimate
                     </Link>
@@ -139,10 +139,10 @@ const FeaturedProjectsSection = () => {
         <div className="text-center mt-16">
           <Link
             href="/projects"
-            className="inline-flex items-center bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white px-10 py-4 rounded-lg text-lg font-semibold hover:from-mh-leather-tan hover:to-mh-hunter-green transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+            className="btn btn-secondary inline-flex items-center"
           >
             View All Projects
-            <ArrowRight size={20} className="ml-2" />
+            <ArrowRight size={20} className="ml-2 icon-action icon-animate-bounce" />
           </Link>
         </div>
       </div>

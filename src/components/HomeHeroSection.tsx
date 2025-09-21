@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Play, Pause } from 'lucide-react'
 
-const HeroSection = () => {
+const HomeHeroSection = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true)
 
   const toggleVideo = () => {
@@ -51,7 +51,7 @@ const HeroSection = () => {
         className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 bg-black/60 dark:bg-dark-surface/80 backdrop-blur-sm text-white dark:text-dark-text p-2 sm:p-3 rounded-full hover:bg-black/70 dark:hover:bg-dark-surface/90 transition-all duration-300 hover:scale-110 shadow-lg touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"
         aria-label={isVideoPlaying ? 'Pause video' : 'Play video'}
       >
-        {isVideoPlaying ? <Pause size={18} className="sm:w-5 sm:h-5" /> : <Play size={18} className="sm:w-5 sm:h-5" />}
+        {isVideoPlaying ? <Pause size={18} className="sm:w-5 sm:h-5 icon-action icon-interactive-primary" /> : <Play size={18} className="sm:w-5 sm:h-5 icon-action icon-animate-glow" />}
       </button>
 
       {/* Hero Content */}
@@ -68,17 +68,17 @@ const HeroSection = () => {
         </p>
 
         {/* Call to Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center px-4 max-w-lg mx-auto">
           <Link
             href="/estimate"
-            className="w-full sm:w-auto bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-mh-leather-tan dark:hover:bg-mh-leather-tan transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl touch-manipulation min-h-[48px] text-center"
+            className="btn btn-primary w-full sm:flex-1 min-h-[48px] text-center flex items-center justify-center text-base sm:text-lg"
           >
             Get Your AI Estimate
           </Link>
           
           <Link
             href="/projects"
-            className="w-full sm:w-auto bg-transparent border-2 border-white dark:border-white text-white dark:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-white dark:hover:bg-white hover:text-charcoal dark:hover:text-charcoal transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg touch-manipulation min-h-[48px] text-center"
+            className="btn btn-outline-secondary w-full sm:flex-1 min-h-[48px] text-center flex items-center justify-center text-base sm:text-lg border-white text-white hover:text-white"
           >
             Explore Our Projects
           </Link>
@@ -95,4 +95,4 @@ const HeroSection = () => {
   )
 }
 
-export default HeroSection
+export default HomeHeroSection

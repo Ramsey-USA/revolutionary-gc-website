@@ -78,7 +78,7 @@ const CoreValuesSection = () => {
                   {/* Front of Card - Enhanced Design */}
                   <div className={`flip-card-front bg-gradient-to-br ${value.bgGradient} ${value.hoverBg} backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl p-6 flex flex-col items-center justify-center border border-gray-200 dark:border-gray-700 transition-all duration-500 group-hover:scale-105`}>
                     <div className={`p-4 rounded-full bg-gradient-to-br ${value.bgGradient} shadow-lg mb-6 transform group-hover:scale-110 transition-transform duration-300`}>
-                      <IconComponent size={48} className={value.color} />
+                      <IconComponent size={48} className={`${value.color} icon-hero icon-interactive-secondary`} />
                     </div>
                     <h3 className={`text-2xl font-bold ${value.color} text-center leading-tight mb-3`}>
                       {value.title}
@@ -91,7 +91,7 @@ const CoreValuesSection = () => {
                   {/* Back of Card - Enhanced Design */}
                   <div className={`flip-card-back bg-gradient-to-br ${value.bgGradient} ${value.hoverBg} backdrop-blur-sm rounded-xl shadow-lg p-6 flex flex-col justify-center border border-gray-200 dark:border-gray-700`}>
                     <div className={`p-3 rounded-full bg-gradient-to-br ${value.bgGradient} shadow-lg mb-4 mx-auto w-fit`}>
-                      <IconComponent size={32} className={value.color} />
+                      <IconComponent size={32} className={`${value.color} icon-feature icon-animate-float`} />
                     </div>
                     <h3 className={`text-xl font-bold ${value.color} mb-4 text-center`}>
                       {value.title}

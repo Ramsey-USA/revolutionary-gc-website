@@ -153,7 +153,7 @@ export default function ProjectsPage() {
       <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-dark-text mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-mh-hunter-green dark:text-dark-text mb-4">
               Featured Projects
             </h2>
             <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto mb-8">
@@ -209,7 +209,7 @@ export default function ProjectsPage() {
 
                   {/* Enhanced Project Content */}
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text mb-2 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">
                       {project.title}
                     </h3>
                     <p className="text-gray-600 dark:text-dark-text-secondary mb-4 leading-relaxed group-hover:text-gray-800 dark:group-hover:text-dark-text transition-colors duration-300">
@@ -230,7 +230,7 @@ export default function ProjectsPage() {
 
                     {/* Enhanced Key Features */}
                     <div className="space-y-2 mb-6">
-                      <h4 className="font-semibold text-black dark:text-dark-text text-sm group-hover:text-mh-hunter-green transition-colors duration-300">Key Features:</h4>
+                      <h4 className="font-semibold text-mh-hunter-green dark:text-dark-text text-sm group-hover:text-mh-leather-tan transition-colors duration-300">Key Features:</h4>
                       <div className="grid grid-cols-2 gap-2">
                         {project.features.map((feature, featureIndex) => (
                           <div key={featureIndex} className="flex items-center space-x-2 group-hover:translate-x-1 transition-transform duration-300" style={{ transitionDelay: `${featureIndex * 50}ms` }}>
@@ -242,7 +242,7 @@ export default function ProjectsPage() {
                     </div>
 
                     {/* Enhanced Action Button */}
-                    <button className="w-full bg-gradient-to-r from-mh-hunter-green to-mh-hunter-green/80 text-white py-3 px-4 rounded-lg font-semibold hover:from-mh-leather-tan hover:to-mh-leather-tan/80 transition-all duration-300 transform hover:scale-105 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 shadow-lg hover:shadow-xl">
+                    <button className="btn btn-primary w-full opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
                       View Project Details
                     </button>
                   </div>
@@ -257,7 +257,7 @@ export default function ProjectsPage() {
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 transition-colors duration-300 border-t border-gray-200 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-mh-hunter-green dark:text-dark-text mb-4">
               From Vision to Reality
             </h2>
             <p className="text-lg text-gray-600 dark:text-dark-text-secondary max-w-2xl mx-auto">
@@ -276,7 +276,7 @@ export default function ProjectsPage() {
                 {/* Connector Line */}
                 <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-hunter-green to-gray-300 dark:from-mh-hunter-green dark:to-dark-border"></div>
               </div>
-              <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Site Assessment</h3>
+              <h3 className="text-lg font-bold text-mh-hunter-green dark:text-dark-text mb-2 group-hover:text-mh-leather-tan transition-colors duration-300">Site Assessment</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary text-sm">Comprehensive site analysis and feasibility studies</p>
             </div>
 
@@ -290,7 +290,7 @@ export default function ProjectsPage() {
                 {/* Connector Line */}
                 <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-mh-hunter-green to-gray-300 dark:from-mh-hunter-green dark:to-dark-border"></div>
               </div>
-              <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2 group-hover:text-mh-hunter-green transition-colors duration-300">Design & Planning</h3>
+              <h3 className="text-lg font-bold text-mh-hunter-green dark:text-dark-text mb-2 group-hover:text-mh-leather-tan transition-colors duration-300">Design & Planning</h3>
               <p className="text-gray-600 dark:text-dark-text-secondary text-sm">AI-powered design with 3D visualization and detailed blueprints</p>
             </div>
 

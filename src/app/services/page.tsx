@@ -162,7 +162,7 @@ export default function ServicesPage() {
 
                     {/* Enhanced Action Button */}
                     <div className="mt-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                      <button className="w-full bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 text-white py-3 px-4 rounded-lg font-semibold hover:from-mh-hunter-green hover:to-mh-hunter-green/80 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                      <button className="btn btn-secondary w-full">
                         Learn More
                       </button>
                     </div>
@@ -240,7 +240,7 @@ export default function ServicesPage() {
               <p className="text-gray-600 dark:text-dark-text-secondary mb-6">Ready to experience our streamlined process?</p>
               <a
                 href="/estimate"
-                className="inline-block bg-gradient-to-r from-mh-hunter-green to-mh-hunter-green/80 text-white px-8 py-3 rounded-lg font-semibold hover:from-mh-leather-tan hover:to-mh-leather-tan/80 hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="btn btn-primary"
               >
                 Start Your Project Today
               </a>
@@ -260,7 +260,7 @@ export default function ServicesPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/estimate"
-                  className="bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-mh-hunter-green hover:to-mh-hunter-green/80 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  className="btn btn-accent"
                 >
                   Get AI Estimate
                 </a>

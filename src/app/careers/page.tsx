@@ -2,9 +2,12 @@
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import WhyChooseSection from '../../components/WhyChooseSection'
-import StarDecorations from '../../components/StarDecorations'
 import UniversalHeroSection from '../../components/UniversalHeroSection'
 import { useState } from 'react'
+import {
+  Briefcase, Shield, Award, Users, Smile, DollarSign, Heart, ShieldCheck,
+  TrendingUp, Sun, MapPin, Star, ArrowRight, User as UserIcon, FileText
+} from 'lucide-react'
 
 interface Position {
   id: string
@@ -197,7 +200,7 @@ export default function CareersPage() {
   }
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
       <Header />
       <UniversalHeroSection
         title="Build Your Career"
@@ -220,34 +223,43 @@ export default function CareersPage() {
       />
 
       {/* Career Statistics */}
-      <section className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
+      <section className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center p-6 bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 group border border-mh-leather-tan/20 min-h-[140px] flex flex-col justify-center">
-              <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan mb-2 group-hover:scale-110 transition-transform duration-300">12+</div>
+            <div className="text-center p-6 bg-white dark:bg-gray-800/70 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 group border border-mh-leather-tan/30 dark:border-mh-leather-tan/35">
+              <div className="w-14 h-14 mx-auto mb-3 rounded-full bg-mh-leather-tan/15 flex items-center justify-center group-hover:bg-mh-leather-tan/25 transition">
+                <Briefcase className="w-7 h-7 text-mh-leather-tan" />
+              </div>
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green bg-clip-text text-transparent mb-1">12+</div>
               <div className="text-gray-600 dark:text-dark-text-secondary font-medium">Open Positions</div>
             </div>
-            
-            <div className="text-center p-6 bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 group border border-mh-hunter-green/20 min-h-[140px] flex flex-col justify-center">
-              <div className="text-3xl md:text-4xl font-bold text-mh-hunter-green mb-2 group-hover:scale-110 transition-transform duration-300">85%</div>
+            <div className="text-center p-6 bg-white dark:bg-gray-800/70 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 group border border-mh-hunter-green/30 dark:border-mh-hunter-green/40">
+              <div className="w-14 h-14 mx-auto mb-3 rounded-full bg-mh-hunter-green/15 flex items-center justify-center group-hover:bg-mh-hunter-green/25 transition">
+                <Shield className="w-7 h-7 text-mh-hunter-green" />
+              </div>
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan bg-clip-text text-transparent mb-1">85%</div>
               <div className="text-gray-600 dark:text-dark-text-secondary font-medium">Veteran Team</div>
             </div>
-            
-            <div className="text-center p-6 bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 group border border-mh-leather-tan/20 min-h-[140px] flex flex-col justify-center">
-              <div className="text-3xl md:text-4xl font-bold text-mh-leather-tan mb-2 group-hover:scale-110 transition-transform duration-300">150+</div>
-              <div className="text-gray-600 dark:text-dark-text-secondary font-medium">Years Combined Experience</div>
+            <div className="text-center p-6 bg-white dark:bg-gray-800/70 backdrop-blur-sm rounded-xl hover:shadow-xl shadow-lg transition-all duration-500 hover:scale-105 group border border-mh-leather-tan/30 dark:border-mh-leather-tan/35">
+              <div className="w-14 h-14 mx-auto mb-3 rounded-full bg-mh-leather-tan/15 flex items-center justify-center group-hover:bg-mh-leather-tan/25 transition">
+                <Award className="w-7 h-7 text-mh-leather-tan" />
+              </div>
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green bg-clip-text text-transparent mb-1">150+</div>
+              <div className="text-gray-600 dark:text-dark-text-secondary font-medium">Years Experience</div>
             </div>
-            
-            <div className="text-center p-6 bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 group border border-mh-hunter-green/20 min-h-[140px] flex flex-col justify-center">
-              <div className="text-3xl md:text-4xl font-bold text-mh-hunter-green mb-2 group-hover:scale-110 transition-transform duration-300">95%</div>
-              <div className="text-gray-600 dark:text-dark-text-secondary font-medium">Employee Satisfaction</div>
+            <div className="text-center p-6 bg-white dark:bg-gray-800/70 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 group border border-mh-hunter-green/30 dark:border-mh-hunter-green/40">
+              <div className="w-14 h-14 mx-auto mb-3 rounded-full bg-mh-hunter-green/15 flex items-center justify-center group-hover:bg-mh-hunter-green/25 transition">
+                <Smile className="w-7 h-7 text-mh-hunter-green" />
+              </div>
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan bg-clip-text text-transparent mb-1">95%</div>
+              <div className="text-gray-600 dark:text-dark-text-secondary font-medium">Satisfaction</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Benefits & Culture Section */}
-      <section id="benefits" className="py-20 bg-white dark:bg-dark-surface-2 transition-colors duration-300">
+      <section id="benefits" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
@@ -260,11 +272,9 @@ export default function CareersPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Competitive Compensation */}
-            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-mh-leather-tan hover:border-l-8 min-h-[280px] flex flex-col">
+            <div className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:rotate-0 border border-mh-leather-tan/35 dark:border-mh-leather-tan/40">
               <div className="w-16 h-16 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12">
-                <svg className="w-8 h-8 text-mh-leather-tan group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                </svg>
+                <DollarSign className="w-8 h-8 text-mh-leather-tan" />
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Competitive Compensation</h3>
@@ -278,11 +288,9 @@ export default function CareersPage() {
             </div>
 
             {/* Health & Wellness */}
-            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8 min-h-[280px] flex flex-col">
+            <div className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:rotate-0 border border-mh-hunter-green/35 dark:border-mh-hunter-green/40">
               <div className="w-16 h-16 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
-                <svg className="w-8 h-8 text-mh-hunter-green group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
+                <Heart className="w-8 h-8 text-mh-hunter-green" />
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text mb-4 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Health & Wellness</h3>
@@ -296,11 +304,9 @@ export default function CareersPage() {
             </div>
 
             {/* Veteran Support */}
-            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8 min-h-[280px] flex flex-col">
-              <div className="w-16 h-16 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12">
-                <svg className="w-8 h-8 text-mh-hunter-green group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
+            <div className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:rotate-0 border border-mh-hunter-green/35 dark:border-mh-hunter-green/40">
+              <div className="w-16 h-16 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 transition-all duration-500 group-hover:scale-110 group_hover:-rotate-12">
+                <ShieldCheck className="w-8 h-8 text-mh-hunter-green" />
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-black dark:text-dark-text mb-4 group-hover:text-mh-hunter-green dark:group-hover:text-mh-hunter-green transition-colors duration-300">Veteran Support</h3>
@@ -314,11 +320,9 @@ export default function CareersPage() {
             </div>
 
             {/* Professional Development */}
-            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-mh-hunter-green hover:border-l-8 min-h-[280px] flex flex-col">
-              <div className="w-16 h-16 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
-                <svg className="w-8 h-8 text-mh-hunter-green group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+            <div className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:rotate-0 border border-mh-hunter-green/35 dark:border-mh-hunter-green/40">
+              <div className="w-16 h-16 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 transition-all duration-500 group-hover:scale-110 group_hover:rotate-12">
+                <TrendingUp className="w-8 h-8 text-mh-hunter-green" />
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Professional Development</h3>
@@ -332,11 +336,9 @@ export default function CareersPage() {
             </div>
 
             {/* Work-Life Balance */}
-            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border-l-4 border-mh-leather-tan hover:border-l-8 min-h-[280px] flex flex-col">
-              <div className="w-16 h-16 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-12">
-                <svg className="w-8 h-8 text-mh-leather-tan group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
+            <div className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:rotate-0 border border-mh-leather-tan/35 dark:border-mh-leather-tan/40">
+              <div className="w-16 h-16 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30 transition-all duration-500 group-hover:scale-110 group_hover:-rotate-12">
+                <Sun className="w-8 h-8 text-mh-leather-tan" />
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Work-Life Balance</h3>
@@ -350,11 +352,9 @@ export default function CareersPage() {
             </div>
 
             {/* Team Culture */}
-            <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border-l-4 border-mh-leather-tan hover:border-l-8 min-h-[280px] flex flex-col">
-              <div className="w-16 h-16 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
-                <svg className="w-8 h-8 text-mh-leather-tan group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
+            <div className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:rotate-0 border border-mh-leather-tan/35 dark:border-mh-leather-tan/40">
+              <div className="w-16 h-16 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30 transition-all duration-500 group-hover:scale-110 group_hover:rotate-12">
+                <Users className="w-8 h-8 text-mh-leather-tan" />
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text mb-4 group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Team Culture</h3>
@@ -371,7 +371,7 @@ export default function CareersPage() {
       </section>
 
       {/* Open Positions Section */}
-      <section id="open-positions" className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
+      <section id="open-positions" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
@@ -387,12 +387,12 @@ export default function CareersPage() {
             {departments.map(dept => (
               <button
                 key={dept}
-                onClick={() => setSelectedDepartment(dept)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-500 transform hover:scale-105 hover:shadow-lg ${
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mh-hunter-green/60 ${
                   selectedDepartment === dept
-                    ? 'bg-mh-hunter-green dark:bg-mh-hunter-green text-white dark:text-white shadow-xl scale-105'
-                    : 'bg-gray-100 dark:bg-dark-surface-2 text-gray-700 dark:text-dark-text hover:bg-gray-200 dark:hover:bg-dark-surface-3 hover:text-mh-hunter-green dark:hover:text-mh-hunter-green'
+                    ? 'bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white shadow-lg'
+                    : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-mh-hunter-green dark:hover:text-mh-leather-tan border border-gray-200 dark:border-gray-700'
                 }`}
+                onClick={() => setSelectedDepartment(dept)}
               >
                 {dept === 'all' ? 'All Departments' : dept}
               </button>
@@ -404,7 +404,7 @@ export default function CareersPage() {
             {filteredPositions.map(position => (
               <div
                 key={position.id}
-                className="bg-white dark:bg-dark-surface-2 border border-gray-200 dark:border-dark-border rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 hover:rotate-1 group"
+                className="bg-white dark:bg-gray-800 border border-mh-hunter-green/25 dark:border-mh-hunter-green/35 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2 group"
               >
                 <div className="p-8">
                   <div className="flex justify-between items-start mb-4">
@@ -425,10 +425,7 @@ export default function CareersPage() {
                   </div>
 
                   <div className="flex items-center text-gray-600 dark:text-dark-text-secondary mb-4">
-                    <svg className="w-4 h-4 mr-2 group-hover:text-mh-hunter-green transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
+                    <MapPin className="w-4 h-4 mr-2 text-mh-hunter-green group-hover:scale-110 transition-transform" />
                     {position.location}
                   </div>
 
@@ -465,10 +462,10 @@ export default function CareersPage() {
 
                   <div className="flex gap-4">
                     <button
-                      onClick={() => setExpandedPosition(
-                        expandedPosition === position.id ? null : position.id
-                      )}
-                      className="flex-1 px-6 py-3 border-2 border-mh-hunter-green dark:border-mh-hunter-green text-mh-hunter-green dark:text-mh-hunter-green rounded-lg font-medium hover:bg-mh-hunter-green dark:hover:bg-mh-hunter-green hover:text-white dark:hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                      onClick={() =>
+                        setExpandedPosition(expandedPosition === position.id ? null : position.id)
+                      }
+                      className="flex-1 px-6 py-3 border-2 border-mh-hunter-green text-mh-hunter-green dark:text-mh-hunter-green rounded-lg font-medium hover:bg-mh-hunter-green hover:text-white transition-all duration-300"
                     >
                       {expandedPosition === position.id ? 'Show Less' : 'Learn More'}
                     </button>
@@ -477,7 +474,7 @@ export default function CareersPage() {
                         setFormData(prev => ({ ...prev, position: position.title }))
                         document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })
                       }}
-                      className="flex-1 px-6 py-3 bg-mh-leather-tan dark:bg-mh-leather-tan text-white dark:text-white rounded-lg font-medium hover:bg-mh-hunter-green dark:hover:bg-mh-hunter-green transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                      className="flex-1 px-6 py-3 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white rounded-lg font-medium hover:from-mh-leather-tan hover:to-mh-hunter-green transition-all duration-300"
                     >
                       Apply Now
                     </button>
@@ -496,36 +493,31 @@ export default function CareersPage() {
       </section>
 
       {/* Career Path Timeline */}
-      <section className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
+      <section className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
-              Your Career Journey
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
-              At MH Construction, we believe in promoting from within. See how you can advance your career with us.
+            <h2 className="text-3xl md:text-4xl font-bold">Your Career Journey</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              A transparent growth path from entry to leadership inside MH Construction.
             </p>
           </div>
-
           <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-mh-hunter-green/20 dark:bg-mh-hunter-green/30 hidden lg:block"></div>
-
-            <div className="space-y-12 lg:space-y-24">
+            <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 w-1 h-full bg-gradient-to-b from-mh-hunter-green/25 via-mh-leather-tan/25 to-mh-hunter-green/25 rounded"></div>
+            <div className="space-y-16 lg:space-y-28">
               {/* Entry Level */}
               <div className="relative flex flex-col lg:flex-row items-center group">
-                <div className="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0">
-                  <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-mh-hunter-green hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 group-hover:rotate-1">
+                <div className="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0">
+                  <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-mh-hunter-green/30 dark:border-mh-hunter-green/40 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-mh-hunter-green dark:bg-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                        <span className="text-white dark:text-white font-bold">1</span>
+                      <div className="w-12 h-12 rounded-full bg-mh-hunter-green text-white flex items-center justify-center mr-4 font-bold group-hover:scale-110 transition">
+                        1
                       </div>
-                      <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text group-hover:text-mh-leather-tan transition-colors duration-300">Entry Level</h3>
+                      <h3 className="text-xl font-bold text-mh-hunter-green">Entry Level</h3>
                     </div>
-                    <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
-                      Start your career with hands-on experience and comprehensive training programs.
+                    <p className="text-gray-600 dark:text-gray-400 mb-4">
+                      Foundation roles with immersive training and mentorship.
                     </p>
-                    <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                    <ul className="text-sm text-gray-500 dark:text-gray-400 space-y-2">
                       <li>• Field Technician</li>
                       <li>• Junior Estimator</li>
                       <li>• Assistant Project Coordinator</li>
@@ -533,29 +525,28 @@ export default function CareersPage() {
                     </ul>
                   </div>
                 </div>
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-mh-hunter-green dark:bg-mh-hunter-green rounded-full border-4 border-white dark:border-dark-surface shadow-lg group-hover:scale-125 group-hover:shadow-xl transition-all duration-300"></div>
+                <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-mh-hunter-green border-4 border-white dark:border-gray-900 shadow group-hover:scale-125 transition"></div>
                 <div className="lg:w-1/2 lg:pl-12">
                   <div className="text-center lg:text-left">
-                    <div className="text-4xl font-bold text-mh-hunter-green dark:text-mh-hunter-green mb-2 group-hover:scale-110 transition-transform duration-300">0-2 Years</div>
-                    <div className="text-gray-600 dark:text-dark-text-secondary">Experience Range</div>
+                    <div className="text-4xl font-bold text-mh-hunter-green">0–2 Years</div>
+                    <div className="text-gray-600 dark:text-gray-400">Experience Range</div>
                   </div>
                 </div>
               </div>
-
               {/* Mid Level */}
               <div className="relative flex flex-col lg:flex-row-reverse items-center group">
-                <div className="lg:w-1/2 lg:pl-12 mb-8 lg:mb-0">
-                  <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-mh-leather-tan hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 group-hover:-rotate-1">
+                <div className="lg:w-1/2 lg:pl-12 mb-10 lg:mb-0">
+                  <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-mh-leather-tan/35 dark:border-mh-leather-tan/40 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-mh-leather-tan dark:bg-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
-                        <span className="text-white dark:text-white font-bold">2</span>
+                      <div className="w-12 h-12 rounded-full bg-mh-leather-tan text-white flex items-center justify-center mr-4 font-bold group-hover:scale-110 transition">
+                        2
                       </div>
-                      <h3 className="text-xl font-bold text-mh-hunter-green dark:text-dark-text group-hover:text-mh-leather-tan transition-colors duration-300">Mid Level</h3>
+                      <h3 className="text-xl font-bold text-mh-hunter-green">Mid Level</h3>
                     </div>
-                    <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
-                      Take on more responsibility and lead smaller projects while developing specialized skills.
+                    <p className="text-gray-600 dark:text-gray-400 mb-4">
+                      Expanding responsibility, independent task ownership, skill depth.
                     </p>
-                    <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                    <ul className="text-sm text-gray-500 dark:text-gray-400 space-y-2">
                       <li>• Project Coordinator</li>
                       <li>• Estimator</li>
                       <li>• Field Supervisor</li>
@@ -563,59 +554,57 @@ export default function CareersPage() {
                     </ul>
                   </div>
                 </div>
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-mh-leather-tan dark:bg-mh-leather-tan rounded-full border-4 border-white dark:border-dark-surface shadow-lg group-hover:scale-125 group-hover:shadow-xl transition-all duration-300"></div>
+                <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-mh-leather-tan border-4 border-white dark:border-gray-900 shadow group-hover:scale-125 transition"></div>
                 <div className="lg:w-1/2 lg:pr-12">
                   <div className="text-center lg:text-right">
-                    <div className="text-4xl font-bold text-mh-hunter-green dark:text-mh-leather-tan mb-2 group-hover:scale-110 transition-transform duration-300">3-7 Years</div>
-                    <div className="text-gray-600 dark:text-dark-text-secondary">Experience Range</div>
+                    <div className="text-4xl font-bold text-mh-leather-tan">3–7 Years</div>
+                    <div className="text-gray-600 dark:text-gray-400">Experience Range</div>
                   </div>
                 </div>
               </div>
-
               {/* Senior Level */}
               <div className="relative flex flex-col lg:flex-row items-center group">
-                <div className="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0">
-                  <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-mh-hunter-green hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 group-hover:rotate-1">
+                <div className="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0">
+                  <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-mh-hunter-green/35 dark:border-mh-hunter-green/45 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-mh-hunter-green dark:bg-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                        <span className="text-white dark:text-white font-bold">3</span>
+                      <div className="w-12 h-12 rounded-full bg-mh-hunter-green text-white flex items-center justify-center mr-4 font-bold group-hover:scale-110 transition">
+                        3
                       </div>
-                      <h3 className="text-xl font-bold text-black dark:text-dark-text group-hover:text-mh-hunter-green transition-colors duration-300">Senior Level</h3>
+                      <h3 className="text-xl font-bold text-mh-hunter-green">Senior Level</h3>
                     </div>
-                    <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
-                      Lead major projects and mentor junior team members while expanding your expertise.
+                    <p className="text-gray-600 dark:text-gray-400 mb-4">
+                      Strategic influence, cross-discipline coordination, mentorship leadership.
                     </p>
-                    <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                    <ul className="text-sm text-gray-500 dark:text-gray-400 space-y-2">
                       <li>• Senior Project Manager</li>
                       <li>• Senior Estimator</li>
-                      <li>• Construction Superintendent</li>
+                      <li>• Superintendent</li>
                       <li>• Safety Manager</li>
                     </ul>
                   </div>
                 </div>
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-mh-hunter-green dark:bg-mh-hunter-green rounded-full border-4 border-white dark:border-dark-surface shadow-lg group-hover:scale-125 group-hover:shadow-xl transition-all duration-300"></div>
+                <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-mh-hunter-green border-4 border-white dark:border-gray-900 shadow group-hover:scale-125 transition"></div>
                 <div className="lg:w-1/2 lg:pl-12">
                   <div className="text-center lg:text-left">
-                    <div className="text-4xl font-bold text-mh-hunter-green dark:text-mh-hunter-green mb-2 group-hover:scale-110 transition-transform duration-300">8-15 Years</div>
-                    <div className="text-gray-600 dark:text-dark-text-secondary">Experience Range</div>
+                    <div className="text-4xl font-bold text-mh-hunter-green">8–15 Years</div>
+                    <div className="text-gray-600 dark:text-gray-400">Experience Range</div>
                   </div>
                 </div>
               </div>
-
               {/* Leadership */}
               <div className="relative flex flex-col lg:flex-row-reverse items-center group">
-                <div className="lg:w-1/2 lg:pl-12 mb-8 lg:mb-0">
-                  <div className="bg-white dark:bg-dark-surface-2 p-8 rounded-xl shadow-lg border-l-4 border-mh-leather-tan hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 group-hover:-rotate-1">
+                <div className="lg:w-1/2 lg:pl-12 mb-10 lg:mb-0">
+                  <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-mh-leather-tan/35 dark:border-mh-leather-tan/45 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-mh-leather-tan dark:bg-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
-                        <span className="text-white dark:text-white font-bold">4</span>
+                      <div className="w-12 h-12 rounded-full bg-mh-leather-tan text-white flex items-center justify-center mr-4 font-bold group-hover:scale-110 transition">
+                        4
                       </div>
-                      <h3 className="text-xl font-bold text-black dark:text-dark-text group-hover:text-mh-leather-tan dark:group-hover:text-mh-leather-tan transition-colors duration-300">Leadership</h3>
+                      <h3 className="text-xl font-bold text-mh-hunter-green">Leadership</h3>
                     </div>
-                    <p className="text-gray-600 dark:text-dark-text-secondary mb-4">
-                      Shape the future of the company as a leader, setting strategy and mentoring the next generation.
+                    <p className="text-gray-600 dark:text-gray-400 mb-4">
+                      Vision setting, portfolio direction, enterprise mentorship & stewardship.
                     </p>
-                    <ul className="text-sm text-gray-500 dark:text-dark-text-secondary space-y-2">
+                    <ul className="text-sm text-gray-500 dark:text-gray-400 space-y-2">
                       <li>• Operations Manager</li>
                       <li>• Division Director</li>
                       <li>• Vice President</li>
@@ -623,11 +612,11 @@ export default function CareersPage() {
                     </ul>
                   </div>
                 </div>
-                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-mh-leather-tan dark:bg-mh-leather-tan rounded-full border-4 border-white dark:border-dark-surface shadow-lg group-hover:scale-125 group-hover:shadow-xl transition-all duration-300"></div>
+                <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-mh-leather-tan border-4 border-white dark:border-gray-900 shadow group-hover:scale-125 transition"></div>
                 <div className="lg:w-1/2 lg:pr-12">
                   <div className="text-center lg:text-right">
-                    <div className="text-4xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-2 group-hover:scale-110 transition-transform duration-300">15+ Years</div>
-                    <div className="text-gray-600 dark:text-dark-text-secondary">Experience Range</div>
+                    <div className="text-4xl font-bold text-mh-leather-tan">15+ Years</div>
+                    <div className="text-gray-600 dark:text-gray-400">Experience Range</div>
                   </div>
                 </div>
               </div>
@@ -636,7 +625,8 @@ export default function CareersPage() {
         </div>
       </section>
 
-      <section id="application-form" className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
+      {/* Application Form */}
+      <section id="application-form" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">Apply Today</h2>
@@ -645,7 +635,7 @@ export default function CareersPage() {
             </p>
           </div>
           
-          <form className="space-y-8 bg-gray-50 dark:bg-dark-surface-2 p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100 dark:border-dark-border transition-colors duration-300" onSubmit={handleSubmit}>
+          <form className="space-y-8 bg-gray-50 dark:bg-gray-800/80 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 transition-colors duration-300" onSubmit={handleSubmit}>
             {/* Form Header */}
             <div className="text-center pb-6 border-b border-gray-200 dark:border-dark-border">
               <h3 className="text-2xl font-bold text-black dark:text-dark-text mb-2">Job Application</h3>
@@ -655,10 +645,7 @@ export default function CareersPage() {
             {/* Personal Information Section */}
             <div className="space-y-6">
               <h4 className="text-lg font-semibold text-black dark:text-dark-text flex items-center">
-                <svg className="w-5 h-5 mr-2 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-                Personal Information
+                <UserIcon className="w-5 h-5 mr-2 text-mh-hunter-green" /> Personal Information
               </h4>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -671,8 +658,8 @@ export default function CareersPage() {
                     required 
                     value={formData.name} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition-all duration-300 bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-mh-hunter-green/50 dark:hover:border-mh-hunter-green/50 transform focus:scale-105" 
-                    placeholder="Your full name" 
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition"
+                    placeholder="Your full name"
                   />
                 </div>
                 
@@ -685,8 +672,8 @@ export default function CareersPage() {
                     required 
                     value={formData.email} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition-all duration-300 bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-mh-hunter-green/50 dark:hover:border-mh-hunter-green/50 transform focus:scale-105" 
-                    placeholder="your.email@example.com" 
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition"
+                    placeholder="your.email@example.com"
                   />
                 </div>
               </div>
@@ -700,8 +687,8 @@ export default function CareersPage() {
                   required 
                   value={formData.phone} 
                   onChange={handleChange} 
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition-all duration-300 bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-mh-hunter-green/50 dark:hover:border-mh-hunter-green/50 transform focus:scale-105" 
-                  placeholder="(509) 308-6489" 
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition"
+                  placeholder="(509) 308-6489"
                 />
               </div>
             </div>
@@ -709,10 +696,7 @@ export default function CareersPage() {
             {/* Position Information Section */}
             <div className="space-y-6">
               <h4 className="text-lg font-semibold text-black dark:text-dark-text flex items-center">
-                <svg className="w-5 h-5 mr-2 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 002 2h2a1 1 0 001-1v-1a2 2 0 00-2-2H8a2 2 0 00-2 2v1a1 1 0 001 1h2a2 2 0 002-2z" />
-                </svg>
-                Position Information
+                <Briefcase className="w-5 h-5 mr-2 text-mh-hunter-green" /> Position Information
               </h4>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -725,8 +709,8 @@ export default function CareersPage() {
                     required 
                     value={formData.position} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition-all duration-300 bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-mh-hunter-green/50 dark:hover:border-mh-hunter-green/50 transform focus:scale-105" 
-                    placeholder="e.g. Project Manager, Estimator, Superintendent" 
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition"
+                    placeholder="e.g. Project Manager, Estimator, Superintendent"
                   />
                 </div>
                 
@@ -738,7 +722,7 @@ export default function CareersPage() {
                     required 
                     value={formData.experienceLevel} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition-all duration-300 bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-mh-hunter-green/50 dark:hover:border-mh-hunter-green/50 transform focus:scale-105"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition"
                   >
                     <option value="">Select experience level</option>
                     <option value="entry">Entry Level (0-2 years)</option>
@@ -758,7 +742,7 @@ export default function CareersPage() {
                     required 
                     value={formData.workPreference} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition-all duration-300 bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-mh-hunter-green/50 dark:hover:border-mh-hunter-green/50 transform focus:scale-105"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition"
                   >
                     <option value="">Select preference</option>
                     <option value="onsite">On-site</option>
@@ -775,7 +759,7 @@ export default function CareersPage() {
                     required 
                     value={formData.desiredDepartment} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition-all duration-300 bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-mh-hunter-green/50 dark:hover:border-mh-hunter-green/50 transform focus:scale-105"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition"
                   >
                     <option value="">Select department</option>
                     <option value="field">Field Operations</option>
@@ -791,10 +775,7 @@ export default function CareersPage() {
             {/* Additional Information Section */}
             <div className="space-y-6">
               <h4 className="text-lg font-semibold text-black dark:text-dark-text flex items-center">
-                <svg className="w-5 h-5 mr-2 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                Additional Information
+                <FileText className="w-5 h-5 mr-2 text-mh-hunter-green" /> Additional Information
               </h4>
               
               <div className="space-y-2">
@@ -805,7 +786,7 @@ export default function CareersPage() {
                   required 
                   value={formData.howHeard} 
                   onChange={handleChange} 
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition-all duration-300 bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-mh-hunter-green/50 dark:hover:border-mh-hunter-green/50 transform focus:scale-105"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition"
                 >
                   <option value="">Select option</option>
                   <option value="referral">Referral/Word of Mouth</option>
@@ -825,7 +806,7 @@ export default function CareersPage() {
                   rows={6} 
                   value={formData.message} 
                   onChange={handleChange} 
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition-all duration-300 bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-mh-hunter-green/50 dark:hover:border-mh-hunter-green/50 resize-vertical transform focus:scale-105" 
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition"
                   placeholder="Share your experience, skills, and why you want to join MH Construction..."
                 />
               </div>
@@ -849,9 +830,7 @@ export default function CareersPage() {
                 ) : (
                   <span className="flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
                     Submit Application
-                    <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                   </span>
                 )}
               </button>
@@ -864,8 +843,8 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Employee Testimonials Section */}
-      <section className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
+      {/* Testimonials */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
@@ -878,7 +857,7 @@ export default function CareersPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Testimonial 1 */}
-            <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 group min-h-[320px] flex flex-col">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 group min-h-[320px]">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                   <span className="text-white font-bold text-xl">SG</span>
@@ -891,9 +870,13 @@ export default function CareersPage() {
               </div>
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-mh-leather-tan group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" style={{transitionDelay: `${i * 50}ms`}}>
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
+                  <Star
+                    key={i}
+                    className="w-5 h-5 text-mh-leather-tan group-hover:scale-110 transition-transform duration-200"
+                    fill="currentColor"
+                    stroke="none"
+                    style={{ transitionDelay: `${i * 50}ms` }}
+                  />
                 ))}
               </div>
               <p className="text-gray-600 dark:text-dark-text-secondary italic flex-1">
@@ -902,7 +885,7 @@ export default function CareersPage() {
             </div>
 
             {/* Testimonial 2 */}
-            <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border border-gray-100 dark:border-dark-border group min-h-[320px] flex flex-col">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 group min-h-[320px]">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
                   <span className="text-white font-bold text-xl">MT</span>
@@ -915,9 +898,13 @@ export default function CareersPage() {
               </div>
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-mh-leather-tan group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" style={{transitionDelay: `${i * 50}ms`}}>
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
+                  <Star
+                    key={i}
+                    className="w-5 h-5 text-mh-leather-tan group-hover:scale-110 transition-transform duration-200"
+                    fill="currentColor"
+                    stroke="none"
+                    style={{ transitionDelay: `${i * 50}ms` }}
+                  />
                 ))}
               </div>
               <p className="text-gray-600 dark:text-dark-text italic flex-1">
@@ -926,7 +913,7 @@ export default function CareersPage() {
             </div>
 
             {/* Testimonial 3 */}
-            <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border border-gray-100 dark:border-dark-border group">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 group">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                   <span className="text-white font-bold text-xl">JR</span>
@@ -939,18 +926,22 @@ export default function CareersPage() {
               </div>
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-mh-leather-tan group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" style={{transitionDelay: `${i * 50}ms`}}>
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
+                  <Star
+                    key={i}
+                    className="w-5 h-5 text-mh-leather-tan group-hover:scale-110 transition-transform duration-200"
+                    fill="currentColor"
+                    stroke="none"
+                    style={{ transitionDelay: `${i * 50}ms` }}
+                  />
                 ))}
               </div>
-              <p className="text-gray-600 dark:text-dark-text italic">
+              <p className="text-gray-600 dark:text-dark-text italic flex-1">
                 "The professional development opportunities here are incredible. MH Construction invested in my training and certifications, and I've been able to advance my career faster than I ever imagined possible."
               </p>
             </div>
 
             {/* Testimonial 4 */}
-            <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border border-gray-100 dark:border-dark-border group">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 group">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
                   <span className="text-white font-bold text-xl">DL</span>
@@ -963,9 +954,13 @@ export default function CareersPage() {
               </div>
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-mh-leather-tan group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" style={{transitionDelay: `${i * 50}ms`}}>
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
+                  <Star
+                    key={i}
+                    className="w-5 h-5 text-mh-leather-tan group-hover:scale-110 transition-transform duration-200"
+                    fill="currentColor"
+                    stroke="none"
+                    style={{ transitionDelay: `${i * 50}ms` }}
+                  />
                 ))}
               </div>
               <p className="text-gray-600 dark:text-dark-text italic">
@@ -974,7 +969,7 @@ export default function CareersPage() {
             </div>
 
             {/* Testimonial 5 */}
-            <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 border border-gray-100 dark:border-dark-border group">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 group">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-mh-leather-tan rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                   <span className="text-white font-bold text-xl">AK</span>
@@ -987,9 +982,13 @@ export default function CareersPage() {
               </div>
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-mh-leather-tan group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" style={{transitionDelay: `${i * 50}ms`}}>
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
+                  <Star
+                    key={i}
+                    className="w-5 h-5 text-mh-leather-tan group-hover:scale-110 transition-transform duration-200"
+                    fill="currentColor"
+                    stroke="none"
+                    style={{ transitionDelay: `${i * 50}ms` }}
+                  />
                 ))}
               </div>
               <p className="text-gray-600 dark:text-dark-text italic">
@@ -998,7 +997,7 @@ export default function CareersPage() {
             </div>
 
             {/* Testimonial 6 */}
-            <div className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:-rotate-1 border border-gray-100 dark:border-dark-border group">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 group">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-mh-hunter-green rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300">
                   <span className="text-white font-bold text-xl">RC</span>
@@ -1011,9 +1010,13 @@ export default function CareersPage() {
               </div>
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-mh-leather-tan group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" style={{transitionDelay: `${i * 50}ms`}}>
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
+                  <Star
+                    key={i}
+                    className="w-5 h-5 text-mh-leather-tan group-hover:scale-110 transition-transform duration-200"
+                    fill="currentColor"
+                    stroke="none"
+                    style={{ transitionDelay: `${i * 50}ms` }}
+                  />
                 ))}
               </div>
               <p className="text-gray-600 dark:text-dark-text italic">
@@ -1031,12 +1034,10 @@ export default function CareersPage() {
               </p>
               <button
                 onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan dark:from-mh-hunter-green dark:to-mh-leather-tan text-white dark:text-white rounded-lg font-semibold hover:from-mh-leather-tan hover:to-mh-hunter-green dark:hover:from-mh-leather-tan dark:hover:to-mh-hunter-green transition-all duration-300 transform hover:scale-105 hover:shadow-lg group"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white rounded-lg font-semibold hover:from-mh-leather-tan hover:to-mh-hunter-green transition-all duration-300 transform hover:scale-105 hover:shadow-lg group"
               >
                 Apply Today
-                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
               </button>
             </div>
           </div>

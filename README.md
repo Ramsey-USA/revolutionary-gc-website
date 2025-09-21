@@ -26,6 +26,36 @@ npm run deploy
 
 ### 🎯 **RECENT MAJOR UPDATES (September 2025)**
 
+#### ✅ **COMPREHENSIVE DESIGN SYSTEM OVERHAUL**
+- **Duotone Icon System**: 8 specialized icon categories with 7 animation types
+- **MH Brand Colors**: Complete Hunter Green (#386851) & Leather Tan (#BD9264) integration
+- **Utility Classes**: Feature cards, section headers, consistent spacing system
+- **Theme System**: Enhanced light/dark mode with military-themed toggle
+- **Mobile-First**: Touch-friendly design with 44px minimum touch targets
+
+#### ✅ **HOME PAGE TRANSFORMATION**
+- **Universal Hero System**: Team Page hero pattern standardized across all pages
+- **Video Exceptions**: Home and Wounded Warrior pages maintain custom video heroes
+- **Streamlined Header Navigation**: MH brand colors, responsive design, focused navigation elements
+- **Component Refactoring**: WhyChooseSection converted to utility-based system
+- **Enhanced Footer**: Modern decorative blur effects, calendar integration, social media improvements
+- **Responsive Design**: Complete mobile optimization with touch interactions
+- **Animation System**: Sophisticated hover effects and transitions throughout
+- **Code Quality**: Clean, maintainable components with consistent patterns
+
+#### ✅ **STREAMLINED HEADER NAVIGATION (September 2025)**
+- **Navigation Elements**: MH Logo, About, Services, Wounded Warrior, Theme Toggle, Consultation Button only
+- **Enhanced Hover Effects**: Strong MH brand color representation with background opacity and shadow effects
+- **Mobile Optimization**: Responsive design with consistent brand colors throughout
+- **Accessibility**: 44px minimum touch targets, proper focus states, ARIA compliance
+- **Brand Integration**: Hunter Green and Leather Tan color scheme with enhanced visual feedback
+
+#### ✅ **TAILWIND CONFIGURATION ENHANCEMENT**
+- **Custom Colors**: MH brand colors with DEFAULT values for proper compilation
+- **Safelist**: Ensures all custom classes are included in production builds
+- **Responsive Classes**: Mobile-first approach with consistent breakpoints
+- **Performance**: Optimized CSS generation and caching
+
 #### ✅ **Visual Calendar System**
 - **Location**: Contact page (`/contact`)
 - **Features**: Interactive calendar with 8am-3pm Pacific time slots
@@ -48,11 +78,6 @@ npm run deploy
 - **Endpoints**: `/api/consultations`, `/api/notifications`, `/api/dashboard-stats`
 - **Documentation**: `API-DOCUMENTATION.md`
 - **Real-time**: WebSocket subscriptions available
-
-#### ✅ **Enhanced Home Page**
-- **Parallax**: Logo background visibility optimized (25% opacity)
-- **Sections**: AI Tools, Core Values, Featured Projects, Blog News
-- **Firebase**: Error handling and graceful fallbacks
 
 #### ✅ **AI Estimator Widget**
 - **Location**: Estimate page (`/estimate`)
@@ -107,7 +132,428 @@ clientConfirmations/       # Client confirmation tracking
 
 ---
 
-## 🎯 **DEVELOPMENT PHASES**
+## � **MH CONSTRUCTION DESIGN SYSTEM**
+
+### **🎨 Duotone Icon System**
+```css
+/* Icon Categories */
+.icon-nav           /* Navigation icons */
+.icon-action        /* Action buttons and CTAs */
+.icon-social        /* Social media links */
+.icon-feature       /* Feature highlights */
+.icon-calendar      /* Calendar and scheduling */
+.icon-utility       /* Utility and contact info */
+.icon-hero          /* Hero section and major features */
+.icon-success       /* Success states and confirmations */
+
+/* Animation Classes */
+.icon-animate-glow          /* Subtle glow effect */
+.icon-animate-float         /* Floating animation */
+.icon-animate-pulse         /* Pulsing effect */
+.icon-animate-bounce        /* Bouncing animation */
+.icon-animate-rotate        /* Rotation effect */
+.icon-animate-color-shift   /* Color shifting */
+.icon-interactive-primary   /* Primary interaction state */
+.icon-interactive-secondary /* Secondary interaction state */
+```
+
+### **🎨 Standard Button System**
+
+#### **Base Button Classes**
+```css
+/* Core Button Foundation */
+.btn                       /* Base button class with all foundation styles */
+.btn-primary              /* Primary hunter green buttons */
+.btn-secondary            /* Secondary leather tan buttons */
+.btn-outline              /* Outline variant buttons */
+.btn-outline-secondary    /* Secondary outline buttons */
+.btn-ghost                /* Ghost/transparent buttons */
+.btn-accent               /* Accent brand gradient buttons */
+```
+
+#### **Button Usage Examples**
+
+**1. Primary Action Buttons (Hero CTA)**
+```html
+<!-- Primary button with gradient and hover effects -->
+<Link href="/estimate" 
+      className="btn btn-primary w-full sm:flex-1 min-h-[48px] text-center flex items-center justify-center text-base sm:text-lg">
+  Get Your AI Estimate
+</Link>
+```
+
+**2. Secondary Action Buttons**
+```html
+<!-- Outline button for secondary actions -->
+<Link href="/projects" 
+      className="btn btn-outline-secondary w-full sm:flex-1 min-h-[48px] text-center flex items-center justify-center text-base sm:text-lg border-white text-white hover:text-white">
+  Explore Our Projects
+</Link>
+```
+
+**3. React Component Button (ScheduleButton)**
+```tsx
+<!-- Specialized scheduling button with calendar integration -->
+<ScheduleButton 
+  variant="primary"        // primary | secondary | outline | ghost
+  size="lg"               // sm | md | lg
+  className="w-full"      // Additional classes
+  showIcon={true}         // Show calendar icon
+  block={true}            // Full width
+>
+  Schedule Consultation
+</ScheduleButton>
+```
+
+#### **Button Design Specifications**
+
+**Colors & Gradients:**
+- **Primary**: Hunter Green (#386851) with gradient effects
+- **Secondary**: Leather Tan (#BD9264) 
+- **Hover States**: Darker variants with transform effects
+- **Border Radius**: `rounded-lg` (8px) for consistency
+- **Shadows**: `shadow-lg hover:shadow-xl` for depth
+
+**Responsive Design:**
+- **Minimum Touch Target**: 48px (44px + padding) for mobile accessibility
+- **Responsive Text**: `text-base sm:text-lg` scaling
+- **Flexible Width**: `w-full sm:flex-1` for mobile-first design
+
+**Animation & Interactions:**
+- **Transform**: `hover:scale-105 hover:-translate-y-1` for lift effect
+- **Transition**: `transition-all duration-300` for smooth animations
+- **Shimmer Effect**: `::before` pseudo-element for premium feel
+- **Focus States**: Proper accessibility with focus rings
+
+#### **Button Implementation Standards**
+
+**Required Classes for All Buttons:**
+```css
+/* Minimum required classes for standard buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--button-padding-y) var(--button-padding-x);
+  border-radius: var(--button-radius);
+  font-weight: var(--weight-medium);
+  transition: all var(--button-transition);
+  min-height: 48px;  /* Accessibility requirement */
+}
+```
+
+**Accessibility Requirements:**
+- Minimum 44px touch target (48px with padding)
+- Proper focus states with visible focus rings
+- Semantic HTML with proper ARIA labels
+- Sufficient color contrast ratios (4.5:1 minimum)
+
+#### **Complete Button Showcase**
+
+```html
+<!-- Size Variants -->
+<button class="btn btn-primary btn-sm">Small Button</button>
+<button class="btn btn-primary btn-md">Medium Button</button>
+<button class="btn btn-primary btn-lg">Large Button</button>
+
+<!-- Color Variants -->
+<button class="btn btn-primary">Primary Hunter Green</button>
+<button class="btn btn-secondary">Secondary Leather Tan</button>
+<button class="btn btn-accent">Accent Brand Gradient</button>
+
+<!-- Style Variants -->
+<button class="btn btn-outline">Outline Primary</button>
+<button class="btn btn-outline-secondary">Outline Secondary</button>
+<button class="btn btn-ghost">Ghost Button</button>
+
+<!-- Responsive Button -->
+<button class="btn btn-primary btn-responsive">Responsive Width</button>
+
+<!-- Disabled State -->
+<button class="btn btn-primary" disabled>Disabled Button</button>
+```
+
+#### **CSS Custom Properties for Buttons**
+
+```css
+:root {
+  /* Button Spacing */
+  --button-padding-x: 1.5rem;     /* 24px horizontal padding */
+  --button-padding-y: 0.75rem;    /* 12px vertical padding */
+  --button-radius: 0.5rem;        /* 8px border radius */
+  --button-transition: 0.3s;      /* Animation duration */
+  
+  /* Button Shadows */
+  --button-shadow-default: 0 4px 14px rgba(56, 104, 81, 0.2);
+  --button-shadow-hover: 0 8px 25px rgba(56, 104, 81, 0.3);
+  --button-shadow-secondary: 0 4px 14px rgba(189, 146, 100, 0.2);
+}
+```
+
+### **🦶 Modern Footer System**
+
+#### **Enhanced Footer Design**
+The footer has been redesigned with modern decorative elements replacing traditional star decorations, featuring sophisticated background blur effects and brand-consistent styling.
+
+#### **Footer Structure**
+```tsx
+<footer className="bg-black dark:bg-dark-charcoal text-white relative transition-colors duration-300">
+  {/* Decorative Background Elements */}
+  <div className="absolute inset-0 overflow-hidden">
+    <div className="absolute top-8 right-16 w-32 h-32 bg-mh-hunter-green/10 rounded-full blur-3xl"></div>
+    <div className="absolute bottom-16 left-16 w-40 h-40 bg-mh-leather-tan/8 rounded-full blur-3xl"></div>
+    <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-mh-hunter-green/5 rounded-full blur-2xl"></div>
+    <div className="absolute bottom-1/4 right-1/3 w-28 h-28 bg-mh-leather-tan/6 rounded-full blur-2xl"></div>
+  </div>
+  
+  {/* Footer Content */}
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+    {/* Company Info, Quick Links, Social Media, Newsletter */}
+  </div>
+</footer>
+```
+
+#### **Footer Features**
+```typescript
+// Main Footer Sections
+- Company Information      /* Logo, contact details, business hours */
+- Quick Navigation Links   /* Organized in responsive grid */
+- Social Media Hub        /* Facebook, LinkedIn, Instagram, YouTube, Twitter */
+- Newsletter Subscription /* Email signup with Firebase integration */
+- Schedule Consultation   /* Calendar integration button */
+
+// Interactive Elements
+- Hover Effects          /* Smooth transitions on all interactive elements */
+- Theme Awareness        /* Adapts to light/dark mode */
+- Accessibility         /* 48px minimum touch targets, proper focus states */
+- Responsive Design     /* Mobile-optimized layout */
+```
+
+#### **Footer Decorative System**
+```css
+/* Background Blur Effects */
+.bg-mh-hunter-green/10    /* 10% opacity hunter green blur */
+.bg-mh-leather-tan/8      /* 8% opacity leather tan blur */
+.blur-3xl                 /* Large blur radius for ambient effect */
+.blur-2xl                 /* Medium blur radius for subtle accents */
+
+/* Positioning Classes */
+.absolute                 /* Positioned decorative elements */
+.inset-0                 /* Full container coverage */
+.overflow-hidden         /* Contain blur effects within bounds */
+```
+
+#### **Footer CSS Implementation**
+```css
+/* Footer Decorative Elements */
+.footer-decoration {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(48px); /* blur-3xl equivalent */
+  opacity: 0.1;
+  background: linear-gradient(135deg, var(--mh-hunter-green), var(--mh-leather-tan));
+}
+
+/* Footer Interactive Elements */
+.footer-link {
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #d1d5db; /* text-gray-300 */
+}
+
+.footer-link:hover {
+  color: var(--mh-leather-tan);
+}
+
+/* Social Media Icons */
+.social-icon {
+  background: #374151; /* bg-gray-800 */
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.social-icon:hover {
+  background: var(--mh-hunter-green);
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(56, 104, 81, 0.3);
+}
+```
+
+### **� Universal Hero Section System**
+
+#### **Standard Hero Pattern (Team Page Style)**
+The website uses a standardized hero section based on the Team Page design across all pages, with specific exceptions for video-enhanced pages.
+
+#### **Hero Section Implementation**
+```tsx
+<UniversalHeroSection
+  title="Primary Title"
+  titleHighlight="Highlighted Text"
+  subtitle="Descriptive subtitle explaining the page purpose and value proposition"
+  primaryButton={{
+    text: "Primary Action",
+    href: "/action-link"
+  }}
+  secondaryButton={{
+    text: "Secondary Action", 
+    href: "/secondary-link"
+  }}
+/>
+```
+
+#### **Page-Specific Hero Usage**
+
+**Standard Pages (Using UniversalHeroSection):**
+```typescript
+✅ Team Page        - Meet Our Expert Team
+✅ Services Page    - Our Construction Services  
+✅ Projects Page    - Portfolio showcase
+✅ Contact Page     - Get in touch
+✅ Blog Page        - News and insights
+✅ Careers Page     - Join our team
+✅ Estimate Page    - AI-powered estimating
+✅ Safety Page      - Safety protocols
+✅ Subcontractors   - Partner network
+✅ Government       - Contracting services
+✅ FAQs Page        - Common questions
+✅ 3D Explorer      - Project visualization
+✅ Sandbox Page     - Interactive tools
+```
+
+**Video-Enhanced Pages (Custom Hero Sections):**
+```typescript
+🎬 Home Page        - HomeHeroSection with background video
+🎬 Wounded Warrior  - Custom hero with military video content
+```
+
+#### **Hero Section Design Standards**
+```css
+/* Universal Hero Structure */
+.hero-section {
+  min-height: 60vh;                    /* Minimum viewport coverage */
+  background: linear-gradient(135deg, var(--mh-hunter-green), var(--mh-leather-tan));
+  padding: 4rem 0;                     /* Vertical spacing */
+  position: relative;                  /* For decorative elements */
+}
+
+/* Hero Typography */
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive scaling */
+  font-weight: 700;                     /* Bold weight */
+  color: white;                         /* Primary text color */
+}
+
+.hero-highlight {
+  color: var(--mh-leather-tan);        /* Brand accent color */
+  background: linear-gradient(135deg, var(--mh-leather-tan), #e5c07b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.25rem); /* Responsive subtitle */
+  color: rgba(255, 255, 255, 0.9);           /* Subtle text color */
+  max-width: 600px;                          /* Readable line length */
+  margin: 1.5rem auto;                       /* Center alignment */
+}
+```
+
+#### **Hero Button Configuration**
+```typescript
+// Primary Button (Call-to-Action)
+primaryButton: {
+  text: string;           // Button label
+  href: string;           // Navigation link
+  variant?: 'primary';    // Always primary styling
+  icon?: IconComponent;   // Optional icon
+}
+
+// Secondary Button (Alternative Action)  
+secondaryButton: {
+  text: string;           // Button label
+  href: string;           // Navigation link
+  variant?: 'outline';    // Outline styling
+  icon?: IconComponent;   // Optional icon
+}
+```
+
+#### **Responsive Hero Behavior**
+```css
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 50vh;           /* Reduced height on mobile */
+    padding: 3rem 0;            /* Adjusted spacing */
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;          /* Mobile font size */
+    line-height: 1.2;           /* Tighter line height */
+  }
+  
+  .hero-buttons {
+    flex-direction: column;     /* Stack buttons vertically */
+    gap: 1rem;                  /* Spacing between buttons */
+  }
+}
+
+/* Tablet Optimization */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-section {
+    min-height: 55vh;           /* Medium height for tablets */
+  }
+}
+```
+
+### **�🎨 Utility Class System**
+```css
+/* Feature Cards */
+.feature-grid               /* Grid layout for features */
+.feature-card              /* Individual feature card */
+.feature-icon-container    /* Icon container with variants */
+.feature-icon-primary      /* Primary icon styling */
+.feature-icon-secondary    /* Secondary icon styling */
+.feature-icon-gradient     /* Gradient icon effects */
+.feature-title             /* Feature title styling */
+.feature-description       /* Feature description */
+
+/* Section Headers */
+.section-header            /* Section header container */
+.section-title             /* Main section titles */
+.section-subtitle          /* Section subtitles */
+
+/* Interactive Elements */
+.btn                       /* Base button class */
+.btn-primary              /* Primary buttons */
+.btn-secondary            /* Secondary buttons */
+.btn-outline              /* Outline buttons */
+.nav-link                 /* Navigation links */
+.card                     /* Card containers */
+```
+
+### **🌓 Theme System**
+```css
+/* Light Mode (Default) */
+--mh-hunter-green: #386851;    /* Primary brand */
+--mh-leather-tan: #BD9264;     /* Secondary brand */
+
+/* Dark Mode */
+--dark-surface: #1A1A1A;       /* Background */
+--dark-surface-2: #2D2D2D;     /* Secondary surfaces */
+--dark-text: #E5E5E5;          /* Primary text */
+--dark-text-secondary: #B8B8B8; /* Secondary text */
+
+/* Theme-Aware Classes */
+.text-mh-hunter-green dark:text-mh-leather-tan
+.hover:text-mh-leather-tan dark:hover:text-mh-hunter-green
+.bg-mh-hunter-green dark:bg-mh-leather-tan
+```
+
+---
+
+## �🎯 **DEVELOPMENT PHASES**
 
 ### ✅ **Phase 1 - Complete**
 - Core website with military color scheme
@@ -137,11 +583,31 @@ clientConfirmations/       # Client confirmation tracking
 - API endpoints
 - Real-time updates
 
-### 🔄 **Phase 4 - AI Features Enhancement**
-- Advanced chatbot integration
-- Enhanced 5-step estimator wizard
-- Interactive sandbox improvements
+### ✅ **Phase 4 - Complete (Design System)**
+- Comprehensive duotone icon system
+- MH Construction brand color integration
+- Utility class framework
+- Enhanced theme system
+- Mobile-first responsive design
+- Home page transformation complete
+
+### 🔄 **Phase 5 - Active (Systematic Page Enhancement)**
+- ✅ Streamlined header navigation with focused MH brand elements
+- ✅ Enhanced header hover effects with stronger MH color representation
+- 🔄 Apply Universal Hero Section to all standard pages
+- 🔄 Consistent MH brand color integration across all pages
+- 🔄 Enhanced button system implementation site-wide
+- 🔄 Mobile-first responsive design optimization
+- 🔄 Performance optimization and accessibility improvements
+
+### 🎯 **Phase 6 - Planned (Advanced Experience Enhancement)**
+- Advanced animation and interaction systems
+- Enhanced chatbot integration with MH branding
+- Interactive 5-step estimator wizard improvements
 - 3D project exploration enhancements
+- Advanced accessibility features (screen reader optimization, keyboard navigation)
+- Performance metrics and monitoring
+- SEO optimization with structured data
 
 ---
 
@@ -162,18 +628,33 @@ clientConfirmations/       # Client confirmation tracking
 ### **Key Components**
 ```
 src/components/
-├── Header.tsx              # Navigation with mobile menu
-├── Footer.tsx              # Company info and social links
-├── HeroSection.tsx         # Parallax background section
-├── AIToolsSection.tsx      # AI features showcase
-├── CoreValuesSection.tsx   # Flip card animations
-├── FeaturedProjectsSection.tsx  # Project gallery
-├── BlogNewsSection.tsx     # News carousel
+├── Header.tsx              # Enhanced navigation with MH brand colors and responsive design
+├── Footer.tsx              # Modern footer with decorative blur effects
+├── HeroSection.tsx         # Home page video hero (custom)
+├── UniversalHeroSection.tsx # Standard hero pattern for all pages
+├── HomeHeroSection.tsx     # Video-enhanced home page hero
+├── AIToolsSection.tsx      # Enhanced AI features showcase
+├── CoreValuesSection.tsx   # Duotone icon flip cards
+├── FeaturedProjectsSection.tsx  # MH-branded project gallery
+├── BlogNewsSection.tsx     # Enhanced news carousel
+├── WhyChooseSection.tsx    # Refactored utility-based component
 ├── VisualCalendar.tsx      # Interactive calendar
 ├── CalendarScheduler.tsx   # Scheduling modal
 ├── ScheduleButton.tsx      # Unified CTA button
 ├── AIEstimatorWidget.tsx   # Cost estimation tool
-└── TeamDashboard.tsx       # Admin interface
+├── TeamDashboard.tsx       # Admin interface
+└── ThemeToggle.tsx         # Military-themed toggle switch
+```
+
+### **Enhanced Global Styles**
+```
+src/app/globals.css
+├── Duotone Icon System     # 8 categories, 7 animation types
+├── Utility Classes         # Feature cards, sections, buttons
+├── MH Brand Colors         # Complete color palette
+├── Theme Variables         # Light/dark mode support
+├── Responsive Design       # Mobile-first approach
+└── Animation Keyframes     # Smooth transitions
 ```
 
 ---
@@ -210,21 +691,82 @@ src/components/
 --mh-hunter-green: #386851;    /* Primary brand */
 --mh-leather-tan: #BD9264;     /* Secondary brand */
 
-/* Army Military Colors */
---army-black: #000000;         /* Text and headers */
---army-gold: #FFD700;          /* Accent and CTA */
---army-green: #4B5320;         /* Supporting elements */
---field-tan: #967117;          /* Background accents */
---field-gray: #6C6C6C;         /* Subtle text */
+/* Extended MH Color Palette */
+--mh-hunter-green-50: #f0f4f2;    /* Light variants */
+--mh-hunter-green-100: #d1e3d9;
+--mh-hunter-green-200: #a3c7b3;
+--mh-hunter-green-500: #386851;   /* Base color */
+--mh-hunter-green-700: #2a4d3a;
+--mh-hunter-green-900: #1a3126;   /* Dark variants */
+
+--mh-leather-tan-50: #faf7f3;     /* Light variants */
+--mh-leather-tan-100: #f2e8d8;
+--mh-leather-tan-200: #e5d1b1;
+--mh-leather-tan-500: #BD9264;    /* Base color */
+--mh-leather-tan-700: #a67c50;
+--mh-leather-tan-900: #8b6842;    /* Dark variants */
+
+/* Supporting Brand Colors */
+--mh-steel-blue: #4A6B7C;
+--mh-concrete-gray: #8A9BA8;
+--mh-safety-orange: #FF6B35;
+--mh-blueprint-blue: #2C5F7A;
+--mh-earth-brown: #8B4513;
+
+/* Dark Mode Colors */
+--dark-surface: #1A1A1A;
+--dark-surface-2: #2D2D2D;
+--dark-surface-3: #3A3A3A;
+--dark-text: #E5E5E5;
+--dark-text-secondary: #B8B8B8;
+--dark-border: #404040;
+
+/* Legacy Army Military Colors (for compatibility) */
+--army-black: #000000;
+--army-gold: #BD9264;         /* Maps to mh-leather-tan */
+--army-red: #C60C38;
+--army-green: #386851;        /* Maps to mh-hunter-green */
+--field-tan: #967117;
+--field-gray: #6B7280;
+--light-gray: #F8F9FA;
+--dark-gray: #343A40;
 ```
 
 ### **Typography**
-- **Headings**: Tactic Sans Bold
-- **Subheadings**: Tactic Sans Medium  
-- **Body Text**: Adobe Garamond Pro
+- **Headings**: Tactic Sans Bold (font-heading)
+- **Subheadings**: Tactic Sans Medium (font-subheading)
+- **Body Text**: Adobe Garamond Pro (font-body)
+- **System Font**: Saira (font-saira) - fallback
+
+### **Responsive Design Principles**
+```css
+/* Breakpoints */
+sm: 640px     /* Small devices */
+md: 768px     /* Medium devices */
+lg: 1024px    /* Large devices */
+xl: 1280px    /* Extra large devices */
+2xl: 1536px   /* 2X large devices */
+
+/* Touch Targets */
+min-w-[44px] min-h-[44px]  /* Minimum touch target size */
+touch-manipulation          /* Optimized touch interactions */
+
+/* Mobile-First Approach */
+/* Base styles for mobile */
+/* sm: tablet styles */
+/* md: small desktop styles */
+/* lg: large desktop styles */
+```
 
 ### **Component Variants**
 ```typescript
+// Hero Section variants
+heroType: 'universal' | 'video' | 'custom'
+pages: {
+  universal: ['team', 'services', 'projects', 'contact', 'blog', 'careers', 'estimate', 'safety', 'subcontractors', 'government', 'faqs', '3d-explorer', 'sandbox'],
+  video: ['home', 'wounded-warrior']
+}
+
 // ScheduleButton variants
 variant: 'primary' | 'secondary' | 'outline' | 'ghost'
 size: 'sm' | 'md' | 'lg'
@@ -235,6 +777,54 @@ priority: 'low' | 'medium' | 'high'
 // Consultation status
 status: 'pending' | 'confirmed' | 'completed' | 'cancelled'
 ```
+
+---
+
+## 🚀 **SYSTEMATIC PAGE ENHANCEMENT ROADMAP**
+
+### **Phase 5: Individual Page Enhancement**
+Now that the home page serves as our design system foundation, we'll systematically enhance each page:
+
+#### **Enhancement Priority Order:**
+1. **✅ Home Page** - Complete (Foundation/Template)
+2. **🎯 Contact Page** - Next (High Priority - Client Interaction)
+3. **📋 Services Page** - Client-facing content
+4. **🏗️ Projects Page** - Portfolio showcase
+5. **👥 Team Page** - About/Team information
+6. **🤖 Estimate Page** - AI tools integration
+7. **📖 Blog Page** - Content and insights
+8. **🔧 Specialty Pages** - 3D Explorer, Sandbox, etc.
+
+#### **Per-Page Enhancement Checklist:**
+- [x] **Universal Hero Section**: Team Page hero pattern implemented across all standard pages
+- [x] **Video Hero Exceptions**: Home and Wounded Warrior pages maintain custom video heroes
+- [ ] **Duotone Icon Integration**: Apply appropriate icon categories and animations
+- [ ] **MH Color Scheme**: Hunter Green and Leather Tan throughout
+- [ ] **Utility Classes**: Convert to feature cards, section headers, buttons
+- [ ] **Theme Support**: Light/dark mode with proper color switching
+- [ ] **Mobile Optimization**: Touch targets, responsive layout, accessibility
+- [ ] **Performance**: Optimize images, animations, and loading states
+- [ ] **Consistency**: Maintain design patterns from home page
+
+#### **Design System Components to Reuse:**
+```typescript
+// Reusable patterns standardized across pages
+- Universal Hero Section (UniversalHeroSection component)
+- Section headers (.section-header, .section-title, .section-subtitle)
+- Feature cards (.feature-grid, .feature-card system)
+- Button variants (.btn-primary, .btn-secondary, .btn-outline)
+- Navigation patterns (.nav-link with hover effects)
+- Icon animations (all .icon-animate-* classes)
+- Theme-aware colors (MH color palette)
+- Footer with decorative blur effects
+```
+
+#### **Quality Assurance Standards:**
+- **Visual Consistency**: Each page matches home page design language
+- **Interactive Elements**: All hover effects and animations consistent
+- **Accessibility**: WCAG 2.1 AA compliance with proper touch targets
+- **Performance**: <3 second load times, 90+ Lighthouse scores
+- **Mobile Experience**: Seamless experience across all device sizes
 
 ---
 
@@ -513,18 +1103,101 @@ Variables
 
   --dark-gray: #343A40;
 
-🎨 TYPOGRAPHY GUIDE
-Font Specifications
-* Primary Fonts *
+---
 
-  Heading: Tactic Sans Bold         /* All major headings */
+## 🚀 **SYSTEMATIC PAGE ENHANCEMENT GUIDE**
 
-  Subheading: Tactic Sans Medium    /* Section subtitles and subheadings */
+### **📋 Page Enhancement Checklist**
 
-  Body Copy: Adobe Garamond Pro     /* All body text and content */
+#### **For Each Page, Implement:**
+```typescript
+✅ Universal Hero Section (except Home & Wounded Warrior)
+✅ MH Brand Color Integration (#386851 Hunter Green, #BD9264 Leather Tan)
+✅ Enhanced Button System (.btn classes with proper variants)
+✅ Responsive Design (mobile-first, 44px touch targets)
+✅ Accessibility Standards (ARIA labels, focus states, color contrast)
+✅ Performance Optimization (image optimization, lazy loading)
+```
 
-🤖 BASIC AI ESTIMATOR SPECIFICATIONS
-Timeline Phases (Standard Speed)
+#### **Page Priority Order:**
+```typescript
+🎯 High Priority (Customer Facing):
+   - About/Services pages (primary business pages)
+   - Projects page (portfolio showcase)
+   - Contact page (conversion critical)
+   - Estimate page (AI estimator)
+
+🎯 Medium Priority (Specialized Services):
+   - Wounded Warrior page (maintain video hero)
+   - Government Contracting page
+   - Safety page
+   - Subcontractors page
+
+� Lower Priority (Supporting Content):
+   - Blog page
+   - Careers page
+   - FAQs page
+   - 3D Explorer
+   - Sandbox page
+```
+
+#### **Enhancement Standards:**
+```css
+/* Required Elements for Each Page */
+.page-container {
+  min-height: 100vh;              /* Full viewport coverage */
+  background: var(--page-bg);     /* Theme-aware background */
+}
+
+.hero-section {
+  min-height: 60vh;               /* Consistent hero sizing */
+  background: linear-gradient(135deg, var(--mh-hunter-green), var(--mh-leather-tan));
+}
+
+.content-section {
+  padding: 4rem 0;                /* Consistent vertical rhythm */
+  max-width: 1200px;              /* Readable content width */
+  margin: 0 auto;                 /* Center alignment */
+}
+
+.cta-section {
+  background: var(--mh-hunter-green);  /* Brand color for CTAs */
+  color: white;                        /* High contrast text */
+  padding: 3rem 0;                     /* Adequate spacing */
+}
+```
+
+---
+
+## �🎨 **TYPOGRAPHY GUIDE**
+
+### **Font Specifications**
+```css
+/* Primary Fonts */
+--font-heading: 'Tactic Sans Bold';       /* All major headings */
+--font-subheading: 'Tactic Sans Medium';  /* Section subtitles and subheadings */
+--font-body: 'Adobe Garamond Pro';        /* All body text and content */
+```
+
+### **Color Palette**
+```css
+/* MH Construction Brand Colors */
+--mh-hunter-green: #386851;        /* Primary brand color */
+--mh-leather-tan: #BD9264;         /* Secondary brand color */
+
+/* Extended Palette */
+--black: #000000;
+--white: #FFFFFF;
+--light-gray: #F8F9FA;
+--dark-gray: #343A40;
+```
+
+---
+
+## 🤖 **BASIC AI ESTIMATOR SPECIFICATIONS**
+
+### **Timeline Phases (Standard Speed)**
+```
 Plans & Permits: 2-4 months
 Foundation/Concrete: 2-3 weeks
 Framing: 3-4 weeks
@@ -536,12 +1209,21 @@ Cabinets: 2-3 weeks
 Flooring: 1-2 weeks
 Trim & Finishes: 2-3 weeks
 Landscaping: 1-2 weeks
-Speed Multipliers
+```
+
+### **Speed Multipliers**
+```
 Standard: 1.0x (base timeline)
 Premium: 1.15x (+15% timeline, higher quality)
 Expedite: 1.30x (+30% timeline, rush job)
-Seasonal Restrictions
+```
+
+### **Seasonal Restrictions**
+```
 Concrete, Landscaping, Roadways: Restricted Oct 15 - Mar 31
 Timeline Adjustment: Add 2-4 weeks if project includes restricted work during winter
+```
 
-🏗️ This developer-ready README provides everything needed to build MH Construction's revolutionary website with clear priorities, exact specifications, and measurable success criteria! 🏗️
+---
+
+🏗️ **This developer-ready README provides everything needed to build MH Construction's revolutionary website with clear priorities, exact specifications, and measurable success criteria!** 🏗️

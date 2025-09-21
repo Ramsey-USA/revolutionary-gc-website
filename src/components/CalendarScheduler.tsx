@@ -155,7 +155,7 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2 sm:space-x-3">
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center">
-                <Calendar size={20} className="text-white sm:w-6 sm:h-6" />
+                <Calendar size={20} className="text-white sm:w-6 sm:h-6 icon-calendar" />
               </div>
               <div>
                 <h2 className="text-lg sm:text-2xl font-bold text-white">Schedule Consultation</h2>
@@ -167,7 +167,7 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
               onClick={onClose}
               className="text-white/80 hover:text-white transition-colors p-1 sm:p-2 hover:bg-white/10 rounded-full touch-manipulation"
             >
-              <X size={20} className="sm:w-6 sm:h-6" />
+              <X size={20} className="sm:w-6 sm:h-6 icon-nav" />
             </button>
           </div>
         </div>
@@ -193,7 +193,7 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
             {/* Personal Information */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-black dark:text-dark-text flex items-center">
-                <User size={20} className="mr-2 text-mh-hunter-green" />
+                <User size={20} className="mr-2 text-mh-hunter-green icon-feature" />
                 Personal Information
               </h3>
             
@@ -231,7 +231,7 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-dark-text-secondary mb-2">
-                  <Mail size={16} className="inline mr-1" />
+                  <Mail size={16} className="inline mr-1 icon-utility" />
                   Email Address *
                 </label>
                 <input
@@ -247,7 +247,7 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-dark-text-secondary mb-2">
-                  <Phone size={16} className="inline mr-1" />
+                  <Phone size={16} className="inline mr-1 icon-utility" />
                   Phone Number *
                 </label>
                 <input
@@ -266,7 +266,7 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
           {/* Project Information */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-black dark:text-dark-text flex items-center">
-              <Building size={20} className="mr-2 text-mh-hunter-green" />
+              <Building size={20} className="mr-2 text-mh-hunter-green icon-feature" />
               Project Information
             </h3>
             
@@ -298,7 +298,7 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-dark-text-secondary mb-2">
-                  <MapPin size={16} className="inline mr-1" />
+                  <MapPin size={16} className="inline mr-1 icon-utility" />
                   Project Location *
                 </label>
                 <input
@@ -317,7 +317,7 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
           {/* Scheduling */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-black dark:text-dark-text flex items-center">
-              <Clock size={20} className="mr-2 text-mh-hunter-green" />
+              <Clock size={20} className="mr-2 text-mh-hunter-green icon-feature" />
               Preferred Schedule
             </h3>
             
@@ -396,7 +396,7 @@ const CalendarScheduler = ({ isOpen, onClose }: CalendarSchedulerProps) => {
                 </span>
               ) : (
                 <>
-                  <Calendar size={18} className="mr-1 sm:mr-2" />
+                  <Calendar size={18} className="mr-1 sm:mr-2 icon-calendar" />
                   <span className="text-sm sm:text-base">Schedule Consultation</span>
                 </>
               )}

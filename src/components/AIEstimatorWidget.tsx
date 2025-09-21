@@ -215,7 +215,7 @@ const AIEstimatorWidget: React.FC = () => {
       <div className="bg-gradient-to-br from-mh-hunter-green to-mh-hunter-green text-white p-8 rounded-2xl shadow-2xl">
         <div className="text-center">
           <div className="w-20 h-20 bg-mh-leather-tan rounded-full flex items-center justify-center mx-auto mb-8 animate-pulse">
-            <Calculator size={32} className="text-mh-hunter-green" />
+            <Calculator size={32} className="text-mh-hunter-green icon-feature icon-interactive-primary" />
           </div>
           <h3 className="text-3xl font-bold mb-4">AI Processing Your Estimate</h3>
           <p className="text-gray-200 mb-8">Analyzing project requirements and calculating costs...</p>
@@ -223,7 +223,7 @@ const AIEstimatorWidget: React.FC = () => {
           <div className="space-y-4 max-w-md mx-auto">
             <div className="flex items-center justify-between p-3 bg-white/10 rounded-lg">
               <span>Analyzing project type</span>
-              <CheckCircle className="text-mh-hunter-green" size={20} />
+              <CheckCircle className="text-mh-hunter-green icon-success" size={20} />
             </div>
             <div className="flex items-center justify-between p-3 bg-white/10 rounded-lg">
               <span>Calculating material costs</span>
@@ -250,7 +250,7 @@ const AIEstimatorWidget: React.FC = () => {
         <div className="bg-gradient-to-br from-mh-hunter-green to-mh-hunter-green text-white p-8 rounded-2xl shadow-2xl">
           <div className="text-center">
             <div className="w-20 h-20 bg-mh-leather-tan rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle size={32} className="text-mh-hunter-green" />
+              <CheckCircle size={32} className="text-mh-hunter-green icon-success icon-animate-bounce" />
             </div>
             <h3 className="text-3xl font-bold mb-4">Your AI Estimate is Ready!</h3>
             <div className="text-5xl font-bold text-mh-leather-tan mb-2">
@@ -332,7 +332,7 @@ const AIEstimatorWidget: React.FC = () => {
       <div className="flex items-center justify-between mb-8">
         <div className="flex items-center">
           <div className="w-12 h-12 bg-mh-leather-tan rounded-full flex items-center justify-center mr-4">
-            <Calculator size={24} className="text-mh-hunter-green" />
+            <Calculator size={24} className="text-mh-hunter-green icon-feature" />
           </div>
           <div>
             <h3 className="text-2xl font-bold">AI Project Estimator</h3>
@@ -482,7 +482,7 @@ const AIEstimatorWidget: React.FC = () => {
                       <p className="text-sm text-mh-leather-tan">+${feature.cost}/sq ft</p>
                     </div>
                     {projectData.features.includes(feature.value) && (
-                      <CheckCircle className="text-mh-leather-tan" size={20} />
+                      <CheckCircle className="text-mh-leather-tan icon-success" size={20} />
                     )}
                   </div>
                 </button>
@@ -499,7 +499,7 @@ const AIEstimatorWidget: React.FC = () => {
           disabled={currentStep === 1}
           className="flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg font-bold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          <ChevronLeft size={20} className="mr-2" />
+          <ChevronLeft size={20} className="mr-2 icon-nav" />
           Previous
         </button>
         <button
@@ -508,8 +508,8 @@ const AIEstimatorWidget: React.FC = () => {
           className="flex items-center px-6 py-3 bg-mh-leather-tan hover:bg-mh-leather-tan/90 text-mh-hunter-green rounded-lg font-bold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {currentStep === totalSteps ? 'Generate Estimate' : 'Next'}
-          {currentStep !== totalSteps && <ChevronRight size={20} className="ml-2" />}
-          {currentStep === totalSteps && <Calculator size={20} className="ml-2" />}
+          {currentStep !== totalSteps && <ChevronRight size={20} className="ml-2 icon-nav" />}
+          {currentStep === totalSteps && <Calculator size={20} className="ml-2 icon-action" />}
         </button>
       </div>
     </div>

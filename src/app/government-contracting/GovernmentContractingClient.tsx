@@ -1,9 +1,14 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import CalendarScheduler from '../../components/CalendarScheduler'
-import UniversalHeroSection from '../../components/UniversalHeroSection'
-import { Download, FileText, Shield, Clock, Phone, Mail, MapPin, Calendar, ChevronDown, ExternalLink } from 'lucide-react'
+// Removed hero import
+// import UniversalHeroSection from '../../components/UniversalHeroSection'
+import {
+  Download, FileText, Shield, Clock, Phone, Mail, MapPin, Calendar,
+  ChevronDown, ExternalLink, Landmark, Building2, Lock, Siren, FlaskConical,
+  ShieldCheck
+} from 'lucide-react'
 
 const GovernmentContractingClient = () => {
   const [isSchedulerOpen, setIsSchedulerOpen] = useState(false)
@@ -13,7 +18,7 @@ const GovernmentContractingClient = () => {
     {
       id: 'federal',
       title: 'Federal Contracting',
-      icon: '🏛️',
+      icon: <Landmark className="w-8 h-8 text-white" />,
       color: 'from-mh-hunter-green to-mh-leather-tan',
       shortDesc: 'Direct contracts with federal agencies including DoD, GSA, VA, and other federal departments for critical infrastructure projects.',
       details: {
@@ -39,7 +44,7 @@ const GovernmentContractingClient = () => {
     {
       id: 'military',
       title: 'Military Construction',
-      icon: '🛡️',
+      icon: <ShieldCheck className="w-8 h-8 text-white" />,
       color: 'from-mh-leather-tan to-mh-hunter-green',
       shortDesc: 'Specialized experience in military base construction, renovation, and security infrastructure for all branches of the armed forces.',
       details: {
@@ -65,7 +70,7 @@ const GovernmentContractingClient = () => {
     {
       id: 'municipal',
       title: 'State & Municipal',
-      icon: '🏢',
+      icon: <Building2 className="w-8 h-8 text-white" />,
       color: 'from-mh-hunter-green to-mh-leather-tan',
       shortDesc: 'Comprehensive services for state agencies, counties, cities, and local government entities across the Pacific Northwest.',
       details: {
@@ -91,7 +96,7 @@ const GovernmentContractingClient = () => {
     {
       id: 'security',
       title: 'Security & Compliance',
-      icon: '🔒',
+      icon: <Lock className="w-8 h-8 text-white" />,
       color: 'from-mh-leather-tan to-mh-hunter-green',
       shortDesc: 'Full compliance with federal security protocols, clearance requirements, and specialized facility construction standards.',
       details: {
@@ -117,7 +122,7 @@ const GovernmentContractingClient = () => {
     {
       id: 'emergency',
       title: 'Emergency Services',
-      icon: '🚨',
+      icon: <Siren className="w-8 h-8 text-white" />,
       color: 'from-mh-hunter-green to-mh-leather-tan',
       shortDesc: 'Rapid response construction and repair services for government facilities during emergencies and disaster recovery operations.',
       details: {
@@ -143,7 +148,7 @@ const GovernmentContractingClient = () => {
     {
       id: 'specialized',
       title: 'Specialized Facilities',
-      icon: '🔬',
+      icon: <FlaskConical className="w-8 h-8 text-white" />,
       color: 'from-mh-leather-tan to-mh-hunter-green',
       shortDesc: 'Expert construction of specialized government facilities including laboratories, data centers, and high-security installations.',
       details: {
@@ -203,29 +208,32 @@ const GovernmentContractingClient = () => {
     }
   ]
 
+  useEffect(() => {
+    const handleHash = () => {
+      if (window.location.hash === '#schedule-consultation') {
+        setIsSchedulerOpen(true)
+      }
+    }
+    handleHash()
+    window.addEventListener('hashchange', handleHash)
+    return () => window.removeEventListener('hashchange', handleHash)
+  }, [])
+
   const toggleCapability = (id: string) => {
     setExpandedCapability(expandedCapability === id ? null : id)
   }
 
   return (
     <>
-      <UniversalHeroSection
-        title="Government"
-        titleHighlight="Contracting"
-        subtitle="Serving federal, state, and local governments with veteran-led expertise, security clearances, and proven compliance across critical infrastructure projects."
-        primaryButton={{
-          text: "Schedule Government Consultation",
-          onClick: () => setIsSchedulerOpen(true)
-        }}
-        secondaryButton={{
-          text: "Our Capabilities",
-          href: "#capabilities"
-        }}
-      />
+      {/* Hidden anchor target for hero button */}
+      <div id="schedule-consultation" className="sr-only" aria-hidden="true" />
 
-      {/* Enhanced Government Capabilities Section */}
-      <section id="capabilities" className="py-24 bg-gray-50 dark:bg-dark-surface-2 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Capabilities Section */}
+      <section id="gov-capabilities" role="region" aria-label="Government Contracting Capabilities"
+        className="py-24 bg-gray-50 dark:bg-gray-900 transition-colors duration-300 relative">
+        {/* subtle radial brand backdrop */}
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,104,81,0.08),transparent_70%)] dark:bg-[radial-gradient(circle_at_center,rgba(189,146,100,0.08),transparent_70%)]" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-mh-hunter-green/10 to-mh-leather-tan/10 dark:from-mh-hunter-green/20 dark:to-mh-leather-tan/20 rounded-full mb-6">
               <Shield size={20} className="text-mh-hunter-green mr-2" />
@@ -242,80 +250,86 @@ const GovernmentContractingClient = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {capabilities.map((capability, index) => (
-              <div key={capability.id} className="h-full flex flex-col min-h-[320px]">
-                <div className="group bg-white dark:bg-dark-surface rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 dark:border-dark-border overflow-hidden flex flex-col h-full">
-                  <div className={`bg-gradient-to-r ${capability.color} p-6 flex-shrink-0`}>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="text-4xl">{capability.icon}</div>
-                      <button
-                        onClick={() => toggleCapability(capability.id)}
-                        className="text-white hover:text-mh-leather-tan transition-colors duration-300 p-2 rounded-full hover:bg-white/10"
-                        aria-label={`Toggle ${capability.title} details`}
-                      >
-                        <ChevronDown 
-                          size={24} 
-                          className={`transform transition-transform duration-300 ${
-                            expandedCapability === capability.id ? 'rotate-180' : ''
-                          }`}
-                        />
-                      </button>
+            {capabilities.map(capability => {
+              const expanded = expandedCapability === capability.id
+              return (
+                <div key={capability.id} className="h-full flex flex-col min-h-[320px]">
+                  <div className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-mh-hunter-green/15 dark:border-mh-hunter-green/25 overflow-hidden flex flex-col h-full focus-within:ring-2 focus-within:ring-mh-hunter-green/50">
+                    <div className={`bg-gradient-to-r ${capability.color} p-6 flex-shrink-0`}>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="w-12 h-12 rounded-xl bg-white/15 backdrop-blur flex items-center justify-center">
+                          {capability.icon}
+                        </div>
+                        <button
+                          onClick={() => toggleCapability(capability.id)}
+                          aria-expanded={expanded}
+                          aria-controls={`${capability.id}-panel`}
+                          id={`${capability.id}-toggle`}
+                          className="text-white hover:text-mh-leather-tan transition-colors duration-300 p-2 rounded-full hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                        >
+                          <ChevronDown
+                            size={24}
+                            className={`transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`}
+                          />
+                        </button>
+                      </div>
+                      <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>
+                      <p className="text-white/90 text-sm leading-relaxed">{capability.shortDesc}</p>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">
-                      {capability.title}
-                    </h3>
-                    <p className="text-white/90 text-sm leading-relaxed">
-                      {capability.shortDesc}
-                    </p>
-                  </div>
-                  
-                  {expandedCapability === capability.id && (
-                    <div className="p-6 bg-white dark:bg-dark-surface border-t border-gray-100 dark:border-dark-border flex-1 flex flex-col">
-                      <div className="space-y-6 flex-1">
-                        <div>
-                          <h4 className="font-semibold text-black dark:text-dark-text mb-3 text-base">Overview</h4>
-                          <p className="text-gray-600 dark:text-dark-text-secondary text-sm leading-relaxed">
-                            {capability.details.description}
-                          </p>
-                        </div>
-                        
-                        <div>
-                          <h4 className="font-semibold text-black dark:text-dark-text mb-3 text-base">Services</h4>
-                          <ul className="text-sm text-gray-600 dark:text-dark-text-secondary space-y-2">
-                            {capability.details.services.map((service, idx) => (
-                              <li key={idx} className="flex items-start">
-                                <span className="text-mh-hunter-green mr-2 mt-1 font-bold">•</span>
-                                <span className="leading-relaxed">{service}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        
-                        <div className="mt-auto">
-                          <h4 className="font-semibold text-black dark:text-dark-text mb-3 text-base">Qualifications</h4>
-                          <div className="flex flex-wrap gap-2">
-                            {capability.details.qualifications.map((qual, idx) => (
-                              <span 
-                                key={idx}
-                                className="px-3 py-1 bg-gradient-to-r from-mh-hunter-green/10 to-mh-leather-tan/10 dark:from-mh-hunter-green/20 dark:to-mh-leather-tan/20 text-mh-hunter-green dark:text-mh-hunter-green text-xs rounded-full border border-mh-hunter-green/20 dark:border-mh-hunter-green/30 font-medium"
-                              >
-                                {qual}
-                              </span>
-                            ))}
+                    {expanded && (
+                      <div
+                        id={`${capability.id}-panel`}
+                        role="region"
+                        aria-labelledby={`${capability.id}-toggle`}
+                        className="p-6 bg-white dark:bg-gray-800 border-t border-mh-hunter-green/15 dark:border-mh-hunter-green/25 flex-1 flex flex-col"
+                      >
+                        <div className="space-y-6 flex-1">
+                          <div>
+                            <h4 className="font-semibold text-black dark:text-dark-text mb-3 text-base">Overview</h4>
+                            <p className="text-gray-600 dark:text-dark-text-secondary text-sm leading-relaxed">
+                              {capability.details.description}
+                            </p>
+                          </div>
+                          
+                          <div>
+                            <h4 className="font-semibold text-black dark:text-dark-text mb-3 text-base">Services</h4>
+                            <ul className="text-sm text-gray-600 dark:text-dark-text-secondary space-y-2">
+                              {capability.details.services.map((service, idx) => (
+                                <li key={idx} className="flex items-start">
+                                  <span className="text-mh-hunter-green mr-2 mt-1 font-bold">•</span>
+                                  <span className="leading-relaxed">{service}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          
+                          <div className="mt-auto">
+                            <h4 className="font-semibold text-black dark:text-dark-text mb-3 text-base">Qualifications</h4>
+                            <div className="flex flex-wrap gap-2">
+                              {capability.details.qualifications.map((qual, idx) => (
+                                <span 
+                                  key={idx}
+                                  className="px-3 py-1 bg-gradient-to-r from-mh-hunter-green/10 to-mh-leather-tan/10 dark:from-mh-hunter-green/20 dark:to-mh-leather-tan/20 text-mh-hunter-green dark:text-mh-hunter-green text-xs rounded-full border border-mh-hunter-green/20 dark:border-mh-hunter-green/30 font-medium"
+                                >
+                                  {qual}
+                                </span>
+                              ))}
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
 
-      {/* Government Resources Section */}
-      <section className="py-24 bg-white dark:bg-dark-surface transition-colors duration-300">
+      {/* Resources Section (surface & borders unified) */}
+      <section role="region" aria-label="Government Resources"
+        className="py-24 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-mh-leather-tan/10 to-mh-hunter-green/10 dark:from-mh-leather-tan/20 dark:to-mh-hunter-green/20 rounded-full mb-6">
@@ -335,7 +349,7 @@ const GovernmentContractingClient = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {governmentResources.map((resource, index) => (
               <div key={index} className="h-full flex flex-col min-h-[240px]">
-                <div className="group bg-gray-50 dark:bg-dark-surface-2 rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-dark-border flex flex-col h-full transform hover:-translate-y-1">
+                <div className="group bg-white dark:bg-gray-800 rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-mh-hunter-green/15 dark:border-mh-hunter-green/25 flex flex-col h-full hover:-translate-y-1 focus-within:ring-2 focus-within:ring-mh-hunter-green/40">
                   <div className="flex items-start space-x-4 flex-1">
                     <div className="w-14 h-14 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                       <resource.icon size={28} className="text-white" />
@@ -354,7 +368,10 @@ const GovernmentContractingClient = () => {
                           </span>
                           <span className="font-medium">{resource.size}</span>
                         </div>
-                        <button className="group/btn flex items-center space-x-2 text-mh-hunter-green hover:text-mh-leather-tan transition-colors duration-300 bg-white dark:bg-dark-surface px-4 py-2 rounded-lg hover:shadow-md border border-mh-hunter-green/20 hover:border-mh-leather-tan/40">
+                        <button
+                          className="group/btn flex items-center space-x-2 text-mh-hunter-green hover:text-mh-leather-tan transition-colors duration-300 bg-white dark:bg-gray-800 px-4 py-2 rounded-lg hover:shadow-md border border-mh-hunter-green/30 dark:border-mh-hunter-green/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-mh-hunter-green/50"
+                          aria-label={`Download ${resource.title}`}
+                        >
                           <Download size={16} />
                           <span className="text-sm font-semibold">Download</span>
                           <ExternalLink size={12} className="group-hover/btn:translate-x-1 transition-transform duration-300" />
@@ -369,8 +386,9 @@ const GovernmentContractingClient = () => {
         </div>
       </section>
 
-      {/* Government Contact Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-white dark:from-dark-surface-2 dark:to-dark-surface transition-colors duration-300">
+      {/* Contact Section (dark surfaces normalized) */}
+      <section role="region" aria-label="Government Contact"
+        className="py-24 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-mh-hunter-green/10 to-mh-leather-tan/10 dark:from-mh-hunter-green/20 dark:to-mh-leather-tan/20 rounded-full mb-6">
@@ -390,13 +408,13 @@ const GovernmentContractingClient = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
-              <div className="bg-white dark:bg-dark-surface rounded-xl p-8 shadow-xl border border-gray-100 dark:border-dark-border min-h-[520px] flex flex-col">
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-100 dark:border-dark-border min-h-[520px] flex flex-col">
                 <h3 className="text-2xl font-bold text-black dark:text-dark-text mb-6 border-b border-mh-hunter-green/20 pb-3">
                   Government Contracting Office
                 </h3>
                 
                 <div className="space-y-6 flex-1">
-                  <div className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-surface-2 transition-colors duration-300">
+                  <div className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-300">
                     <div className="w-12 h-12 bg-gradient-to-r from-mh-hunter-green to-mh-hunter-green/80 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Phone size={22} className="text-white" />
                     </div>
@@ -407,7 +425,7 @@ const GovernmentContractingClient = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-surface-2 transition-colors duration-300">
+                  <div className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-300">
                     <div className="w-12 h-12 bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Mail size={22} className="text-white" />
                     </div>
@@ -418,7 +436,7 @@ const GovernmentContractingClient = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-surface-2 transition-colors duration-300">
+                  <div className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-300">
                     <div className="w-12 h-12 bg-gradient-to-r from-mh-hunter-green to-mh-hunter-green/80 rounded-xl flex items-center justify-center flex-shrink-0">
                       <MapPin size={22} className="text-white" />
                     </div>
@@ -429,7 +447,7 @@ const GovernmentContractingClient = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-surface-2 transition-colors duration-300">
+                  <div className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-300">
                     <div className="w-12 h-12 bg-gradient-to-r from-mh-leather-tan to-mh-leather-tan/80 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Clock size={22} className="text-white" />
                     </div>
@@ -470,7 +488,7 @@ const GovernmentContractingClient = () => {
 
             {/* Quick Actions */}
             <div className="space-y-6">
-              <div className="bg-white dark:bg-dark-surface rounded-xl p-8 shadow-xl border border-gray-100 dark:border-dark-border min-h-[360px] flex flex-col">
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-100 dark:border-dark-border min-h-[360px] flex flex-col">
                 <h3 className="text-2xl font-bold text-black dark:text-dark-text mb-6 border-b border-mh-hunter-green/20 pb-3">
                   Quick Actions
                 </h3>
@@ -521,8 +539,9 @@ const GovernmentContractingClient = () => {
         </div>
       </section>
 
-      {/* Featured Government Projects Section */}
-      <section id="portfolio" className="py-24 bg-white dark:bg-dark-surface transition-colors duration-300">
+      {/* Featured Projects Section (icons replaced) */}
+      <section id="portfolio" role="region" aria-label="Featured Government Projects"
+        className="py-24 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-mh-leather-tan/10 to-mh-hunter-green/10 dark:from-mh-leather-tan/20 dark:to-mh-hunter-green/20 rounded-full mb-6">
@@ -540,7 +559,7 @@ const GovernmentContractingClient = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="h-full flex flex-col min-h-[300px]">
-              <div className="bg-gray-50 dark:bg-dark-surface-2 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-dark-border flex flex-col h-full">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-dark-border flex flex-col h-full">
                 <div className="h-48 bg-gradient-to-br from-mh-hunter-green to-mh-leather-tan flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-black/10"></div>
                   <div className="text-center text-white z-10">
@@ -567,7 +586,7 @@ const GovernmentContractingClient = () => {
             </div>
 
             <div className="h-full flex flex-col min-h-[300px]">
-              <div className="bg-gray-50 dark:bg-dark-surface-2 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-dark-border flex flex-col h-full">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-dark-border flex flex-col h-full">
                 <div className="h-48 bg-gradient-to-br from-mh-leather-tan to-mh-hunter-green flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-black/10"></div>
                   <div className="text-center text-white z-10">
@@ -594,7 +613,7 @@ const GovernmentContractingClient = () => {
             </div>
 
             <div className="h-full flex flex-col min-h-[300px]">
-              <div className="bg-gray-50 dark:bg-dark-surface-2 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-dark-border flex flex-col h-full">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-dark-border flex flex-col h-full">
                 <div className="h-48 bg-gradient-to-br from-mh-hunter-green to-mh-leather-tan flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-black/10"></div>
                   <div className="text-center text-white z-10">
@@ -623,7 +642,7 @@ const GovernmentContractingClient = () => {
         </div>
       </section>
 
-      {/* Enhanced Call to Action Section */}
+      {/* CTA Section (unchanged structurally; ensure contrast) */}
       <section className="py-20 bg-gradient-to-r from-mh-hunter-green via-mh-hunter-green/90 to-mh-leather-tan relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
@@ -705,9 +724,9 @@ const GovernmentContractingClient = () => {
         </div>
       </section>
 
-      <CalendarScheduler 
-        isOpen={isSchedulerOpen} 
-        onClose={() => setIsSchedulerOpen(false)} 
+      <CalendarScheduler
+        isOpen={isSchedulerOpen}
+        onClose={() => setIsSchedulerOpen(false)}
       />
     </>
   )

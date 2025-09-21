@@ -5,6 +5,12 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import WhyChooseSection from '../../components/WhyChooseSection'
 import UniversalHeroSection from '../../components/UniversalHeroSection'
+import {
+  Info, Landmark, Handshake, ClipboardList,
+  HelpCircle, FolderOpen, Zap, CheckCircle,
+  Search as SearchIcon, Phone, Mail, MapPin,
+  FileText, LifeBuoy, ThumbsUp, ThumbsDown
+} from 'lucide-react'
 
 export default function FAQsPage() {
   const [activeCategory, setActiveCategory] = useState('general')
@@ -12,10 +18,10 @@ export default function FAQsPage() {
   const [searchTerm, setSearchTerm] = useState('')
 
   const categories = [
-    { id: 'general', label: 'General', icon: '🏢' },
-    { id: 'government', label: 'Government Projects', icon: '��️' },
-    { id: 'subcontractors', label: 'Subcontractors', icon: '🤝' },
-    { id: 'projects', label: 'Project Process', icon: '⚙️' }
+    { id: 'general', label: 'General', icon: <Info className="w-6 h-6" aria-hidden="true" /> },
+    { id: 'government', label: 'Government Projects', icon: <Landmark className="w-6 h-6" aria-hidden="true" /> },
+    { id: 'subcontractors', label: 'Subcontractors', icon: <Handshake className="w-6 h-6" aria-hidden="true" /> },
+    { id: 'projects', label: 'Project Process', icon: <ClipboardList className="w-6 h-6" aria-hidden="true" /> }
   ]
 
   const faqs = [
@@ -130,7 +136,7 @@ export default function FAQsPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900">
       <Header />
       
       <main className="flex-1">
@@ -149,37 +155,37 @@ export default function FAQsPage() {
           }}
         />
 
-        {/* FAQ Statistics */}
-        <section className="py-16 bg-white dark:bg-dark-surface-2 transition-colors duration-300">
+        {/* FAQ Statistics (icon updates) */}
+        <section className="py-16 bg-gradient-to-br from-mh-hunter-green/5 via-white to-mh-leather-tan/5 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center group min-h-[180px] flex flex-col justify-center">
-                <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
-                  <span className="text-2xl">❓</span>
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 group-hover:bg-mh-leather-tan/80 transition-all duration-300 group-hover:scale-110">
+                  <HelpCircle className="w-8 h-8 text-mh-hunter-green group-hover:text-white" aria-hidden="true" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-2">16+</div>
+                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green bg-clip-text text-transparent mb-2">16+</div>
                 <div className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary">Comprehensive FAQs</div>
               </div>
               
               <div className="text-center group min-h-[180px] flex flex-col justify-center">
-                <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
-                  <span className="text-2xl">📁</span>
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 group-hover:bg-mh-leather-tan/80 transition-all duration-300 group-hover:scale-110">
+                  <FolderOpen className="w-8 h-8 text-mh-hunter-green group-hover:text-white" aria-hidden="true" />
                 </div>
                 <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-2">4</div>
                 <div className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary">Topic Categories</div>
               </div>
               
               <div className="text-center group min-h-[180px] flex flex-col justify-center">
-                <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
-                  <span className="text-2xl">⚡</span>
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 group-hover:bg-mh-leather-tan/80 transition-all duration-300 group-hover:scale-110">
+                  <Zap className="w-8 h-8 text-mh-hunter-green group-hover:text-white" aria-hidden="true" />
                 </div>
                 <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-2">&lt;2hrs</div>
                 <div className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary">Response Time</div>
               </div>
               
               <div className="text-center group min-h-[180px] flex flex-col justify-center">
-                <div className="bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-leather-tan dark:group-hover:bg-mh-leather-tan group-hover:bg-opacity-90 dark:group-hover:bg-opacity-90 transition-all duration-300 group-hover:scale-110">
-                  <span className="text-2xl">✅</span>
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 group-hover:bg-mh-leather-tan/80 transition-all duration-300 group-hover:scale-110">
+                  <CheckCircle className="w-8 h-8 text-mh-hunter-green group-hover:text-white" aria-hidden="true" />
                 </div>
                 <div className="text-2xl md:text-3xl font-bold text-mh-leather-tan dark:text-mh-leather-tan mb-2">97%</div>
                 <div className="text-sm md:text-base text-gray-600 dark:text-dark-text-secondary">Satisfaction Rate</div>
@@ -189,7 +195,9 @@ export default function FAQsPage() {
         </section>
 
         {/* FAQ Content */}
-        <section id="faq-content" className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
+        <section id="faq-content" className="py-20 bg-mh-hunter-green/5 dark:bg-gray-900 transition-colors duration-300 relative">
+          {/* Soft radial brand backdrop */}
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,104,81,0.08),transparent_70%)] dark:bg-[radial-gradient(circle_at_center,rgba(189,146,100,0.08),transparent_70%)]"></div>
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             
             {/* Section Header */}
@@ -202,7 +210,7 @@ export default function FAQsPage() {
               </p>
             </div>
 
-            {/* Category Navigation */}
+            {/* Category Navigation (use component icons) */}
             <div className="flex flex-wrap justify-center gap-6 mb-16">
               {categories.map(category => (
                 <button
@@ -211,160 +219,158 @@ export default function FAQsPage() {
                     setActiveCategory(category.id)
                     setOpenFAQ(null)
                   }}
-                  className={`group px-8 py-4 rounded-xl font-semibold transition-all duration-500 flex items-center space-x-3 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-2xl min-h-[70px] min-w-[200px] justify-center ${
+                  className={`group relative px-8 py-4 rounded-xl font-semibold transition-all duration-400 flex items-center space-x-3 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-2xl min-h-[70px] min-w-[200px] justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-mh-hunter-green ${
                     activeCategory === category.id
                       ? 'bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white shadow-2xl scale-105'
-                      : 'bg-white dark:bg-dark-surface-2 text-gray-700 dark:text-dark-text hover:bg-gradient-to-r hover:from-mh-hunter-green/10 hover:to-mh-leather-tan/10 border border-gray-200 dark:border-dark-border hover:border-mh-hunter-green/30'
+                      : 'bg-white dark:bg-gray-800 text-mh-hunter-green dark:text-mh-leather-tan border border-mh-hunter-green/30 dark:border-mh-leather-tan/30 hover:border-mh-leather-tan/60'
                   }`}
+                  aria-pressed={activeCategory === category.id}
                 >
                   <span className={`text-xl transition-transform duration-300 ${
-                    activeCategory === category.id ? 'scale-110' : 'group-hover:scale-110 group-hover:rotate-12'
+                    activeCategory === category.id ? 'scale-110' : 'group-hover:scale-125 group-hover:rotate-12'
                   }`}>
                     {category.icon}
                   </span>
                   <span className="relative">
                     {category.label}
                     {activeCategory === category.id && (
-                      <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white/50 rounded-full"></div>
+                      <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white/60 rounded-full"></span>
                     )}
                   </span>
                   {activeCategory === category.id && (
-                    <svg className="w-5 h-5 text-white animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+                    <span className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-white/80 shadow ring-2 ring-white/40 animate-pulse" />
                   )}
                 </button>
               ))}
             </div>
 
-            {/* Search Bar */}
+            {/* Search Bar icon swap */}
             <div className="max-w-2xl mx-auto mb-12">
               <div className="relative group">
+                {/* glow */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-mh-hunter-green/10 to-mh-leather-tan/10 opacity-0 group-focus-within:opacity-100 transition"></div>
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <svg className="h-5 w-5 sm:h-6 sm:w-6 text-mh-hunter-green group-focus-within:text-mh-leather-tan transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
+                  <SearchIcon className="h-5 w-5 sm:h-6 sm:w-6 text-mh-hunter-green group-focus-within:text-mh-leather-tan transition-colors duration-300" aria-hidden="true" />
                 </div>
                 <input
                   type="text"
                   placeholder="Search frequently asked questions..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="block w-full pl-10 sm:pl-12 pr-12 py-3 sm:py-4 border-2 border-gray-300 dark:border-dark-border rounded-xl focus:outline-none focus:ring-0 focus:border-mh-hunter-green hover:border-mh-hunter-green/50 bg-white dark:bg-dark-surface-2 dark:text-dark-text transition-all duration-300 text-base sm:text-lg placeholder-gray-500 dark:placeholder-dark-text-secondary shadow-lg focus:shadow-2xl transform focus:scale-[1.02] touch-manipulation"
+                  className="block w-full pl-10 sm:pl-12 pr-24 py-3 sm:py-4 rounded-xl border-2 border-mh-hunter-green/30 dark:border-mh-hunter-green/40 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:border-mh-hunter-green focus:ring-2 focus:ring-mh-hunter-green/40 transition shadow-lg focus:shadow-2xl"
                 />
                 {searchTerm && (
                   <button
                     onClick={() => setSearchTerm('')}
-                    className="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-mh-hunter-green transition-colors duration-300 touch-manipulation min-w-[44px] min-h-[44px] justify-center"
+                    className="absolute top-1/2 -translate-y-1/2 right-12 text-sm font-semibold text-mh-hunter-green hover:text-mh-leather-tan transition"
                   >
-                    <svg className="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
+                    Clear
                   </button>
                 )}
+                {/* Submit (optional hidden) */}
+                <span className="absolute inset-y-0 right-2 flex items-center">
+                  <span className="px-3 py-1 text-xs rounded-md bg-mh-hunter-green/10 text-mh-hunter-green dark:bg-mh-leather-tan/20 dark:text-mh-leather-tan">
+                    {filteredFAQs.length}
+                  </span>
+                </span>
               </div>
-              {searchTerm && (
-                <div className="mt-3 text-center text-gray-600 dark:text-dark-text-secondary text-sm sm:text-base">
-                  {filteredFAQs.length} result{filteredFAQs.length !== 1 ? 's' : ''} found for "{searchTerm}"
+              {(searchTerm || activeCategory !== 'general') && (
+                <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
+                  <p
+                    className="text-sm text-gray-600 dark:text-gray-400"
+                    aria-live="polite"
+                  >
+                    {filteredFAQs.length} result{filteredFAQs.length !== 1 && 's'}
+                  </p>
+                  <button
+                    onClick={() => { setSearchTerm(''); setActiveCategory('general'); setOpenFAQ(null) }}
+                    className="text-sm font-medium text-mh-hunter-green dark:text-mh-leather-tan hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mh-hunter-green/50 rounded"
+                  >
+                    Reset Filters
+                  </button>
                 </div>
               )}
             </div>
 
-            {/* FAQ List */}
+            {/* FAQ List (accordion icon + feedback icons) */}
             <div className="space-y-6">
-              {filteredFAQs.length === 0 ? (
-                <div className="text-center py-16">
-                  <div className="w-24 h-24 bg-gray-100 dark:bg-dark-surface-2 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <svg className="w-12 h-12 text-gray-400 dark:text-dark-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-600 dark:text-dark-text-secondary mb-2">No FAQs found</h3>
-                  <p className="text-gray-500 dark:text-dark-text-secondary">Try adjusting your search terms or browse a different category.</p>
-                </div>
-              ) : (
-                filteredFAQs.map((faq, index) => (
+              {filteredFAQs.map((faq, index) => {
+                const expanded = openFAQ === faq.id
+                return (
                   <div
                     key={faq.id}
-                    className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg border border-gray-100 dark:border-dark-border overflow-hidden transition-all duration-500 hover:shadow-2xl transform hover:-translate-y-1 hover:scale-[1.02] animate-fade-in-up min-h-[120px] flex flex-col"
-                    style={{ animationDelay: `${index * 100}ms` }}
+                    className="group relative bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-mh-hunter-green/20 dark:border-mh-hunter-green/30 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:border-mh-leather-tan/40"
+                    style={{ animationDelay: `${index * 60}ms` }}
                   >
                     <button
                       onClick={() => toggleFAQ(faq.id)}
-                      className="w-full px-8 py-6 text-left hover:bg-gradient-to-r hover:from-mh-hunter-green/5 hover:to-mh-leather-tan/5 dark:hover:from-mh-hunter-green/10 dark:hover:to-mh-leather-tan/10 transition-all duration-300 flex items-center justify-between group-hover:px-10 flex-1"
+                      aria-expanded={expanded}
+                      aria-controls={`faq-panel-${faq.id}`}
+                      id={`faq-trigger-${faq.id}`}
+                      className={`w-full text-left px-8 py-6 flex items-center justify-between gap-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mh-hunter-green/60 transition ${
+                        expanded
+                          ? 'bg-gradient-to-r from-mh-hunter-green/5 to-mh-leather-tan/5'
+                          : 'hover:bg-gradient-to-r hover:from-mh-hunter-green/5 hover:to-mh-leather-tan/5'
+                      }`}
                     >
-                      <div className="flex items-center space-x-4 flex-1">
-                        <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0 ${
-                          openFAQ === faq.id 
-                            ? 'bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white shadow-lg scale-110' 
-                            : 'bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 text-mh-hunter-green group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 group-hover:scale-110'
+                      <div className="flex items-center gap-4 flex-1">
+                        <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
+                          expanded
+                            ? 'bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white shadow-lg scale-110'
+                            : 'bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 text-mh-hunter-green group-hover:bg-mh-hunter-green/20'
                         }`}>
-                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          </svg>
+                          <HelpCircle className="w-6 h-6" aria-hidden="true" />
                         </div>
-                        <h3 className="text-lg font-semibold text-black dark:text-dark-text pr-4 group-hover:text-mh-hunter-green transition-colors duration-300 leading-relaxed">
+                        <h3 className={`text-lg font-semibold leading-relaxed transition-colors ${
+                          expanded
+                            ? 'bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan bg-clip-text text-transparent'
+                            : 'text-gray-900 dark:text-white group-hover:text-mh-hunter-green dark:group-hover:text-mh-leather-tan'
+                        }`}>
                           {faq.question}
                         </h3>
                       </div>
-                      <div className={`flex items-center space-x-2 transition-all duration-300 flex-shrink-0 ${
-                        openFAQ === faq.id ? 'text-mh-hunter-green' : 'text-gray-400 group-hover:text-mh-hunter-green'
-                      }`}>
-                        <span className="text-sm font-medium hidden sm:block">
-                          {openFAQ === faq.id ? 'Close' : 'Open'}
-                        </span>
-                        <svg
-                          className={`w-6 h-6 transform transition-all duration-300 ${
-                            openFAQ === faq.id ? 'rotate-180 scale-110' : 'group-hover:scale-110'
-                          }`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
+                      <span
+                        className={`inline-flex items-center justify-center w-10 h-10 rounded-lg border transition-all ${
+                          expanded
+                            ? 'rotate-180 border-mh-leather-tan/50 text-mh-leather-tan'
+                            : 'border-mh-hunter-green/30 text-mh-hunter-green group-hover:scale-110'
+                        }`}
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
-                      </div>
+                      </span>
                     </button>
-                    
-                    {openFAQ === faq.id && (
-                      <div className="px-8 pb-8 animate-fade-in-up">
-                        <div className="pt-6 border-t border-gradient-to-r from-mh-hunter-green/20 to-mh-leather-tan/20">
-                          <div className="bg-gradient-to-r from-mh-hunter-green/5 to-mh-leather-tan/5 dark:from-mh-hunter-green/10 dark:to-mh-leather-tan/10 rounded-lg p-6 border-l-4 border-mh-hunter-green">
-                            <p className="text-gray-700 dark:text-dark-text-secondary leading-relaxed text-base">
-                              {faq.answer}
-                            </p>
-                          </div>
-                          <div className="mt-4 flex items-center justify-between text-sm text-gray-500 dark:text-dark-text-secondary">
-                            <div className="flex items-center space-x-2">
-                              <svg className="w-4 h-4 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                              </svg>
-                              <span>Helpful?</span>
-                            </div>
-                            <div className="flex items-center space-x-3">
-                              <button className="flex items-center space-x-1 text-mh-hunter-green hover:text-mh-leather-tan transition-colors duration-300">
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
-                                </svg>
-                                <span>Yes</span>
-                              </button>
-                              <button className="flex items-center space-x-1 text-gray-400 hover:text-mh-leather-tan transition-colors duration-300">
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018c.163 0 .326.02.485.06L17 4m-7 10v2a2 2 0 002 2h.095c.5 0 .905-.405.905-.905 0-.714.211-1.412.608-2.006L17 13V4m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2.5" />
-                                </svg>
-                                <span>No</span>
-                              </button>
-                            </div>
-                          </div>
+                    {expanded && (
+                      <div
+                        id={`faq-panel-${faq.id}`}
+                        role="region"
+                        aria-labelledby={`faq-trigger-${faq.id}`}
+                        className="px-8 pb-8 pt-4 animate-fade-in-up"
+                      >
+                        <div className="border-l-4 border-mh-hunter-green/70 pl-6 py-4 bg-gradient-to-r from-mh-hunter-green/5 to-mh-leather-tan/5 dark:from-mh-hunter-green/10 dark:to-mh-leather-tan/10 rounded-md">
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            {faq.answer}
+                          </p>
+                        </div>
+                        {/* Feedback row simplified */}
+                        <div className="mt-5 flex items-center justify-end gap-4 text-xs text-gray-500">
+                          <span>Was this helpful?</span>
+                          <button className="px-3 py-1 rounded-md border border-mh-hunter-green/30 text-mh-hunter-green hover:bg-mh-hunter-green/10 transition inline-flex items-center gap-1">
+                            <ThumbsUp className="w-4 h-4" aria-hidden="true" /> Yes
+                          </button>
+                          <button className="px-3 py-1 rounded-md border border-mh-leather-tan/30 text-mh-leather-tan hover:bg-mh-leather-tan/10 transition inline-flex items-center gap-1">
+                            <ThumbsDown className="w-4 h-4" aria-hidden="true" /> No
+                          </button>
                         </div>
                       </div>
                     )}
                   </div>
-                ))
-              )}
+                )
+              })}
             </div>
 
-            {/* Helpful Resources Section */}
+            {/* Additional Resources (icon swaps) */}
             <div className="mt-20 mb-16">
               <div className="text-center mb-12">
                 <h3 className="text-2xl md:text-3xl font-bold text-black dark:text-dark-text mb-4">
@@ -376,12 +382,9 @@ export default function FAQsPage() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {/* Project Guide */}
-                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border min-h-[280px] flex flex-col">
-                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 flex-shrink-0">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
+                <div className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border border-mh-hunter-green/20 dark:border-mh-hunter-green/30 hover:border-mh-leather-tan/40 hover:shadow-2xl transition-all duration-500">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all">
+                    <FileText className="w-8 h-8 text-white" aria-hidden="true" />
                   </div>
                   <div className="flex-1 flex flex-col justify-between">
                     <div>
@@ -398,11 +401,9 @@ export default function FAQsPage() {
                 </div>
 
                 {/* Government Contracting */}
-                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:-rotate-1 border border-gray-100 dark:border-dark-border min-h-[280px] flex flex-col">
-                  <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300 flex-shrink-0">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
+                <div className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border border-mh-hunter-green/20 dark:border-mh-hunter-green/30 hover:border-mh-leather-tan/40 hover:shadow-2xl transition-all duration-500">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:-rotate-12 transition-all">
+                    <Landmark className="w-8 h-8 text-white" aria-hidden="true" />
                   </div>
                   <div className="flex-1 flex flex-col justify-between">
                     <div>
@@ -419,11 +420,9 @@ export default function FAQsPage() {
                 </div>
 
                 {/* Contact Support */}
-                <div className="group bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1 border border-gray-100 dark:border-dark-border min-h-[280px] flex flex-col">
-                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 flex-shrink-0">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
+                <div className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border border-mh-hunter-green/20 dark:border-mh-hunter-green/30 hover:border-mh-leather-tan/40 hover:shadow-2xl transition-all duration-500">
+                  <div className="w-16 h-16 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all">
+                    <LifeBuoy className="w-8 h-8 text-white" aria-hidden="true" />
                   </div>
                   <div className="flex-1 flex flex-col justify-between">
                     <div>
@@ -441,9 +440,10 @@ export default function FAQsPage() {
               </div>
             </div>
 
-            {/* Contact CTA */}
+            {/* Contact CTA icons */}
             <div className="mt-16 text-center">
-              <div className="bg-gradient-to-r from-mh-hunter-green/5 to-mh-leather-tan/5 border border-mh-hunter-green/20 rounded-2xl p-8 md:p-12 shadow-xl max-w-4xl mx-auto">
+              <div className="bg-gradient-to-r from-mh-hunter-green/10 to-mh-leather-tan/10 border border-mh-hunter-green/30 dark:border-mh-leather-tan/40 rounded-2xl p-8 md:p-12 shadow-xl max-w-4xl mx-auto relative overflow-hidden">
+                <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top_right,rgba(56,104,81,0.15),transparent_60%)]" />
                 <div className="mb-8">
                   <h3 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
                     Still Have Questions?
@@ -454,12 +454,9 @@ export default function FAQsPage() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                  {/* Phone */}
-                  <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-100 dark:border-dark-border min-h-[180px] flex flex-col justify-center">
-                    <div className="w-12 h-12 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 group-hover:scale-110 transition-all duration-300">
-                      <svg className="w-6 h-6 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
+                  <div className="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-mh-hunter-green/20 dark:border-mh-hunter-green/30">
+                    <div className="w-12 h-12 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-hunter-green/20 group-hover:scale-110 transition-all">
+                      <Phone className="w-6 h-6 text-mh-hunter-green" aria-hidden="true" />
                     </div>
                     <div className="text-center">
                       <h4 className="font-bold text-black dark:text-dark-text mb-2">Call Us</h4>
@@ -468,12 +465,10 @@ export default function FAQsPage() {
                     </div>
                   </div>
 
-                  {/* Email */}
-                  <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-100 dark:border-dark-border min-h-[180px] flex flex-col justify-center">
+                  {/* Email (unified border classes) */}
+                  <div className="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-mh-hunter-green/20 dark:border-mh-hunter-green/30 min-h-[180px] flex flex-col justify-center">
                     <div className="w-12 h-12 bg-mh-leather-tan/10 dark:bg-mh-leather-tan/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-leather-tan/20 dark:group-hover:bg-mh-leather-tan/30 group-hover:scale-110 transition-all duration-300">
-                      <svg className="w-6 h-6 text-mh-leather-tan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
+                      <Mail className="w-6 h-6 text-mh-leather-tan" aria-hidden="true" />
                     </div>
                     <div className="text-center">
                       <h4 className="font-bold text-black dark:text-dark-text mb-2">Email Us</h4>
@@ -482,13 +477,10 @@ export default function FAQsPage() {
                     </div>
                   </div>
 
-                  {/* Office */}
-                  <div className="group bg-white dark:bg-dark-surface-2 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-100 dark:border-dark-border min-h-[180px] flex flex-col justify-center">
+                  {/* Office (unified border classes) */}
+                  <div className="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-mh-hunter-green/20 dark:border-mh-hunter-green/30 min-h-[180px] flex flex-col justify-center">
                     <div className="w-12 h-12 bg-mh-hunter-green/10 dark:bg-mh-hunter-green/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-mh-hunter-green/20 dark:group-hover:bg-mh-hunter-green/30 group-hover:scale-110 transition-all duration-300">
-                      <svg className="w-6 h-6 text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
+                      <MapPin className="w-6 h-6 text-mh-hunter-green" aria-hidden="true" />
                     </div>
                     <div className="text-center">
                       <h4 className="font-bold text-black dark:text-dark-text mb-2">Visit Us</h4>

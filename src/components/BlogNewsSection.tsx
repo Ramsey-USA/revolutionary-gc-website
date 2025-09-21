@@ -111,7 +111,7 @@ const BlogNewsSection = () => {
               {/* Article Content */}
               <div className="p-8 flex flex-col justify-center">
                 <div className="flex items-center text-mh-hunter-green dark:text-mh-leather-tan mb-4">
-                  <Calendar size={16} className="mr-2" />
+                  <Calendar size={16} className="mr-2 icon-utility icon-animate-pulse" />
                   <span className="text-sm font-medium">{currentItem.date}</span>
                   <span className="mx-2 text-gray-400">•</span>
                   <span className="text-sm font-medium">{currentItem.readTime}</span>
@@ -127,10 +127,10 @@ const BlogNewsSection = () => {
 
                 <Link
                   href={`/blog/${currentItem.slug}`}
-                  className="inline-flex items-center bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white px-6 py-3 rounded-lg font-semibold hover:from-mh-leather-tan hover:to-mh-hunter-green transition-all duration-300 w-fit transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                  className="btn btn-primary inline-flex items-center w-fit"
                 >
                   Read Full Article
-                  <ArrowRight size={16} className="ml-2" />
+                  <ArrowRight size={16} className="ml-2 icon-action icon-interactive-primary" />
                 </Link>
               </div>
             </div>
@@ -142,7 +142,7 @@ const BlogNewsSection = () => {
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-700 text-mh-hunter-green dark:text-mh-leather-tan p-3 rounded-full transition-all duration-300 z-10 shadow-lg hover:shadow-xl hover:scale-110 border border-gray-200 dark:border-gray-600"
             aria-label="Previous article"
           >
-            <ChevronLeft size={24} />
+            <ChevronLeft size={24} className="icon-nav icon-animate-float" />
           </button>
 
           <button
@@ -150,7 +150,7 @@ const BlogNewsSection = () => {
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-700 text-mh-hunter-green dark:text-mh-leather-tan p-3 rounded-full transition-all duration-300 z-10 shadow-lg hover:shadow-xl hover:scale-110 border border-gray-200 dark:border-gray-600"
             aria-label="Next article"
           >
-            <ChevronRight size={24} />
+            <ChevronRight size={24} className="icon-nav icon-animate-float" />
           </button>
         </div>
 
@@ -174,10 +174,10 @@ const BlogNewsSection = () => {
         <div className="text-center mt-12">
           <Link
             href="/blog"
-            className="inline-flex items-center bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white px-10 py-4 rounded-lg text-lg font-semibold hover:from-mh-leather-tan hover:to-mh-hunter-green transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+            className="btn btn-secondary inline-flex items-center"
           >
             View All News & Insights
-            <ArrowRight size={20} className="ml-2" />
+            <ArrowRight size={20} className="ml-2 icon-action icon-animate-glow" />
           </Link>
         </div>
       </div>

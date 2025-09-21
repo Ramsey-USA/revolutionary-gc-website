@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { Phone, Mail, MapPin, Clock, Calendar, Send, User, Building, MessageSquare } from 'lucide-react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import WhyChooseSection from '../../components/WhyChooseSection'
@@ -71,115 +72,123 @@ export default function ContactPage() {
       />
 
       {/* Contact Section */}
-      <section id="contact-form" className="py-20 bg-gray-50 dark:bg-dark-surface transition-colors duration-300">
+      <section id="contact-form" className="py-20 bg-white/25 dark:bg-dark-surface/35 backdrop-blur-sm transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
             {/* Contact Information */}
             <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-6">
+              <div className="section-header">
+                <h2 className="section-title">
                   <span className="bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan bg-clip-text text-transparent">
                     Let's Build Together
                   </span>
                 </h2>
-                <p className="text-xl text-gray-600 dark:text-dark-text-secondary leading-relaxed">
+                <p className="section-subtitle">
                   Our team is ready to turn your vision into reality. Whether it's a government facility, educational building, or commercial project, we bring veteran leadership and construction excellence to every job.
                 </p>
               </div>
 
               {/* Contact Cards */}
               <div className="space-y-6">
-                <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-dark-border hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 group">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-mh-hunter-green dark:bg-mh-hunter-green rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
-                      <svg className="w-6 h-6 text-white dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
+                <div className="feature-card group">
+                  <div className="flex items-start space-x-5">
+                    <div className="feature-icon-container feature-icon-primary flex-shrink-0">
+                      <Phone size={24} className="icon-utility icon-animate-glow transition-transform duration-300 group-hover:scale-110" />
                     </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2">Phone</h3>
-                      <p className="text-gray-600 dark:text-dark-text-secondary">Call us directly for immediate assistance</p>
-                      <a href="tel:+15093086489" className="text-mh-hunter-green dark:text-mh-hunter-green font-semibold hover:text-mh-leather-tan dark:hover:text-mh-leather-tan transition-colors">
-                        (509) 308-6489
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-dark-border hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 group">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-mh-leather-tan dark:bg-mh-leather-tan rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
-                      <svg className="w-6 h-6 text-white dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2">Email</h3>
-                      <p className="text-gray-600 dark:text-dark-text-secondary">Send us your project details</p>
-                      <a href="mailto:info@mhconstruction.com" className="text-mh-leather-tan dark:text-mh-leather-tan font-semibold hover:text-mh-hunter-green dark:hover:text-mh-hunter-green transition-colors">
-                        info@mhconstruction.com
-                      </a>
+                    <div className="flex-1">
+                      <h3 className="feature-title feature-title-primary mb-2">Phone</h3>
+                      <p className="feature-description mb-3">Call us directly for immediate assistance</p>
+                      <div className="contact-info">
+                        <a href="tel:+15093086489" className="text-mh-hunter-green dark:text-mh-leather-tan hover:text-mh-leather-tan dark:hover:text-mh-hunter-green font-semibold transition-colors duration-300 touch-manipulation text-lg">
+                          (509) 308-6489
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-dark-border hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 group">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-mh-hunter-green dark:bg-mh-hunter-green rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
-                      <svg className="w-6 h-6 text-white dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
+                <div className="feature-card group">
+                  <div className="flex items-start space-x-5">
+                    <div className="feature-icon-container feature-icon-secondary flex-shrink-0">
+                      <Mail size={24} className="icon-utility icon-animate-float transition-transform duration-300 group-hover:scale-110" />
                     </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-black dark:text-dark-text mb-2">Office Location</h3>
-                      <p className="text-gray-600 dark:text-dark-text-secondary">Visit us for in-person consultations</p>
-                      <p className="text-mh-hunter-green dark:text-mh-hunter-green font-semibold">
-                        3111 N. Capital Ave.<br />
-                        Pasco, WA 99301<br />
-                        <span className="text-sm text-gray-500 dark:text-dark-text-secondary">(Serving the Columbia River Region)</span>
-                      </p>
+                    <div className="flex-1">
+                      <h3 className="feature-title feature-title-secondary mb-2">Email</h3>
+                      <p className="feature-description mb-3">Send us your project details</p>
+                      <div className="contact-info">
+                        <a href="mailto:info@mhconstruction.com" className="text-mh-leather-tan dark:text-mh-hunter-green hover:text-mh-hunter-green dark:hover:text-mh-leather-tan font-semibold transition-colors duration-300 touch-manipulation text-lg break-words">
+                          info@mhconstruction.com
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="feature-card group">
+                  <div className="flex items-start space-x-5">
+                    <div className="feature-icon-container feature-icon-primary flex-shrink-0">
+                      <MapPin size={24} className="icon-utility icon-animate-pulse transition-transform duration-300 group-hover:scale-110" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="feature-title feature-title-primary mb-2">Office Location</h3>
+                      <p className="feature-description mb-3">Visit us for in-person consultations</p>
+                      <div className="contact-info">
+                        <div className="text-mh-hunter-green dark:text-mh-leather-tan font-semibold text-lg">
+                          <p>3111 N. Capital Ave.</p>
+                          <p>Pasco, WA 99301</p>
+                          <p className="text-sm text-gray-500 dark:text-dark-text-secondary font-normal mt-2">(Serving the Columbia River Region)</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Business Hours */}
-              <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-dark-border transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1">
-                <h3 className="text-lg font-bold text-black dark:text-dark-text mb-4 flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-mh-hunter-green dark:text-mh-hunter-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  Business Hours
-                </h3>
-                <div className="space-y-2 text-gray-600 dark:text-dark-text-secondary">
-                  <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span className="font-semibold">7:00 AM - 6:00 PM</span>
+              <div className="feature-card">
+                <div className="flex items-start space-x-5 mb-6">
+                  <div className="feature-icon-container feature-icon-primary flex-shrink-0">
+                    <Clock size={24} className="icon-utility icon-animate-glow" />
                   </div>
-                  <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span className="font-semibold">8:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span className="font-semibold">Closed</span>
-                  </div>
-                  <div className="text-sm text-mh-hunter-green dark:text-mh-hunter-green mt-3">
-                    * Emergency services available 24/7
+                  <div className="flex-1">
+                    <h3 className="feature-title feature-title-primary text-xl mb-4">Business Hours</h3>
+                    <div className="space-y-3 text-gray-600 dark:text-dark-text-secondary">
+                      <div className="flex justify-between items-center">
+                        <span className="font-medium">Monday - Friday</span>
+                        <span className="font-semibold text-mh-hunter-green dark:text-mh-leather-tan">7:00 AM - 6:00 PM</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="font-medium">Saturday</span>
+                        <span className="font-semibold text-mh-hunter-green dark:text-mh-leather-tan">8:00 AM - 4:00 PM</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="font-medium">Sunday</span>
+                        <span className="font-semibold text-mh-hunter-green dark:text-mh-leather-tan">Closed</span>
+                      </div>
+                      <div className="text-sm text-mh-hunter-green dark:text-mh-leather-tan mt-4 pt-3 border-t border-gray-200 dark:border-dark-border">
+                        * Emergency services available 24/7
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white dark:bg-dark-surface-2 rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100 dark:border-dark-border transition-all duration-500 hover:shadow-2xl">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-black dark:text-dark-text mb-4">
-                  Start Your Project
-                </h3>
-                <p className="text-gray-600 dark:text-dark-text-secondary">
+            <div className="bg-white/80 dark:bg-dark-surface-2/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100 dark:border-dark-border transition-all duration-500 hover:shadow-2xl">
+              <div className="section-header text-center mb-8">
+                <div className="flex items-center justify-center mb-4">
+                  <div className="feature-icon-container feature-icon-primary mr-4">
+                    <MessageSquare size={28} className="icon-utility icon-animate-float" />
+                  </div>
+                  <h3 className="section-title text-2xl md:text-3xl mb-0">
+                    <span className="bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan bg-clip-text text-transparent">
+                      Start Your Project
+                    </span>
+                  </h3>
+                </div>
+                <p className="section-subtitle">
                   Tell us about your project and we'll provide a detailed proposal
                 </p>
               </div>
@@ -187,7 +196,8 @@ export default function ContactPage() {
               <form onSubmit={handleContactSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="block text-sm font-medium text-black dark:text-dark-text">
+                    <label htmlFor="name" className="feature-title feature-title-primary text-sm flex items-center">
+                      <User size={16} className="mr-2 text-mh-hunter-green dark:text-mh-leather-tan icon-utility" />
                       Full Name *
                     </label>
                     <input
@@ -197,13 +207,14 @@ export default function ContactPage() {
                       required
                       value={contactData.name}
                       onChange={handleContactChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition-all duration-300 bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-md"
+                      className="w-full px-4 py-3 bg-white/90 dark:bg-dark-surface/90 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-dark-border text-black dark:text-dark-text placeholder-gray-500 dark:placeholder-dark-text-secondary focus:border-mh-hunter-green dark:focus:border-mh-leather-tan focus:ring-2 focus:ring-mh-hunter-green/20 dark:focus:ring-mh-leather-tan/20 transition-all duration-300 touch-manipulation hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-md"
                       placeholder="Your full name"
                     />
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="company" className="block text-sm font-medium text-black dark:text-dark-text">
+                    <label htmlFor="company" className="feature-title feature-title-secondary text-sm flex items-center">
+                      <Building size={16} className="mr-2 text-mh-leather-tan dark:text-mh-hunter-green icon-utility" />
                       Organization
                     </label>
                     <input
@@ -212,7 +223,7 @@ export default function ContactPage() {
                       name="company"
                       value={contactData.company}
                       onChange={handleContactChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition-all duration-300 bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-md"
+                      className="w-full px-4 py-3 bg-white/90 dark:bg-dark-surface/90 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-dark-border text-black dark:text-dark-text placeholder-gray-500 dark:placeholder-dark-text-secondary focus:border-mh-leather-tan dark:focus:border-mh-hunter-green focus:ring-2 focus:ring-mh-leather-tan/20 dark:focus:ring-mh-hunter-green/20 transition-all duration-300 touch-manipulation hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-md"
                       placeholder="Company or organization"
                     />
                   </div>
@@ -220,7 +231,8 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="email" className="block text-sm font-medium text-black dark:text-dark-text">
+                    <label htmlFor="email" className="feature-title feature-title-primary text-sm flex items-center">
+                      <Mail size={16} className="mr-2 text-mh-hunter-green dark:text-mh-leather-tan icon-utility" />
                       Email Address *
                     </label>
                     <input
@@ -230,13 +242,14 @@ export default function ContactPage() {
                       required
                       value={contactData.email}
                       onChange={handleContactChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition-all duration-300 bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-md"
+                      className="w-full px-4 py-3 bg-white/90 dark:bg-dark-surface/90 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-dark-border text-black dark:text-dark-text placeholder-gray-500 dark:placeholder-dark-text-secondary focus:border-mh-hunter-green dark:focus:border-mh-leather-tan focus:ring-2 focus:ring-mh-hunter-green/20 dark:focus:ring-mh-leather-tan/20 transition-all duration-300 touch-manipulation hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-md"
                       placeholder="your.email@example.com"
                     />
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="phone" className="block text-sm font-medium text-black dark:text-dark-text">
+                    <label htmlFor="phone" className="feature-title feature-title-secondary text-sm flex items-center">
+                      <Phone size={16} className="mr-2 text-mh-leather-tan dark:text-mh-hunter-green icon-utility" />
                       Phone Number *
                     </label>
                     <input
@@ -246,7 +259,7 @@ export default function ContactPage() {
                       required
                       value={contactData.phone}
                       onChange={handleContactChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition-all duration-300 bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-md"
+                      className="w-full px-4 py-3 bg-white/90 dark:bg-dark-surface/90 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-dark-border text-black dark:text-dark-text placeholder-gray-500 dark:placeholder-dark-text-secondary focus:border-mh-leather-tan dark:focus:border-mh-hunter-green focus:ring-2 focus:ring-mh-leather-tan/20 dark:focus:ring-mh-hunter-green/20 transition-all duration-300 touch-manipulation hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-md"
                       placeholder="(509) 308-6489"
                     />
                   </div>
@@ -254,7 +267,7 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="projectType" className="block text-sm font-medium text-black dark:text-dark-text">
+                    <label htmlFor="projectType" className="feature-title feature-title-primary text-sm">
                       Project Type *
                     </label>
                     <select
@@ -263,7 +276,7 @@ export default function ContactPage() {
                       required
                       value={contactData.projectType}
                       onChange={handleContactChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition-all duration-300 bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-md"
+                      className="w-full px-4 py-3 bg-white/90 dark:bg-dark-surface/90 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-dark-border text-black dark:text-dark-text focus:border-mh-hunter-green dark:focus:border-mh-leather-tan focus:ring-2 focus:ring-mh-hunter-green/20 dark:focus:ring-mh-leather-tan/20 transition-all duration-300 touch-manipulation hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-md"
                     >
                       <option value="">Select project type</option>
                       <option value="government">Government Building</option>
@@ -280,7 +293,8 @@ export default function ContactPage() {
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="projectLocation" className="block text-sm font-medium text-black dark:text-dark-text">
+                    <label htmlFor="projectLocation" className="feature-title feature-title-secondary text-sm flex items-center">
+                      <MapPin size={16} className="mr-2 text-mh-leather-tan dark:text-mh-hunter-green icon-utility" />
                       Project Location *
                     </label>
                     <input
@@ -290,7 +304,7 @@ export default function ContactPage() {
                       required
                       value={contactData.projectLocation}
                       onChange={handleContactChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition-all duration-300 bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-md"
+                      className="w-full px-4 py-3 bg-white/90 dark:bg-dark-surface/90 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-dark-border text-black dark:text-dark-text placeholder-gray-500 dark:placeholder-dark-text-secondary focus:border-mh-leather-tan dark:focus:border-mh-hunter-green focus:ring-2 focus:ring-mh-leather-tan/20 dark:focus:ring-mh-hunter-green/20 transition-all duration-300 touch-manipulation hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-md"
                       placeholder="City, State"
                     />
                   </div>
@@ -298,7 +312,8 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="projectTimeline" className="block text-sm font-medium text-black dark:text-dark-text">
+                    <label htmlFor="projectTimeline" className="feature-title feature-title-primary text-sm flex items-center">
+                      <Calendar size={16} className="mr-2 text-mh-hunter-green dark:text-mh-leather-tan icon-utility" />
                       Project Timeline *
                     </label>
                     <select
@@ -307,7 +322,7 @@ export default function ContactPage() {
                       required
                       value={contactData.projectTimeline}
                       onChange={handleContactChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition-all duration-300 bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-md"
+                      className="w-full px-4 py-3 bg-white/90 dark:bg-dark-surface/90 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-dark-border text-black dark:text-dark-text focus:border-mh-hunter-green dark:focus:border-mh-leather-tan focus:ring-2 focus:ring-mh-hunter-green/20 dark:focus:ring-mh-leather-tan/20 transition-all duration-300 touch-manipulation hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-md"
                     >
                       <option value="">Select timeline</option>
                       <option value="immediate">Immediate (within 30 days)</option>
@@ -320,7 +335,7 @@ export default function ContactPage() {
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="budget" className="block text-sm font-medium text-black dark:text-dark-text">
+                    <label htmlFor="budget" className="feature-title feature-title-secondary text-sm">
                       Project Budget
                     </label>
                     <select
@@ -328,7 +343,7 @@ export default function ContactPage() {
                       name="budget"
                       value={contactData.budget}
                       onChange={handleContactChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition-all duration-300 bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-md"
+                      className="w-full px-4 py-3 bg-white/90 dark:bg-dark-surface/90 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-dark-border text-black dark:text-dark-text focus:border-mh-leather-tan dark:focus:border-mh-hunter-green focus:ring-2 focus:ring-mh-leather-tan/20 dark:focus:ring-mh-hunter-green/20 transition-all duration-300 touch-manipulation hover:border-gray-400 dark:hover:border-gray-500 hover:shadow-md"
                     >
                       <option value="">Select budget range</option>
                       <option value="under-500k">Under $500K</option>
@@ -342,7 +357,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="message" className="block text-sm font-medium text-black dark:text-dark-text">
+                  <label htmlFor="message" className="feature-title feature-title-secondary text-sm">
                     Project Details *
                   </label>
                   <textarea
@@ -352,37 +367,37 @@ export default function ContactPage() {
                     value={contactData.message}
                     onChange={handleContactChange}
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-mh-hunter-green transition-all duration-300 bg-white dark:bg-dark-surface-3 dark:text-dark-text hover:border-gray-400 dark:hover:border-gray-500 resize-none hover:shadow-md"
+                    className="w-full px-4 py-3 bg-white/90 dark:bg-dark-surface/90 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-dark-border text-black dark:text-dark-text placeholder-gray-500 dark:placeholder-dark-text-secondary focus:border-mh-leather-tan dark:focus:border-mh-hunter-green focus:ring-2 focus:ring-mh-leather-tan/20 dark:focus:ring-mh-hunter-green/20 transition-all duration-300 resize-none hover:shadow-md touch-manipulation"
                     placeholder="Please describe your project, including size, specific requirements, and any special considerations..."
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  disabled={isSubmittingContact}
-                  className="w-full bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan dark:from-mh-hunter-green dark:to-mh-leather-tan text-white dark:text-white px-8 py-4 rounded-xl text-lg font-bold hover:from-mh-leather-tan hover:to-mh-hunter-green dark:hover:from-mh-leather-tan dark:hover:to-mh-hunter-green transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-2xl flex items-center justify-center"
-                >
-                  {isSubmittingContact ? (
-                    <span className="flex items-center">
-                      <svg className="animate-spin -ml-1 mr-3 h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Sending Message...
-                    </span>
-                  ) : (
-                    <>
-                      <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                      </svg>
-                      Send Project Inquiry
-                    </>
-                  )}
-                </button>
-
-                <p className="text-center text-sm text-gray-500 dark:text-dark-text-secondary">
-                  * Required fields. We typically respond within 24 hours.
-                </p>
+                {/* Submit Button */}
+                <div className="pt-6">
+                  <button
+                    type="submit"
+                    disabled={isSubmittingContact}
+                    className="w-full bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center touch-manipulation group text-lg min-h-[64px]"
+                  >
+                    {isSubmittingContact ? (
+                      <span className="flex items-center space-x-3">
+                        <svg className="animate-spin h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        <span>Sending Message...</span>
+                      </span>
+                    ) : (
+                      <span className="flex items-center space-x-3">
+                        <Send size={24} className="icon-action icon-animate-glow group-hover:scale-110 transition-transform duration-300" />
+                        <span>Send Project Inquiry</span>
+                      </span>
+                    )}
+                  </button>
+                  <p className="text-center text-sm text-gray-500 dark:text-dark-text-secondary mt-4">
+                    * Required fields. We typically respond within 24 hours during business days.
+                  </p>
+                </div>
               </form>
             </div>
           </div>
@@ -390,81 +405,81 @@ export default function ContactPage() {
       </section>
 
       {/* Visual Calendar Section */}
-      <section className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
+      <section className="py-20 bg-white/50 dark:bg-dark-surface/50 backdrop-blur-sm transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <VisualCalendar />
         </div>
       </section>
 
       {/* Alternative Scheduling Options */}
-      <section className="py-16 bg-gray-50 dark:bg-dark-surface-2 transition-colors duration-300">
+      <section className="py-16 bg-gray-50/75 dark:bg-dark-surface-2/75 backdrop-blur-sm transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-black dark:text-dark-text mb-6">
-            Prefer a Different Approach?
-          </h3>
-          <p className="text-lg text-gray-600 dark:text-dark-text-secondary mb-8 max-w-2xl mx-auto">
-            We offer multiple ways to connect with our team. Choose the option that works best for your schedule and preferences.
-          </p>
+          <div className="section-header mb-12">
+            <h3 className="section-title text-2xl md:text-3xl">
+              <span className="bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan bg-clip-text text-transparent">
+                Prefer a Different Approach?
+              </span>
+            </h3>
+            <p className="section-subtitle text-lg max-w-2xl mx-auto">
+              We offer multiple ways to connect with our team. Choose the option that works best for your schedule and preferences.
+            </p>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Quick Scheduling */}
-            <div className="bg-white dark:bg-dark-surface rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="w-16 h-16 bg-mh-hunter-green rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+            <div className="feature-card group text-center flex flex-col h-full">
+              <div className="feature-icon-container feature-icon-primary mx-auto mb-6">
+                <Calendar size={32} className="icon-utility icon-animate-glow transition-transform duration-300 group-hover:scale-110" />
               </div>
-              <h4 className="text-xl font-bold text-black dark:text-dark-text mb-3">Quick Scheduling</h4>
-              <p className="text-gray-600 dark:text-dark-text-secondary mb-6">
+              <h4 className="feature-title feature-title-primary text-xl mb-3">Quick Scheduling</h4>
+              <p className="feature-description mb-8 flex-grow">
                 Use our streamlined scheduling system for fast consultation booking
               </p>
-              <ScheduleButton variant="primary" size="md" className="w-full">
-                Schedule Now
-              </ScheduleButton>
+              <div className="mt-auto">
+                <ScheduleButton variant="primary" size="md" className="w-full">
+                  Schedule Now
+                </ScheduleButton>
+              </div>
             </div>
 
             {/* Direct Contact */}
-            <div className="bg-white dark:bg-dark-surface rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="w-16 h-16 bg-mh-leather-tan rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
+            <div className="feature-card group text-center flex flex-col h-full">
+              <div className="feature-icon-container feature-icon-secondary mx-auto mb-6">
+                <Phone size={32} className="icon-utility icon-animate-float transition-transform duration-300 group-hover:scale-110" />
               </div>
-              <h4 className="text-xl font-bold text-black dark:text-dark-text mb-3">Direct Contact</h4>
-              <p className="text-gray-600 dark:text-dark-text-secondary mb-6">
+              <h4 className="feature-title feature-title-secondary text-xl mb-3">Direct Contact</h4>
+              <p className="feature-description mb-8 flex-grow">
                 Call us directly for immediate assistance and consultation
               </p>
-              <a
-                href="tel:+15093086489"
-                className="inline-flex items-center justify-center w-full px-6 py-3 bg-mh-leather-tan hover:bg-mh-hunter-green text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                (509) 308-6489
-              </a>
+              <div className="mt-auto">
+                <a
+                  href="tel:+15093086489"
+                  className="inline-flex items-center justify-center w-full px-6 py-4 bg-gradient-to-r from-mh-leather-tan to-mh-hunter-green hover:from-mh-hunter-green hover:to-mh-leather-tan text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 touch-manipulation min-h-[56px]"
+                >
+                  <Phone size={20} className="mr-3 icon-action" />
+                  <span>(509) 308-6489</span>
+                </a>
+              </div>
             </div>
 
             {/* Email Contact */}
-            <div className="bg-white dark:bg-dark-surface rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="w-16 h-16 bg-mh-hunter-green rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+            <div className="feature-card group text-center flex flex-col h-full">
+              <div className="feature-icon-container feature-icon-primary mx-auto mb-6">
+                <Mail size={32} className="icon-utility icon-animate-pulse transition-transform duration-300 group-hover:scale-110" />
               </div>
-              <h4 className="text-xl font-bold text-black dark:text-dark-text mb-3">Email Inquiry</h4>
-              <p className="text-gray-600 dark:text-dark-text-secondary mb-6">
+              <h4 className="feature-title feature-title-primary text-xl mb-3">Email Inquiry</h4>
+              <p className="feature-description mb-8 flex-grow">
                 Send detailed project information for comprehensive consultation
               </p>
-              <a
-                href="mailto:info@mhconstruction.com"
-                className="inline-flex items-center justify-center w-full px-6 py-3 bg-mh-hunter-green hover:bg-mh-leather-tan text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                Send Email
-              </a>
+              <div className="mt-auto">
+                <a
+                  href="mailto:info@mhconstruction.com"
+                  className="inline-flex items-center justify-center w-full px-6 py-4 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan hover:from-mh-leather-tan hover:to-mh-hunter-green text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 touch-manipulation min-h-[56px]"
+                >
+                  <Mail size={20} className="mr-3 icon-action" />
+                  <span>Send Email</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

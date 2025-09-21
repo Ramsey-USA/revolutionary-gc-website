@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from 'react'
 import Header from '../components/Header'
-import HeroSection from '../components/HeroSection'
+import HomeHeroSection from '../components/HomeHeroSection'
 import AIToolsSection from '../components/AIToolsSection'
 import CoreValuesSection from '../components/CoreValuesSection'
 import FeaturedProjectsSection from '../components/FeaturedProjectsSection'
@@ -66,7 +66,7 @@ export default function Home() {
       {/* Content with higher z-index */}
       <div className="relative z-10">
         <Header />
-        <HeroSection />
+        <HomeHeroSection />
         <AIToolsSection />
         <CoreValuesSection />
         <FeaturedProjectsSection />

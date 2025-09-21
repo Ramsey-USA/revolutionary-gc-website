@@ -185,48 +185,48 @@ const SafetyClient = () => {
       />
 
       {/* Safety Statistics Section */}
-      <section id="statistics" className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
+      <section id="statistics" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-gray-100 mb-4">
               Safety Performance Metrics
             </h2>
-            <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
               Our commitment to safety is measured not just in awards, but in the real-world impact 
               on our workers, clients, and communities.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="group bg-gray-50 dark:bg-dark-surface-2 rounded-xl p-8 hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-2 min-h-[200px] flex flex-col justify-center" onClick={() => toggleSection('incidents')}>
+            <div className="group bg-gray-50 dark:bg-gray-800 rounded-xl p-8 hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-2 min-h-[200px] flex flex-col justify-center" onClick={() => toggleSection('incidents')}>
               <div className="text-center">
                 <div className="text-5xl font-bold text-mh-hunter-green mb-3">0</div>
-                <div className="text-lg font-semibold text-black dark:text-dark-text mb-2">Lost Time Incidents</div>
-                <div className="text-sm text-gray-600 dark:text-dark-text-secondary">Last 24 Months</div>
+                <div className="text-lg font-semibold text-black dark:text-gray-100 mb-2">Lost Time Incidents</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Last 24 Months</div>
               </div>
             </div>
 
-            <div className="group bg-gray-50 dark:bg-dark-surface-2 rounded-xl p-8 hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-2 min-h-[200px] flex flex-col justify-center" onClick={() => toggleSection('hours')}>
+            <div className="group bg-gray-50 dark:bg-gray-800 rounded-xl p-8 hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-2 min-h-[200px] flex flex-col justify-center" onClick={() => toggleSection('hours')}>
               <div className="text-center">
                 <div className="text-5xl font-bold text-mh-leather-tan mb-3">500K+</div>
-                <div className="text-lg font-semibold text-black dark:text-dark-text mb-2">Safe Work Hours</div>
-                <div className="text-sm text-gray-600 dark:text-dark-text-secondary">Without Incident</div>
+                <div className="text-lg font-semibold text-black dark:text-gray-100 mb-2">Safe Work Hours</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Without Incident</div>
               </div>
             </div>
 
-            <div className="group bg-gray-50 dark:bg-dark-surface-2 rounded-xl p-8 hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-2 min-h-[200px] flex flex-col justify-center" onClick={() => toggleSection('awards')}>
+            <div className="group bg-gray-50 dark:bg-gray-800 rounded-xl p-8 hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-2 min-h-[200px] flex flex-col justify-center" onClick={() => toggleSection('awards')}>
               <div className="text-center">
                 <div className="text-5xl font-bold text-mh-hunter-green mb-3">15</div>
-                <div className="text-lg font-semibold text-black dark:text-dark-text mb-2">Safety Awards</div>
-                <div className="text-sm text-gray-600 dark:text-dark-text-secondary">Industry Recognition</div>
+                <div className="text-lg font-semibold text-black dark:text-gray-100 mb-2">Safety Awards</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Industry Recognition</div>
               </div>
             </div>
 
-            <div className="group bg-gray-50 dark:bg-dark-surface-2 rounded-xl p-8 hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-2 min-h-[200px] flex flex-col justify-center" onClick={() => toggleSection('emr')}>
+            <div className="group bg-gray-50 dark:bg-gray-800 rounded-xl p-8 hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-2 min-h-[200px] flex flex-col justify-center" onClick={() => toggleSection('emr')}>
               <div className="text-center">
                 <div className="text-5xl font-bold text-mh-leather-tan mb-3">0.12</div>
-                <div className="text-lg font-semibold text-black dark:text-dark-text mb-2">EMR Rating</div>
-                <div className="text-sm text-gray-600 dark:text-dark-text-secondary">Below Industry Average</div>
+                <div className="text-lg font-semibold text-black dark:text-gray-100 mb-2">EMR Rating</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Below Industry Average</div>
               </div>
             </div>
           </div>
@@ -234,20 +234,20 @@ const SafetyClient = () => {
       </section>
 
       {/* Safety Awards Section */}
-      <section id="awards" className="py-20 bg-gray-50 dark:bg-dark-surface-2 transition-colors duration-300">
+      <section id="awards" className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-gray-100 mb-4">
               Safety Excellence Recognition
             </h2>
-            <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
               Industry recognition for our unwavering commitment to workplace safety and innovation.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {safetyAwards.map((award, index) => (
-              <div key={index} className="group bg-white dark:bg-dark-surface rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 dark:border-dark-border overflow-hidden min-h-[300px] flex flex-col">
+              <div key={index} className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 dark:border-gray-700 overflow-hidden min-h-[300px] flex flex-col">
                 <div className={`bg-gradient-to-r ${award.color} p-6 text-white flex-shrink-0`}>
                   <div className="flex justify-between items-start mb-4">
                     <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium">
@@ -260,7 +260,7 @@ const SafetyClient = () => {
                   <h3 className="text-xl font-bold mb-2">{award.title}</h3>
                 </div>
                 <div className="p-6 flex-1 flex items-center">
-                  <p className="text-gray-600 dark:text-dark-text-secondary text-sm leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                     {award.description}
                   </p>
                 </div>
@@ -271,13 +271,13 @@ const SafetyClient = () => {
       </section>
 
       {/* Safety Resources Section */}
-      <section className="py-20 bg-white dark:bg-dark-surface transition-colors duration-300">
+      <section className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-gray-100 mb-4">
               Safety Resources & Documentation
             </h2>
-            <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
               Comprehensive safety documentation, training materials, and compliance resources 
               for teams, clients, and partners.
             </p>
@@ -285,23 +285,23 @@ const SafetyClient = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {safetyResources.map((resource, index) => (
-              <div key={index} className="group bg-gray-50 dark:bg-dark-surface-2 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-dark-border min-h-[220px] flex">
+              <div key={index} className="group bg-gray-50 dark:bg-gray-800 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700 min-h-[220px] flex">
                 <div className="flex items-start space-x-4 w-full">
                   <div className="w-12 h-12 bg-gradient-to-r from-mh-hunter-green to-mh-leather-tan rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <resource.icon size={24} className="text-white" />
                   </div>
                   <div className="flex-1 flex flex-col justify-between min-h-[140px]">
                     <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-black dark:text-dark-text mb-3 group-hover:text-mh-hunter-green transition-colors duration-300">
+                      <h3 className="text-lg font-semibold text-black dark:text-gray-100 mb-3 group-hover:text-mh-hunter-green transition-colors duration-300">
                         {resource.title}
                       </h3>
-                      <p className="text-gray-600 dark:text-dark-text-secondary text-sm mb-4 leading-relaxed">
+                      <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 leading-relaxed">
                         {resource.description}
                       </p>
                     </div>
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-dark-border">
-                      <div className="flex items-center space-x-2 text-xs text-gray-500 dark:text-dark-text-secondary">
-                        <span className="px-2 py-1 bg-gray-200 dark:bg-dark-surface-3 rounded">{resource.type}</span>
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
+                      <div className="flex items-center space-x-2 text-xs text-gray-500 dark:text-gray-400">
+                        <span className="px-2 py-1 bg-gray-200 dark:bg-gray-800 rounded">{resource.type}</span>
                         <span>{resource.size}</span>
                       </div>
                       <button className="group flex items-center space-x-2 text-mh-hunter-green hover:text-mh-leather-tan transition-colors duration-300">
@@ -319,13 +319,13 @@ const SafetyClient = () => {
       </section>
 
       {/* Incident Reporting Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white dark:from-dark-surface-2 dark:to-dark-surface transition-colors duration-300">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-dark-text mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-gray-100 mb-4">
               Safety Incident Reporting
             </h2>
-            <p className="text-xl text-gray-600 dark:text-dark-text-secondary max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
               Immediate reporting and response system for safety incidents, near-misses, and safety suggestions. 
               Your safety is our priority.
             </p>
@@ -333,18 +333,18 @@ const SafetyClient = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Incident Report Form */}
-            <div className="bg-white dark:bg-dark-surface rounded-xl p-8 shadow-lg border border-gray-100 dark:border-dark-border min-h-[600px] flex flex-col">
-              <h3 className="text-2xl font-bold text-black dark:text-dark-text mb-6">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 min-h-[600px] flex flex-col">
+              <h3 className="text-2xl font-bold text-black dark:text-gray-100 mb-6">
                 Report Safety Incident
               </h3>
               
               {incidentSubmitSuccess ? (
-                <div className="text-center py-8 flex-1 flex flex-col justify-center">
+                <div className="text-center py-8 flex-1 flex flex-col justify-center" aria-live="polite">
                   <div className="w-16 h-16 bg-mh-hunter-green/20 dark:bg-mh-hunter-green/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield size={32} className="text-mh-hunter-green dark:text-mh-hunter-green" />
+                    <Shield size={32} className="text-mh-hunter-green" />
                   </div>
-                  <h4 className="text-xl font-semibold text-mh-hunter-green dark:text-mh-hunter-green mb-2">Report Submitted Successfully</h4>
-                  <p className="text-gray-600 dark:text-dark-text-secondary">
+                  <h4 className="text-xl font-semibold text-mh-hunter-green mb-2">Report Submitted Successfully</h4>
+                  <p className="text-gray-600 dark:text-gray-400">
                     Thank you for reporting this safety incident. Our safety team has been notified and will respond immediately.
                   </p>
                 </div>
@@ -352,7 +352,7 @@ const SafetyClient = () => {
                 <form onSubmit={handleIncidentSubmit} className="space-y-6 flex-1 flex flex-col">
                   <div className="flex-1 space-y-6">
                     <div>
-                      <label htmlFor="type" className="block text-sm font-medium text-black dark:text-dark-text mb-2">
+                      <label htmlFor="type" className="block text-sm font-medium text-black dark:text-gray-100 mb-2">
                         Incident Type *
                       </label>
                       <select
@@ -361,7 +361,7 @@ const SafetyClient = () => {
                         value={incidentFormData.type}
                         onChange={handleIncidentInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-transparent bg-white dark:bg-dark-surface-2 text-black dark:text-dark-text"
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-transparent bg-white dark:bg-gray-800 text-black dark:text-gray-100"
                       >
                         <option value="">Select incident type</option>
                         <option value="injury">Injury</option>
@@ -374,7 +374,7 @@ const SafetyClient = () => {
                     </div>
 
                     <div>
-                      <label htmlFor="severity" className="block text-sm font-medium text-black dark:text-dark-text mb-2">
+                      <label htmlFor="severity" className="block text-sm font-medium text-black dark:text-gray-100 mb-2">
                         Severity Level *
                       </label>
                       <select
@@ -383,7 +383,7 @@ const SafetyClient = () => {
                         value={incidentFormData.severity}
                         onChange={handleIncidentInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-transparent bg-white dark:bg-dark-surface-2 text-black dark:text-dark-text"
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-transparent bg-white dark:bg-gray-800 text-black dark:text-gray-100"
                       >
                         <option value="low">Low</option>
                         <option value="medium">Medium</option>
@@ -393,7 +393,7 @@ const SafetyClient = () => {
                     </div>
 
                     <div>
-                      <label htmlFor="location" className="block text-sm font-medium text-black dark:text-dark-text mb-2">
+                      <label htmlFor="location" className="block text-sm font-medium text-black dark:text-gray-100 mb-2">
                         Location *
                       </label>
                       <input
@@ -404,12 +404,12 @@ const SafetyClient = () => {
                         onChange={handleIncidentInputChange}
                         required
                         placeholder="Project site, address, or specific location"
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-transparent bg-white dark:bg-dark-surface-2 text-black dark:text-dark-text"
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-transparent bg-white dark:bg-gray-800 text-black dark:text-gray-100"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="description" className="block text-sm font-medium text-black dark:text-dark-text mb-2">
+                      <label htmlFor="description" className="block text-sm font-medium text-black dark:text-gray-100 mb-2">
                         Description *
                       </label>
                       <textarea
@@ -420,13 +420,13 @@ const SafetyClient = () => {
                         required
                         rows={4}
                         placeholder="Detailed description of the incident, what happened, and any immediate actions taken"
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-transparent bg-white dark:bg-dark-surface-2 text-black dark:text-dark-text resize-none"
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-transparent bg-white dark:bg-gray-800 text-black dark:text-gray-100 resize-none"
                       />
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label htmlFor="reporterName" className="block text-sm font-medium text-black dark:text-dark-text mb-2">
+                        <label htmlFor="reporterName" className="block text-sm font-medium text-black dark:text-gray-100 mb-2">
                           Your Name *
                         </label>
                         <input
@@ -437,12 +437,12 @@ const SafetyClient = () => {
                           onChange={handleIncidentInputChange}
                           required
                           placeholder="Full name"
-                          className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-transparent bg-white dark:bg-dark-surface-2 text-black dark:text-dark-text"
+                          className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-transparent bg-white dark:bg-gray-800 text-black dark:text-gray-100"
                         />
                       </div>
 
                       <div>
-                        <label htmlFor="reporterEmail" className="block text-sm font-medium text-black dark:text-dark-text mb-2">
+                        <label htmlFor="reporterEmail" className="block text-sm font-medium text-black dark:text-gray-100 mb-2">
                           Email Address *
                         </label>
                         <input
@@ -453,7 +453,7 @@ const SafetyClient = () => {
                           onChange={handleIncidentInputChange}
                           required
                           placeholder="your.email@company.com"
-                          className="w-full px-4 py-3 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-transparent bg-white dark:bg-dark-surface-2 text-black dark:text-dark-text"
+                          className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-mh-hunter-green focus:border-transparent bg-white dark:bg-gray-800 text-black dark:text-gray-100"
                         />
                       </div>
                     </div>
@@ -482,8 +482,8 @@ const SafetyClient = () => {
 
             {/* Emergency Contacts */}
             <div className="space-y-8">
-              <div className="bg-white dark:bg-dark-surface rounded-xl p-8 shadow-lg border border-gray-100 dark:border-dark-border min-h-[400px] flex flex-col">
-                <h3 className="text-2xl font-bold text-black dark:text-dark-text mb-6">
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 min-h-[400px] flex flex-col">
+                <h3 className="text-2xl font-bold text-black dark:text-gray-100 mb-6">
                   Emergency Contacts
                 </h3>
                 
@@ -493,9 +493,9 @@ const SafetyClient = () => {
                       <Phone size={20} className="text-mh-leather-tan" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-black dark:text-dark-text">Emergency Line</h4>
-                      <p className="text-gray-600 dark:text-dark-text-secondary font-bold text-lg">911</p>
-                      <p className="text-sm text-gray-500 dark:text-dark-text-secondary">Life-threatening emergencies</p>
+                      <h4 className="font-semibold text-black dark:text-gray-100">Emergency Line</h4>
+                      <p className="text-gray-600 dark:text-gray-400 font-bold text-lg">911</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Life-threatening emergencies</p>
                     </div>
                   </div>
 
@@ -504,9 +504,9 @@ const SafetyClient = () => {
                       <Phone size={20} className="text-mh-hunter-green" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-black dark:text-dark-text">Safety Hotline</h4>
-                      <p className="text-gray-600 dark:text-dark-text-secondary font-bold text-lg">(509) 308-6489</p>
-                      <p className="text-sm text-gray-500 dark:text-dark-text-secondary">24/7 safety concerns</p>
+                      <h4 className="font-semibold text-black dark:text-gray-100">Safety Hotline</h4>
+                      <p className="text-gray-600 dark:text-gray-400 font-bold text-lg">(509) 308-6489</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">24/7 safety concerns</p>
                     </div>
                   </div>
 
@@ -515,9 +515,9 @@ const SafetyClient = () => {
                       <Mail size={20} className="text-mh-leather-tan" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-black dark:text-dark-text">Safety Manager</h4>
-                      <p className="text-gray-600 dark:text-dark-text-secondary">safety@mhconstruction.com</p>
-                      <p className="text-sm text-gray-500 dark:text-dark-text-secondary">Non-emergency safety issues</p>
+                      <h4 className="font-semibold text-black dark:text-gray-100">Safety Manager</h4>
+                      <p className="text-gray-600 dark:text-gray-400">safety@mhconstruction.com</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Non-emergency safety issues</p>
                     </div>
                   </div>
 
@@ -526,9 +526,9 @@ const SafetyClient = () => {
                       <MapPin size={20} className="text-mh-hunter-green" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-black dark:text-dark-text">Safety Office</h4>
-                      <p className="text-gray-600 dark:text-dark-text-secondary">Spokane, Washington</p>
-                      <p className="text-sm text-gray-500 dark:text-dark-text-secondary">Main safety coordination center</p>
+                      <h4 className="font-semibold text-black dark:text-gray-100">Safety Office</h4>
+                      <p className="text-gray-600 dark:text-gray-400">Spokane, Washington</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Main safety coordination center</p>
                     </div>
                   </div>
                 </div>

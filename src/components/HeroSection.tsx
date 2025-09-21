@@ -51,14 +51,14 @@ const HeroSection = () => {
         className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 bg-black/60 dark:bg-dark-surface/80 backdrop-blur-sm text-white dark:text-dark-text p-2 sm:p-3 rounded-full hover:bg-black/70 dark:hover:bg-dark-surface/90 transition-all duration-300 hover:scale-110 shadow-lg touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"
         aria-label={isVideoPlaying ? 'Pause video' : 'Play video'}
       >
-        {isVideoPlaying ? <Pause size={18} className="sm:w-5 sm:h-5" /> : <Play size={18} className="sm:w-5 sm:h-5" />}
+        {isVideoPlaying ? <Pause size={18} className="sm:w-5 sm:h-5 icon-action icon-interactive-primary" /> : <Play size={18} className="sm:w-5 sm:h-5 icon-action icon-animate-glow" />}
       </button>
 
       {/* Hero Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white dark:text-white mb-4 sm:mb-6 leading-tight">
           Building Tomorrow with{' '}
-          <span className="text-mh-leather-tan dark:text-mh-leather-tan">Today's Technology</span>
+          <span style={{color: '#BD9264'}}>Today's Technology</span>
         </h1>
         
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 dark:text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
@@ -71,14 +71,14 @@ const HeroSection = () => {
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center px-4 max-w-lg mx-auto">
           <Link
             href="/estimate"
-            className="w-full sm:flex-1 bg-mh-hunter-green text-white px-6 sm:px-8 py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-mh-leather-tan hover:text-white transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl touch-manipulation min-h-[48px] text-center flex items-center justify-center"
+            className="btn btn-primary w-full sm:flex-1 min-h-[48px] text-center flex items-center justify-center text-base sm:text-lg"
           >
             Get Your AI Estimate
           </Link>
           
           <Link
             href="/projects"
-            className="w-full sm:flex-1 bg-transparent border-2 border-white text-white px-6 sm:px-8 py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-mh-leather-tan hover:border-mh-leather-tan hover:text-white transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg touch-manipulation min-h-[48px] text-center flex items-center justify-center"
+            className="btn btn-outline-secondary w-full sm:flex-1 min-h-[48px] text-center flex items-center justify-center text-base sm:text-lg border-white text-white hover:text-white"
           >
             Explore Our Projects
           </Link>

@@ -61,7 +61,7 @@ const ScheduleButton: React.FC<ScheduleButtonProps> = ({
         onClick={openScheduler}
         className={`${baseClasses} ${getVariantClasses()} ${getSizeClasses()} ${widthClass} ${className}`}
       >
-        {showIcon && <Calendar size={20} className="mr-2" />}
+        {showIcon && <Calendar size={20} className="mr-2 icon-calendar" />}
         {children}
       </button>
       <CalendarScheduler isOpen={isSchedulerOpen} onClose={closeScheduler} />

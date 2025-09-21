@@ -58,7 +58,7 @@ const AIToolsSection = () => {
             return (
               <div
                 key={index}
-                className="bg-white dark:bg-dark-surface-2 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-500 border border-gray-100 dark:border-dark-border hover:shadow-2xl hover:border-mh-leather-tan dark:hover:border-mh-leather-tan group flex flex-col h-full hover:-translate-y-2"
+                className="card group flex flex-col h-full hover:-translate-y-2 border-gray-100 dark:border-dark-border hover:border-primary dark:hover:border-primary"
               >
                 {/* Card Header with Icon */}
                 <div className={`bg-gradient-to-br ${tool.gradient} p-6 text-white transition-all duration-300 group-hover:brightness-110 relative overflow-hidden`}>
@@ -66,7 +66,7 @@ const AIToolsSection = () => {
                   <div className="absolute inset-0 bg-black/5 group-hover:bg-black/10 transition-all duration-300"></div>
                   
                   <div className={`relative flex items-center justify-center w-16 h-16 ${tool.iconBg} rounded-full mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 border border-white/20 group-hover:border-white/30 backdrop-blur-sm`}>
-                    <IconComponent size={32} className="drop-shadow-md" />
+                    <IconComponent size={32} className="drop-shadow-md icon-feature icon-animate-rotate" />
                   </div>
                   <h3 className="relative text-2xl font-bold text-center text-white drop-shadow-md">{tool.title}</h3>
                 </div>
@@ -79,7 +79,7 @@ const AIToolsSection = () => {
                   
                   <Link
                     href={tool.ctaLink}
-                    className="block w-full bg-mh-hunter-green hover:bg-mh-leather-tan text-white hover:text-white text-center py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 mt-auto shadow-md hover:shadow-lg"
+                    className="btn btn-primary w-full mt-auto"
                   >
                     {tool.ctaText}
                   </Link>
@@ -96,7 +96,7 @@ const AIToolsSection = () => {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center bg-mh-leather-tan hover:bg-mh-hunter-green text-white hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl group"
+            className="btn btn-secondary inline-flex items-center justify-center text-lg group"
           >
             <span>Schedule a Demo</span>
             <svg className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
